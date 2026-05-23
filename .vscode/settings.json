@@ -1,0 +1,6 @@
+{
+    "csharp-dev-tools.roslyn.projectOrSolutionFiles": [
+        "d:\\unityxinxiangmu\\3Dgame\\3Dgame.sln"
+    ],
+    "dotnet.preferCSharpExtension": true
+}

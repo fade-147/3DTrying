@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -126,13 +126,32 @@ namespace Mirror.RemoteCalls
             // IMPORTANT: we check if the message's componentIndex component is
             //            actually of the right type. prevents attackers trying
             //            to invoke remote calls on wrong components.
-            if (GetInvokerForHash(functionHash, remoteCallType, out Invoker invoker) &&
-                invoker.componentType.IsInstanceOfType(component))
+            if (GetInvokerForHash(functionHash, remoteCallType, out Invoker invoker))
             {
-                // invoke function on this component
-                invoker.function(component, reader, senderConnection);
-                return true;
+                if (invoker.componentType.IsInstanceOfType(component))
+                {
+                    // invoke function on this component
+                    invoker.function(component, reader, senderConnection);
+                    return true;
+                }
+                else
+                {
+                    // detailed debug to help diagnose missing receiver issues in builds
+                    try
+                    {
+                        Debug.LogError($"RemoteProcedureCalls.Invoke: component type mismatch for hash={functionHash} on object={component.gameObject.name} netId={component.netIdentity.netId}. Expected={invoker.componentType.FullName}, Actual={component.GetType().FullName}");
+                    }
+                    catch { }
+                    return false;
+                }
             }
+
+            // not registered - provide debug info
+            try
+            {
+                Debug.LogError($"RemoteProcedureCalls.Invoke: no invoker registered for hash={functionHash} callType={remoteCallType} on object={(component != null ? component.gameObject.name : "<null>")} netId={(component != null ? component.netIdentity.netId.ToString() : "?")}");
+            }
+            catch { }
             return false;
         }
 
@@ -146,6 +165,23 @@ namespace Mirror.RemoteCalls
             remoteCallDelegates.TryGetValue(functionHash, out Invoker invoker)
             ? invoker.function
             : null;
+
+        // Debug helper: dump all registered remote call delegates
+        public static void DumpRegisteredHandlers()
+        {
+            try
+            {
+                foreach (var kvp in remoteCallDelegates)
+                {
+                    Invoker inv = kvp.Value;
+                    Debug.Log($"RemoteProcedureCalls: registered hash={kvp.Key} type={inv.componentType.FullName} callType={inv.callType} requiresAuthority={inv.cmdRequiresAuthority}");
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.LogError($"RemoteProcedureCalls.DumpRegisteredHandlers error: {e}");
+            }
+        }
     }
 }
 

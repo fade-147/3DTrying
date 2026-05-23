@@ -1,0 +1,31 @@
+{
+    "name": "HotUpdate",
+    "rootNamespace": "",
+    "references": [
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:be281b7992e9e1840851a78ba9db107c",
+        "GUID:68bd7fdb68ef2684e982e8a9825b18a5",
+        "GUID:1c7c33eb5480dd24c9e29a8250c1a775",
+        "GUID:30817c1a0e6d646d99c048fc403f5979",
+        "GUID:4307f53044263cf4b835bd812fc161a4",
+        "GUID:ba8c092d026123a418fb4bfb797a7bd8",
+        "GUID:72872094b21c16e48b631b2224833d49",
+        "GUID:2665a8d13d1b3f18800f46e256720795",
+        "GUID:bd78bb22ae3a60443a865fb2d7dfdafa",
+        "GUID:e34a5702dd353724aa315fb8011f08c3",
+        "GUID:4d1926c9df5b052469a1c63448b7609a",
+        "GUID:6b289bb677194eb40b60db3a566aab7b",
+        "GUID:f87ecb857e752164ab814a3de8eb0262",
+        "GUID:2289059ddf1745b4d80a0f184af99d6b",
+        "GUID:66c2eb417c67ad849907d0769db96dbf"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

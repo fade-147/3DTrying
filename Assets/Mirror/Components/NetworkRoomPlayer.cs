@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Mirror
 {
@@ -76,6 +76,11 @@ namespace Mirror
         #endregion
 
         #region Commands
+
+        public void SetReadyToBegin(bool readyState)
+        {
+            readyToBegin = readyState;
+        }
 
         [Command]
         public void CmdChangeReadyState(bool readyState)

@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "Booom2026-Claude",
+			"path": "../Booom2026-Claude"
+		},
+		{
+			"name": "3Dgame",
+			"path": "."
+		}
+	],
+	"settings": {
+		"dotnet.preferCSharpExtension": true
+	}
+}

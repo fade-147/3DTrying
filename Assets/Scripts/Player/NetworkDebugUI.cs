@@ -66,6 +66,7 @@ public class NetworkDebugUI : MonoBehaviour
         debugInfo += $"  是否有权限: {localPlayer.isOwned}\n\n";
 
         debugInfo += "【玩家状态】\n";
+        debugInfo += $"  队伍ID (0=红, 1=蓝): {(controller != null ? controller.teamId.ToString() : "无")}\n";
         debugInfo += $"  是否死亡: {(playerChar != null ? playerChar.isDead.ToString() : "N/A")}\n";
         debugInfo += $"  当前血量: {(playerChar != null ? $"{playerChar.CurrentHealth:F0}/{playerChar.MaxHealth:F0}" : "N/A")}\n";
         debugInfo += $"  当前位置: {localPlayer.transform.position}\n\n";

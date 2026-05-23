@@ -20,6 +20,8 @@ namespace StarterAssets
     public class ThirdPersonController : NetworkBehaviour
     {
         [Header("Player")]
+        [SyncVar]
+        public int teamId;  //用来区分玩家的队伍
         public float MoveSpeed = 2.0f;
         public float SprintSpeed = 5.335f;
         [Range(0.0f, 0.3f)]
@@ -57,6 +59,7 @@ namespace StarterAssets
         public Animator firstPersonAnimator;  // 第一人称Animator
         public Camera fpCamera;              // 第一人称相机
         public Transform fpCameraRoot;     // 第一人称相机父物体（脖子/头部）
+        public GameObject cameraMap;       // 小地图专用相机
         private bool isFirstPerson = false;   // 是否为第一人称
         private Cinemachine.CinemachineVirtualCamera thirdPersonVCam; // 第三人称相机
 
@@ -179,8 +182,14 @@ namespace StarterAssets
         public int RecoilStartShot = 3;        // 第几发开始上跳
         public float RecoilRampSpeed = 0.5f;   // 上跳累积速度
 
-        public float sensitivityX = 0.8f; // 水平灵敏度
+        private SettingManager _settingManager;
+        private bool SettingOpen=false;
+        private GameObject settingsObj;
+        private float _outlineUpdateTimer = 0f;
+        private const float OUTLINE_UPDATE_INTERVAL = 1f; // 每秒更新一次敌人描边
+        public float sensitivityX = 0.8f; // 设置中绑定，水平灵敏度
         public float sensitivityY = 0.8f;
+
 
         //枪口上跳配置
         [Header("第一人称 枪口上跳配置")]
@@ -258,6 +267,15 @@ namespace StarterAssets
                     vcam.LookAt = CinemachineCameraTarget.transform;
                 }
             }
+
+            // 仅本地玩家开启小地图相机
+            if (cameraMap != null) cameraMap.SetActive(true);
+
+            // 游戏启动时锁定隐藏鼠标
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+
+            UpdateEnemyOutlines();  //给敌人加描边
         }
 
 
@@ -327,6 +345,12 @@ namespace StarterAssets
                 UpdateAmmoUI();
             }
 
+            // 灵敏度设置
+            if (isLocalPlayer)
+            {
+                SetupSensitivitySettings();
+            }
+
             // 默认显示第三人称，隐藏第一人称
             if (isLocalPlayer)
             {
@@ -348,6 +372,58 @@ namespace StarterAssets
                 if (firstPersonModelGun != null) firstPersonModelGun.SetActive(false);
                 if (fpCamera != null) fpCamera.gameObject.SetActive(false);
             }
+        }
+
+        //设置面板获
+        private void SetupSensitivitySettings()
+        {
+            // 通过标签找到设置管理器物体
+            settingsObj = GameObject.FindGameObjectWithTag("Settings");
+
+            if (settingsObj != null)
+            {
+                _settingManager = settingsObj.GetComponent<SettingManager>();
+
+                if (_settingManager != null)
+                {
+                    // 初始化滑动条的范围 (0.1 - 1.1)
+                    if (_settingManager.sensitivityXSlider != null)
+                    {
+                        _settingManager.sensitivityXSlider.minValue = 0.1f;
+                        _settingManager.sensitivityXSlider.maxValue = 1.1f;
+                        // 初始化当前值
+                        _settingManager.sensitivityXSlider.value = sensitivityX;
+                        // 监听滑动事件
+                        _settingManager.sensitivityXSlider.onValueChanged.AddListener(OnSensitivityXChanged);
+                    }
+
+                    if (_settingManager.sensitivityYSlider != null)
+                    {
+                        _settingManager.sensitivityYSlider.minValue = 0.1f;
+                        _settingManager.sensitivityYSlider.maxValue = 1.1f;
+                        // 初始化当前值
+                        _settingManager.sensitivityYSlider.value = sensitivityY;
+                        // 监听滑动事件
+                        _settingManager.sensitivityYSlider.onValueChanged.AddListener(OnSensitivityYChanged);
+                    }
+
+                }
+
+                settingsObj.SetActive(false);
+            }
+
+        }
+
+        // 水平灵敏度变化回调
+        private void OnSensitivityXChanged(float value)
+        {
+            sensitivityX = value;
+        }
+
+        // 垂直灵敏度变化回调
+        private void OnSensitivityYChanged(float value)
+        {
+            sensitivityY = value;
         }
 
         // 更新弹药UI显示
@@ -425,7 +501,7 @@ namespace StarterAssets
                 _fireTimer -= Time.deltaTime;
 
             // 射击触发：鼠标左键 + 可射击 + 持枪 + 冷却完成 + 非喝水状态
-            if (Input.GetMouseButton(0) && !IsRunning && CanShoot && isHoldingGun && _fireTimer <= 0 && !_isDrinking && !isReloading && currentAmmo > 0)
+            if (Input.GetMouseButton(0) && !IsRunning && CanShoot && isHoldingGun && _fireTimer <= 0 && !_isDrinking && !isReloading && currentAmmo > 0 && !SettingOpen)
             {
                 isInspecting = false;
 
@@ -478,6 +554,33 @@ namespace StarterAssets
             if (Input.GetKeyDown(KeyCode.L) && !_isDrinking)  //按L键切换视角
             {
                 ToggleFirstPerson();
+            }
+            if (Input.GetKeyDown(KeyCode.Tab))
+            {
+                SettingOpen = !SettingOpen;
+                settingsObj.SetActive(SettingOpen);
+
+                if (SettingOpen)
+                {
+                    Cursor.visible = true;
+                    Cursor.lockState = CursorLockMode.None;
+                    _input.cursorInputForLook = false;
+                    _input.LookInput(Vector2.zero);  // 清空残留的鼠标 delta，防止视角继续转动
+                }
+                else
+                {
+                    Cursor.visible = false;
+                    Cursor.lockState = CursorLockMode.Locked;
+                    _input.cursorInputForLook = true;
+                }
+            }
+
+            // 周期性更新敌人描边
+            _outlineUpdateTimer -= Time.deltaTime;
+            if (_outlineUpdateTimer <= 0f)
+            {
+                _outlineUpdateTimer = OUTLINE_UPDATE_INTERVAL;
+                UpdateEnemyOutlines();
             }
         }
 
@@ -623,6 +726,8 @@ namespace StarterAssets
             }
         }
 
+        #region 发射子弹，客户端预测和回滚（未完成）
+
         //服务端射击命令，网络生成子弹
         [Command]
         private void CmdFire(Vector3 shootDirection, Vector3 muzzleWorldPos)
@@ -668,6 +773,10 @@ namespace StarterAssets
                 Destroy(flash, 0.1f);
             }
         }
+
+        #endregion
+
+        #region 喝水以及打断逻辑
 
         // 喝水逻辑
         // 开始喝水,客户端发起请求
@@ -811,6 +920,7 @@ namespace StarterAssets
             Debug.Log("喝水被打断！");
         }
 
+        #endregion
 
         public void GetOnGun()
         {
@@ -1383,10 +1493,52 @@ namespace StarterAssets
                 reloadProgressUI.gameObject.SetActive(false);
             }
         }
+
+        // 更新所有敌人的描边状态
+        private void UpdateEnemyOutlines()
+        {
+            if (!isLocalPlayer) return;
+
+            // 处理玩家角色
+            ThirdPersonController[] allPlayers = FindObjectsOfType<ThirdPersonController>();
+            foreach (ThirdPersonController player in allPlayers)
+            {
+                if (player == this) continue;
+                CharacterOutline outline = player.GetComponent<CharacterOutline>();
+                if (outline == null) continue;
+                outline.ToggleOutline(player.teamId != this.teamId);
+            }
+
+            // 处理 Bot
+            BotController[] allBots = FindObjectsOfType<BotController>();
+            foreach (BotController bot in allBots)
+            {
+                CharacterOutline outline = bot.GetComponent<CharacterOutline>();
+                if (outline == null) continue;
+                outline.ToggleOutline(bot.teamId != this.teamId);
+            }
+        }
+
+
         //动画回调函数
         public void OnInspectComplete()
         {
             isInspecting = false;
+        }
+
+        void OnGUI()
+        {
+            if (Camera.main == null) return;
+
+            Vector3 screenPos = Camera.main.WorldToScreenPoint(transform.position);
+            if (screenPos.z < 0) return;
+
+            screenPos.y = Screen.height - screenPos.y;
+
+            bool isLocal = isLocalPlayer;
+            string teamName = teamId == 0 ? "红队" : "蓝队";
+            string text = $"{(isLocal ? "我" : "")} T:{teamId}({teamName})";
+            GUI.Label(new Rect(screenPos.x - 40, screenPos.y - 20, 200, 20), text);
         }
     }
 }

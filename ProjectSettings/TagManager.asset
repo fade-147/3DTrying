@@ -11,6 +11,11 @@ TagManager:
   - DrinkUI
   - ReloadUI
   - AmmoText
+  - Settings
+  - Team1PlayerList
+  - Team2PlayerList
+  - RedBase
+  - BlueBase
   layers:
   - Default
   - TransparentFX
@@ -18,9 +23,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - MapCamera
+  - MapThings
+  - MapFlool
   - 
   - 
   - 

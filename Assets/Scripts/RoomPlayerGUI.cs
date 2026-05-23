@@ -18,34 +18,24 @@ public class RoomPlayerGUI : MonoBehaviour
     Text readyState;
     GameObject playerList;
     GameObject playerPanel;
-    NetworkRoomPlayer player;
+    MyNetworkRoomPlayer player;
 
-    private void Start()
-    {
-        InitializeUI();    //初始化UI组件
-    }
-    private void OnEnable()
-    {
-        SceneManager.sceneLoaded += OnSceneLoaded;   //注册场景加载的回调函数，当场景加载完成后会调用OnSceneLoaded函数
-    }
-    private void OnDisable()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;   //取消注册场景加载的回调函数，避免内存泄漏
-    }
 
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)  //传入场景以及加载场景的模式，当场景加载完成后会调用这个函数
+    public void InitializeUI()
     {
-        if (scene.name == "LobbyScene 1")   //如果加载的场景是LobbyScene场景的话，初始化UI组件.。保证按下返回大厅按钮后，玩家的UI组件能够重新显示出来
+        player = GetComponent<MyNetworkRoomPlayer>();
+        
+        // 关键防拷贝！如果已经有旧的UI面板，我们应该先把它销毁或剔除！以免界面堆积很多个重复玩家！
+        if (playerPanel != null)
         {
-            InitializeUI();
+            Destroy(playerPanel);
         }
-    }
 
-    private void InitializeUI()
-    {
-        player = GetComponent<NetworkRoomPlayer>();
-        playerList = GameObject.FindWithTag("PlayerList");
-        playerPanel = Instantiate(playerPanelPrefab, playerList.transform) as GameObject;
+        // 根据队伍ID，找到对应的UI容器
+        Transform teamContainer = GetTeamContainer(player.teamId);
+        // 实例化玩家面板到对应的队伍容器里
+        playerPanel = Instantiate(playerPanelPrefab, teamContainer) as GameObject;
+
         readyBtn = playerPanel.transform.Find("Ready Button").GetComponent<Button>();
         cancelBtn = playerPanel.transform.Find("Cancel Button").GetComponent<Button>();
         removeBtn = playerPanel.transform.Find("Remove Button").GetComponent<Button>();
@@ -66,6 +56,40 @@ public class RoomPlayerGUI : MonoBehaviour
         {
             removeBtn.gameObject.SetActive(true);
             removeBtn.onClick.AddListener(OnRemoveButtonClicked);
+        }
+    }
+
+    public void DestroyUI()
+    {
+        if (playerPanel != null)
+        {
+            Destroy(playerPanel);
+        }
+    }
+
+    // 队伍变化时，更新UI面板的位置
+    public void UpdateTeamUI(int newTeamId)
+    {
+        if (playerPanel == null) return;
+
+        // 把面板移动到新队伍的容器里
+        Transform newContainer = GetTeamContainer(newTeamId);
+        playerPanel.transform.SetParent(newContainer);
+        playerPanel.transform.localScale = Vector3.one; // 修复UGUI缩放问题
+    }
+
+    // 根据队伍ID获取对应的UI容器
+    private Transform GetTeamContainer(int teamId)
+    {
+        if (teamId == 0)
+        {
+            // 红队的列表容器
+            return GameObject.FindWithTag("Team1PlayerList").transform;
+        }
+        else
+        {
+            // 蓝队的列表容器
+            return GameObject.FindWithTag("Team2PlayerList").transform;
         }
     }
 

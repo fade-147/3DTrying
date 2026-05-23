@@ -563,6 +563,7 @@ GameObject:
   - component: {fileID: 1379952246}
   - component: {fileID: 1379952245}
   - component: {fileID: 1379952244}
+  - component: {fileID: 1379952249}
   m_Layer: 0
   m_Name: Steam Network Room Manager
   m_TagString: Untagged
@@ -643,6 +644,7 @@ MonoBehaviour:
   spawnPrefabs:
   - {fileID: 1086664671600574, guid: 5953171a59c27394e9ad5cbb564affa8, type: 3}
   - {fileID: 1067471869909948, guid: 5e02303289b3c494e8e185be0fbbd405, type: 3}
+  - {fileID: 6233281133662039027, guid: 44e69846b740e2f43bf15aa16c829a07, type: 3}
   exceptionsDisconnect: 1
   snapshotSettings:
     bufferTimeMultiplier: 2
@@ -660,12 +662,13 @@ MonoBehaviour:
   timeInterpolationGui: 0
   showRoomGUI: 1
   minPlayers: 1
-  roomPlayerPrefab: {fileID: 5432829391655837536, guid: 10357657666eacd4581b47de6b5b14af, type: 3}
+  roomPlayerPrefab: {fileID: -8049335274157230246, guid: 10357657666eacd4581b47de6b5b14af, type: 3}
   RoomScene: Assets/Scenes/LobbyScene 1.unity
   GameplayScene: Assets/Scenes/GameScene.unity
   _allPlayersReady: 0
   clientIndex: 0
   startGameButton: {fileID: 0}
+  botGamePrefab: {fileID: 6233281133662039027, guid: 44e69846b740e2f43bf15aa16c829a07, type: 3}
 --- !u!4 &1379952248
 Transform:
   m_ObjectHideFlags: 0
@@ -681,6 +684,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1379952249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379952243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca70e4d40aceb1a43b622f96dc9ab9fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useOpusCompression: 1
+  useVad: 1
+  recordingDurationSeconds: 60
 --- !u!1 &1401859201
 GameObject:
   m_ObjectHideFlags: 0

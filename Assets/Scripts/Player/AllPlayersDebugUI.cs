@@ -46,7 +46,7 @@ public class AllPlayersDebugUI : MonoBehaviour
 
             if (controller != null)
             {
-                info += $"持枪: {controller.isHoldingGun} | 速度: {controller.MoveSpeed}\n";
+                info += $"队伍ID: {controller.teamId} | 持枪: {controller.isHoldingGun} | 速度: {controller.MoveSpeed}\n";
             }
 
             if (animator != null)
