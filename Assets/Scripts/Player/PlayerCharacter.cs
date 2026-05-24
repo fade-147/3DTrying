@@ -9,11 +9,9 @@ public class PlayerCharacter : NetworkBehaviour
 {
     public float MaxHealth = 100f;
 
-    // SyncVar同步血量，钩子函数更新UI
     [SyncVar(hook = nameof(OnHealthChanged))]
     public float CurrentHealth;
 
-    // 同步死亡状态
     [SyncVar] public bool isDead;
 
     [Header("死亡UI")]
@@ -21,12 +19,15 @@ public class PlayerCharacter : NetworkBehaviour
     public GameObject playerVisual;
 
     [Header("血条设置")]
-    public Image healthFillImage; // 横向填充的血条
-    private float respawnTimer = 3f; // 复活倒计时
+    public Image healthFillImage;
+    private float respawnTimer = 3f;
+
+    private bool _initialized;
 
     private void Awake()
     {
         CurrentHealth = MaxHealth;
+        _initialized = true;
     }
 
     private void Start()
@@ -95,13 +96,9 @@ public class PlayerCharacter : NetworkBehaviour
     [ClientRpc]
     void RpcOnDie()
     {
-        isDead = true;
-
-        // 隐藏玩家模型
         if (playerVisual != null)
             playerVisual.SetActive(false);
 
-        // 本地玩家显示死亡面板
         if (isLocalPlayer && deathCanvas != null)
             deathCanvas.SetActive(true);
     }
@@ -131,13 +128,9 @@ public class PlayerCharacter : NetworkBehaviour
     [ClientRpc]
     void RpcOnRespawn()
     {
-        isDead = false;
-
-        // 显示玩家模型
         if (playerVisual != null)
             playerVisual.SetActive(true);
 
-        // 本地玩家隐藏死亡面板
         if (isLocalPlayer && deathCanvas != null)
             deathCanvas.SetActive(false);
     }
@@ -146,7 +139,6 @@ public class PlayerCharacter : NetworkBehaviour
     void OnHealthChanged(float oldHp, float newHp)
     {
         UpdateHealthUI();
-        Debug.Log("当前血量：" + newHp);
     }
 
     // 更新血条显示（横向填充）

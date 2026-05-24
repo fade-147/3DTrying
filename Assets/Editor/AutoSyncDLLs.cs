@@ -34,6 +34,7 @@ public class AutoSyncDLLs : EditorWindow
         "Unity.InputSystem.dll",
         "Unity.TextMeshPro.dll",
         "UnityEngine.CoreModule.dll",
+        "Unity.AI.Navigation.dll",
         // 影视 & 基础
         "Cinemachine.dll",
         // 基础类库

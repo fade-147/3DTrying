@@ -3,6 +3,7 @@ using UnityEngine.AI;
 using Mirror;
 using NodeCanvas.Framework;
 using StarterAssets;
+using System.Collections.Generic;
 
 /// <summary>
 /// AI 控制组件，挂载到 PlayerArmature 上，为 NodeCanvas 行为树提供 Bot 行为能力。
@@ -33,6 +34,7 @@ public class BotController : NetworkBehaviour
     public const float DetectionRange = 50f;
     public const string RedBaseTag = "RedBase";
     public const string BlueBaseTag = "BlueBase";
+    public const string TargetEnemyVarName = "targetEnemy";
 
     private NavMeshAgent _navMeshAgent;
     private Animator _animator;
@@ -41,11 +43,15 @@ public class BotController : NetworkBehaviour
 
     private float _baseSpeed;
     private float _fireTimer;
-    private Vector3 _aimVelocity;
+
+    // 巡逻记忆：避免短时间内重复访问同一区域
+    private readonly Queue<Vector3> _visitedPositions = new Queue<Vector3>();
+    private const int MaxVisitedMemory = 10;
+    private const float PatrolRevisitRadius = 10f;
+    private const float PatrolRadius = 30f;
+    private const int MaxPatrolSamples = 20;
 
     // Animator 参数 hash
-    private static readonly int SpeedHash = Animator.StringToHash("Speed");
-    private static readonly int MoveForwardHash = Animator.StringToHash("MoveForward");
     private static readonly int IsDrinkingHash = Animator.StringToHash("IsDrinking");
     private static readonly int DrinkHash = Animator.StringToHash("Drink");
     private static readonly int IsHoldingGunHash = Animator.StringToHash("IsHoldingGun");
@@ -67,25 +73,17 @@ public class BotController : NetworkBehaviour
         base.OnStartServer();
         currentAmmo = MaxAmmo;
 
-        // 确保行为树在服务器端运行。BehaviourTreeOwner 的 OnEnable 可能在
-        // Mirror 网络初始化之前触发，导致行为树未正确启动。
         var bto = GetComponent<NodeCanvas.BehaviourTrees.BehaviourTreeOwner>();
-        if (bto != null)
+        if (bto != null && !bto.isRunning)
         {
-            if (!bto.isRunning)
-            {
-                bto.StartBehaviour();
-                Debug.Log($"[BotController] BehaviourTree started: teamId={teamId}, pos={transform.position}");
-            }
+            bto.StartBehaviour();
+            Debug.Log($"[BotController] BehaviourTree started: teamId={teamId}, pos={transform.position}");
         }
-
-        if (_navMeshAgent != null && !_navMeshAgent.isOnNavMesh)
-            Debug.LogWarning($"[BotController] NavMeshAgent not on NavMesh: teamId={teamId}, pos={transform.position}");
     }
 
     /// <summary>
-    /// 查找最近的不同队伍的玩家，写入黑版 targetEnemy。
-    /// 由 BotFindEnemy 任务调用。
+    /// 查找最近的不同队伍目标（玩家或人机），写入黑版 targetEnemy。
+    /// 无目标时不修改黑版，避免 null 引发 NodeCanvas SetVariableValue 报错。
     /// </summary>
     public void FindTargetEnemy()
     {
@@ -94,21 +92,25 @@ public class BotController : NetworkBehaviour
         GameObject nearest = null;
         float nearestDist = Mathf.Infinity;
 
-        ThirdPersonController[] allPlayers = FindObjectsByType<ThirdPersonController>(FindObjectsSortMode.None);
-        foreach (ThirdPersonController player in allPlayers)
+        PlayerCharacter[] allChars = FindObjectsByType<PlayerCharacter>(FindObjectsSortMode.None);
+        foreach (PlayerCharacter pc in allChars)
         {
-            if (player.teamId == teamId) continue;
-            if (player.GetComponent<PlayerCharacter>() is PlayerCharacter pc && pc.isDead) continue;
+            if (pc.isDead) continue;
+            if (pc.gameObject == gameObject) continue;
 
-            float dist = Vector3.Distance(transform.position, player.transform.position);
+            int otherTeamId = GetTeamId(pc);
+            if (otherTeamId == -1 || otherTeamId == teamId) continue;
+
+            float dist = Vector3.Distance(transform.position, pc.transform.position);
             if (dist < nearestDist)
             {
                 nearestDist = dist;
-                nearest = player.gameObject;
+                nearest = pc.gameObject;
             }
         }
 
-        _blackboard.SetVariableValue("targetEnemy", nearest);
+        if (nearest != null)
+            _blackboard.SetVariableValue(TargetEnemyVarName, nearest);
     }
 
     /// <summary>
@@ -153,6 +155,82 @@ public class BotController : NetworkBehaviour
     }
 
     /// <summary>
+    /// 从 PlayerCharacter 获取队伍 ID，兼容玩家（ThirdPersonController）和人机（BotController）。
+    /// </summary>
+    public static int GetTeamId(PlayerCharacter pc)
+    {
+        BotController bc = pc.GetComponent<BotController>();
+        if (bc != null) return bc.teamId;
+        ThirdPersonController tpc = pc.GetComponent<ThirdPersonController>();
+        if (tpc != null) return tpc.teamId;
+        return -1;
+    }
+
+    /// <summary>
+    /// 生成一个智能巡逻点，避开最近访问过的区域，并修正 Y 坐标到 NavMesh 表面。
+    /// 最多尝试 20 次随机采样，找不到合适点则回退到随机点。
+    /// 采样失败则重新随机，确保返回的点在 NavMesh 上。
+    /// </summary>
+    public Vector3 PickPatrolPoint()
+    {
+        Vector3 patrolTarget = Vector3.zero;
+        bool found = false;
+
+        for (int i = 0; i < MaxPatrolSamples; i++)
+        {
+            Vector2 randomCircle = Random.insideUnitCircle * PatrolRadius;
+            Vector3 candidate = transform.position + new Vector3(randomCircle.x, 0f, randomCircle.y);
+
+            // 修正 Y 坐标到 NavMesh 表面
+            if (NavMesh.SamplePosition(candidate, out NavMeshHit hit, 10f, NavMesh.AllAreas))
+                candidate = hit.position;
+            else
+                continue;
+
+            bool tooClose = false;
+            foreach (Vector3 visited in _visitedPositions)
+            {
+                if (Vector3.Distance(candidate, visited) < PatrolRevisitRadius)
+                {
+                    tooClose = true;
+                    break;
+                }
+            }
+
+            if (!tooClose)
+            {
+                patrolTarget = candidate;
+                found = true;
+                break;
+            }
+        }
+
+        if (!found)
+        {
+            // 回退：随机方向 + NavMesh 修正
+            for (int i = 0; i < MaxPatrolSamples; i++)
+            {
+                Vector3 fallback = transform.position + new Vector3(Random.Range(-1f, 1f), 0f, Random.Range(-1f, 1f)) * PatrolRadius;
+                if (NavMesh.SamplePosition(fallback, out NavMeshHit hit, 10f, NavMesh.AllAreas))
+                {
+                    patrolTarget = hit.position;
+                    found = true;
+                    break;
+                }
+            }
+        }
+
+        if (!found)
+            patrolTarget = transform.position;
+
+        _visitedPositions.Enqueue(patrolTarget);
+        if (_visitedPositions.Count > MaxVisitedMemory)
+            _visitedPositions.Dequeue();
+
+        return patrolTarget;
+    }
+
+    /// <summary>
     /// 每帧平滑瞄准目标敌人。
     /// 由 BotAimAndShoot 的 OnUpdate 调用。
     /// </summary>
@@ -169,12 +247,12 @@ public class BotController : NetworkBehaviour
     }
 
     /// <summary>
-    /// 服务端射击指令，通过 Mirror 生成子弹。
+    /// 服务端生成子弹（不用 Mirror [Command]，直接 isServer 检查）。
     /// 由 BotAimAndShoot 任务调用。
     /// </summary>
-    [Command]
-    public void CmdFire(Vector3 shootDirection, Vector3 muzzlePos)
+    public void ServerFire(Vector3 shootDirection, Vector3 muzzlePos)
     {
+        if (!isServer) return;
         if (bulletPrefab == null) return;
 
         GameObject bullet = Instantiate(bulletPrefab, muzzlePos, Quaternion.LookRotation(shootDirection));
@@ -195,27 +273,6 @@ public class BotController : NetworkBehaviour
         }
 
         Destroy(bullet, bulletLifeTime);
-    }
-
-    /// <summary>
-    /// 根据 NavMeshAgent 速度更新 Animator 参数。
-    /// 由 BotUpdateAnim 任务每帧调用。
-    /// </summary>
-    public void UpdateMovementAnim()
-    {
-        if (_animator == null) return;
-
-        Vector3 velocity = _navMeshAgent != null ? _navMeshAgent.velocity : Vector3.zero;
-
-        // 世界速度转局部速度，用于 MoveForward 等方向判定
-        Vector3 localVelocity = transform.InverseTransformDirection(velocity);
-        float speed = velocity.magnitude;
-
-        _animator.SetFloat(SpeedHash, speed);
-        _animator.SetBool(MoveForwardHash, localVelocity.z > 0.1f);
-
-        // 确保持枪状态为 true（Bot 始终持枪）
-        _animator.SetBool(IsHoldingGunHash, true);
     }
 
     /// <summary>

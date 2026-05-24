@@ -1,11 +1,12 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 using Mirror;
 using YooAsset;
 using Mirror.FizzySteam;
 using StarterAssets;
+
 
 public class MyNetworkRoomManager : NetworkRoomManager
 {
@@ -79,23 +80,6 @@ public class MyNetworkRoomManager : NetworkRoomManager
             return;
         }
 
-        if (newScenePath == RoomScene)
-        {
-            foreach (NetworkRoomPlayer roomPlayer in roomSlots)
-            {
-                if (roomPlayer == null) continue;
-
-                NetworkIdentity identity = roomPlayer.GetComponent<NetworkIdentity>();
-                if (NetworkServer.active)
-                {
-                    roomPlayer.SetReadyToBegin(false);
-                    NetworkServer.ReplacePlayerForConnection(identity.connectionToClient, roomPlayer.gameObject, ReplacePlayerOptions.KeepAuthority);
-                }
-            }
-            allPlayersReady = false;
-            _botTracker?.ClearBots();
-        }
-
         StartCoroutine(ServerLoadSceneByYooAsset(newScenePath));
     }
 
@@ -103,7 +87,21 @@ public class MyNetworkRoomManager : NetworkRoomManager
     {
         _isSwitchingScene = true;
 
-        // 在场景加载前通知所有客户端：准备切换场景
+        // 回退到 RoomScene 时，先销毁所有 game player，让后续 AddPlayer 正常创建 room player
+        if (scenePath == RoomScene && NetworkServer.active)
+        {
+            foreach (NetworkConnectionToClient conn in NetworkServer.connections.Values)
+            {
+                if (conn.identity != null)
+                {
+                    NetworkServer.Destroy(conn.identity.gameObject);
+                }
+            }
+            roomSlots.Clear();
+            allPlayersReady = false;
+            _botTracker?.ClearBots();
+        }
+
         NetworkServer.SetAllClientsNotReady();
         NetworkManager.networkSceneName = scenePath;
         OnServerChangeScene(scenePath);
@@ -119,9 +117,6 @@ public class MyNetworkRoomManager : NetworkRoomManager
             _currentSceneHandle?.Release();
             _currentSceneHandle = YooAssets.LoadSceneAsync(scenePath, LoadSceneMode.Single);
             yield return _currentSceneHandle;
-
-            // 场景加载完成后触发 Ready 流程，Mirror 会自动创建 game player
-            NetworkClient.ready = false;
 
             startPositionIndex = 0;
             startPositions.Clear();
@@ -178,12 +173,49 @@ public class MyNetworkRoomManager : NetworkRoomManager
     #endregion
 
     #region 房间流程
+    public override void OnServerAddPlayer(NetworkConnectionToClient conn)
+    {
+        // 远端客户端 OnClientSceneChanged 可能在 spawn 消息到达前就发送 AddPlayer，
+        // 此时 conn.identity 已在 OnServerSceneChanged 中被设置为 game player
+        if (conn.identity != null)
+        {
+            NetworkServer.SetClientReady(conn);
+            return;
+        }
+
+        if (Utils.IsSceneActive(RoomScene))
+        {
+            base.OnServerAddPlayer(conn);
+            return;
+        }
+
+        // GameplayScene: pendingPlayers 可能已被 CheckReadyToBegin 清空
+        // 在此手动创建 game player
+        Transform startPos = GetStartPosition();
+        GameObject gamePlayer = startPos != null
+            ? Instantiate(playerPrefab, startPos.position, startPos.rotation)
+            : Instantiate(playerPrefab, Vector3.zero, Quaternion.identity);
+
+        NetworkServer.AddPlayerForConnection(conn, gamePlayer);
+    }
+
     public override void OnRoomServerPlayersReady()
     {
         if (Utils.IsSceneActive(RoomScene) && startGameButton != null)
         {
             startGameButton.SetActive(true);
         }
+    }
+
+    public override bool OnRoomServerSceneLoadedForPlayer(NetworkConnectionToClient conn, GameObject roomPlayer, GameObject gamePlayer)
+    {
+        MyNetworkRoomPlayer roomP = roomPlayer.GetComponent<MyNetworkRoomPlayer>();
+        ThirdPersonController tpc = gamePlayer.GetComponent<ThirdPersonController>();
+        if (roomP != null && tpc != null)
+        {
+            tpc.teamId = roomP.teamId;
+        }
+        return true;
     }
 
     public override void OnRoomServerPlayersNotReady()
@@ -204,6 +236,22 @@ public class MyNetworkRoomManager : NetworkRoomManager
     #region UI 按钮 + Bot 生成
     public void StartGame()
     {
+        if (Utils.IsSceneActive(RoomScene))
+        {
+            // CheckReadyToBegin 可能已清空 pendingPlayers，重建以保证 OnServerSceneChanged 能创建 game player
+            pendingPlayers.Clear();
+            foreach (NetworkConnectionToClient conn in NetworkServer.connections.Values)
+            {
+                if (conn.identity != null && conn.identity.TryGetComponent<NetworkRoomPlayer>(out _))
+                {
+                    pendingPlayers.Add(new PendingPlayer
+                    {
+                        conn = conn,
+                        roomPlayer = conn.identity.gameObject
+                    });
+                }
+            }
+        }
         ServerChangeScene(GameplayScene);
     }
 
@@ -213,6 +261,22 @@ public class MyNetworkRoomManager : NetworkRoomManager
         {
             ServerChangeScene(RoomScene);
         }
+    }
+
+    /// <summary>
+    /// 将位置修正到离 NavMesh 最近的有效点，失败则返回原始位置。
+    /// </summary>
+    private static Vector3 SnapToNavMesh(Vector3 pos)
+    {
+        if (NavMesh.SamplePosition(pos, out NavMeshHit hit, 50f, NavMesh.AllAreas))
+            return hit.position;
+
+        // 回退：从原点大范围搜索
+        if (NavMesh.SamplePosition(Vector3.zero, out hit, 500f, NavMesh.AllAreas))
+            return hit.position;
+
+        Debug.LogError("[MyNetworkRoomManager] SnapToNavMesh 失败");
+        return pos;
     }
 
     void SpawnBots()
@@ -231,6 +295,8 @@ public class MyNetworkRoomManager : NetworkRoomManager
             Vector3 pos = spawns.Length > 0
                 ? spawns[i % spawns.Length].transform.position
                 : Vector3.zero;
+
+            pos = SnapToNavMesh(pos);
 
             GameObject bot = Instantiate(botGamePrefab, pos, Quaternion.identity);
 

@@ -5,34 +5,33 @@ using UnityEngine.AI;
 
 namespace NodeCanvas.Tasks.Actions
 {
-    /// <summary>
-    /// 每帧同步 NavMeshAgent 速度到 Animator 参数（Speed, MoveForward, IsHoldingGun）。
-    /// 多帧任务，持续运行以保持动画同步。
-    /// </summary>
     [Category("Bot")]
-    [Description("Continuously sync NavMeshAgent velocity to Animator parameters")]
+    [Description("Directly control Animator states for bot locomotion")]
     public class BotUpdateAnim : ActionTask<Transform>
     {
         private NavMeshAgent _navAgent;
         private Animator _animator;
+        private bool _isMoving;
 
-        private static readonly int SpeedHash = Animator.StringToHash("Speed");
-        private static readonly int MoveForwardHash = Animator.StringToHash("MoveForward");
         private static readonly int IsHoldingGunHash = Animator.StringToHash("IsHoldingGun");
-        private static readonly int MoveLeftHash = Animator.StringToHash("MoveLeft");
-        private static readonly int MoveRightHash = Animator.StringToHash("MoveRight");
-        private static readonly int MoveBackHash = Animator.StringToHash("MoveBack");
+        private const float MoveSpeedThreshold = 0.1f;
 
         protected override void OnExecute()
         {
             _navAgent = agent.GetComponent<NavMeshAgent>();
-            _animator = agent.GetComponent<Animator>();
+
+            Transform visual = agent.Find("SK_Military_Survivalist");
+            _animator = visual != null ? visual.GetComponent<Animator>() : agent.GetComponent<Animator>();
 
             if (_navAgent == null || _animator == null)
             {
                 EndAction(false);
                 return;
             }
+
+            _animator.SetBool(IsHoldingGunHash, true);
+            _animator.CrossFade("Idle", 0.1f);
+            _isMoving = false;
         }
 
         protected override void OnUpdate()
@@ -45,20 +44,28 @@ namespace NodeCanvas.Tasks.Actions
 
             Vector3 velocity = _navAgent.velocity;
             float speed = velocity.magnitude;
+            bool moving = speed > MoveSpeedThreshold;
 
-            // Speed 参数控制移动混合树
-            _animator.SetFloat(SpeedHash, speed);
+            // 只在状态切换时 CrossFade，避免每帧重复调用
+            if (moving != _isMoving)
+            {
+                _isMoving = moving;
+                _animator.CrossFade(moving ? "Walk With Rifle" : "Idle", 0.15f);
+            }
 
-            // 方向参数
-            Vector3 localVelocity = agent.InverseTransformDirection(velocity);
-
-            _animator.SetBool(MoveForwardHash, localVelocity.z > 0.1f);
-            _animator.SetBool(MoveLeftHash, localVelocity.x < -0.1f);
-            _animator.SetBool(MoveRightHash, localVelocity.x > 0.1f);
-            _animator.SetBool(MoveBackHash, localVelocity.z < -0.1f);
-
-            // Bot 始终持枪
-            _animator.SetBool(IsHoldingGunHash, true);
+            // 移动方向旋转（仅非战斗，战斗中由 BotAimAndShoot 控制）
+            // 使用 GetVariable 避免变量不存在时产生错误日志
+            var targetVar = blackboard.GetVariable(BotController.TargetEnemyVarName, typeof(GameObject));
+            GameObject targetEnemy = targetVar != null ? targetVar.value as GameObject : null;
+            if (targetEnemy == null && moving)
+            {
+                Vector3 moveDir = velocity.normalized;
+                moveDir.y = 0f;
+                if (moveDir != Vector3.zero)
+                {
+                    agent.rotation = Quaternion.LookRotation(moveDir);
+                }
+            }
         }
 
         protected override void OnPause() { }

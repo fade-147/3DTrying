@@ -219,7 +219,8 @@ namespace StarterAssets
             {
                 _mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
             }
-            GetComponent<PlayerInput>().enabled = false;
+            PlayerInput pi = GetComponent<PlayerInput>();
+            if (pi != null) pi.enabled = false;
             // 获取Spine2骨骼
             if (_animator == null) TryGetComponent(out _animator);
             _networkAnimator = GetComponent<NetworkAnimator>();
@@ -254,7 +255,8 @@ namespace StarterAssets
         {
             base.OnStartLocalPlayer();
 
-            GetComponent<PlayerInput>().enabled = true;
+            PlayerInput pi = GetComponent<PlayerInput>();
+            if (pi != null) pi.enabled = true;
 
 
             // 仅本地玩家绑定主相机
@@ -438,9 +440,8 @@ namespace StarterAssets
         //Update仅本地玩家执行，死亡后禁用输入
         private void Update()
         {
-
-            // 非本地玩家/死亡状态 不执行逻辑
-            if (!isLocalPlayer || player.isDead) return;
+            // 非本地玩家/死亡状态/未初始化完成 不执行逻辑
+            if (!isLocalPlayer || player == null || player.isDead) return;
 
             _hasAnimator = TryGetComponent(out _animator);
             JumpAndGravity();

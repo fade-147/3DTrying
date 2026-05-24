@@ -35,11 +35,11 @@ static const Il2CppMethodExecutionContextInfoIndex g_methodExecutionContextInfoI
 IL2CPP_EXTERN_C Il2CppSequencePoint g_sequencePointsUnity_InputSystem_ForUI[];
 Il2CppSequencePoint g_sequencePointsUnity_InputSystem_ForUI[5] = 
 {
-	{ 103175, 0, 0, 0, 0, 0, -1, kSequencePointKind_Normal, 0, 0 },
-	{ 103175, 0, 0, 0, 0, 0, 16777215, kSequencePointKind_Normal, 0, 1 },
-	{ 103175, 1, 38, 38, 9, 10, 0, kSequencePointKind_Normal, 0, 2 },
-	{ 103175, 1, 39, 45, 13, 15, 1, kSequencePointKind_Normal, 0, 3 },
-	{ 103175, 1, 46, 46, 9, 10, 63, kSequencePointKind_Normal, 0, 4 },
+	{ 103471, 0, 0, 0, 0, 0, -1, kSequencePointKind_Normal, 0, 0 },
+	{ 103471, 0, 0, 0, 0, 0, 16777215, kSequencePointKind_Normal, 0, 1 },
+	{ 103471, 1, 38, 38, 9, 10, 0, kSequencePointKind_Normal, 0, 2 },
+	{ 103471, 1, 39, 45, 13, 15, 1, kSequencePointKind_Normal, 0, 3 },
+	{ 103471, 1, 46, 46, 9, 10, 63, kSequencePointKind_Normal, 0, 4 },
 };
 #else
 extern Il2CppSequencePoint g_sequencePointsUnity_InputSystem_ForUI[];
@@ -61,7 +61,7 @@ static const Il2CppSequencePointSourceFile g_sequencePointSourceFiles[1] = { NUL
 #if IL2CPP_MONO_DEBUGGER
 static const Il2CppTypeSourceFilePair g_typeSourceFiles[1] = 
 {
-	{ 13223, 1 },
+	{ 13251, 1 },
 };
 #else
 static const Il2CppTypeSourceFilePair g_typeSourceFiles[1] = { { 0, 0 } };

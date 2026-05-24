@@ -64,7 +64,6 @@
     <type fullname="Mirror.ReadyMessage" preserve="all" />
     <type fullname="Mirror.RemoteCalls.RemoteCallDelegate" preserve="all" />
     <type fullname="Mirror.RemoteCalls.RemoteProcedureCalls" preserve="all" />
-    <type fullname="Mirror.ReplacePlayerOptions" preserve="all" />
     <type fullname="Mirror.RpcMessage" preserve="all" />
     <type fullname="Mirror.SceneMessage" preserve="all" />
     <type fullname="Mirror.SceneOperation" preserve="all" />
@@ -82,6 +81,7 @@
     <type fullname="Mirror.Discovery.ServerResponse" preserve="all" />
     <type fullname="Mirror.NetworkAnimator" preserve="all" />
     <type fullname="Mirror.NetworkRoomManager" preserve="all" />
+    <type fullname="Mirror.NetworkRoomManager/PendingPlayer" preserve="all" />
     <type fullname="Mirror.NetworkRoomPlayer" preserve="all" />
     <type fullname="Mirror.PredictedSyncData" preserve="all" />
     <type fullname="Mirror.PredictedSyncDataReadWrite" preserve="all" />
@@ -97,13 +97,19 @@
     <type fullname="NodeCanvas.Framework.BBParameter`1" preserve="all" />
     <type fullname="NodeCanvas.Framework.Blackboard" preserve="all" />
     <type fullname="NodeCanvas.Framework.BlackboardOnlyAttribute" preserve="all" />
+    <type fullname="NodeCanvas.Framework.ConditionTask`1" preserve="all" />
     <type fullname="NodeCanvas.Framework.GraphOwner" preserve="all" />
+    <type fullname="NodeCanvas.Framework.IBlackboard" preserve="all" />
+    <type fullname="NodeCanvas.Framework.IBlackboardExtensions" preserve="all" />
+    <type fullname="NodeCanvas.Framework.Task" preserve="all" />
     <type fullname="NodeCanvas.Framework.Variable" preserve="all" />
     <type fullname="ParadoxNotion.Design.CategoryAttribute" preserve="all" />
     <type fullname="ParadoxNotion.Design.DescriptionAttribute" preserve="all" />
   </assembly>
   <assembly fullname="System">
     <type fullname="System.CodeDom.Compiler.GeneratedCodeAttribute" preserve="all" />
+    <type fullname="System.Collections.Generic.Queue`1" preserve="all" />
+    <type fullname="System.Collections.Generic.Queue`1/Enumerator" preserve="all" />
     <type fullname="System.ComponentModel.EditorBrowsableAttribute" preserve="all" />
     <type fullname="System.ComponentModel.EditorBrowsableState" preserve="all" />
     <type fullname="System.Uri" preserve="all" />
@@ -120,7 +126,9 @@
     <type fullname="UnityEngine.InputSystem.PlayerInput" preserve="all" />
   </assembly>
   <assembly fullname="UnityEngine.AIModule">
+    <type fullname="UnityEngine.AI.NavMesh" preserve="all" />
     <type fullname="UnityEngine.AI.NavMeshAgent" preserve="all" />
+    <type fullname="UnityEngine.AI.NavMeshHit" preserve="all" />
   </assembly>
   <assembly fullname="UnityEngine.AnimationModule">
     <type fullname="UnityEngine.Animator" preserve="all" />
@@ -247,6 +255,9 @@
     <type fullname="System.ArraySegment`1" preserve="all" />
     <type fullname="System.Boolean" preserve="all" />
     <type fullname="System.Byte" preserve="all" />
+    <type fullname="System.Collections.Generic.Dictionary`2" preserve="all" />
+    <type fullname="System.Collections.Generic.Dictionary`2/ValueCollection" preserve="all" />
+    <type fullname="System.Collections.Generic.Dictionary`2/ValueCollection/Enumerator" preserve="all" />
     <type fullname="System.Collections.Generic.IEnumerable`1" preserve="all" />
     <type fullname="System.Collections.Generic.IEnumerator`1" preserve="all" />
     <type fullname="System.Collections.Generic.List`1" preserve="all" />

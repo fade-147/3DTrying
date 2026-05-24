@@ -757,7 +757,16 @@
     <ClCompile Include="Source\Generics__117.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Generics__118.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__119.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
     <ClCompile Include="Source\Generics__12.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__120.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\Generics__13.cpp">
@@ -1444,6 +1453,9 @@
     <ClCompile Include="Source\Telepathy.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Unity.AI.Navigation.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
     <ClCompile Include="Source\Unity.Burst.cpp">
       <Filter>Source</Filter>
     </ClCompile>
@@ -2039,6 +2051,12 @@
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\Telepathy_Debugger.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Unity.AI.Navigation_CodeGen.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Unity.AI.Navigation_Debugger.c">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\Unity.Burst.Unsafe_CodeGen.c">

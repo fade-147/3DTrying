@@ -6,10 +6,11 @@ using StarterAssets;
 namespace NodeCanvas.Tasks.Actions
 {
     /// <summary>
-    /// 查找最近的不同队伍玩家作为目标敌人，结果写入黑版 targetEnemy。
+    /// 查找最近的不同队伍目标（玩家或人机），结果写入黑版 targetEnemy。
+    /// 搜索 PlayerCharacter 组件（玩家和人机都有），再从 BotController 或 ThirdPersonController 获取 teamId。
     /// </summary>
     [Category("Bot")]
-    [Description("Find the nearest enemy player on opposing team and write to blackboard variable 'targetEnemy'")]
+    [Description("Find the nearest enemy (player or bot) on opposing team and write to blackboard variable 'targetEnemy'")]
     public class BotFindEnemy : ActionTask<Transform>
     {
         [BlackboardOnly]
@@ -27,19 +28,20 @@ namespace NodeCanvas.Tasks.Actions
             GameObject nearest = null;
             float nearestDist = Mathf.Infinity;
 
-            ThirdPersonController[] allPlayers = Object.FindObjectsByType<ThirdPersonController>(FindObjectsSortMode.None);
-            foreach (ThirdPersonController player in allPlayers)
+            PlayerCharacter[] allChars = Object.FindObjectsByType<PlayerCharacter>(FindObjectsSortMode.None);
+            foreach (PlayerCharacter pc in allChars)
             {
-                if (player.teamId == botController.teamId) continue;
+                if (pc.isDead) continue;
+                if (pc.gameObject == agent.gameObject) continue;
 
-                PlayerCharacter pc = player.GetComponent<PlayerCharacter>();
-                if (pc != null && pc.isDead) continue;
+                int otherTeamId = BotController.GetTeamId(pc);
+                if (otherTeamId == -1 || otherTeamId == botController.teamId) continue;
 
-                float dist = Vector3.Distance(agent.position, player.transform.position);
+                float dist = Vector3.Distance(agent.position, pc.transform.position);
                 if (dist < nearestDist)
                 {
                     nearestDist = dist;
-                    nearest = player.gameObject;
+                    nearest = pc.gameObject;
                 }
             }
 

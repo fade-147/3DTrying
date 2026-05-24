@@ -43,6 +43,7 @@ public class MyYooAsset : MonoBehaviour
         "Unity.InputSystem.dll",
         "Unity.TextMeshPro.dll",
         "UnityEngine.CoreModule.dll",
+        "Unity.AI.Navigation.dll",
         // 影视 & 基础
         "Cinemachine.dll",
         // 基础类库（AOTGenericReferences 标记为热更引用了泛型）

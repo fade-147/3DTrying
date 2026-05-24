@@ -188,7 +188,13 @@
     </ClCompile>
     <ClCompile Include="Source\Generics__117.cpp">
     </ClCompile>
+    <ClCompile Include="Source\Generics__118.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__119.cpp">
+    </ClCompile>
     <ClCompile Include="Source\Generics__12.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__120.cpp">
     </ClCompile>
     <ClCompile Include="Source\Generics__13.cpp">
     </ClCompile>
@@ -646,6 +652,8 @@
     </ClCompile>
     <ClCompile Include="Source\Telepathy.cpp">
     </ClCompile>
+    <ClCompile Include="Source\Unity.AI.Navigation.cpp">
+    </ClCompile>
     <ClCompile Include="Source\Unity.Burst.cpp">
     </ClCompile>
     <ClCompile Include="Source\Unity.Burst.Unsafe.cpp">
@@ -1043,6 +1051,10 @@
     <ClCompile Include="Source\Telepathy_CodeGen.c">
     </ClCompile>
     <ClCompile Include="Source\Telepathy_Debugger.c">
+    </ClCompile>
+    <ClCompile Include="Source\Unity.AI.Navigation_CodeGen.c">
+    </ClCompile>
+    <ClCompile Include="Source\Unity.AI.Navigation_Debugger.c">
     </ClCompile>
     <ClCompile Include="Source\Unity.Burst.Unsafe_CodeGen.c">
     </ClCompile>

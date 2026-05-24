@@ -308,25 +308,33 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Collections.Generic.Dictionary.ValueCollection.Enumerator<int,object>
 	// System.Collections.Generic.Dictionary.ValueCollection<int,object>
 	// System.Collections.Generic.Dictionary<int,object>
+	// System.Collections.Generic.EqualityComparer<Mirror.NetworkRoomManager.PendingPlayer>
 	// System.Collections.Generic.EqualityComparer<byte>
 	// System.Collections.Generic.EqualityComparer<float>
 	// System.Collections.Generic.EqualityComparer<int>
 	// System.Collections.Generic.EqualityComparer<object>
+	// System.Collections.Generic.HashSet.Enumerator<Mirror.NetworkRoomManager.PendingPlayer>
 	// System.Collections.Generic.HashSet.Enumerator<object>
+	// System.Collections.Generic.HashSet<Mirror.NetworkRoomManager.PendingPlayer>
 	// System.Collections.Generic.HashSet<object>
+	// System.Collections.Generic.HashSetEqualityComparer<Mirror.NetworkRoomManager.PendingPlayer>
 	// System.Collections.Generic.HashSetEqualityComparer<object>
+	// System.Collections.Generic.ICollection<Mirror.NetworkRoomManager.PendingPlayer>
 	// System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<int,object>>
 	// System.Collections.Generic.ICollection<int>
 	// System.Collections.Generic.ICollection<object>
 	// System.Collections.Generic.IComparer<int>
 	// System.Collections.Generic.IComparer<object>
+	// System.Collections.Generic.IEnumerable<Mirror.NetworkRoomManager.PendingPlayer>
 	// System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<int,object>>
 	// System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<object,object>>
 	// System.Collections.Generic.IEnumerable<int>
 	// System.Collections.Generic.IEnumerable<object>
+	// System.Collections.Generic.IEnumerator<Mirror.NetworkRoomManager.PendingPlayer>
 	// System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<int,object>>
 	// System.Collections.Generic.IEnumerator<int>
 	// System.Collections.Generic.IEnumerator<object>
+	// System.Collections.Generic.IEqualityComparer<Mirror.NetworkRoomManager.PendingPlayer>
 	// System.Collections.Generic.IEqualityComparer<int>
 	// System.Collections.Generic.IEqualityComparer<object>
 	// System.Collections.Generic.IList<int>
@@ -339,10 +347,13 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Collections.Generic.List<object>
 	// System.Collections.Generic.ObjectComparer<int>
 	// System.Collections.Generic.ObjectComparer<object>
+	// System.Collections.Generic.ObjectEqualityComparer<Mirror.NetworkRoomManager.PendingPlayer>
 	// System.Collections.Generic.ObjectEqualityComparer<byte>
 	// System.Collections.Generic.ObjectEqualityComparer<float>
 	// System.Collections.Generic.ObjectEqualityComparer<int>
 	// System.Collections.Generic.ObjectEqualityComparer<object>
+	// System.Collections.Generic.Queue.Enumerator<UnityEngine.Vector3>
+	// System.Collections.Generic.Queue<UnityEngine.Vector3>
 	// System.Collections.Generic.Stack.Enumerator<object>
 	// System.Collections.Generic.Stack<object>
 	// System.Collections.ObjectModel.ReadOnlyCollection<int>
@@ -430,6 +441,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Func<object,ushort>
 	// System.Func<object>
 	// System.Nullable<UnityEngine.InputSystem.InputAction.CallbackContext>
+	// System.Predicate<Mirror.NetworkRoomManager.PendingPlayer>
 	// System.Predicate<int>
 	// System.Predicate<object>
 	// UnityEngine.Events.InvokableCall<float>
