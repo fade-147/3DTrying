@@ -22,12 +22,9 @@ public class PlayerCharacter : NetworkBehaviour
     public Image healthFillImage;
     private float respawnTimer = 3f;
 
-    private bool _initialized;
-
     private void Awake()
     {
         CurrentHealth = MaxHealth;
-        _initialized = true;
     }
 
     private void Start()

@@ -38,6 +38,33 @@ public class MyNetworkRoomManager : NetworkRoomManager
     {
         base.OnStartServer();
         InitBotTracker();
+        // 替换 AddPlayerMessage 处理器：Mirror 内置的 OnServerAddPlayerInternal 在
+        // conn.identity != null 时直接报错，无法被 OnServerAddPlayer 覆盖拦截。
+        // 场景切换后远端客户端 OnClientSceneChanged 可能在 spawn 到达前就发 AddPlayer，
+        // 需要在这里优雅处理而非报错。
+        NetworkServer.RegisterHandler<AddPlayerMessage>(OnServerAddPlayerMessage);
+    }
+
+    void OnServerAddPlayerMessage(NetworkConnectionToClient conn, AddPlayerMessage msg)
+    {
+        if (conn.identity != null)
+        {
+            NetworkServer.SetClientReady(conn);
+            return;
+        }
+
+        if (autoCreatePlayer && playerPrefab == null)
+        {
+            Debug.LogError("The PlayerPrefab is empty on the NetworkManager.");
+            return;
+        }
+        if (autoCreatePlayer && !playerPrefab.TryGetComponent(out NetworkIdentity _))
+        {
+            Debug.LogError("The PlayerPrefab does not have a NetworkIdentity.");
+            return;
+        }
+
+        OnServerAddPlayer(conn);
     }
 
     void InitBotTracker()

@@ -66,6 +66,9 @@ sysinfo.txt
 # Mono auto generated files
 mono_crash.*
 
+# YooAsset hot update bundles (generated build artifacts)
+/[Bb]undles/
+
 # Builds
 *.apk
 *.aab

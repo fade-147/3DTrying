@@ -25,6 +25,8 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// Adrenak.UniVoice.ClientSession<int>
 	// Adrenak.UniVoice.IAudioClient<int>
 	// Adrenak.UniVoice.IAudioServer<int>
+	// Mirror.NetworkMessages.<>c__DisplayClass8_0<Mirror.AddPlayerMessage,object>
+	// Mirror.NetworkMessages.<>c__DisplayClass9_0<Mirror.AddPlayerMessage,object>
 	// Mirror.Pool<object>
 	// Mirror.Reader<Adrenak.UniVoice.Networks.MirrorMessage>
 	// Mirror.Reader<Mirror.AddPlayerMessage>
@@ -220,6 +222,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Action<int,object>
 	// System.Action<int>
 	// System.Action<object,Adrenak.UniVoice.Networks.MirrorMessage>
+	// System.Action<object,Mirror.AddPlayerMessage,int>
 	// System.Action<object,Mirror.AddPlayerMessage>
 	// System.Action<object,Mirror.ChangeOwnerMessage>
 	// System.Action<object,Mirror.CommandMessage>
@@ -303,16 +306,23 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Collections.Generic.Comparer<int>
 	// System.Collections.Generic.Comparer<object>
 	// System.Collections.Generic.Dictionary.Enumerator<int,object>
+	// System.Collections.Generic.Dictionary.Enumerator<ushort,object>
 	// System.Collections.Generic.Dictionary.KeyCollection.Enumerator<int,object>
+	// System.Collections.Generic.Dictionary.KeyCollection.Enumerator<ushort,object>
 	// System.Collections.Generic.Dictionary.KeyCollection<int,object>
+	// System.Collections.Generic.Dictionary.KeyCollection<ushort,object>
 	// System.Collections.Generic.Dictionary.ValueCollection.Enumerator<int,object>
+	// System.Collections.Generic.Dictionary.ValueCollection.Enumerator<ushort,object>
 	// System.Collections.Generic.Dictionary.ValueCollection<int,object>
+	// System.Collections.Generic.Dictionary.ValueCollection<ushort,object>
 	// System.Collections.Generic.Dictionary<int,object>
+	// System.Collections.Generic.Dictionary<ushort,object>
 	// System.Collections.Generic.EqualityComparer<Mirror.NetworkRoomManager.PendingPlayer>
 	// System.Collections.Generic.EqualityComparer<byte>
 	// System.Collections.Generic.EqualityComparer<float>
 	// System.Collections.Generic.EqualityComparer<int>
 	// System.Collections.Generic.EqualityComparer<object>
+	// System.Collections.Generic.EqualityComparer<ushort>
 	// System.Collections.Generic.HashSet.Enumerator<Mirror.NetworkRoomManager.PendingPlayer>
 	// System.Collections.Generic.HashSet.Enumerator<object>
 	// System.Collections.Generic.HashSet<Mirror.NetworkRoomManager.PendingPlayer>
@@ -321,6 +331,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Collections.Generic.HashSetEqualityComparer<object>
 	// System.Collections.Generic.ICollection<Mirror.NetworkRoomManager.PendingPlayer>
 	// System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<int,object>>
+	// System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<ushort,object>>
 	// System.Collections.Generic.ICollection<int>
 	// System.Collections.Generic.ICollection<object>
 	// System.Collections.Generic.IComparer<int>
@@ -328,19 +339,23 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Collections.Generic.IEnumerable<Mirror.NetworkRoomManager.PendingPlayer>
 	// System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<int,object>>
 	// System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<object,object>>
+	// System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<ushort,object>>
 	// System.Collections.Generic.IEnumerable<int>
 	// System.Collections.Generic.IEnumerable<object>
 	// System.Collections.Generic.IEnumerator<Mirror.NetworkRoomManager.PendingPlayer>
 	// System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<int,object>>
+	// System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<ushort,object>>
 	// System.Collections.Generic.IEnumerator<int>
 	// System.Collections.Generic.IEnumerator<object>
 	// System.Collections.Generic.IEqualityComparer<Mirror.NetworkRoomManager.PendingPlayer>
 	// System.Collections.Generic.IEqualityComparer<int>
 	// System.Collections.Generic.IEqualityComparer<object>
+	// System.Collections.Generic.IEqualityComparer<ushort>
 	// System.Collections.Generic.IList<int>
 	// System.Collections.Generic.IList<object>
 	// System.Collections.Generic.KeyValuePair<int,object>
 	// System.Collections.Generic.KeyValuePair<object,object>
+	// System.Collections.Generic.KeyValuePair<ushort,object>
 	// System.Collections.Generic.List.Enumerator<int>
 	// System.Collections.Generic.List.Enumerator<object>
 	// System.Collections.Generic.List<int>
@@ -352,6 +367,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Collections.Generic.ObjectEqualityComparer<float>
 	// System.Collections.Generic.ObjectEqualityComparer<int>
 	// System.Collections.Generic.ObjectEqualityComparer<object>
+	// System.Collections.Generic.ObjectEqualityComparer<ushort>
 	// System.Collections.Generic.Queue.Enumerator<UnityEngine.Vector3>
 	// System.Collections.Generic.Queue<UnityEngine.Vector3>
 	// System.Collections.Generic.Stack.Enumerator<object>
@@ -470,6 +486,9 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 		// bool Mirror.NetworkBehaviour.SyncVarEqual<int>(int,int&)
 		// System.Void Mirror.NetworkDiagnostics.OnSend<Mirror.SceneMessage>(Mirror.SceneMessage,int,int,int)
 		// System.Void Mirror.NetworkMessages.Pack<Mirror.SceneMessage>(Mirror.SceneMessage,Mirror.NetworkWriter)
+		// Mirror.NetworkMessageDelegate Mirror.NetworkMessages.WrapHandler<Mirror.AddPlayerMessage,object>(System.Action<object,Mirror.AddPlayerMessage,int>,bool,bool)
+		// Mirror.NetworkMessageDelegate Mirror.NetworkMessages.WrapHandler<Mirror.AddPlayerMessage,object>(System.Action<object,Mirror.AddPlayerMessage>,bool,bool)
+		// System.Void Mirror.NetworkServer.RegisterHandler<Mirror.AddPlayerMessage>(System.Action<Mirror.NetworkConnectionToClient,Mirror.AddPlayerMessage>,bool)
 		// System.Void Mirror.NetworkServer.SendToAll<Mirror.SceneMessage>(Mirror.SceneMessage,int,bool)
 		// System.Void Mirror.NetworkWriter.Write<Mirror.SceneMessage>(Mirror.SceneMessage)
 		// object& System.Runtime.CompilerServices.Unsafe.As<object,object>(object&)
