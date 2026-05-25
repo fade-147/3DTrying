@@ -72,6 +72,9 @@ public class MyYooAsset : MonoBehaviour
     // 标记所有程序集是否已加载（AOT 元数据 + 热更 DLL）
     public bool AssembliesLoaded { get; private set; } = false;
 
+    // 更新确认
+    private bool _updateConfirmed;
+
     //网络相关
     public string defaultHostServer = "http://127.0.0.1/CDN/PC/v1.0";
     public string fallbackHostServer = "http://127.0.0.1/CDN/PC/v1.0";
@@ -202,23 +205,42 @@ public class MyYooAsset : MonoBehaviour
         if (downloader.TotalDownloadCount == 0)
         {
             Debug.Log("没有需要更新的文件");
-            // 如果没有需要更新的文件，则直接进入完成逻辑（后续会加载 dll 并切换场景）
             Debug.Log("[调试] 未检测到更新，直接进入 UpdateDone 流程，准备加载 DLL");
             UpdateDone();
             yield break;
         }
-        else
+
+        // 有更新：弹出确认面板
+        int count = downloader.TotalDownloadCount;
+        long bytes = downloader.TotalDownloadBytes;
+        Debug.Log($"需要更新{count}个文件, 大小是{bytes / 1024 / 1024}MB");
+
+        if (hotUpdateView != null)
         {
-            int count = downloader.TotalDownloadCount;
-            long bytes = downloader.TotalDownloadBytes;
-            Debug.Log($"需要更新{count}个文件, 大小是{bytes/1024/1024}MB");
+            hotUpdateView.ShowUpdateInfo(count, bytes);
+            // 绑定确认按钮
+            if (hotUpdateView.confirmUpdateButton != null)
+            {
+                hotUpdateView.confirmUpdateButton.onClick.RemoveAllListeners();
+                hotUpdateView.confirmUpdateButton.onClick.AddListener(OnUpdateConfirmClicked);
+            }
+            if (hotUpdateView.confirmQuitButton != null)
+            {
+                hotUpdateView.confirmQuitButton.onClick.RemoveAllListeners();
+                hotUpdateView.confirmQuitButton.onClick.AddListener(OnQuitGameClicked);
+            }
         }
-        
-        
+
+        // 等待用户点击
+        yield return new WaitUntil(() => _updateConfirmed);
+
+        // 关闭确认面板
+        if (hotUpdateView != null)
+            hotUpdateView.HideUpdateConfirm();
+
         //5.开始下载
-        downloader.DownloadUpdateCallback = ProgressCallBack; //监听
-        //downloader.DownloadUpdateCallback = ProgressCallBack;
-        downloader.BeginDownload(); //开始下载
+        downloader.DownloadUpdateCallback = ProgressCallBack;
+        downloader.BeginDownload();
         yield return downloader;
 
         
@@ -454,6 +476,19 @@ public class MyYooAsset : MonoBehaviour
             hotUpdateView.startButton.interactable = false;
 
         StartCoroutine(LoadMainSceneAndFinish());
+    }
+
+    public void OnUpdateConfirmClicked()
+    {
+        _updateConfirmed = true;
+    }
+
+    public void OnQuitGameClicked()
+    {
+        Application.Quit();
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
     }
 
     private IEnumerator LoadMainSceneAndFinish()
