@@ -20623,7 +20623,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1898034768}
   m_Layer: 0
-  m_Name: StarPos
+  m_Name: StarPoss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

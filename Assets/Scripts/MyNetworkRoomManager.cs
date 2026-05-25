@@ -22,6 +22,7 @@ public class MyNetworkRoomManager : NetworkRoomManager
 
     public override void Awake()
     {
+        RegisterBotListMessage();
         base.Awake();
         if (instance == null)
         {
@@ -32,6 +33,28 @@ public class MyNetworkRoomManager : NetworkRoomManager
         {
             Destroy(gameObject);
         }
+    }
+
+    static void RegisterBotListMessage()
+    {
+        if (Reader<BotListMessage>.read != null) return; // 已注册，幂等
+
+        Reader<BotListMessage>.read = reader =>
+        {
+            int count = reader.ReadInt();
+            int[] ids = new int[count];
+            for (int i = 0; i < count; i++)
+                ids[i] = reader.ReadInt();
+            return new BotListMessage { teamIds = ids };
+        };
+
+        Writer<BotListMessage>.write = (writer, msg) =>
+        {
+            int count = msg.teamIds != null ? msg.teamIds.Length : 0;
+            writer.WriteInt(count);
+            for (int i = 0; i < count; i++)
+                writer.WriteInt(msg.teamIds[i]);
+        };
     }
 
     public override void OnStartServer()
@@ -80,6 +103,7 @@ public class MyNetworkRoomManager : NetworkRoomManager
         if (!NetworkServer.active) return;
         InitBotTracker();
         _botTracker.AddBot(teamId);
+        SendBotListToAll();
     }
 
     public void RemoveLastBot(int teamId)
@@ -87,6 +111,19 @@ public class MyNetworkRoomManager : NetworkRoomManager
         if (!NetworkServer.active) return;
         InitBotTracker();
         _botTracker.RemoveLastBot(teamId);
+        SendBotListToAll();
+    }
+
+    void SendBotListToAll()
+    {
+        int[] ids = _botTracker != null ? _botTracker.botTeamIds.ToArray() : new int[0];
+        NetworkServer.SendToAll(new BotListMessage { teamIds = ids });
+    }
+
+    void SendBotListToConnection(NetworkConnectionToClient conn)
+    {
+        int[] ids = _botTracker != null ? _botTracker.botTeamIds.ToArray() : new int[0];
+        conn.Send(new BotListMessage { teamIds = ids });
     }
 
     public override void Start()
@@ -114,19 +151,26 @@ public class MyNetworkRoomManager : NetworkRoomManager
     {
         _isSwitchingScene = true;
 
-        // 回退到 RoomScene 时，先销毁所有 game player，让后续 AddPlayer 正常创建 room player
+        // 回退到 RoomScene 时，将每个连接的 identity 从 game player 换回 room player，
+        // 保留 roomSlots 不变以保证 player index 稳定、不产生重复 entry。
         if (scenePath == RoomScene && NetworkServer.active)
         {
-            foreach (NetworkConnectionToClient conn in NetworkServer.connections.Values)
+            foreach (NetworkRoomPlayer roomPlayer in roomSlots)
             {
-                if (conn.identity != null)
+                if (roomPlayer == null) continue;
+                roomPlayer.SetReadyToBegin(false);
+                NetworkIdentity identity = roomPlayer.GetComponent<NetworkIdentity>();
+                if (identity.connectionToClient != null)
                 {
-                    NetworkServer.Destroy(conn.identity.gameObject);
+                    NetworkServer.ReplacePlayerForConnection(
+                        identity.connectionToClient,
+                        roomPlayer.gameObject,
+                        ReplacePlayerOptions.KeepAuthority);
                 }
             }
-            roomSlots.Clear();
             allPlayersReady = false;
             _botTracker?.ClearBots();
+            SendBotListToAll();
         }
 
         NetworkServer.SetAllClientsNotReady();
@@ -213,6 +257,7 @@ public class MyNetworkRoomManager : NetworkRoomManager
         if (Utils.IsSceneActive(RoomScene))
         {
             base.OnServerAddPlayer(conn);
+            SendBotListToConnection(conn);
             return;
         }
 
@@ -350,3 +395,9 @@ public class MyNetworkRoomManager : NetworkRoomManager
         _currentSceneHandle?.Release();
     }
 }
+
+public struct BotListMessage : NetworkMessage
+{
+    public int[] teamIds;
+}
+

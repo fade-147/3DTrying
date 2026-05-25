@@ -45,6 +45,7 @@
     <type fullname="Mirror.NetworkConnectionToClient" preserve="all" />
     <type fullname="Mirror.NetworkIdentity" preserve="all" />
     <type fullname="Mirror.NetworkManager" preserve="all" />
+    <type fullname="Mirror.NetworkMessage" preserve="all" />
     <type fullname="Mirror.NetworkPingMessage" preserve="all" />
     <type fullname="Mirror.NetworkPongMessage" preserve="all" />
     <type fullname="Mirror.NetworkReader" preserve="all" />
@@ -64,6 +65,7 @@
     <type fullname="Mirror.ReadyMessage" preserve="all" />
     <type fullname="Mirror.RemoteCalls.RemoteCallDelegate" preserve="all" />
     <type fullname="Mirror.RemoteCalls.RemoteProcedureCalls" preserve="all" />
+    <type fullname="Mirror.ReplacePlayerOptions" preserve="all" />
     <type fullname="Mirror.RpcMessage" preserve="all" />
     <type fullname="Mirror.SceneMessage" preserve="all" />
     <type fullname="Mirror.SceneOperation" preserve="all" />

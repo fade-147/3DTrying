@@ -25,10 +25,14 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// Adrenak.UniVoice.ClientSession<int>
 	// Adrenak.UniVoice.IAudioClient<int>
 	// Adrenak.UniVoice.IAudioServer<int>
+	// Mirror.NetworkClient.<>c__DisplayClass61_0<BotListMessage>
+	// Mirror.NetworkMessages.<>c__DisplayClass8_0<BotListMessage,object>
 	// Mirror.NetworkMessages.<>c__DisplayClass8_0<Mirror.AddPlayerMessage,object>
+	// Mirror.NetworkMessages.<>c__DisplayClass9_0<BotListMessage,object>
 	// Mirror.NetworkMessages.<>c__DisplayClass9_0<Mirror.AddPlayerMessage,object>
 	// Mirror.Pool<object>
 	// Mirror.Reader<Adrenak.UniVoice.Networks.MirrorMessage>
+	// Mirror.Reader<BotListMessage>
 	// Mirror.Reader<Mirror.AddPlayerMessage>
 	// Mirror.Reader<Mirror.ChangeOwnerMessage>
 	// Mirror.Reader<Mirror.CommandMessage>
@@ -106,6 +110,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// Mirror.Reader<ulong>
 	// Mirror.Reader<ushort>
 	// Mirror.Writer<Adrenak.UniVoice.Networks.MirrorMessage>
+	// Mirror.Writer<BotListMessage>
 	// Mirror.Writer<Mirror.AddPlayerMessage>
 	// Mirror.Writer<Mirror.ChangeOwnerMessage>
 	// Mirror.Writer<Mirror.CommandMessage>
@@ -212,6 +217,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// Steamworks.Callback<Steamworks.LobbyCreated_t>
 	// Steamworks.Callback<Steamworks.LobbyEnter_t>
 	// System.Action<Adrenak.UniVoice.AudioFrame>
+	// System.Action<BotListMessage>
 	// System.Action<Mirror.NetworkDiagnostics.MessageInfo>
 	// System.Action<UnityEngine.Vector3>
 	// System.Action<byte,byte>
@@ -222,6 +228,8 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Action<int,object>
 	// System.Action<int>
 	// System.Action<object,Adrenak.UniVoice.Networks.MirrorMessage>
+	// System.Action<object,BotListMessage,int>
+	// System.Action<object,BotListMessage>
 	// System.Action<object,Mirror.AddPlayerMessage,int>
 	// System.Action<object,Mirror.AddPlayerMessage>
 	// System.Action<object,Mirror.ChangeOwnerMessage>
@@ -379,6 +387,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Func<UnityEngine.Vector3>
 	// System.Func<float>
 	// System.Func<object,Adrenak.UniVoice.Networks.MirrorMessage>
+	// System.Func<object,BotListMessage>
 	// System.Func<object,Mirror.AddPlayerMessage>
 	// System.Func<object,Mirror.ChangeOwnerMessage>
 	// System.Func<object,Mirror.CommandMessage>
@@ -484,13 +493,25 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 		// bool Mirror.NetworkBehaviour.SyncVarEqual<byte>(byte,byte&)
 		// bool Mirror.NetworkBehaviour.SyncVarEqual<float>(float,float&)
 		// bool Mirror.NetworkBehaviour.SyncVarEqual<int>(int,int&)
+		// System.Void Mirror.NetworkClient.RegisterHandler<BotListMessage>(System.Action<BotListMessage>,bool)
+		// System.Void Mirror.NetworkConnection.Send<BotListMessage>(BotListMessage,int)
+		// System.Void Mirror.NetworkDiagnostics.OnSend<BotListMessage>(BotListMessage,int,int,int)
 		// System.Void Mirror.NetworkDiagnostics.OnSend<Mirror.SceneMessage>(Mirror.SceneMessage,int,int,int)
+		// System.Void Mirror.NetworkMessages.Pack<BotListMessage>(BotListMessage,Mirror.NetworkWriter)
 		// System.Void Mirror.NetworkMessages.Pack<Mirror.SceneMessage>(Mirror.SceneMessage,Mirror.NetworkWriter)
+		// Mirror.NetworkMessageDelegate Mirror.NetworkMessages.WrapHandler<BotListMessage,object>(System.Action<object,BotListMessage,int>,bool,bool)
+		// Mirror.NetworkMessageDelegate Mirror.NetworkMessages.WrapHandler<BotListMessage,object>(System.Action<object,BotListMessage>,bool,bool)
 		// Mirror.NetworkMessageDelegate Mirror.NetworkMessages.WrapHandler<Mirror.AddPlayerMessage,object>(System.Action<object,Mirror.AddPlayerMessage,int>,bool,bool)
 		// Mirror.NetworkMessageDelegate Mirror.NetworkMessages.WrapHandler<Mirror.AddPlayerMessage,object>(System.Action<object,Mirror.AddPlayerMessage>,bool,bool)
+		// int Mirror.NetworkReader.Read<int>()
+		// int[] Mirror.NetworkReaderExtensions.ReadArray<int>(Mirror.NetworkReader)
 		// System.Void Mirror.NetworkServer.RegisterHandler<Mirror.AddPlayerMessage>(System.Action<Mirror.NetworkConnectionToClient,Mirror.AddPlayerMessage>,bool)
+		// System.Void Mirror.NetworkServer.SendToAll<BotListMessage>(BotListMessage,int,bool)
 		// System.Void Mirror.NetworkServer.SendToAll<Mirror.SceneMessage>(Mirror.SceneMessage,int,bool)
+		// System.Void Mirror.NetworkWriter.Write<BotListMessage>(BotListMessage)
 		// System.Void Mirror.NetworkWriter.Write<Mirror.SceneMessage>(Mirror.SceneMessage)
+		// System.Void Mirror.NetworkWriter.Write<int>(int)
+		// System.Void Mirror.NetworkWriterExtensions.WriteArray<int>(Mirror.NetworkWriter,int[])
 		// object& System.Runtime.CompilerServices.Unsafe.As<object,object>(object&)
 		// System.Void* System.Runtime.CompilerServices.Unsafe.AsPointer<object>(object&)
 		// System.Void* Unity.Collections.LowLevel.Unsafe.UnsafeUtility.AddressOf<UnityEngine.Vector2>(UnityEngine.Vector2&)

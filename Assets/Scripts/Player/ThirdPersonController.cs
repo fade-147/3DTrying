@@ -280,6 +280,11 @@ namespace StarterAssets
             UpdateEnemyOutlines();  //给敌人加描边
         }
 
+        private void OnDestroy()
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
 
         private void Start()
         {

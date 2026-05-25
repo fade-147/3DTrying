@@ -8,8 +8,7 @@ public class BotLobbyUI : MonoBehaviour
 
     private Transform _team1Container;
     private Transform _team2Container;
-
-    bool _initialized;
+    private int[] _cachedBotTeamIds = new int[0];
 
     void Start()
     {
@@ -28,57 +27,39 @@ public class BotLobbyUI : MonoBehaviour
             return;
         }
 
-        // 延迟初始化：BotTeamTracker 可能在 BotLobbyUI.Start 之后才创建
-        // (如 MyNetworkRoomManager.OnStartServer 晚于场景加载时）
-        _initialized = true;
-        StartCoroutine(InitWhenReady());
+        var tracker = MyNetworkRoomManager.instance?.GetComponentInChildren<BotTeamTracker>(true);
+        if (tracker != null)
+        {
+            tracker.OnBotListChanged += RebuildAll;
+            RebuildAll();
+        }
+        else
+        {
+            NetworkClient.RegisterHandler<BotListMessage>(OnBotListMessage);
+        }
     }
 
-    System.Collections.IEnumerator InitWhenReady()
+    void OnBotListMessage(BotListMessage msg)
     {
-        // 等 BotTeamTracker 就绪，最多等 5 秒
-        float timeout = 5f;
-        BotTeamTracker tracker = null;
-        while (timeout > 0 && tracker == null)
-        {
-            var rm = MyNetworkRoomManager.instance;
-            if (rm != null)
-            {
-                tracker = rm.GetComponentInChildren<BotTeamTracker>(true);
-            }
-            if (tracker == null)
-            {
-                yield return null;
-                timeout -= Time.deltaTime;
-            }
-        }
-
-        if (tracker == null)
-        {
-            Debug.LogWarning("[BotLobbyUI] 等待 BotTeamTracker 超时");
-            yield break;
-        }
-
-        tracker.OnBotListChanged += RebuildAll;
+        _cachedBotTeamIds = msg.teamIds;
         RebuildAll();
     }
 
     void RebuildAll()
     {
-        if (!_initialized) return;
+        if (_team1Container == null || _team2Container == null) return;
 
-        var rm = MyNetworkRoomManager.instance;
-        var tracker = rm?.GetComponentInChildren<BotTeamTracker>(true);
-        if (tracker == null || _team1Container == null || _team2Container == null) return;
+        var tracker = MyNetworkRoomManager.instance?.GetComponentInChildren<BotTeamTracker>(true);
+        int[] ids = tracker != null ? tracker.botTeamIds.ToArray() : _cachedBotTeamIds;
 
         ClearBotEntries();
 
         bool isServer = NetworkServer.active;
 
         int redIdx = 0, blueIdx = 0;
-        for (int i = 0; i < tracker.botTeamIds.Count; i++)
+        for (int i = 0; i < ids.Length; i++)
         {
-            int teamId = tracker.botTeamIds[i];
+            int teamId = ids[i];
             Transform container = teamId == 0 ? _team1Container : _team2Container;
             int idx = teamId == 0 ? ++redIdx : ++blueIdx;
             string botName = teamId == 0 ? $"红队AI #{idx}" : $"蓝队AI #{idx}";
@@ -141,12 +122,8 @@ public class BotLobbyUI : MonoBehaviour
 
     void OnDestroy()
     {
-        var rm = MyNetworkRoomManager.instance;
-        if (rm != null)
-        {
-            var tracker = rm.GetComponentInChildren<BotTeamTracker>(true);
-            if (tracker != null)
-                tracker.OnBotListChanged -= RebuildAll;
-        }
+        var tracker = MyNetworkRoomManager.instance?.GetComponentInChildren<BotTeamTracker>(true);
+        if (tracker != null)
+            tracker.OnBotListChanged -= RebuildAll;
     }
 }
