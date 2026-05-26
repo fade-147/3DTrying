@@ -22,8 +22,10 @@ public class BotController : NetworkBehaviour
     [SerializeField] private float bulletLifeTime = 2f;
 
     [Header("Combat")]
-    [SerializeField] private float fireRate = 0.2f;
+    [SerializeField] private float fireRate = 0.35f;
     [SerializeField] private float aimSmoothTime = 0.1f;
+    [SerializeField] private float spreadAngle = 2f;
+    [SerializeField] private float hitProbability = 0.7f;
 
     [SyncVar] public int teamId;
     [SyncVar] public int currentAmmo = 30;
@@ -64,6 +66,14 @@ public class BotController : NetworkBehaviour
         _blackboard = GetComponent<Blackboard>();
         if (_blackboard == null)
             Debug.LogError("[BotController] Blackboard component missing on " + gameObject.name);
+
+        if (_animator != null)
+        {
+            _animator.enabled = false;
+            _animator.enabled = true;
+            _animator.Rebind();
+            _animator.Play(0, 0);
+        }
 
         _baseSpeed = _navMeshAgent != null ? _navMeshAgent.speed : 3.5f;
     }
@@ -331,6 +341,20 @@ public class BotController : NetworkBehaviour
     {
         currentAmmo = Mathf.Max(0, currentAmmo - 1);
         _fireTimer = fireRate;
+    }
+
+    /// <summary>
+    /// 基于命中率对射击方向添加随机散布。
+    /// 命中时不加偏移，未命中时在 spreadAngle 范围内随机偏转。
+    /// </summary>
+    public Vector3 ApplySpread(Vector3 baseDirection)
+    {
+        if (Random.value <= hitProbability)
+            return baseDirection;
+
+        float spreadX = Random.Range(-spreadAngle, spreadAngle);
+        float spreadY = Random.Range(-spreadAngle, spreadAngle);
+        return Quaternion.Euler(spreadX, spreadY, 0f) * baseDirection;
     }
 
     /// <summary>

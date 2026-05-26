@@ -298,6 +298,7 @@ MonoBehaviour:
   fpCamera: {fileID: 7079140760512078170}
   fpCameraRoot: {fileID: 2490793981319814572}
   cameraMap: {fileID: 7434294476739517205}
+  startInFirstPerson: 1
   fpMouseSensitivity: 1.5
   isHoldingGun: 0
   toggleGunLockTime: 2.5

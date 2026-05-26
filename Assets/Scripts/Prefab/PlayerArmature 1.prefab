@@ -4244,8 +4244,10 @@ MonoBehaviour:
   hitEffect: {fileID: 1067471869909948, guid: 5e02303289b3c494e8e185be0fbbd405, type: 3}
   bulletSpeed: 800
   bulletLifeTime: 2
-  fireRate: 0.2
+  fireRate: 0.3
   aimSmoothTime: 0.1
+  spreadAngle: 2
+  hitProbability: 0.6
   teamId: 0
   currentAmmo: 30
   isReloading: 0

@@ -61,6 +61,7 @@ namespace StarterAssets
         public Transform fpCameraRoot;     // 第一人称相机父物体（脖子/头部）
         public GameObject cameraMap;       // 小地图专用相机
         private bool isFirstPerson = false;   // 是否为第一人称
+        public bool startInFirstPerson = false;  // 初始是否为第一人称（Inspector勾选）
         private Cinemachine.CinemachineVirtualCamera thirdPersonVCam; // 第三人称相机
 
         private float fpYaw;       // 左右转向
@@ -358,14 +359,20 @@ namespace StarterAssets
                 SetupSensitivitySettings();
             }
 
-            // 默认显示第三人称，隐藏第一人称
+            // 根据 startInFirstPerson 决定初始视角
             if (isLocalPlayer)
             {
-                if (thirdPersonModel != null) thirdPersonModel.SetActive(true);
-                if (firstPersonModel != null) firstPersonModel.SetActive(false);
-                if (firstPersonModel != null) firstPersonModelGun.SetActive(false);
-                if (fpCamera != null) fpCamera.gameObject.SetActive(false);
-                if (_mainCamera != null) _mainCamera.SetActive(true);
+                isFirstPerson = startInFirstPerson;
+
+                // 必须在 ApplyPersonView 之前赋值，因为 ApplyPersonView 可能禁用 vcam，
+                // 之后 OnStartLocalPlayer 的 FindObjectOfType 找不到禁用对象，Follow/LookAt 就永远不会被赋值
+                if (thirdPersonVCam != null && CinemachineCameraTarget != null)
+                {
+                    thirdPersonVCam.Follow = CinemachineCameraTarget.transform;
+                    thirdPersonVCam.LookAt = CinemachineCameraTarget.transform;
+                }
+
+                ApplyPersonView();
                 if (firstPersonAnimator != null)
                 {
                     firstPersonAnimator.SetBool("Holstered", !isHoldingGun);
@@ -1338,6 +1345,25 @@ namespace StarterAssets
             Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z), GroundedRadius);
         }
 
+        // 应用人称视角的模型/相机显隐 + FPS角度重置
+        private void ApplyPersonView()
+        {
+            if (thirdPersonModel != null) thirdPersonModel.SetActive(!isFirstPerson);
+            if (firstPersonModel != null) firstPersonModel.SetActive(isFirstPerson);
+            if (firstPersonModelGun != null) firstPersonModelGun.SetActive(isFirstPerson && isHoldingGun);
+
+            if (fpCamera != null) fpCamera.gameObject.SetActive(isFirstPerson);
+            if (_mainCamera != null) _mainCamera.SetActive(!isFirstPerson);
+            if (thirdPersonVCam != null) thirdPersonVCam.gameObject.SetActive(!isFirstPerson);
+
+            if (isFirstPerson)
+            {
+                fpYaw = transform.eulerAngles.y;
+                fpPitch = 0;
+                if (fpCameraRoot != null) fpCameraRoot.localRotation = Quaternion.Euler(0f, 0f, 0f);
+            }
+        }
+
         //切换人称视角
         private void ToggleFirstPerson()
         {
@@ -1350,38 +1376,13 @@ namespace StarterAssets
             _currentSpread = BaseSpread;
 
             isFirstPerson = !isFirstPerson;
+            ApplyPersonView();
 
-            // 本地模型切换
-            if (thirdPersonModel != null)
-                thirdPersonModel.SetActive(!isFirstPerson);
-            if (firstPersonModel != null)
+            if (!isFirstPerson)
             {
-                firstPersonModel.SetActive(isFirstPerson);
-                firstPersonModelGun.SetActive(isFirstPerson && isHoldingGun);
-            }
-
-            // 相机切换
-            if (thirdPersonVCam != null)
-                thirdPersonVCam.gameObject.SetActive(!isFirstPerson);
-            if (_mainCamera != null)
-                _mainCamera.SetActive(!isFirstPerson); // 禁用场景主相机
-            if (fpCamera != null)
-                fpCamera.gameObject.SetActive(isFirstPerson);
-
-            // 切换时重置相机角度，防止跳变
-            if (isFirstPerson)
-            {
-                fpYaw = transform.eulerAngles.y;
-                fpPitch = 0;
-                fpCameraRoot.localRotation = Quaternion.Euler(0f, 0f, 0f);
-            }
-            else
-            {
-                // 重置角色朝向
                 _targetRotation = _mainCamera.transform.eulerAngles.y;
                 transform.rotation = Quaternion.Euler(0, _targetRotation, 0);
 
-                // 如果是持枪状态，全网同步触发 ChangeGun 动画
                 if (isHoldingGun)
                 {
                     CmdTriggerChangeGun();

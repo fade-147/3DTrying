@@ -10,7 +10,7 @@ namespace NodeCanvas.Tasks.Actions
     public class BotAimAndShoot : ActionTask<Transform>
     {
         public BBParameter<GameObject> targetEnemy;
-        public BBParameter<float> fireRate = 0.2f;
+        public BBParameter<float> fireRate = 0.35f;
         public BBParameter<float> effectiveRange = 30f;
         public BBParameter<float> maxChaseDistance = 60f;
         public BBParameter<float> lostTargetTimeout = 5f;
@@ -110,7 +110,7 @@ namespace NodeCanvas.Tasks.Actions
 
                 if (_fireTimer <= 0f && dist <= effectiveRange.value)
                 {
-                    _botController.ServerFire(shootDirection, muzzlePos);
+                    _botController.ServerFire(_botController.ApplySpread(shootDirection), muzzlePos);
                     _botController.ConsumeAmmo();
                     _fireTimer = fireRate.value;
                 }

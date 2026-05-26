@@ -14,14 +14,13 @@ namespace NodeCanvas.Tasks.Actions
         private bool _isMoving;
 
         private static readonly int IsHoldingGunHash = Animator.StringToHash("IsHoldingGun");
+        private static readonly int MoveForwardHash = Animator.StringToHash("MoveForward");
         private const float MoveSpeedThreshold = 0.1f;
 
         protected override void OnExecute()
         {
             _navAgent = agent.GetComponent<NavMeshAgent>();
-
-            Transform visual = agent.Find("SK_Military_Survivalist");
-            _animator = visual != null ? visual.GetComponent<Animator>() : agent.GetComponent<Animator>();
+            _animator = agent.GetComponent<Animator>();
 
             if (_navAgent == null || _animator == null)
             {
@@ -30,6 +29,7 @@ namespace NodeCanvas.Tasks.Actions
             }
 
             _animator.SetBool(IsHoldingGunHash, true);
+            _animator.SetBool(MoveForwardHash, false);
             _animator.CrossFade("Idle", 0.1f);
             _isMoving = false;
         }
@@ -46,10 +46,10 @@ namespace NodeCanvas.Tasks.Actions
             float speed = velocity.magnitude;
             bool moving = speed > MoveSpeedThreshold;
 
-            // 只在状态切换时 CrossFade，避免每帧重复调用
             if (moving != _isMoving)
             {
                 _isMoving = moving;
+                _animator.SetBool(MoveForwardHash, moving);
                 _animator.CrossFade(moving ? "Walk With Rifle" : "Idle", 0.15f);
             }
 
