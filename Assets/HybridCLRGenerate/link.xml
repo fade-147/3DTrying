@@ -100,6 +100,7 @@
     <type fullname="NodeCanvas.Framework.Blackboard" preserve="all" />
     <type fullname="NodeCanvas.Framework.BlackboardOnlyAttribute" preserve="all" />
     <type fullname="NodeCanvas.Framework.ConditionTask`1" preserve="all" />
+    <type fullname="NodeCanvas.Framework.Graph" preserve="all" />
     <type fullname="NodeCanvas.Framework.GraphOwner" preserve="all" />
     <type fullname="NodeCanvas.Framework.IBlackboard" preserve="all" />
     <type fullname="NodeCanvas.Framework.IBlackboardExtensions" preserve="all" />
@@ -131,6 +132,7 @@
     <type fullname="UnityEngine.AI.NavMesh" preserve="all" />
     <type fullname="UnityEngine.AI.NavMeshAgent" preserve="all" />
     <type fullname="UnityEngine.AI.NavMeshHit" preserve="all" />
+    <type fullname="UnityEngine.AI.NavMeshPathStatus" preserve="all" />
   </assembly>
   <assembly fullname="UnityEngine.AnimationModule">
     <type fullname="UnityEngine.Animator" preserve="all" />
@@ -258,10 +260,12 @@
     <type fullname="System.Boolean" preserve="all" />
     <type fullname="System.Byte" preserve="all" />
     <type fullname="System.Collections.Generic.Dictionary`2" preserve="all" />
+    <type fullname="System.Collections.Generic.Dictionary`2/Enumerator" preserve="all" />
     <type fullname="System.Collections.Generic.Dictionary`2/ValueCollection" preserve="all" />
     <type fullname="System.Collections.Generic.Dictionary`2/ValueCollection/Enumerator" preserve="all" />
     <type fullname="System.Collections.Generic.IEnumerable`1" preserve="all" />
     <type fullname="System.Collections.Generic.IEnumerator`1" preserve="all" />
+    <type fullname="System.Collections.Generic.KeyValuePair`2" preserve="all" />
     <type fullname="System.Collections.Generic.List`1" preserve="all" />
     <type fullname="System.Collections.Generic.List`1/Enumerator" preserve="all" />
     <type fullname="System.Collections.IEnumerator" preserve="all" />

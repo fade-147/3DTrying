@@ -23,6 +23,7 @@
     <type fullname="BasicRigidBodyPush" preserve="all" />
     <type fullname="BotController" preserve="all" />
     <type fullname="BotLobbyUI" preserve="all" />
+    <type fullname="BotZoneManager" preserve="all" />
     <type fullname="Bullet" preserve="all" />
     <type fullname="ChangeAnimator" preserve="all" />
     <type fullname="CharacterOutline" preserve="all" />
@@ -39,6 +40,7 @@
     <type fullname="StarterAssets.ThirdPersonController" preserve="all" />
     <type fullname="SteamLobby" preserve="all" />
     <type fullname="SteamManager" preserve="all" />
+    <type fullname="StrategyZone" preserve="all" />
     <type fullname="SwitchTeamButton" preserve="all" />
     <type fullname="TeamSpawnArea" preserve="all" />
     <type fullname="VoiceChatManager" preserve="all" />

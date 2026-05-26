@@ -376,40 +376,71 @@ public class MyNetworkRoomManager : NetworkRoomManager
         _teamSpawns.Clear();
 
         TeamSpawnArea[] areas = FindObjectsOfType<TeamSpawnArea>();
-        if (areas.Length < TeamCount)
+
+        // 按 sideId 分组
+        List<TeamSpawnArea> side0Areas = new();
+        List<TeamSpawnArea> side1Areas = new();
+        foreach (var area in areas)
         {
-            // 回退：未配置 TeamSpawnArea 时，所有 NetworkStartPosition 作为共享生成池
-            NetworkStartPosition[] all = FindObjectsOfType<NetworkStartPosition>();
-            if (all.Length == 0)
-            {
-                Debug.LogError("[MyNetworkRoomManager] 场景中没有 NetworkStartPosition，玩家将在原点生成");
-                return;
-            }
-
-            var sharedConfig = new TeamSpawnConfig { area = null, positions = all, nextIndex = 0 };
-            for (int i = 0; i < TeamCount; i++)
-                _teamSpawns[i] = sharedConfig;
-
-            Debug.LogWarning($"[MyNetworkRoomManager] TeamSpawnArea 不足，回退到共享池 ({all.Length} 个生成点)");
-            return;
+            if (area.sideId == 0) side0Areas.Add(area);
+            else side1Areas.Add(area);
         }
 
-        List<TeamSpawnArea> pool = new List<TeamSpawnArea>(areas);
-        for (int i = 0; i < TeamCount; i++)
+        if (side0Areas.Count > 0 && side1Areas.Count > 0)
         {
-            int idx = Random.Range(0, pool.Count);
-            TeamSpawnArea area = pool[idx];
-            pool.RemoveAt(idx);
+            // 两侧都有 TeamSpawnArea：随机决定 team0 在哪侧
+            TeamSideMapping.AssignRandom();
 
-            _teamSpawns[i] = new TeamSpawnConfig
+            // 收集同侧所有 NetworkStartPosition
+            List<NetworkStartPosition> posSide0 = new();
+            foreach (var a in side0Areas)
+                posSide0.AddRange(a.GetComponentsInChildren<NetworkStartPosition>());
+            List<NetworkStartPosition> posSide1 = new();
+            foreach (var a in side1Areas)
+                posSide1.AddRange(a.GetComponentsInChildren<NetworkStartPosition>());
+
+            int teamForSide0 = TeamSideMapping.SideToTeam[0];
+            int teamForSide1 = TeamSideMapping.SideToTeam[1];
+
+            _teamSpawns[teamForSide0] = new TeamSpawnConfig
             {
-                area = area,
-                positions = area.GetComponentsInChildren<NetworkStartPosition>(),
+                area = side0Areas[0],
+                positions = posSide0.ToArray(),
                 nextIndex = 0
             };
 
-            Debug.Log($"[MyNetworkRoomManager] Team {i} → {area.name} ({_teamSpawns[i].positions.Length} spawns)");
+            _teamSpawns[teamForSide1] = new TeamSpawnConfig
+            {
+                area = side1Areas[0],
+                positions = posSide1.ToArray(),
+                nextIndex = 0
+            };
+
+            Debug.Log($"[MyNetworkRoomManager] Side 0 → Team {teamForSide0} ({posSide0.Count} spawns), Side 1 → Team {teamForSide1} ({posSide1.Count} spawns)");
+            return;
         }
+
+        // 回退：未配置足够的 TeamSpawnArea 时，所有 NetworkStartPosition 作为共享生成池
+        NetworkStartPosition[] all = FindObjectsOfType<NetworkStartPosition>();
+        if (all.Length == 0)
+        {
+            Debug.LogError("[MyNetworkRoomManager] 场景中没有 NetworkStartPosition，玩家将在原点生成");
+            return;
+        }
+
+        // 无 TeamSpawnArea 时回退到共享池，映射设为 side=teamId（保持原行为）
+        TeamSideMapping.SideToTeam.Clear();
+        TeamSideMapping.TeamToSide.Clear();
+        TeamSideMapping.SideToTeam[0] = 0;
+        TeamSideMapping.SideToTeam[1] = 1;
+        TeamSideMapping.TeamToSide[0] = 0;
+        TeamSideMapping.TeamToSide[1] = 1;
+
+        var sharedConfig = new TeamSpawnConfig { area = null, positions = all, nextIndex = 0 };
+        for (int i = 0; i < TeamCount; i++)
+            _teamSpawns[i] = sharedConfig;
+
+        Debug.LogWarning($"[MyNetworkRoomManager] TeamSpawnArea 不足，回退到共享池 ({all.Length} 个生成点)");
     }
 
     private Transform GetNextTeamSpawnPosition(int teamId)

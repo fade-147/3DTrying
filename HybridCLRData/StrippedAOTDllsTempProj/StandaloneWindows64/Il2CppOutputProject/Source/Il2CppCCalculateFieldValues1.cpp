@@ -35069,9 +35069,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4093[4] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4094[4] = 
 {
 	0,0,0,0,};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4095[5] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4095[7] = 
 {
-	0,0,0,0,0,};
+	0,0,0,0,0,0,0,};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4096[4] = 
 {
 	0,0,0,0,};

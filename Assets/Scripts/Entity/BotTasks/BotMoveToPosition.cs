@@ -15,12 +15,17 @@ namespace NodeCanvas.Tasks.Actions
 
         private const float MoveTimeout = 30f;
         private const float RescanInterval = 1.5f;
+        private const float StartupGracePeriod = 0.5f;
 
         private NavMeshAgent _navAgent;
         private BotController _botController;
         private Blackboard _blackboard;
         private float _elapsedTime;
         private float _rescanTimer;
+        private float _graceTimer;
+        private Vector3 _lastTarget;
+        private Vector3 _projectedDest;
+        private int _setDestFailCount;
 
         protected override void OnExecute()
         {
@@ -28,7 +33,18 @@ namespace NodeCanvas.Tasks.Actions
             _botController = agent.GetComponent<BotController>();
             _blackboard = agent.GetComponent<Blackboard>();
             _elapsedTime = 0f;
-            _rescanTimer = RescanInterval; // 首帧立即扫描，防止向错误方向移动
+            _rescanTimer = 0f; // 首次扫描延迟 1.5s，防止刚进入巡逻就因残留 targetEnemy 退出
+
+            // 目标没变则不重置宽限期，防止树重置时反复归零
+            if (targetPosition.value != _lastTarget)
+            {
+                _graceTimer = 0f;
+                _lastTarget = targetPosition.value;
+                _projectedDest = targetPosition.value;
+            }
+            _setDestFailCount = 0;
+
+            Debug.Log($"[BotMoveToPosition] OnExecute: target={targetPosition.value}, agentOnNavMesh={_navAgent != null && _navAgent.isOnNavMesh}, speed={(_navAgent != null ? _navAgent.speed : -1)}, isStopped={_navAgent != null && _navAgent.isStopped}, botTeamId={(_botController != null ? _botController.teamId : -1)}, pos={agent.position}");
         }
 
         protected override void OnUpdate()
@@ -61,12 +77,40 @@ namespace NodeCanvas.Tasks.Actions
             if (_navAgent == null || !_navAgent.isOnNavMesh)
                 return;
 
+            // 将目标投影到 NavMesh 表面，确保可达
+            Vector3 dest = targetPosition.value;
+            if (NavMesh.SamplePosition(dest, out NavMeshHit navHit, 10f, NavMesh.AllAreas))
+                dest = navHit.position;
+
             _navAgent.speed = speed.value;
             _navAgent.stoppingDistance = keepDistance.value;
-            _navAgent.SetDestination(targetPosition.value);
+            bool pathFound = _navAgent.SetDestination(dest);
+            if (pathFound)
+                _projectedDest = dest;
 
+            if (!pathFound)
+            {
+                _setDestFailCount++;
+                if (_setDestFailCount % 60 == 1) // 每60帧≈1秒报一次
+                    Debug.LogWarning($"[BotMoveToPosition] SetDestination FAILED x{_setDestFailCount}: dest={dest}, agentPos={agent.position}, isOnNavMesh={_navAgent.isOnNavMesh}, pathStatus={_navAgent.pathStatus}");
+            }
+
+            _graceTimer += Time.deltaTime;
+            if (_graceTimer < StartupGracePeriod)
+                return;
+
+            // 到达判定：路径计算完毕 + 剩余距离在阈值内 + 实际距离也接近目标
+            // 双重校验防止 remainingDistance==0 导致的假到达（agent 未启动/无有效路径时）
             if (!_navAgent.pathPending && _navAgent.remainingDistance <= _navAgent.stoppingDistance)
-                EndAction(true);
+            {
+                float directDist = Vector3.Distance(agent.position, _projectedDest);
+                if (directDist <= _navAgent.stoppingDistance + 0.5f)
+                {
+                    if (_botController != null)
+                        _botController.ArriveAtZone();
+                    EndAction(true);
+                }
+            }
         }
 
         protected override void OnPause() { }

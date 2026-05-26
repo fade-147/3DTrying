@@ -53,6 +53,11 @@ public class BotController : NetworkBehaviour
     private const float PatrolRadius = 30f;
     private const int MaxPatrolSamples = 20;
 
+    // 策略区记忆：避免短时间内重复去同一区
+    private readonly Queue<StrategyZone> _visitedZones = new Queue<StrategyZone>();
+    private const int MaxVisitedZones = 3;
+    private StrategyZone _currentZone;
+
     // Animator 参数 hash
     private static readonly int IsDrinkingHash = Animator.StringToHash("IsDrinking");
     private static readonly int DrinkHash = Animator.StringToHash("Drink");
@@ -84,16 +89,27 @@ public class BotController : NetworkBehaviour
         currentAmmo = MaxAmmo;
 
         var bto = GetComponent<NodeCanvas.BehaviourTrees.BehaviourTreeOwner>();
-        if (bto != null && !bto.isRunning)
+        if (bto != null)
         {
-            bto.StartBehaviour();
-            Debug.Log($"[BotController] BehaviourTree started: teamId={teamId}, pos={transform.position}");
+            if (bto.isRunning)
+            {
+                Debug.Log($"[BotController] OnStartServer: teamId={teamId}, pos={transform.position}, BT already running");
+            }
+            else
+            {
+                bto.StartBehaviour();
+                Debug.Log($"[BotController] OnStartServer: teamId={teamId}, pos={transform.position}, BT started, graph={(bto.graph != null ? bto.graph.name : "NULL")}");
+            }
+        }
+        else
+        {
+            Debug.LogWarning($"[BotController] OnStartServer: teamId={teamId}, pos={transform.position}, BehaviourTreeOwner NOT FOUND!");
         }
     }
 
     /// <summary>
     /// 查找最近的不同队伍目标（玩家或人机），写入黑版 targetEnemy。
-    /// 无目标时不修改黑版，避免 null 引发 NodeCanvas SetVariableValue 报错。
+    /// 无目标时清除黑版变量，防止残留旧引用导致巡逻误退出。
     /// </summary>
     public void FindTargetEnemy()
     {
@@ -121,6 +137,8 @@ public class BotController : NetworkBehaviour
 
         if (nearest != null)
             _blackboard.SetVariableValue(TargetEnemyVarName, nearest);
+        else
+            _blackboard.SetVariableValue(TargetEnemyVarName, null);
     }
 
     /// <summary>
@@ -211,6 +229,7 @@ public class BotController : NetworkBehaviour
             {
                 patrolTarget = candidate;
                 found = true;
+                Debug.Log($"[BotController] PickPatrolPoint: found after {i + 1} samples, target={patrolTarget}, distFromSelf={Vector3.Distance(transform.position, patrolTarget):F1}");
                 break;
             }
         }
@@ -225,19 +244,131 @@ public class BotController : NetworkBehaviour
                 {
                     patrolTarget = hit.position;
                     found = true;
+                    Debug.Log($"[BotController] PickPatrolPoint: fallback found at sample {i + 1}, target={patrolTarget}");
                     break;
                 }
             }
         }
 
         if (!found)
+        {
             patrolTarget = transform.position;
+            Debug.LogWarning($"[BotController] PickPatrolPoint: ALL SAMPLES FAILED, staying at {patrolTarget}. NavMesh status: agentOnNavMesh={_navMeshAgent != null && _navMeshAgent.isOnNavMesh}");
+        }
 
         _visitedPositions.Enqueue(patrolTarget);
         if (_visitedPositions.Count > MaxVisitedMemory)
             _visitedPositions.Dequeue();
 
         return patrolTarget;
+    }
+
+    /// <summary>
+    /// 从场景 StrategyZone 中智能选择一个目标区。
+    /// 排除最近去过的、已被队友认领的区，按距离+权重+类型评分。
+    /// </summary>
+    public StrategyZone PickStrategyZone()
+    {
+        var allZones = StrategyZone.AllZones;
+        if (allZones == null || allZones.Count == 0)
+            return null;
+
+        uint myNetId = netId;
+        var mgr = BotZoneManager.Instance;
+
+        // 已有目标区且仍有效，不重选，防止树重置时 zone 跳变
+        if (_currentZone != null
+            && _currentZone.IsValidForTeam(teamId)
+            && !IsZoneRecentlyVisited(_currentZone)
+            && (mgr == null || !mgr.IsZoneClaimedByOther(_currentZone, myNetId)))
+        {
+            return _currentZone;
+        }
+
+        // 旧 zone 无效，释放认领
+        if (_currentZone != null && mgr != null)
+        {
+            mgr.ReleaseZone(myNetId);
+            AddVisitedZone(_currentZone);
+            _currentZone = null;
+        }
+
+        StrategyZone best = null;
+        float bestScore = -1f;
+
+        foreach (var zone in allZones)
+        {
+            if (zone == null) continue;
+            if (!zone.IsValidForTeam(teamId)) continue;
+            if (IsZoneRecentlyVisited(zone)) continue;
+            if (mgr != null && mgr.IsZoneClaimedByOther(zone, myNetId)) continue;
+
+            float dist = Vector3.Distance(transform.position, zone.WorldPosition);
+            float typeWeight = zone.zoneType switch
+            {
+                ZoneType.Frontline => 1.5f,
+                ZoneType.Defend => 1.2f,
+                ZoneType.Flank => 1.0f,
+                ZoneType.Roam => 0.8f,
+                _ => 1f,
+            };
+
+            float score = zone.priority * typeWeight / Mathf.Max(dist, 1f);
+
+            if (score > bestScore)
+            {
+                bestScore = score;
+                best = zone;
+            }
+        }
+
+        // 所有区都被排除：选最近的有效区
+        if (best == null)
+        {
+            float minDist = Mathf.Infinity;
+            foreach (var zone in allZones)
+            {
+                if (zone == null || !zone.IsValidForTeam(teamId)) continue;
+                float d = Vector3.Distance(transform.position, zone.WorldPosition);
+                if (d < minDist) { minDist = d; best = zone; }
+            }
+        }
+
+        if (best != null)
+        {
+            mgr?.TryClaimZone(best, myNetId);
+            _currentZone = best;
+        }
+
+        return best;
+    }
+
+    private bool IsZoneRecentlyVisited(StrategyZone zone)
+    {
+        foreach (var vz in _visitedZones)
+            if (vz == zone) return true;
+        return false;
+    }
+
+    private void AddVisitedZone(StrategyZone zone)
+    {
+        _visitedZones.Enqueue(zone);
+        if (_visitedZones.Count > MaxVisitedZones)
+            _visitedZones.Dequeue();
+    }
+
+    /// <summary>
+    /// 到达当前策略区时调用，释放认领 + 标记冷却 + 清空 currentZone 以便下次选新区。
+    /// </summary>
+    public void ArriveAtZone()
+    {
+        if (_currentZone != null && BotZoneManager.Instance != null)
+        {
+            BotZoneManager.Instance.ReleaseZone(netId);
+            AddVisitedZone(_currentZone);
+            BotZoneManager.Instance.MarkZoneVisited(_currentZone);
+            _currentZone = null;
+        }
     }
 
     /// <summary>

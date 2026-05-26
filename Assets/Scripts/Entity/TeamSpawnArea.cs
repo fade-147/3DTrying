@@ -6,4 +6,8 @@ using UnityEngine;
 /// </summary>
 public class TeamSpawnArea : MonoBehaviour
 {
+    /// <summary>
+    /// 地图侧标识：0 或 1，用于区分同一地图中的两侧出生区。
+    /// </summary>
+    public int sideId = 0;
 }
