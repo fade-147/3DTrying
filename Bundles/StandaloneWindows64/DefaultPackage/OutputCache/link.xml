@@ -40,6 +40,7 @@
     <type fullname="SteamLobby" preserve="all" />
     <type fullname="SteamManager" preserve="all" />
     <type fullname="SwitchTeamButton" preserve="all" />
+    <type fullname="TeamSpawnArea" preserve="all" />
     <type fullname="VoiceChatManager" preserve="all" />
   </assembly>
   <assembly fullname="Mirror, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">

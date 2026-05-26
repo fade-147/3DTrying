@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
@@ -19,6 +20,17 @@ public class MyNetworkRoomManager : NetworkRoomManager
 
     private SceneHandle _currentSceneHandle;
     private bool _isSwitchingScene = false;
+
+    // 队伍生成配置：teamId → 生成区域 + 缓存数据
+    private readonly Dictionary<int, TeamSpawnConfig> _teamSpawns = new Dictionary<int, TeamSpawnConfig>();
+    private const int TeamCount = 2;
+
+    private sealed class TeamSpawnConfig
+    {
+        public TeamSpawnArea area;
+        public NetworkStartPosition[] positions;
+        public int nextIndex;
+    }
 
     public override void Awake()
     {
@@ -170,6 +182,7 @@ public class MyNetworkRoomManager : NetworkRoomManager
             }
             allPlayersReady = false;
             _botTracker?.ClearBots();
+            _teamSpawns.Clear();
             SendBotListToAll();
         }
 
@@ -191,6 +204,11 @@ public class MyNetworkRoomManager : NetworkRoomManager
 
             startPositionIndex = 0;
             startPositions.Clear();
+
+            if (scenePath == GameplayScene)
+            {
+                AssignTeamsToSpawnAreas();
+            }
 
             FinishLoadScene();
 
@@ -262,13 +280,29 @@ public class MyNetworkRoomManager : NetworkRoomManager
         }
 
         // GameplayScene: pendingPlayers 可能已被 CheckReadyToBegin 清空
-        // 在此手动创建 game player
-        Transform startPos = GetStartPosition();
-        GameObject gamePlayer = startPos != null
-            ? Instantiate(playerPrefab, startPos.position, startPos.rotation)
-            : Instantiate(playerPrefab, Vector3.zero, Quaternion.identity);
+        // 在此手动创建 game player，从 roomSlots 查找队伍
+        int teamId = GetTeamIdForConnection(conn);
+        GameObject gamePlayer = SpawnPlayerAtTeamPosition(teamId);
 
         NetworkServer.AddPlayerForConnection(conn, gamePlayer);
+    }
+
+    public override GameObject OnRoomServerCreateGamePlayer(NetworkConnectionToClient conn, GameObject roomPlayer)
+    {
+        MyNetworkRoomPlayer roomP = roomPlayer.GetComponent<MyNetworkRoomPlayer>();
+        int teamId = roomP != null ? roomP.teamId : 0;
+
+        return SpawnPlayerAtTeamPosition(teamId);
+    }
+
+    private int GetTeamIdForConnection(NetworkConnectionToClient conn)
+    {
+        foreach (NetworkRoomPlayer slot in roomSlots)
+        {
+            if (slot.connectionToClient == conn && slot is MyNetworkRoomPlayer mySlot)
+                return mySlot.teamId;
+        }
+        return 0;
     }
 
     public override void OnRoomServerPlayersReady()
@@ -335,6 +369,87 @@ public class MyNetworkRoomManager : NetworkRoomManager
         }
     }
 
+    #region 队伍生成区域
+
+    private void AssignTeamsToSpawnAreas()
+    {
+        _teamSpawns.Clear();
+
+        TeamSpawnArea[] areas = FindObjectsOfType<TeamSpawnArea>();
+        if (areas.Length < TeamCount)
+        {
+            // 回退：未配置 TeamSpawnArea 时，所有 NetworkStartPosition 作为共享生成池
+            NetworkStartPosition[] all = FindObjectsOfType<NetworkStartPosition>();
+            if (all.Length == 0)
+            {
+                Debug.LogError("[MyNetworkRoomManager] 场景中没有 NetworkStartPosition，玩家将在原点生成");
+                return;
+            }
+
+            var sharedConfig = new TeamSpawnConfig { area = null, positions = all, nextIndex = 0 };
+            for (int i = 0; i < TeamCount; i++)
+                _teamSpawns[i] = sharedConfig;
+
+            Debug.LogWarning($"[MyNetworkRoomManager] TeamSpawnArea 不足，回退到共享池 ({all.Length} 个生成点)");
+            return;
+        }
+
+        List<TeamSpawnArea> pool = new List<TeamSpawnArea>(areas);
+        for (int i = 0; i < TeamCount; i++)
+        {
+            int idx = Random.Range(0, pool.Count);
+            TeamSpawnArea area = pool[idx];
+            pool.RemoveAt(idx);
+
+            _teamSpawns[i] = new TeamSpawnConfig
+            {
+                area = area,
+                positions = area.GetComponentsInChildren<NetworkStartPosition>(),
+                nextIndex = 0
+            };
+
+            Debug.Log($"[MyNetworkRoomManager] Team {i} → {area.name} ({_teamSpawns[i].positions.Length} spawns)");
+        }
+    }
+
+    private Transform GetNextTeamSpawnPosition(int teamId)
+    {
+        if (!_teamSpawns.TryGetValue(teamId, out TeamSpawnConfig config)
+            || config.positions.Length == 0)
+        {
+            return GetStartPosition(); // 回退到默认轮询
+        }
+
+        int index = config.nextIndex;
+        config.nextIndex = (index + 1) % config.positions.Length;
+        return config.positions[index].transform;
+    }
+
+    public Transform GetTeamRespawnPosition(int teamId)
+    {
+        if (!_teamSpawns.TryGetValue(teamId, out TeamSpawnConfig config)
+            || config.positions.Length == 0)
+        {
+            // 统一回退：全局随机
+            NetworkStartPosition[] fallback = FindObjectsOfType<NetworkStartPosition>();
+            if (fallback.Length > 0)
+                return fallback[Random.Range(0, fallback.Length)].transform;
+            return null;
+        }
+
+        return config.positions[Random.Range(0, config.positions.Length)].transform;
+    }
+
+    private GameObject SpawnPlayerAtTeamPosition(int teamId)
+    {
+        Transform startPos = GetNextTeamSpawnPosition(teamId);
+        return startPos != null
+            ? Instantiate(playerPrefab, startPos.position, startPos.rotation)
+            : Instantiate(playerPrefab, Vector3.zero, Quaternion.identity);
+    }
+
+    #endregion
+
     /// <summary>
     /// 将位置修正到离 NavMesh 最近的有效点，失败则返回原始位置。
     /// </summary>
@@ -360,19 +475,16 @@ public class MyNetworkRoomManager : NetworkRoomManager
         }
         if (_botTracker == null) return;
 
-        NetworkStartPosition[] spawns = FindObjectsOfType<NetworkStartPosition>();
-
         for (int i = 0; i < _botTracker.botTeamIds.Count; i++)
         {
-            Vector3 pos = spawns.Length > 0
-                ? spawns[i % spawns.Length].transform.position
-                : Vector3.zero;
+            int teamId = _botTracker.botTeamIds[i];
+            Transform startPos = GetNextTeamSpawnPosition(teamId);
+            Vector3 pos = startPos != null ? startPos.position : Vector3.zero;
 
             pos = SnapToNavMesh(pos);
 
             GameObject bot = Instantiate(botGamePrefab, pos, Quaternion.identity);
 
-            int teamId = _botTracker.botTeamIds[i];
             BotController bc = bot.GetComponent<BotController>();
             if (bc != null) bc.teamId = teamId;
 

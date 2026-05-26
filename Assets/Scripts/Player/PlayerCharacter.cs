@@ -108,13 +108,16 @@ public class PlayerCharacter : NetworkBehaviour
         CurrentHealth = MaxHealth;
         isDead = false;
 
-        // 随机找出生点
-        NetworkStartPosition[] spawns = FindObjectsOfType<NetworkStartPosition>();
-        if (spawns.Length > 0)
+        // 队伍区域复活
+        int teamId = BotController.GetTeamId(this);
+        Transform spawn = MyNetworkRoomManager.instance != null
+            ? MyNetworkRoomManager.instance.GetTeamRespawnPosition(teamId)
+            : null;
+
+        if (spawn != null)
         {
-            Transform randomSpawn = spawns[Random.Range(0, spawns.Length)].transform;
-            transform.position = randomSpawn.position;
-            transform.rotation = randomSpawn.rotation;
+            transform.position = spawn.position;
+            transform.rotation = spawn.rotation;
         }
 
         // 通知所有客户端复活
