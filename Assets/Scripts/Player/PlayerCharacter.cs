@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
+using UnityEngine.AI;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Mirror;
 using UnityEngine.UI;
 
@@ -14,6 +16,13 @@ public class PlayerCharacter : NetworkBehaviour
 
     [SyncVar] public bool isDead;
 
+    // 布娃娃组件缓存
+    private Animator _animator;
+    private CharacterController _characterController;
+    private NavMeshAgent _navMeshAgent;
+    private Collider[] _rootColliders;
+    private Rigidbody[] _ragdollRigidbodies;
+
     [Header("死亡UI")]
     public GameObject deathCanvas;
     public GameObject playerVisual;
@@ -25,6 +34,50 @@ public class PlayerCharacter : NetworkBehaviour
     private void Awake()
     {
         CurrentHealth = MaxHealth;
+        CacheRagdollComponents();
+    }
+
+    /// <summary>缓存布娃娃相关的 Rigidbody 和根碰撞体引用</summary>
+    private void CacheRagdollComponents()
+    {
+        _animator = GetComponent<Animator>();
+        _characterController = GetComponent<CharacterController>();
+        _navMeshAgent = GetComponent<NavMeshAgent>();
+        _rootColliders = GetComponents<Collider>();
+
+        var allRbs = GetComponentsInChildren<Rigidbody>();
+        _ragdollRigidbodies = allRbs.Where(rb => rb.gameObject != gameObject).ToArray();
+    }
+
+    /// <summary>启用布娃娃物理（死亡时调用）</summary>
+    private void EnableRagdoll()
+    {
+        if (_animator != null) _animator.enabled = false;
+        if (_characterController != null) _characterController.enabled = false;
+        if (_navMeshAgent != null) _navMeshAgent.enabled = false;
+        foreach (var col in _rootColliders) col.enabled = false;
+
+        foreach (var rb in _ragdollRigidbodies)
+            rb.isKinematic = false;
+
+        // 强制刷新 SkinnedMeshRenderer，重新从骨骼读取物理位置
+        foreach (var smr in GetComponentsInChildren<SkinnedMeshRenderer>(true))
+        {
+            smr.enabled = false;
+            smr.enabled = true;
+        }
+    }
+
+    /// <summary>禁用布娃娃物理（复活时调用）</summary>
+    private void DisableRagdoll()
+    {
+        foreach (var rb in _ragdollRigidbodies)
+            rb.isKinematic = true;
+
+        if (_animator != null) _animator.enabled = true;
+        if (_characterController != null) _characterController.enabled = true;
+        if (_navMeshAgent != null) _navMeshAgent.enabled = true;
+        foreach (var col in _rootColliders) col.enabled = true;
     }
 
     private void Start()
@@ -83,9 +136,8 @@ public class PlayerCharacter : NetworkBehaviour
     void Die()
     {
         isDead = true;
-        // 同步死亡表现到所有客户端
+        EnableRagdoll();
         RpcOnDie();
-        // 3秒后复活
         Invoke(nameof(Respawn), respawnTimer);
     }
 
@@ -93,8 +145,7 @@ public class PlayerCharacter : NetworkBehaviour
     [ClientRpc]
     void RpcOnDie()
     {
-        if (playerVisual != null)
-            playerVisual.SetActive(false);
+        EnableRagdoll();
 
         if (isLocalPlayer && deathCanvas != null)
             deathCanvas.SetActive(true);
@@ -104,11 +155,10 @@ public class PlayerCharacter : NetworkBehaviour
     [Server]
     void Respawn()
     {
-        // 重置状态
         CurrentHealth = MaxHealth;
         isDead = false;
+        DisableRagdoll();
 
-        // 队伍区域复活
         int teamId = BotController.GetTeamId(this);
         Transform spawn = MyNetworkRoomManager.instance != null
             ? MyNetworkRoomManager.instance.GetTeamRespawnPosition(teamId)
@@ -120,7 +170,6 @@ public class PlayerCharacter : NetworkBehaviour
             transform.rotation = spawn.rotation;
         }
 
-        // 通知所有客户端复活
         RpcOnRespawn();
     }
 
@@ -128,8 +177,7 @@ public class PlayerCharacter : NetworkBehaviour
     [ClientRpc]
     void RpcOnRespawn()
     {
-        if (playerVisual != null)
-            playerVisual.SetActive(true);
+        DisableRagdoll();
 
         if (isLocalPlayer && deathCanvas != null)
             deathCanvas.SetActive(false);

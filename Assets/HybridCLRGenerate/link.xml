@@ -120,6 +120,7 @@
   <assembly fullname="System.Core">
     <type fullname="System.Collections.Generic.HashSet`1" preserve="all" />
     <type fullname="System.Collections.Generic.HashSet`1/Enumerator" preserve="all" />
+    <type fullname="System.Linq.Enumerable" preserve="all" />
   </assembly>
   <assembly fullname="Unity.Burst">
     <type fullname="Unity.Burst.Intrinsics.X86" preserve="all" />

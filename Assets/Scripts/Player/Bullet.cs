@@ -33,10 +33,11 @@ public class Bullet : NetworkBehaviour
             Destroy(hitFX, 1f);
         }
 
-        // 防止击中自己，服务端扣血
-        if (other.gameObject.TryGetComponent<PlayerCharacter>(out var targetPlayer) && targetPlayer.netIdentity != ownerNetIdentity)
+        // 防止击中自己，服务端扣血（GetComponentInParent 兼容骨骼碰撞体）
+        var targetPlayer = other.gameObject.GetComponentInParent<PlayerCharacter>();
+        if (targetPlayer != null && targetPlayer.netIdentity != ownerNetIdentity)
         {
-            targetPlayer.TakeDamage(15f); // 假设伤害值为.。。
+            targetPlayer.TakeDamage(15f);
         }
 
         // 服务端销毁子弹

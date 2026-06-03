@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8640353156196756625}
   - component: {fileID: 9048560880465137736}
   - component: {fileID: -724554670971556839}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: P_LPSP_PROJ_Bullet_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -281,7 +281,7 @@ GameObject:
   - component: {fileID: 4397278263413714}
   - component: {fileID: 198974215115052992}
   - component: {fileID: 199619784623798600}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5181,7 +5181,7 @@ GameObject:
   - component: {fileID: 4931387532149536}
   - component: {fileID: 33863200561730922}
   - component: {fileID: 23107287041144438}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5264,7 +5264,7 @@ GameObject:
   - component: {fileID: 4177223287807308}
   - component: {fileID: 108073886206650742}
   - component: {fileID: 6812169121981224230}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
