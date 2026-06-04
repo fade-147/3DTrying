@@ -500,11 +500,6 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Func<object,ulong>
 	// System.Func<object,ushort>
 	// System.Func<object>
-	// System.Linq.Buffer<object>
-	// System.Linq.Enumerable.Iterator<object>
-	// System.Linq.Enumerable.WhereArrayIterator<object>
-	// System.Linq.Enumerable.WhereEnumerableIterator<object>
-	// System.Linq.Enumerable.WhereListIterator<object>
 	// System.Nullable<UnityEngine.InputSystem.InputAction.CallbackContext>
 	// System.Predicate<Mirror.NetworkRoomManager.PendingPlayer>
 	// System.Predicate<int>
@@ -552,8 +547,6 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 		// System.Void Mirror.NetworkWriter.Write<Mirror.SceneMessage>(Mirror.SceneMessage)
 		// System.Void Mirror.NetworkWriter.Write<int>(int)
 		// System.Void Mirror.NetworkWriterExtensions.WriteArray<int>(Mirror.NetworkWriter,int[])
-		// object[] System.Linq.Enumerable.ToArray<object>(System.Collections.Generic.IEnumerable<object>)
-		// System.Collections.Generic.IEnumerable<object> System.Linq.Enumerable.Where<object>(System.Collections.Generic.IEnumerable<object>,System.Func<object,bool>)
 		// object& System.Runtime.CompilerServices.Unsafe.As<object,object>(object&)
 		// System.Void* System.Runtime.CompilerServices.Unsafe.AsPointer<object>(object&)
 		// System.Void* Unity.Collections.LowLevel.Unsafe.UnsafeUtility.AddressOf<UnityEngine.Vector2>(UnityEngine.Vector2&)

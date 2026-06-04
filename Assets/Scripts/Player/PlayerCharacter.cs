@@ -2,7 +2,6 @@
 using UnityEngine.AI;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using Mirror;
 using UnityEngine.UI;
 
@@ -22,7 +21,6 @@ public class PlayerCharacter : NetworkBehaviour
     private CharacterController _characterController;
     private NavMeshAgent _navMeshAgent;
     private Collider[] _rootColliders;
-    private Rigidbody[] _ragdollRigidbodies;
 
     [Tooltip("BehaviourTreeOwner")]
     public MonoBehaviour behaviourTreeOwner;
@@ -32,6 +30,12 @@ public class PlayerCharacter : NetworkBehaviour
     [Header("死亡UI")]
     public GameObject deathCanvas;
     public GameObject playerVisual;
+
+    [Header("死亡视角（本地玩家）")]
+    public GameObject deathThirdPersonModel;   // 死亡时显示第三人称模型
+    public GameObject deathFirstPersonModel;   // 死亡时隐藏第一人称模型
+    public GameObject deathFirstPersonModelGun; // 死亡时隐藏第一人称枪
+    public Camera deadCamera;                  // 死亡时启用的相机
 
     [Header("血条设置")]
     public Image healthFillImage;
@@ -43,7 +47,7 @@ public class PlayerCharacter : NetworkBehaviour
         CacheRagdollComponents();
     }
 
-    /// <summary>缓存布娃娃相关的 Rigidbody 和根碰撞体引用</summary>
+    /// <summary>缓存布娃娃相关的组件引用</summary>
     private void CacheRagdollComponents()
     {
         _animator = GetComponent<Animator>();
@@ -51,9 +55,6 @@ public class PlayerCharacter : NetworkBehaviour
         _characterController = GetComponent<CharacterController>();
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _rootColliders = GetComponents<Collider>();
-
-        var allRbs = GetComponentsInChildren<Rigidbody>();
-        _ragdollRigidbodies = allRbs.Where(rb => rb.gameObject != gameObject).ToArray();
     }
 
     /// <summary>启用布娃娃物理（死亡时调用）</summary>
@@ -66,22 +67,20 @@ public class PlayerCharacter : NetworkBehaviour
             _animator.Update(0);
         }
 
+        // 强制 SMR 不因包围盒问题被裁剪（布娃娃倒地后骨骼超出原始包围盒）
+        foreach (var smr in GetComponentsInChildren<SkinnedMeshRenderer>(true))
+            smr.updateWhenOffscreen = true;
+
         if (_characterController != null) _characterController.enabled = false;
         if (_navMeshAgent != null) _navMeshAgent.enabled = false;
         if (behaviourTreeOwner != null) behaviourTreeOwner.enabled = false;
         if (networkAnimator != null) networkAnimator.enabled = false;
         foreach (var col in _rootColliders) col.enabled = false;
-
-        foreach (var rb in _ragdollRigidbodies)
-            rb.isKinematic = false;
     }
 
     /// <summary>禁用布娃娃物理（复活时调用）</summary>
     private void DisableRagdoll()
     {
-        foreach (var rb in _ragdollRigidbodies)
-            rb.isKinematic = true;
-
         if (_animator != null)
         {
             _animator.runtimeAnimatorController = _originalController;
@@ -161,8 +160,19 @@ public class PlayerCharacter : NetworkBehaviour
     {
         EnableRagdoll();
 
-        if (isLocalPlayer && deathCanvas != null)
-            deathCanvas.SetActive(true);
+        if (isLocalPlayer)
+        {
+            if (deathCanvas != null)
+                deathCanvas.SetActive(true);
+            if (deathFirstPersonModel != null)
+                deathFirstPersonModel.SetActive(false);
+            if (deathFirstPersonModelGun != null)
+                deathFirstPersonModelGun.SetActive(false);
+            if (deathThirdPersonModel != null)
+                deathThirdPersonModel.SetActive(true);
+            if (deadCamera != null)
+                deadCamera.gameObject.SetActive(true);
+        }
     }
 
     // 服务端复活
@@ -193,8 +203,19 @@ public class PlayerCharacter : NetworkBehaviour
     {
         DisableRagdoll();
 
-        if (isLocalPlayer && deathCanvas != null)
-            deathCanvas.SetActive(false);
+        if (isLocalPlayer)
+        {
+            if (deathCanvas != null)
+                deathCanvas.SetActive(false);
+            if (deathFirstPersonModel != null)
+                deathFirstPersonModel.SetActive(true);
+            if (deathFirstPersonModelGun != null)
+                deathFirstPersonModelGun.SetActive(true);
+            if (deathThirdPersonModel != null)
+                deathThirdPersonModel.SetActive(false);
+            if (deadCamera != null)
+                deadCamera.gameObject.SetActive(false);
+        }
     }
 
     // 血量变化时自动更新UI
