@@ -1,7 +1,7 @@
 {
     "FileVersion": "1.0.0",
     "PackageName": "DefaultPackage",
-    "PackageVersion": "2026-06-03-1349",
+    "PackageVersion": "2026-06-04-542",
     "Wrappers": [
         {
             "BundleGUID": "00198a250a0c2081a5a37f8f100421de",
@@ -292,6 +292,10 @@
             "FileName": "44c8f1593f6a8f407db0955325af9380.bundle"
         },
         {
+            "BundleGUID": "453d5a3bc9a5d4a8c27de88109893834",
+            "FileName": "453d5a3bc9a5d4a8c27de88109893834.bundle"
+        },
+        {
             "BundleGUID": "4563e8f6af369d0b01c76c8526f41415",
             "FileName": "4563e8f6af369d0b01c76c8526f41415.bundle"
         },
@@ -334,10 +338,6 @@
         {
             "BundleGUID": "4d68d95598b64bb5bed33a8ed04d3004",
             "FileName": "4d68d95598b64bb5bed33a8ed04d3004.bundle"
-        },
-        {
-            "BundleGUID": "4f1fb57947c65a6210531b25ff61bcef",
-            "FileName": "4f1fb57947c65a6210531b25ff61bcef.bundle"
         },
         {
             "BundleGUID": "4f99f536285d2196d8ad5302cc3d495d",
