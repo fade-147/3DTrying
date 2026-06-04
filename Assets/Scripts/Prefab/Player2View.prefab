@@ -597,6 +597,8 @@ MonoBehaviour:
   MaxHealth: 100
   CurrentHealth: 100
   isDead: 0
+  behaviourTreeOwner: {fileID: 0}
+  networkAnimator: {fileID: 0}
   deathCanvas: {fileID: 0}
   playerVisual: {fileID: 0}
   healthFillImage: {fileID: 0}
@@ -9032,6 +9034,10 @@ PrefabInstance:
     - target: {fileID: 3711828768199741961, guid: 19eadcf8fbed56b4da77ca94c1b4145f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -7.1226306
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819888880575146218, guid: 19eadcf8fbed56b4da77ca94c1b4145f, type: 3}
+      propertyPath: m_OcclusionCulling
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3819888880575146218, guid: 19eadcf8fbed56b4da77ca94c1b4145f, type: 3}
       propertyPath: m_CullingMask.m_Bits

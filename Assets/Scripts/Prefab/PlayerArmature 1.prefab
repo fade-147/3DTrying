@@ -4692,6 +4692,8 @@ MonoBehaviour:
   MaxHealth: 100
   CurrentHealth: 100
   isDead: 0
+  behaviourTreeOwner: {fileID: 3721394961958933585}
+  networkAnimator: {fileID: 9012345678901234502}
   deathCanvas: {fileID: 0}
   playerVisual: {fileID: 0}
   healthFillImage: {fileID: 0}

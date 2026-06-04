@@ -18,10 +18,16 @@ public class PlayerCharacter : NetworkBehaviour
 
     // 布娃娃组件缓存
     private Animator _animator;
+    private RuntimeAnimatorController _originalController;
     private CharacterController _characterController;
     private NavMeshAgent _navMeshAgent;
     private Collider[] _rootColliders;
     private Rigidbody[] _ragdollRigidbodies;
+
+    [Tooltip("BehaviourTreeOwner")]
+    public MonoBehaviour behaviourTreeOwner;
+    [Tooltip("拖拽 NetworkAnimator")]
+    public NetworkAnimator networkAnimator;
 
     [Header("死亡UI")]
     public GameObject deathCanvas;
@@ -41,6 +47,7 @@ public class PlayerCharacter : NetworkBehaviour
     private void CacheRagdollComponents()
     {
         _animator = GetComponent<Animator>();
+        if (_animator != null) _originalController = _animator.runtimeAnimatorController;
         _characterController = GetComponent<CharacterController>();
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _rootColliders = GetComponents<Collider>();
@@ -52,15 +59,17 @@ public class PlayerCharacter : NetworkBehaviour
     /// <summary>启用布娃娃物理（死亡时调用）</summary>
     private void EnableRagdoll()
     {
-        // 停止动画并释放骨骼控制权（Rebind 是关键——清空 Animator 对 Transform 的写入）
         if (_animator != null)
         {
-            _animator.enabled = false;
-            _animator.Rebind();
+            _animator.cullingMode = AnimatorCullingMode.AlwaysAnimate;
+            _animator.runtimeAnimatorController = null;
+            _animator.Update(0);
         }
 
         if (_characterController != null) _characterController.enabled = false;
         if (_navMeshAgent != null) _navMeshAgent.enabled = false;
+        if (behaviourTreeOwner != null) behaviourTreeOwner.enabled = false;
+        if (networkAnimator != null) networkAnimator.enabled = false;
         foreach (var col in _rootColliders) col.enabled = false;
 
         foreach (var rb in _ragdollRigidbodies)
@@ -73,9 +82,15 @@ public class PlayerCharacter : NetworkBehaviour
         foreach (var rb in _ragdollRigidbodies)
             rb.isKinematic = true;
 
-        if (_animator != null) _animator.enabled = true;
+        if (_animator != null)
+        {
+            _animator.runtimeAnimatorController = _originalController;
+            _animator.cullingMode = AnimatorCullingMode.CullUpdateTransforms;
+        }
         if (_characterController != null) _characterController.enabled = true;
         if (_navMeshAgent != null) _navMeshAgent.enabled = true;
+        if (behaviourTreeOwner != null) behaviourTreeOwner.enabled = true;
+        if (networkAnimator != null) networkAnimator.enabled = true;
         foreach (var col in _rootColliders) col.enabled = true;
     }
 
