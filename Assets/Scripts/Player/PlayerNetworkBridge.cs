@@ -147,23 +147,21 @@ namespace StarterAssets
 
             CacheReferences();
 
-            // --- Component conflict resolution ---
+            // ── Component conflict resolution ──
+            // Two systems coexist: LPSP (visuals) + TPC (movement/networking).
             //
-            // Two systems coexist on this prefab:
-            //   A) LPSP (Character + Movement + CameraLook + LowerWeapon + Motion + Recoil)
-            //   B) TPC  (ThirdPersonController — custom movement, camera, shooting)
+            // Always disabled:
+            //   • Movement — calls Move() on same CC, overwrites TPC velocity.
             //
-            // Permanent conflicts (ALWAYS disable, Editor and Build):
-            //   • Movement   — calls Move() on same CharacterController, overwrites TPC's velocity
-            //   • CameraLook — rotates camera in LateUpdate, conflicts with TPC.UpdateFPSCamera()
+            // Always enabled (Editor + Build):
+            //   • Character — animations, weapons, ammo, firing.
+            //   • CameraLook — FP camera rotation.
+            //   • LowerWeapon, MotionApplier, RecoilMotion — visual polish.
             //
-            // Build-only conflicts (only in IL2CPP, InvokeUnityEvents broken):
-            //   • Character   — OnLook/OnMovement/OnFire never fire, equippedWeapon NRE
-            //   • LowerWeapon — NRE when characterBehaviour is disabled
-            //   • Motion/Recoil — NRE in LateUpdate when characterBehaviour is disabled
-            //
-            // In Editor, InvokeUnityEvents works correctly. Keep Character enabled
-            // for Q/E leaning, weapon animations, procedural motion, and recoil.
+            // Input delivery:
+            //   Editor: InvokeUnityEvents (m_NotificationBehavior=2) calls Character.OnMove/OnLook/...
+            //   Build:  PNB C# event bridge subscribes to pi.actions[*].performed and forwards to Character+TPC.
+            //   TPC reads _moveInput from pi.actions in Editor; from bridge in Build.
 
             // ── Always disabled (Editor + Build) ──
             // Movement: calls Move() on same CharacterController, overwrites TPC velocity.
@@ -174,60 +172,30 @@ namespace StarterAssets
                 Debug.Log($"[PNB] Disabled LPSP Movement on '{m.gameObject.name}'.");
             }
 
-            // ── Build-only: disable LPSP chain (InvokeUnityEvents broken in IL2CPP) ──
-            // In Editor, InvokeUnityEvents works correctly. Keep Character, CameraLook,
-            // LowerWeapon, MotionApplier, and RecoilMotion enabled for Q/E leaning,
-            // smooth animations, procedural motion, recoil, and camera rotation.
-#if !UNITY_EDITOR
-            if (characterBehaviour != null)
-            {
-                characterBehaviour.enabled = false;
-                Debug.Log("[PNB] Disabled LPSP Character (IL2CPP: InvokeUnityEvents broken).");
-            }
+            // ── Unified (Editor + Build): Character always enabled ──
+            // Build uses C# event bridge to forward input to Character;
+            // Editor uses InvokeUnityEvents (works correctly in Editor).
 
-            var allCameraLook = GetComponentsInChildren<InfimaGames.LowPolyShooterPack.CameraLook>(true);
-            foreach (var c in allCameraLook)
-            {
-                c.enabled = false;
-                Debug.Log($"[PNB] Disabled LPSP CameraLook on '{c.gameObject.name}'.");
-            }
-
-            var allLowerWeapon = GetComponentsInChildren<InfimaGames.LowPolyShooterPack.LowerWeapon>(true);
-            foreach (var lw in allLowerWeapon)
-            {
-                lw.enabled = false;
-                Debug.Log($"[PNB] Disabled LPSP LowerWeapon on '{lw.gameObject.name}'.");
-            }
-
-            var allMotionApplier = GetComponentsInChildren<InfimaGames.LowPolyShooterPack.MotionApplier>(true);
-            foreach (var ma in allMotionApplier)
-            {
-                ma.enabled = false;
-                Debug.Log($"[PNB] Disabled LPSP MotionApplier on '{ma.gameObject.name}'.");
-            }
-            var allRecoilMotion = GetComponentsInChildren<InfimaGames.LowPolyShooterPack.RecoilMotion>(true);
-            foreach (var rm in allRecoilMotion)
-            {
-                rm.enabled = false;
-                Debug.Log($"[PNB] Disabled LPSP RecoilMotion on '{rm.gameObject.name}'.");
-            }
-#else
-            // Character starts disabled in prefab (m_Enabled: 0). Enable it so that
-            // InvokeUnityEvents fire — OnLook/OnMovement/OnTryFire/OnTryPlayReload —
-            // which drive CameraLook, UpdateAnimator, weapon firing, reload, and ammo.
-            if (characterBehaviour != null)
+            // Character starts disabled in prefab (m_Enabled: 0). Enable it.
+            if (characterBehaviour != null && !characterBehaviour.enabled)
             {
                 characterBehaviour.enabled = true;
-                Debug.Log("[PNB] Editor mode: LPSP Character enabled.");
+                Debug.Log("[PNB] LPSP Character enabled.");
             }
-            Debug.Log("[PNB] Editor mode: CameraLook + animation chain kept enabled.");
-#endif
+            Debug.Log("[PNB] Unified mode: all LPSP components enabled (Editor + Build).");
 
             // Enable input
             if (playerInput != null)
             {
                 playerInput.enabled = true;
             }
+
+#if !UNITY_EDITOR
+            // Build: C# event bridge. InvokeUnityEvents may fail in IL2CPP+AssetBundle.
+            // Subscribe to InputAction events directly and forward to Character + TPC.
+            // Editor relies on InvokeUnityEvents (works correctly in Editor).
+            SetupInputEventBridge();
+#endif
 
             // Default to 1P for local player
             _isFirstPerson = true;
@@ -307,6 +275,72 @@ namespace StarterAssets
             // NetworkAnimator.animator is NOT swapped here — it stays on tpAnimator
             // (set by Editor tool). Swapping causes Mirror layer array IndexOutOfRange.
         }
+
+        #endregion
+
+        #region INPUT EVENT BRIDGE (Build)
+
+#if !UNITY_EDITOR
+        /// <summary>
+        /// Build-only: forwards InputAction events to Character and TPC via C# API.
+        /// InvokeUnityEvents (m_NotificationBehavior=2) may fail in IL2CPP+AssetBundle builds.
+        /// C# event subscriptions are standard .NET and work reliably.
+        ///
+        /// Editor relies on InvokeUnityEvents — this bridge is NOT set up in Editor.
+        /// </summary>
+        private void SetupInputEventBridge()
+        {
+            if (playerInput == null) return;
+
+            var chr = characterBehaviour as InfimaGames.LowPolyShooterPack.Character;
+            var tpc = thirdPersonController;
+
+            // Use PlayerInput.onActionTriggered — fires for EVERY action, independent of
+            // pi.actions reference validity. Does not conflict with InvokeUnityEvents.
+            playerInput.onActionTriggered += ctx =>
+            {
+                switch (ctx.action.name)
+                {
+                    case "Movement":
+                        chr?.OnMove(ctx);
+                        tpc?.OnMove(ctx);
+                        break;
+                    case "Look":
+                        chr?.OnLook(ctx);
+                        tpc?.OnLook(ctx);
+                        break;
+                    case "Fire":
+                        chr?.OnTryFire(ctx);
+                        break;
+                    case "Reload":
+                        chr?.OnTryPlayReload(ctx);
+                        break;
+                    case "Aim":
+                        chr?.OnTryAiming(ctx);
+                        break;
+                    case "Inspect":
+                        chr?.OnTryInspect(ctx);
+                        break;
+                    case "Run":
+                        chr?.OnTryRun(ctx);
+                        tpc?.OnSprint(ctx);
+                        break;
+                    case "Jump":
+                        chr?.OnTryJump(ctx);
+                        tpc?.OnJump(ctx);
+                        break;
+                    case "Holster":
+                        chr?.OnTryHolster(ctx);
+                        break;
+                    case "Inventory Next":
+                        chr?.OnTryInventoryNext(ctx);
+                        break;
+                }
+            };
+
+            Debug.Log("[PNB] Build: C# input bridge (onActionTriggered) active.");
+        }
+#endif
 
         #endregion
 

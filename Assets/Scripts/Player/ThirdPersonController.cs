@@ -468,6 +468,7 @@ namespace StarterAssets
                 thirdPersonVCam.Follow = CinemachineCameraTarget.transform;
                 thirdPersonVCam.LookAt = CinemachineCameraTarget.transform;
             }
+
         }
 
         //设置面板获
@@ -1093,9 +1094,10 @@ namespace StarterAssets
 
             if (fpCameraRoot == null) return;
 
-            // 鼠标输入
-            float mouseX = _lookInput.x * fpMouseSensitivity * Time.deltaTime* sensitivityX;    //可以调整灵敏度
-            float mouseY = _lookInput.y * fpMouseSensitivity * Time.deltaTime*sensitivityY;
+            // 鼠标输入 — no * Time.deltaTime (CameraLook doesn't use it).
+            // 0.05f matches IA_Player's ScaleVector2(x=0.05,y=0.05) processor for consistent Editor/Build feel.
+            float mouseX = _lookInput.x * fpMouseSensitivity * sensitivityX * 0.05f;
+            float mouseY = _lookInput.y * fpMouseSensitivity * sensitivityY * 0.05f;
 
             // 基础视角旋转
             fpYaw += mouseX;
@@ -1484,15 +1486,30 @@ namespace StarterAssets
             // with smooth damping. Skip TPC version to avoid overwriting.
             if (IsLpspCharacterActive) return;
 
+            // Damp times matched to LPSP Character.UpdateAnimator for consistent feel Editor↔Build.
+            const float dampLocomotion = 0.25f;
+            const float dampTurning = 0.4f;
+            float dt = Time.deltaTime;
+
             // Locomotion blend (magnitude)
-            firstPersonAnimator.SetFloat("Movement", _animationBlend);
+            firstPersonAnimator.SetFloat("Movement", _animationBlend, dampLocomotion, dt);
             // Per-axis for directional blending (strafe / forward-back)
-            firstPersonAnimator.SetFloat("Horizontal", _moveInput.x);
-            firstPersonAnimator.SetFloat("Vertical", _moveInput.y);
+            firstPersonAnimator.SetFloat("Horizontal", _moveInput.x, dampLocomotion, dt);
+            firstPersonAnimator.SetFloat("Vertical", _moveInput.y, dampLocomotion, dt);
+
+            // Leaning — Q/E (driven by movement.y input)
+            float leaningValue = Mathf.Clamp01(Mathf.Abs(_moveInput.y));
+            firstPersonAnimator.SetFloat("Leaning Forward", leaningValue, 0.5f, dt);
+
+            // Turning — from mouse X (abs because we just want magnitude for the turn anim)
+            firstPersonAnimator.SetFloat("Turning", Mathf.Abs(_lookInput.x), dampTurning, dt);
 
             // Sprint / holster
             firstPersonAnimator.SetBool("Running", _sprintHeld);
             firstPersonAnimator.SetBool("Holstered", !isHoldingGun);
+
+            // Locomotion play rate — stop movement anim when airborne
+            firstPersonAnimator.SetFloat("Play Rate Locomotion", Grounded ? 1f : 0f, 0.2f, dt);
         }
 
         // 右键瞄准动画
@@ -1504,20 +1521,19 @@ namespace StarterAssets
             // Skip TPC version to avoid conflicting parameter writes.
             if (IsLpspCharacterActive) return;
             // 鼠标右键按住进入瞄准
+            // 12.5f ≈ 1/0.08 (matching Character's dampTimeAiming for consistent Editor↔Build feel)
             if (Input.GetMouseButton(1))
             {
                 firstPersonAnimator.SetBool(_animIDAim, true);
                 float currentAimValue = firstPersonAnimator.GetFloat(_animIDAiming);
-                // 平滑过渡到瞄准状态（Time.deltaTime保证不同帧率下速度一致）
-                firstPersonAnimator.SetFloat(_animIDAiming, Mathf.Lerp(currentAimValue, 1f, Time.deltaTime * 10f));
+                firstPersonAnimator.SetFloat(_animIDAiming, Mathf.Lerp(currentAimValue, 1f, Time.deltaTime * 12.5f));
                 if (collimatorUI != null) collimatorUI.SetActive(false);
             }
             else
             {
                 firstPersonAnimator.SetBool(_animIDAim, false);
                 float currentAimValue = firstPersonAnimator.GetFloat(_animIDAiming);
-                // 平滑过渡到非瞄准状态
-                firstPersonAnimator.SetFloat(_animIDAiming, Mathf.Lerp(currentAimValue, 0f, Time.deltaTime * 10f));
+                firstPersonAnimator.SetFloat(_animIDAiming, Mathf.Lerp(currentAimValue, 0f, Time.deltaTime * 12.5f));
                 if (collimatorUI != null) collimatorUI.SetActive(true);   //显示准星
             }
         }
@@ -1607,29 +1623,43 @@ namespace StarterAssets
         #region IA_Player Input
 
         /// <summary>
-        /// Polls IA_Player actions directly each frame. FP_CH's PlayerInput uses
-        /// InvokeUnityEvents mode, so SendMessage callbacks (OnMove/OnLook/etc.) are
-        /// never invoked. Per-frame polling bypasses the notification mode entirely.
+        /// Polls player input each frame. Unified Editor + Build path:
+        /// tries pi.actions first, falls back to Keyboard.current if null.
+        /// Mouse delta is always read raw (bypass ScaleVector2 processor).
         /// </summary>
         private void PollPlayerInput()
         {
             var pi = GetComponent<PlayerInput>();
-            if (pi == null || pi.actions == null) return;
+            if (pi != null && pi.actions != null)
+            {
+                _moveInput = pi.actions["Movement"].ReadValue<Vector2>();
+                _sprintHeld = pi.actions["Run"].IsPressed();
+                if (pi.actions["Jump"].WasPressedThisFrame())
+                    _jumpTriggered = true;
+            }
+            else
+            {
+                // Fallback: read directly from hardware (works regardless of InputActionAsset state).
+                var keyb = Keyboard.current;
+                if (keyb != null)
+                {
+                    _moveInput = Vector2.zero;
+                    if (keyb.wKey.isPressed) _moveInput.y += 1;
+                    if (keyb.sKey.isPressed) _moveInput.y -= 1;
+                    if (keyb.aKey.isPressed) _moveInput.x -= 1;
+                    if (keyb.dKey.isPressed) _moveInput.x += 1;
+                    _sprintHeld = keyb.leftShiftKey.isPressed;
+                    if (keyb.spaceKey.wasPressedThisFrame)
+                        _jumpTriggered = true;
+                }
+            }
 
-            _moveInput = pi.actions["Movement"].ReadValue<Vector2>();
             if (_cursorInputForLook)
             {
-                // Bypass ScaleVector2(0.05) processor on the Look action's Pointer/delta binding.
-                // LPSP CameraLook uses Quaternion accumulation (needs tiny values), but TPC uses
-                // Euler-angle addition (needs raw pixel delta). Reading Mouse.current.delta directly
-                // gives us the raw hardware value.
                 var mouse = Mouse.current;
                 if (mouse != null)
                     _lookInput = mouse.delta.ReadValue();
             }
-            _sprintHeld = pi.actions["Run"].IsPressed();
-            if (pi.actions["Jump"].WasPressedThisFrame())
-                _jumpTriggered = true;
         }
 
         #endregion

@@ -222,6 +222,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Action<Adrenak.UniVoice.AudioFrame>
 	// System.Action<BotListMessage>
 	// System.Action<Mirror.NetworkDiagnostics.MessageInfo>
+	// System.Action<UnityEngine.InputSystem.InputAction.CallbackContext>
 	// System.Action<UnityEngine.Vector3>
 	// System.Action<byte,byte>
 	// System.Action<float,float>

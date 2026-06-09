@@ -568,6 +568,36 @@ public class MyYooAsset : MonoBehaviour
             Debug.LogError($"加载 HotUpdate.dll 失败: {ex}");
             return;
         }
+
+        // HybridCLR 加载的 DLL 中 [RuntimeInitializeOnLoadMethod] 不会自动触发。
+        // LPSP (Low Poly Shooter Pack) 依赖 Bootstraper.Initialize() 初始化
+        // ServiceLocator + IGameModeService。必须手动调用。
+        try
+        {
+            var bootstraperType = _hotUpdateAss.GetType("InfimaGames.LowPolyShooterPack.Bootstraper");
+            if (bootstraperType != null)
+            {
+                var initMethod = bootstraperType.GetMethod("Initialize",
+                    System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.Public);
+                if (initMethod != null)
+                {
+                    initMethod.Invoke(null, null);
+                    Debug.Log("[MyYooAsset] Bootstraper.Initialize() 手动调用成功 — ServiceLocator 已初始化。");
+                }
+                else
+                {
+                    Debug.LogWarning("[MyYooAsset] Bootstraper.Initialize 方法未找到！");
+                }
+            }
+            else
+            {
+                Debug.LogWarning("[MyYooAsset] Bootstraper 类型未在 HotUpdate.dll 中找到。");
+            }
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError($"[MyYooAsset] Bootstraper.Initialize() 调用失败: {ex}");
+        }
 #else
         // 编辑器下直接尝试从已加载程序集查找
         var hot = System.AppDomain.CurrentDomain.GetAssemblies().FirstOrDefault(a => a.GetName().Name == "HotUpdate");
