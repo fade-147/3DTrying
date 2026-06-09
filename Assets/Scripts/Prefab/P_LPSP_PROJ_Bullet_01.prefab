@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 96448838451407516}
   - component: {fileID: 114243545424532484}
   - component: {fileID: 4162600789830257559}
+  - component: {fileID: -4849280614141771497}
   m_Layer: 15
   m_Name: P_LPSP_PROJ_Bullet_01
   m_TagString: Untagged
@@ -241,6 +242,24 @@ MonoBehaviour:
   serverOnly: 0
   visibility: 0
   hasSpawned: 0
+--- !u!114 &-4849280614141771497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086664671600574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3d3e5b5e68341b4797ed37871a4ea2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
+  HitEffect: {fileID: 1067471869909948, guid: 5e02303289b3c494e8e185be0fbbd405, type: 3}
+  BulletLifeTime: 2
+  ownerNetIdentity: {fileID: 4162600789830257559}
 --- !u!1 &1231345400216816
 GameObject:
   m_ObjectHideFlags: 0

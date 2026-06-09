@@ -328,6 +328,11 @@ public class MyNetworkRoomManager : NetworkRoomManager
         {
             tpc.teamId = roomP.teamId;
         }
+
+        // Also set teamId on PlayerState if present (for BotController.GetTeamId compatibility)
+        PlayerState ps = gamePlayer.GetComponent<PlayerState>();
+        if (ps != null) ps.teamId = roomP.teamId;
+
         return true;
     }
 

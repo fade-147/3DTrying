@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -19,10 +19,42 @@ public class Bullet : NetworkBehaviour
         Destroy(gameObject, BulletLifeTime);
     }
 
+    /// <summary>
+    /// 服务端调用：忽略子弹与所有同队伍角色的碰撞，使子弹穿透队友。
+    /// 需在 NetworkServer.Spawn 之后、子弹开始移动之前调用。
+    /// </summary>
+    [Server]
+    public void SetupTeammateIgnore()
+    {
+        if (ownerNetIdentity == null) return;
+
+        int shooterTeam = BotController.GetTeamId(ownerNetIdentity.GetComponent<PlayerCharacter>());
+        if (shooterTeam < 0) return;
+
+        Collider myCollider = GetComponent<Collider>();
+        if (myCollider == null) return;
+
+        PlayerCharacter[] allChars = FindObjectsByType<PlayerCharacter>(FindObjectsSortMode.None);
+        foreach (PlayerCharacter pc in allChars)
+        {
+            if (BotController.GetTeamId(pc) != shooterTeam) continue;
+
+            // 忽略同队的所有 Collider（含 CharacterController 和骨骼胶囊体）
+            foreach (Collider c in pc.GetComponents<Collider>())
+                Physics.IgnoreCollision(myCollider, c);
+            foreach (Collider c in pc.GetComponentsInChildren<Collider>())
+                Physics.IgnoreCollision(myCollider, c);
+        }
+    }
+
     private void OnCollisionEnter(Collision other)
     {
         // 仅服务端处理碰撞伤害
         if (!isServer) return;
+
+        // 子弹互撞忽略——不生成特效、不销毁
+        if (other.gameObject.GetComponent<Bullet>() != null)
+            return;
 
         // 生成命中特效
         if (HitEffect != null)

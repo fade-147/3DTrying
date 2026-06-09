@@ -62,10 +62,11 @@ namespace InfimaGames.LowPolyShooterPack
         /// </summary>
         private void Start()
         {
-            if (ServiceLocator.Current == null) return;
-            var gm = ServiceLocator.Current.Get<IGameModeService>();
-            if (gm == null) return;
-            playerCharacter = gm.GetPlayerCharacter();
+            // Find our own Character on this prefab instance via hierarchy.
+            // ServiceLocator is a process-wide singleton — in multiplayer, later-spawned
+            // player Characters overwrite the registration, causing CameraLook on the
+            // host to reference a remote player's Character (which has no local mouse input).
+            playerCharacter = GetComponentInParent<CharacterBehaviour>();
             if (playerCharacter == null) return;
 
             rotationCharacter = playerCharacter.transform.localRotation;

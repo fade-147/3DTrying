@@ -2,7 +2,6 @@
 
 using UnityEngine;
 using System.Collections;
-using InfimaGames.LowPolyShooterPack;
 using Random = UnityEngine.Random;
 
 namespace InfimaGames.LowPolyShooterPack.Legacy
@@ -32,13 +31,8 @@ namespace InfimaGames.LowPolyShooterPack.Legacy
 
 		private void Start()
 		{
-			//Grab the game mode service, we need it to access the player character!
-			var gameModeService = ServiceLocator.Current.Get<IGameModeService>();
-			//Ignore the main player character's collision. A little hacky, but it should work.
-			Physics.IgnoreCollision(gameModeService.GetPlayerCharacter().GetComponent<Collider>(),
-				GetComponent<Collider>());
-
-			//Start destroy timer
+			// 联网环境下自伤保护由 Bullet.ownerNetIdentity 处理，
+			// 不再依赖 Physics.IgnoreCollision（服务端也会执行，导致 Bot 子弹无法命中玩家）。
 			StartCoroutine(DestroyAfter());
 		}
 

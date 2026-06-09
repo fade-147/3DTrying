@@ -179,8 +179,7 @@ public class PlayerCombat : NetworkBehaviour
         Camera currentCamera = (_view != null && _view.isFirstPerson) ? _view.fpCamera : Camera.main;
         if (currentCamera == null) currentCamera = Camera.main;
 
-        Ray baseRay = currentCamera.ScreenPointToRay(
-            new Vector3(Screen.width / 2 - 60, Screen.height / 2 + 60, 0));
+        Ray baseRay = currentCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
         Vector3 shootDirection = baseRay.direction;
 
         bool isFirstPerson = _view != null && _view.isFirstPerson;

@@ -183,7 +183,7 @@ public class BotController : NetworkBehaviour
     }
 
     /// <summary>
-    /// 从 PlayerCharacter 获取队伍 ID，兼容玩家（ThirdPersonController）和人机（BotController）。
+    /// 从 PlayerCharacter 获取队伍 ID，兼容人机（BotController）和玩家（PlayerState / PlayerNetworkBridge / ThirdPersonController）。
     /// </summary>
     public static int GetTeamId(PlayerCharacter pc)
     {
@@ -191,6 +191,10 @@ public class BotController : NetworkBehaviour
         if (bc != null) return bc.teamId;
         PlayerState ps = pc.GetComponent<PlayerState>();
         if (ps != null) return ps.teamId;
+        PlayerNetworkBridge pnb = pc.GetComponent<PlayerNetworkBridge>();
+        if (pnb != null) return pnb.teamId;
+        ThirdPersonController tpc = pc.GetComponent<ThirdPersonController>();
+        if (tpc != null) return tpc.teamId;
         return -1;
     }
 
@@ -405,6 +409,7 @@ public class BotController : NetworkBehaviour
             bulletScript.ownerNetIdentity = netIdentity;
             bulletScript.HitEffect = hitEffect;
             bulletScript.BulletLifeTime = bulletLifeTime;
+            bulletScript.SetupTeammateIgnore();
         }
 
         if (bullet.TryGetComponent<Rigidbody>(out Rigidbody rb))

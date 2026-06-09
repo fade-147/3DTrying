@@ -24,6 +24,7 @@
     <type fullname="BotController" preserve="all" />
     <type fullname="BotLobbyUI" preserve="all" />
     <type fullname="BotZoneManager" preserve="all" />
+    <type fullname="Bullet" preserve="all" />
     <type fullname="ChangeAnimator" preserve="all" />
     <type fullname="CharacterOutline" preserve="all" />
     <type fullname="GameMenuCol" preserve="all" />

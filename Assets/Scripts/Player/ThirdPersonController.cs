@@ -233,6 +233,12 @@ namespace StarterAssets
         private bool _jumpTriggered;
         private bool _cursorInputForLook = true;
 
+        /// <summary>
+        /// Tracks LPSP Character shotsFired to detect when Character fires,
+        /// so TPC can send exactly one CmdFire per Character.Fire() call.
+        /// </summary>
+        private int _lastLpspShotsFired;
+
         private void Awake()
         {
             if (_mainCamera == null)
@@ -629,8 +635,14 @@ namespace StarterAssets
             if (_fireTimer > 0)
                 _fireTimer -= Time.deltaTime;
 
-            // 射击触发：鼠标左键 + 可射击 + 持枪 + 冷却完成 + 非喝水状态
-            if (Input.GetMouseButton(0) && !IsRunning && CanShoot && isHoldingGun && _fireTimer <= 0 && !_isDrinking && !isReloading && currentAmmo > 0 && !SettingOpen)
+            // 射击触发：鼠标左键 + 可射击 + 持枪 + 非喝水状态
+            // ── LPSP Character 活跃时 ──
+            // Character handles fire rate, ammo, local effects (animation, sound, casing, recoil).
+            // TPC detects Character.fire and sends exactly one CmdFire (networked bullet) per shot.
+            // This avoids double-firing and ammo desync.
+            // ── LPSP Character 不活跃时(Build fallback) ──
+            // TPC handles everything: ammo, fire rate, spread, recoil, CmdFire.
+            if (Input.GetMouseButton(0) && !IsRunning && CanShoot && isHoldingGun && !_isDrinking && !isReloading && !SettingOpen)
             {
                 isInspecting = false;
 
@@ -641,49 +653,71 @@ namespace StarterAssets
                     return;
                 }
 
-                // When LPSP Character is active (Editor mode), it handles local effects:
-                // ammo, recoil, spread, muzzle flash, sound, casing — via OnTryFire → Fire().
-                // TPC only sends the networked bullet (CmdFire).
-                bool handledByLpsp = IsLpspCharacterActive;
-
-                if (!handledByLpsp)
+                if (IsLpspCharacterActive)
                 {
-                    CalculateCurrentSpread();
-                    _currentSpread = Mathf.Min(_currentSpread + SpreadPerShot, MaxSpread);
-                    ApplyFpRecoil();
-                    currentAmmo--;
-                    UpdateAmmoUI();
+                    // ── LPSP Character drives fire; TPC sends networked bullet ──
+                    var chr = GetComponentInChildren<InfimaGames.LowPolyShooterPack.Character>(true);
+                    if (chr != null)
+                    {
+                        int currentShots = chr.GetShotsFired();
+                        if (currentShots != _lastLpspShotsFired)
+                        {
+                            _lastLpspShotsFired = currentShots;
+
+                            Camera currentCamera = IsInFirstPerson ? fpCamera : MainCamera;
+                            if (currentCamera == null) currentCamera = Camera.main;
+                            if (currentCamera == null) return;
+
+                            Ray baseRay = currentCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
+                            Vector3 shootDirection = baseRay.direction;
+
+                            if (IsInFirstPerson && isHoldingGun)
+                            {
+                                float randomX = Random.Range(-_currentSpread, _currentSpread);
+                                float randomY = Random.Range(-_currentSpread, _currentSpread);
+                                Quaternion spreadRotation = Quaternion.Euler(randomY, randomX, 0f);
+                                shootDirection = spreadRotation * baseRay.direction;
+                            }
+
+                            Transform muzzle = IsInFirstPerson ? firstPersonMuzzle : thirdPersonMuzzle;
+                            if (muzzle == null) muzzle = thirdPersonMuzzle;
+                            if (muzzle != null)
+                                CmdFire(shootDirection, muzzle.position);
+                        }
+                    }
                 }
-
-                // 计算带散射的射击方向（核心）
-                Camera currentCamera = IsInFirstPerson ? fpCamera : MainCamera;
-                if (currentCamera == null) currentCamera = Camera.main;
-
-                // 准星中心射线
-                Ray baseRay = currentCamera.ScreenPointToRay(new Vector3(Screen.width / 2-60, Screen.height / 2+60, 0));
-                Vector3 shootDirection = baseRay.direction;
-
-                // 第一人称持枪时，应用腰射散射
-                if (IsInFirstPerson && isHoldingGun)
+                else
                 {
-                    // 生成随机散布偏移
-                    float randomX = Random.Range(-_currentSpread, _currentSpread);
-                    float randomY = Random.Range(-_currentSpread, _currentSpread);
+                    // ── TPC standalone fire (Build, no LPSP Character) ──
+                    if (_fireTimer <= 0 && currentAmmo > 0)
+                    {
+                        CalculateCurrentSpread();
+                        _currentSpread = Mathf.Min(_currentSpread + SpreadPerShot, MaxSpread);
+                        ApplyFpRecoil();
+                        currentAmmo--;
+                        UpdateAmmoUI();
 
-                    // 把角度偏移转成方向向量
-                    Quaternion spreadRotation = Quaternion.Euler(randomY, randomX, 0f);
-                    shootDirection = spreadRotation * baseRay.direction;
+                        Camera currentCamera = IsInFirstPerson ? fpCamera : MainCamera;
+                        if (currentCamera == null) currentCamera = Camera.main;
+
+                        Ray baseRay = currentCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
+                        Vector3 shootDirection = baseRay.direction;
+
+                        if (IsInFirstPerson && isHoldingGun)
+                        {
+                            float randomX = Random.Range(-_currentSpread, _currentSpread);
+                            float randomY = Random.Range(-_currentSpread, _currentSpread);
+                            Quaternion spreadRotation = Quaternion.Euler(randomY, randomX, 0f);
+                            shootDirection = spreadRotation * baseRay.direction;
+                        }
+
+                        Transform muzzle = IsInFirstPerson ? firstPersonMuzzle : thirdPersonMuzzle;
+                        if (muzzle == null) muzzle = thirdPersonMuzzle;
+                        if (muzzle == null) return;
+                        CmdFire(shootDirection, muzzle.position);
+                        _fireTimer = FireRate;
+                    }
                 }
-
-                //获取对应枪口位置
-                Transform muzzle = IsInFirstPerson ? firstPersonMuzzle : thirdPersonMuzzle;
-                if (muzzle == null) muzzle = thirdPersonMuzzle; // fallback to 3P muzzle
-                if (muzzle == null) return; // no muzzle available, can't fire
-                Vector3 targetMuzzlePos = muzzle.position;
-                //传给服务端生成子弹
-                CmdFire(shootDirection, targetMuzzlePos);
-                // 重置射速冷却
-                _fireTimer = FireRate;
             }
 
             if (Input.GetKeyDown(KeyCode.Tab))
@@ -877,6 +911,7 @@ namespace StarterAssets
                 bulletScript.ownerNetIdentity = netIdentity;
                 bulletScript.HitEffect = HitEffect;
                 bulletScript.BulletLifeTime = BulletLifeTime;
+                bulletScript.SetupTeammateIgnore();
             }
 
             // 服务端统一给子弹推力（用客户端传的方向，绝对正确）
@@ -1298,23 +1333,29 @@ namespace StarterAssets
             float speedOffset = 0.1f;
             float inputMagnitude = _moveInput.magnitude;
 
-            if (currentHorizontalSpeed < targetSpeed - speedOffset || currentHorizontalSpeed > targetSpeed + speedOffset)
+            // Self-referential lerp: accelerates _speed toward target regardless of frame rate.
+            // Using currentHorizontalSpeed (from controller.velocity) as lerp source fails at
+            // very high FPS because CharacterController.velocity rounds tiny per-frame movements to 0,
+            // causing _speed to stagnate forever.
+            float targetFinalSpeed = targetSpeed * inputMagnitude;
+            if (Mathf.Abs(_speed - targetFinalSpeed) > 0.01f)
             {
-                _speed = Mathf.Lerp(currentHorizontalSpeed, targetSpeed * inputMagnitude, Time.deltaTime * SpeedChangeRate);
+                _speed = Mathf.Lerp(_speed, targetFinalSpeed, Time.deltaTime * SpeedChangeRate);
                 _speed = Mathf.Round(_speed * 1000f) / 1000f;
             }
             else
             {
-                _speed = targetSpeed;
+                _speed = targetFinalSpeed;
             }
 
             // --- Move diagnostic: log once per ~3s ---
             if (Time.frameCount % 180 == 0)
             {
-                Debug.Log($"[MOVE_DIAG] holdingGun={isHoldingGun} is1P={IsInFirstPerson} | " +
+                Debug.Log($"[MOVE_DIAG] holdingGun={isHoldingGun} is1P={IsInFirstPerson} lpspChar={IsLpspCharacterActive} | " +
+                          $"moveIn=({_moveInput.x:F3},{_moveInput.y:F3}) mag={_moveInput.magnitude:F3} | " +
                           $"spd={_speed:F4} targetSpd={targetSpeed:F2} curHSpeed={currentHorizontalSpeed:F4} | " +
-                          $"ccVel_before={_controller.velocity} | dt={Time.deltaTime:F4} | " +
-                          $"pos={transform.position:F4}");
+                          $"animBlend={_animationBlend:F3} vVel={_verticalVelocity:F2} | " +
+                          $"ccEn={_controller?.enabled} ccNull={_controller==null} | dt={Time.deltaTime:F4}");
             }
             _animationBlend = Mathf.Lerp(_animationBlend, targetSpeed, Time.deltaTime * SpeedChangeRate);
 
@@ -1636,6 +1677,9 @@ namespace StarterAssets
                 _sprintHeld = pi.actions["Run"].IsPressed();
                 if (pi.actions["Jump"].WasPressedThisFrame())
                     _jumpTriggered = true;
+
+                if (Time.frameCount % 180 == 0)
+                    Debug.Log($"[POLL_INPUT] source=pi.actions | moveIn=({_moveInput.x:F3},{_moveInput.y:F3}) sprint={_sprintHeld} jump={_jumpTriggered}");
             }
             else
             {
@@ -1652,6 +1696,9 @@ namespace StarterAssets
                     if (keyb.spaceKey.wasPressedThisFrame)
                         _jumpTriggered = true;
                 }
+
+                if (Time.frameCount % 180 == 0)
+                    Debug.Log($"[POLL_INPUT] source=Keyboard fallback | keybNull={keyb==null} | moveIn=({_moveInput.x:F3},{_moveInput.y:F3}) sprint={_sprintHeld} jump={_jumpTriggered}");
             }
 
             if (_cursorInputForLook)
