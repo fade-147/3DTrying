@@ -72,3 +72,17 @@ MonoBehaviour:
         FilterRuleName: CollectAll
         AssetTags: 
         UserData: 
+    - GroupName: LowPody
+      GroupDesc:
+      AssetTags:
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Assets/My Get/CSAssets2026/Infima Games/Low Poly Shooter Pack
+          - Free Sample
+        CollectorGUID: 6417c31b57a1b5b4695ce6ea8771a948
+        CollectorType: 0
+        AddressRuleName: AddressDisable
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 

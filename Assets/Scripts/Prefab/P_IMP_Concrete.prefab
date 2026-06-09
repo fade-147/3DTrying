@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4587651611338842}
+  - component: {fileID: 114777204554752142}
   - component: {fileID: 82763957066427458}
-  - component: {fileID: 4228644181199507904}
-  - component: {fileID: -8040820877869935964}
+  - component: {fileID: -8252297795811607700}
   m_Layer: 0
   m_Name: P_IMP_Concrete
   m_TagString: Untagged
@@ -29,14 +29,33 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.52, y: 0.52, z: 0.52}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4701804857306314}
   - {fileID: 4874605371692882}
   - {fileID: 4875484846783468}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114777204554752142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067471869909948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e1ff595cafaf634c8876e79d424183b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  despawnTimer: 10
+  impactSounds:
+  - {fileID: 8300000, guid: 172f576bc4226094180d5993f9325d57, type: 3}
+  - {fileID: 8300000, guid: ead9439cc21260d44b99cc5037814e27, type: 3}
+  - {fileID: 8300000, guid: 26c5b6d560a62c946accc4e4207b66cc, type: 3}
+  - {fileID: 8300000, guid: 37e08e3552104a248a91d21d637ef2f4, type: 3}
+  audioSource: {fileID: 82763957066427458}
 --- !u!82 &82763957066427458
 AudioSource:
   m_ObjectHideFlags: 0
@@ -133,7 +152,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &4228644181199507904
+--- !u!114 &-8252297795811607700
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -150,40 +169,6 @@ MonoBehaviour:
   serverOnly: 0
   visibility: 0
   hasSpawned: 0
---- !u!114 &-8040820877869935964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1067471869909948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ff3ba0becae47b8b9381191598957c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncDirection: 1
-  syncMode: 0
-  syncInterval: 0
-  target: {fileID: 4587651611338842}
-  syncPosition: 1
-  syncRotation: 1
-  syncScale: 1
-  onlySyncOnChange: 1
-  compressRotation: 1
-  interpolatePosition: 1
-  interpolateRotation: 1
-  interpolateScale: 1
-  coordinateSpace: 0
-  timelineOffset: 1
-  showGizmos: 0
-  showOverlay: 0
-  overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
-  onlySyncOnChangeCorrectionMultiplier: 2
-  useFixedUpdate: 0
-  rotationSensitivity: 0.01
-  positionPrecision: 0.01
-  scalePrecision: 0.01
 --- !u!1 &1192667920482426
 GameObject:
   m_ObjectHideFlags: 0
@@ -5031,7 +5016,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f1b1ee42adec5c544b37ecbf2a864629, type: 2}
+  - {fileID: 2100000, guid: a526e256d337dbf4288e13f1a96e4461, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9932,6 +9918,7 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: b1c68c048883aa04e98206611bbd70f7, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14831,7 +14818,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3064a05586bfc724c9e53002a01b53d6, type: 2}
+  - {fileID: 2100000, guid: 7a8ad10c976a30848b75c4ba8d61ce62, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

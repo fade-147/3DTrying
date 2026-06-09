@@ -189,8 +189,8 @@ public class BotController : NetworkBehaviour
     {
         BotController bc = pc.GetComponent<BotController>();
         if (bc != null) return bc.teamId;
-        ThirdPersonController tpc = pc.GetComponent<ThirdPersonController>();
-        if (tpc != null) return tpc.teamId;
+        PlayerState ps = pc.GetComponent<PlayerState>();
+        if (ps != null) return ps.teamId;
         return -1;
     }
 

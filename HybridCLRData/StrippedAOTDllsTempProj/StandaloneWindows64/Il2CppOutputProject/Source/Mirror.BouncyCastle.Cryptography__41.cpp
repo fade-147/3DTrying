@@ -50,119 +50,6 @@ IL2CPP_EXTERN_C String_t* _stringLiteral6D850599050207BA3A37A2D88D63B137C63EFC8E
 IL2CPP_EXTERN_C String_t* _stringLiteralA6DBDE4DFCE47C72AFA52C1981772A8DD7EFD2C8;
 IL2CPP_EXTERN_C String_t* _stringLiteralF4B67B27E4DD10700B0726FC3E0A89E2CDBB84C8;
 IL2CPP_EXTERN_C String_t* _stringLiteralF8167CCC78C1117CDBB4F4177DE66863BA21E27A;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD160Digest_CopyIn_m1F47425D2A238EC3F2144AB024637A51A52896A8_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD160Digest_Copy_mFB901D4811A2F95A41B14171269C4887B2396345_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD160Digest_DoFinal_m4B626024C13473DE4D52686F981C0F8DFB68267B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD160Digest_F1_mA6CBE6AB3206602EEA8B47A2BD0296D930ED2AD7_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD160Digest_F2_mAED592CC8CEEB0B299AC329A81A090C7C7C4A346_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD160Digest_F3_m75E1A913468CC925BC3D28FDC404D7BA890F80D0_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD160Digest_F4_m286B45E0392CF3AD1594A6B4CD5B0FC176E21A54_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD160Digest_F5_m1864F5D04D54312BD0B011A212EEBFC79B8AE08D_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD160Digest_GetDigestSize_mB4BCE2030CCF3D1D9C23941EFE1CE8BA107F283B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD160Digest_ProcessBlock_m931018ED911F996B37E36F9333800BA5580F4235_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD160Digest_ProcessLength_m8BDF519729035BBD097A4C616A8C9D1DAF49D230_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD160Digest_ProcessWord_m00986F9AB548D8B13887A6897A349D7FE97E123C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD160Digest_RL_m8454221D54865C72FA8CDC8DC24445F4E7B31714_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD160Digest_Reset_m26F247706B5716BB9C4F484C593D8D447C572175_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD160Digest_Reset_m67CD20BDCF953C66BE4D1B87BAFD0E6AAE071805_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD160Digest__ctor_m74CF004258CC056FC547C193BB9FD6A88872690E_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD160Digest__ctor_mD8E1AA58729A292BAE301F61E8362F3B65FE4663_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD160Digest_get_AlgorithmName_m406760793C70664E260B23966B945A7F4B10A64E_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD256Digest_CopyIn_mCA71EF491480FA0CF238B996D068297AE6C0BD43_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD256Digest_Copy_m21CF676FFEDAE831D0186098E05F57B4A02650E1_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD256Digest_DoFinal_m74036A81806670A00B968060F71CB5A79ACB3B98_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD256Digest_F1_m5C38317CD756A06A41326B53BEDFB32C9DB63D69_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD256Digest_F1_m9BBBD4D404E0958AF994787688590CA209EED0DC_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD256Digest_F2_m11B5E43924D5AB71F8CCD10A2D04941A4958EB4C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD256Digest_F2_mE9FA5395453450BC72D77BE6B6293705497A11C0_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD256Digest_F3_m5B5C35E4F0F5DAAD43BC370EC78C7B391A060708_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD256Digest_F3_m82EE13C5169A46FBDFBBA8ED7A89E40A2956BF5A_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD256Digest_F4_m029803C4DA07A0DE45612909371EE6BF3B6CB9EB_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD256Digest_F4_m7A7B69DA972D8E72D9E67204B66F5ED29D865D01_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD256Digest_FF1_m75F0224CAC599364AC5B7088DA4BB8D31A716B72_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD256Digest_FF2_m66D64DF1997459B0C99F071AD1A9283B16F5B860_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD256Digest_FF3_mC4D34040D4313B8039746C5125F36A89EC9E5F8B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD256Digest_FF4_mC1DF4E17CB2255D319EA01FAA86F27E2B769AEA2_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD256Digest_GetDigestSize_m3966A2985CB32E2A2ECFAD89D5EE42895850809D_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD256Digest_ProcessBlock_m9D429382ED37DFDA44A3BBC29F66ADE7DF9EBF5F_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD256Digest_ProcessLength_m8BC4896EB8AE94DDA26ECCAC64D2CC76C61E8011_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD256Digest_ProcessWord_mB1DE2B423461F34AFA6B6C558C252F21CDEB6EE7_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD256Digest_RL_m838D97C7FC0BAA87272EBD20437CF8D424819466_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD256Digest_Reset_m5049EB9C0C57E0B61F905E02479C6B1AFD8A2341_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD256Digest_Reset_mDE495F7CCFB7D86A1990A2706993F40CD94F5728_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD256Digest__ctor_mAA1104B20142EBA0D7A4ABAE5DCB2CA0D24D2E8C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD256Digest__ctor_mC196FDC311899FE60F3D54051C1B0C54F805E9C6_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD256Digest_get_AlgorithmName_m0A9ED5AC56A782684B1E1B986F02FAFF7EB4C769_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD320Digest_CopyIn_mC127FB6BD35FBD2AAC10B9781A274476C074B688_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD320Digest_Copy_mF3B31E1F8FA87701537BF0A41DFADBA91957BB6F_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD320Digest_DoFinal_m40798F00C553DEF3D6E1C1DC4D6730B2A068E53B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD320Digest_F1_m411C920132D33B4E4A80DCB8BD1BD2DD67FB1B4B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD320Digest_F2_mA1D2952EF320BE474C6B445789AD6C5C7D009CC1_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD320Digest_F3_mA3F828E61B6D33122C8BB76B527A0030C36E34DE_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD320Digest_F4_m5BE1B200D3A01B09425B690575611EA004C2F34A_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD320Digest_F5_m98E19D2E84706E99D9AD9023FFAD89905A6B5669_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD320Digest_GetDigestSize_m849E1E728CFB0A0A7E9B4E82BE635CCF2CBF9C29_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD320Digest_ProcessBlock_mB1667C65AFF8C5FAB604005F1142A1542E3D59C9_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD320Digest_ProcessLength_m1C13227DD44E97214489BB7B5659CB11EB6C7917_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD320Digest_ProcessWord_m3DECB4CC2B99A6D68F24DE03D65DF9D3C4ED69DF_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD320Digest_RL_m61E373F19E76AEED497CF83448FFA8DA9A4B7C0C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD320Digest_Reset_m086F0E98981D5699D2891A50D6FDB8B063632702_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD320Digest_Reset_m6763D44F17189DE86F3FAA6CDE9422A89405F5C6_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD320Digest__ctor_m2D46C5BBE95F2E3B5785AED832D01EE72B21679C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD320Digest__ctor_m5DB0DD2484BF18ED2CD26E6215E573604577757F_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RipeMD320Digest_get_AlgorithmName_m1B99B3292C2948BBC2876F468FB9C85D1CEEBC4E_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha1Digest_CopyIn_m9E6A71EA7773A092D17C940A16DEFBB0ACD1273F_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha1Digest_Copy_mCE70174FF9F33CBB8D59D6B090F09575A59F9265_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha1Digest_DoFinal_m1D1896CC9EEF609AB096A18081F915C1C612C553_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha1Digest_F_m9EA9254A817FAE631FBB22B7D6445D0F4E14FA51_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha1Digest_G_m41E356838AD07E8E8486F61C6883E452668AFC09_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha1Digest_GetDigestSize_mA4EA9DCB1B5090101A53E3BD8F50DC61803CF433_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha1Digest_H_mBEB9AA47E3C6E639F557EE0F1CDF4C18A057F48B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha1Digest_ProcessBlock_mF74FB940229DC6B93E46F419FE4AAA28D80D2FD3_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha1Digest_ProcessLength_m8C05F2F1EDB588FDF5574AB93380AC53615F6F53_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha1Digest_ProcessWord_m8C1AAB4737C32CCD79E4FDA0BFB41045DB21BD05_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha1Digest_Reset_mA2D04A4223390371549D95286884D33EC4D2C3EF_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha1Digest_Reset_mC8E8D940AE10F6624EA229AA9522F170AE671D4B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha1Digest__ctor_mCB0EEF4B6C1F65564035BFBA4B63A2591B8C8412_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha1Digest__ctor_mDFD7D456A9078BF6F7D11D23D1F27D39703C3C85_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha1Digest_get_AlgorithmName_m02C06C30652126358F1F8013F3BC367CB03DB2C4_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha224Digest_Ch_m62E957C0E27B0D3292380E97A73B9A0CA1713FDF_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha224Digest_CopyIn_mADFA7CD9A627272D84335C7D3C34B9340341B242_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha224Digest_Copy_mF50D2533BC3496CBEC017D00F7B102EA302C6890_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha224Digest_DoFinal_m9162094BADFD94A0CF5DE9CC29D21F8B63301266_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha224Digest_GetDigestSize_m2769CE322C7BE7E29F3A98BB361B80F68D48EFE2_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha224Digest_Maj_mDCA8FF1CCB1EF9869C73AB597DA241CD5E2724E6_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha224Digest_ProcessBlock_m3F8CC9ADE751D0E71A355E3DFF33A395FC18F9B5_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha224Digest_ProcessLength_mEFA8ABD09D3009618CAA973CBF7ABF0BCCBC55CE_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha224Digest_ProcessWord_m2CA60F6A8C6B7D6DDEB2EE29864B6D0953DE7937_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha224Digest_Reset_m55E3910BB79D3D76056D27D95597BF50271D82E6_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha224Digest_Reset_mBE66CA09AE33CE8B638A87CDBC12A4A3FAB020FA_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha224Digest_Sum0_m958FD77748AE20F93DCEFEB10E78966EB4310CDD_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha224Digest_Sum1_m6B434D8427C533DBEB42ADD9EB09E97C99A6BAC4_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha224Digest_Theta0_mF0A2F4D2A454C6D3B3D8879266C403ACF38A8601_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha224Digest_Theta1_m7965E2ACE4A72C13B25027D4F891FA67C898B2AE_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha224Digest__cctor_m44B70E148293C3BDEEAF7CB5898EF76BE7DD368A_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha224Digest__ctor_m34AB6660BD2E276A6FF239B9EF8DB824CB54C081_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha224Digest__ctor_mBFD67E7D6C43D10F118F20E05574E2F2266B9E18_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha224Digest_get_AlgorithmName_m34DC575807AD28B429CAFAC3E8BCDBD1DE0FC78A_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha256Digest_CopyIn_m857C6FB7A69455C6CF9259259D1233F0FB63183F_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha256Digest_Copy_m01A8A87921D48CE482335C9490EFAECBC0CD0AE0_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha256Digest_DoFinal_m8F01ACE808232964EDA6BE7D2FCBD5D6C9F34111_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha256Digest_GetDigestSize_mF9DC344503BC14A5754BE5A91A56C3E69021D63E_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha256Digest_ProcessBlock_m79BDF7AA05FF92C2E60A1C5145605ABDCF735C1B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha256Digest_ProcessLength_mEC6BA9ADE2F47B78596A5B8E98C8B7D87432741A_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha256Digest_ProcessWord_mB3A0CE1F602677AB0E35DBC589372195ECD7FAE0_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha256Digest_Reset_m134FA93BE9E9FDBA8EEC936D0C196BC3DEB17C15_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha256Digest_Reset_mA5E5DD7D237D59828DB2E907EDC22040398E07C2_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha256Digest_Sum0Maj_m83397E66E3B5DC8C3946D87410D35383E3A5E55F_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha256Digest_Sum1Ch_mBE40B2FF672C226CAEDC83D1423EF79B1DDE1BDB_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha256Digest_Theta0_mEB7446C202843D7EC4C43924FE01FFB1DE1BF8E1_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha256Digest_Theta1_m1987895BB335DF006F4744A7471C6356FE473BFF_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha256Digest__cctor_m5B32F92F0F2B7EB975FC8105442C18A5C55ADCE3_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha256Digest__ctor_mAFF1D98252227F327B3F8123D9E6A65DB1ECDF55_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha256Digest__ctor_mDFFAC1AD820B4AAAB9C86F912DA9465395EEEDA3_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha256Digest_get_AlgorithmName_mC0CEE17D6AF163790B8CC94E3E33B4DD71432731_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Sha256Digest_initHs_m5E17FD04080C291C1F0F0E972239F7ADF6CD5C38_RuntimeMethod_var;
 
 struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031;
 struct Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C;
@@ -492,11 +379,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RipeMD160Digest__ctor_m74CF004258CC056FC
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD160Digest__ctor_m74CF004258CC056FC547C193BB9FD6A88872690E_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD160Digest__ctor_m74CF004258CC056FC547C193BB9FD6A88872690E_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_0 = (Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C*)(Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C*)SZArrayNew(Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C_il2cpp_TypeInfo_var, (uint32_t)((int32_t)16));
 		__this->___X = L_0;
@@ -512,11 +396,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RipeMD160Digest__ctor_mD8E1AA58729A292BA
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD160Digest__ctor_mD8E1AA58729A292BAE301F61E8362F3B65FE4663_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD160Digest__ctor_mD8E1AA58729A292BAE301F61E8362F3B65FE4663_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_0 = (Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C*)(Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C*)SZArrayNew(Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C_il2cpp_TypeInfo_var, (uint32_t)((int32_t)16));
 		__this->___X = L_0;
@@ -530,14 +411,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RipeMD160Digest__ctor_mD8E1AA58729A292BA
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RipeMD160Digest_CopyIn_m1F47425D2A238EC3F2144AB024637A51A52896A8 (RipeMD160Digest_t67CC7CD18F221A419D552B8478E8C386C1C89BF3* __this, RipeMD160Digest_t67CC7CD18F221A419D552B8478E8C386C1C89BF3* ___0_t, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD160Digest_CopyIn_m1F47425D2A238EC3F2144AB024637A51A52896A8_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD160Digest_CopyIn_m1F47425D2A238EC3F2144AB024637A51A52896A8_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		RipeMD160Digest_t67CC7CD18F221A419D552B8478E8C386C1C89BF3* L_0 = ___0_t;
 		GeneralDigest_CopyIn_mC1BA92836D3B770ADFFED18F4267A9FDB3F1BD04(__this, L_0, NULL);
@@ -582,41 +455,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* RipeMD160Digest_get_AlgorithmName_m
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD160Digest_get_AlgorithmName_m406760793C70664E260B23966B945A7F4B10A64E_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralF4B67B27E4DD10700B0726FC3E0A89E2CDBB84C8);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD160Digest_get_AlgorithmName_m406760793C70664E260B23966B945A7F4B10A64E_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		return _stringLiteralF4B67B27E4DD10700B0726FC3E0A89E2CDBB84C8;
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD160Digest_GetDigestSize_mB4BCE2030CCF3D1D9C23941EFE1CE8BA107F283B (RipeMD160Digest_t67CC7CD18F221A419D552B8478E8C386C1C89BF3* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD160Digest_GetDigestSize_mB4BCE2030CCF3D1D9C23941EFE1CE8BA107F283B_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD160Digest_GetDigestSize_mB4BCE2030CCF3D1D9C23941EFE1CE8BA107F283B_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		return ((int32_t)20);
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RipeMD160Digest_ProcessWord_m00986F9AB548D8B13887A6897A349D7FE97E123C (RipeMD160Digest_t67CC7CD18F221A419D552B8478E8C386C1C89BF3* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_input, int32_t ___1_inOff, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD160Digest_ProcessWord_m00986F9AB548D8B13887A6897A349D7FE97E123C_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	int32_t V_0 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD160Digest_ProcessWord_m00986F9AB548D8B13887A6897A349D7FE97E123C_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_0 = __this->___X;
 		int32_t L_1 = __this->___xOff;
@@ -647,14 +501,6 @@ IL_002f:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RipeMD160Digest_ProcessLength_m8BDF519729035BBD097A4C616A8C9D1DAF49D230 (RipeMD160Digest_t67CC7CD18F221A419D552B8478E8C386C1C89BF3* __this, int64_t ___0_bitLength, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD160Digest_ProcessLength_m8BDF519729035BBD097A4C616A8C9D1DAF49D230_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD160Digest_ProcessLength_m8BDF519729035BBD097A4C616A8C9D1DAF49D230_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = __this->___xOff;
 		if ((((int32_t)L_0) <= ((int32_t)((int32_t)14))))
@@ -681,14 +527,6 @@ IL_0010:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD160Digest_DoFinal_m4B626024C13473DE4D52686F981C0F8DFB68267B (RipeMD160Digest_t67CC7CD18F221A419D552B8478E8C386C1C89BF3* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_output, int32_t ___1_outOff, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD160Digest_DoFinal_m4B626024C13473DE4D52686F981C0F8DFB68267B_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD160Digest_DoFinal_m4B626024C13473DE4D52686F981C0F8DFB68267B_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		GeneralDigest_Finish_mDFEBE12A0A64850E3A129052E5ED06607E63E67D(__this, NULL);
 		int32_t L_0 = __this->___H0;
@@ -717,15 +555,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD160Digest_DoFinal_m4B626024C134
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RipeMD160Digest_Reset_m67CD20BDCF953C66BE4D1B87BAFD0E6AAE071805 (RipeMD160Digest_t67CC7CD18F221A419D552B8478E8C386C1C89BF3* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD160Digest_Reset_m67CD20BDCF953C66BE4D1B87BAFD0E6AAE071805_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	int32_t V_0 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD160Digest_Reset_m67CD20BDCF953C66BE4D1B87BAFD0E6AAE071805_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		GeneralDigest_Reset_m85B15687A0C29CAA93F64054D0F9497250946C25(__this, NULL);
 		__this->___H0 = ((int32_t)1732584193);
@@ -740,7 +570,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RipeMD160Digest_Reset_m67CD20BDCF953C66B
 
 IL_0048:
 	{
-		CHECK_PAUSE_POINT;
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_0 = __this->___X;
 		int32_t L_1 = V_0;
 		NullCheck(L_0);
@@ -765,14 +594,6 @@ IL_0055:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD160Digest_RL_m8454221D54865C72FA8CDC8DC24445F4E7B31714 (RipeMD160Digest_t67CC7CD18F221A419D552B8478E8C386C1C89BF3* __this, int32_t ___0_x, int32_t ___1_n, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD160Digest_RL_m8454221D54865C72FA8CDC8DC24445F4E7B31714_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD160Digest_RL_m8454221D54865C72FA8CDC8DC24445F4E7B31714_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = ___0_x;
 		int32_t L_1 = ___1_n;
@@ -783,14 +604,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD160Digest_RL_m8454221D54865C72F
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD160Digest_F1_mA6CBE6AB3206602EEA8B47A2BD0296D930ED2AD7 (RipeMD160Digest_t67CC7CD18F221A419D552B8478E8C386C1C89BF3* __this, int32_t ___0_x, int32_t ___1_y, int32_t ___2_z, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD160Digest_F1_mA6CBE6AB3206602EEA8B47A2BD0296D930ED2AD7_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD160Digest_F1_mA6CBE6AB3206602EEA8B47A2BD0296D930ED2AD7_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = ___0_x;
 		int32_t L_1 = ___1_y;
@@ -800,14 +613,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD160Digest_F1_mA6CBE6AB3206602EE
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD160Digest_F2_mAED592CC8CEEB0B299AC329A81A090C7C7C4A346 (RipeMD160Digest_t67CC7CD18F221A419D552B8478E8C386C1C89BF3* __this, int32_t ___0_x, int32_t ___1_y, int32_t ___2_z, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD160Digest_F2_mAED592CC8CEEB0B299AC329A81A090C7C7C4A346_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD160Digest_F2_mAED592CC8CEEB0B299AC329A81A090C7C7C4A346_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = ___0_x;
 		int32_t L_1 = ___1_y;
@@ -818,14 +623,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD160Digest_F2_mAED592CC8CEEB0B29
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD160Digest_F3_m75E1A913468CC925BC3D28FDC404D7BA890F80D0 (RipeMD160Digest_t67CC7CD18F221A419D552B8478E8C386C1C89BF3* __this, int32_t ___0_x, int32_t ___1_y, int32_t ___2_z, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD160Digest_F3_m75E1A913468CC925BC3D28FDC404D7BA890F80D0_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD160Digest_F3_m75E1A913468CC925BC3D28FDC404D7BA890F80D0_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = ___0_x;
 		int32_t L_1 = ___1_y;
@@ -835,14 +632,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD160Digest_F3_m75E1A913468CC925B
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD160Digest_F4_m286B45E0392CF3AD1594A6B4CD5B0FC176E21A54 (RipeMD160Digest_t67CC7CD18F221A419D552B8478E8C386C1C89BF3* __this, int32_t ___0_x, int32_t ___1_y, int32_t ___2_z, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD160Digest_F4_m286B45E0392CF3AD1594A6B4CD5B0FC176E21A54_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD160Digest_F4_m286B45E0392CF3AD1594A6B4CD5B0FC176E21A54_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = ___0_x;
 		int32_t L_1 = ___2_z;
@@ -853,14 +642,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD160Digest_F4_m286B45E0392CF3AD1
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD160Digest_F5_m1864F5D04D54312BD0B011A212EEBFC79B8AE08D (RipeMD160Digest_t67CC7CD18F221A419D552B8478E8C386C1C89BF3* __this, int32_t ___0_x, int32_t ___1_y, int32_t ___2_z, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD160Digest_F5_m1864F5D04D54312BD0B011A212EEBFC79B8AE08D_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD160Digest_F5_m1864F5D04D54312BD0B011A212EEBFC79B8AE08D_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = ___0_x;
 		int32_t L_1 = ___1_y;
@@ -870,12 +651,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD160Digest_F5_m1864F5D04D54312BD
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RipeMD160Digest_ProcessBlock_m931018ED911F996B37E36F9333800BA5580F4235 (RipeMD160Digest_t67CC7CD18F221A419D552B8478E8C386C1C89BF3* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD160Digest_ProcessBlock_m931018ED911F996B37E36F9333800BA5580F4235_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
 	int32_t V_2 = 0;
@@ -887,8 +662,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RipeMD160Digest_ProcessBlock_m931018ED91
 	int32_t V_8 = 0;
 	int32_t V_9 = 0;
 	int32_t V_10 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD160Digest_ProcessBlock_m931018ED911F996B37E36F9333800BA5580F4235_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = __this->___H0;
 		int32_t L_1 = L_0;
@@ -3819,7 +3592,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RipeMD160Digest_ProcessBlock_m931018ED91
 
 IL_203f:
 	{
-		CHECK_PAUSE_POINT;
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_1946 = __this->___X;
 		int32_t L_1947 = V_10;
 		NullCheck(L_1946);
@@ -3847,12 +3619,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* RipeMD160Digest_Copy_mFB901D48
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD160Digest_Copy_mFB901D4811A2F95A41B14171269C4887B2396345_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD160Digest_t67CC7CD18F221A419D552B8478E8C386C1C89BF3_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD160Digest_Copy_mFB901D4811A2F95A41B14171269C4887B2396345_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		RipeMD160Digest_t67CC7CD18F221A419D552B8478E8C386C1C89BF3* L_0 = (RipeMD160Digest_t67CC7CD18F221A419D552B8478E8C386C1C89BF3*)il2cpp_codegen_object_new(RipeMD160Digest_t67CC7CD18F221A419D552B8478E8C386C1C89BF3_il2cpp_TypeInfo_var);
 		RipeMD160Digest__ctor_mD8E1AA58729A292BAE301F61E8362F3B65FE4663(L_0, __this, NULL);
@@ -3864,13 +3633,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RipeMD160Digest_Reset_m26F247706B5716BB9
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD160Digest_Reset_m26F247706B5716BB9C4F484C593D8D447C572175_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD160Digest_t67CC7CD18F221A419D552B8478E8C386C1C89BF3_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	RipeMD160Digest_t67CC7CD18F221A419D552B8478E8C386C1C89BF3* V_0 = NULL;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD160Digest_Reset_m26F247706B5716BB9C4F484C593D8D447C572175_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		RuntimeObject* L_0 = ___0_other;
 		V_0 = ((RipeMD160Digest_t67CC7CD18F221A419D552B8478E8C386C1C89BF3*)CastclassClass((RuntimeObject*)L_0, RipeMD160Digest_t67CC7CD18F221A419D552B8478E8C386C1C89BF3_il2cpp_TypeInfo_var));
@@ -3892,26 +3658,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* RipeMD256Digest_get_AlgorithmName_m
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD256Digest_get_AlgorithmName_m0A9ED5AC56A782684B1E1B986F02FAFF7EB4C769_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralA6DBDE4DFCE47C72AFA52C1981772A8DD7EFD2C8);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD256Digest_get_AlgorithmName_m0A9ED5AC56A782684B1E1B986F02FAFF7EB4C769_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		return _stringLiteralA6DBDE4DFCE47C72AFA52C1981772A8DD7EFD2C8;
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD256Digest_GetDigestSize_m3966A2985CB32E2A2ECFAD89D5EE42895850809D (RipeMD256Digest_t99331C4A70EE55E139AEA1B2197BA0B4A316A7D3* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD256Digest_GetDigestSize_m3966A2985CB32E2A2ECFAD89D5EE42895850809D_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD256Digest_GetDigestSize_m3966A2985CB32E2A2ECFAD89D5EE42895850809D_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		return ((int32_t)32);
 	}
@@ -3922,11 +3677,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RipeMD256Digest__ctor_mC196FDC311899FE60
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD256Digest__ctor_mC196FDC311899FE60F3D54051C1B0C54F805E9C6_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD256Digest__ctor_mC196FDC311899FE60F3D54051C1B0C54F805E9C6_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_0 = (Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C*)(Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C*)SZArrayNew(Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C_il2cpp_TypeInfo_var, (uint32_t)((int32_t)16));
 		__this->___X = L_0;
@@ -3942,11 +3694,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RipeMD256Digest__ctor_mAA1104B20142EBA0D
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD256Digest__ctor_mAA1104B20142EBA0D7A4ABAE5DCB2CA0D24D2E8C_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD256Digest__ctor_mAA1104B20142EBA0D7A4ABAE5DCB2CA0D24D2E8C_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_0 = (Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C*)(Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C*)SZArrayNew(Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C_il2cpp_TypeInfo_var, (uint32_t)((int32_t)16));
 		__this->___X = L_0;
@@ -3960,14 +3709,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RipeMD256Digest__ctor_mAA1104B20142EBA0D
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RipeMD256Digest_CopyIn_mCA71EF491480FA0CF238B996D068297AE6C0BD43 (RipeMD256Digest_t99331C4A70EE55E139AEA1B2197BA0B4A316A7D3* __this, RipeMD256Digest_t99331C4A70EE55E139AEA1B2197BA0B4A316A7D3* ___0_t, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD256Digest_CopyIn_mCA71EF491480FA0CF238B996D068297AE6C0BD43_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD256Digest_CopyIn_mCA71EF491480FA0CF238B996D068297AE6C0BD43_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		RipeMD256Digest_t99331C4A70EE55E139AEA1B2197BA0B4A316A7D3* L_0 = ___0_t;
 		GeneralDigest_CopyIn_mC1BA92836D3B770ADFFED18F4267A9FDB3F1BD04(__this, L_0, NULL);
@@ -4021,15 +3762,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RipeMD256Digest_CopyIn_mCA71EF491480FA0C
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RipeMD256Digest_ProcessWord_mB1DE2B423461F34AFA6B6C558C252F21CDEB6EE7 (RipeMD256Digest_t99331C4A70EE55E139AEA1B2197BA0B4A316A7D3* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_input, int32_t ___1_inOff, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD256Digest_ProcessWord_mB1DE2B423461F34AFA6B6C558C252F21CDEB6EE7_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	int32_t V_0 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD256Digest_ProcessWord_mB1DE2B423461F34AFA6B6C558C252F21CDEB6EE7_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_0 = __this->___X;
 		int32_t L_1 = __this->___xOff;
@@ -4060,14 +3793,6 @@ IL_002f:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RipeMD256Digest_ProcessLength_m8BC4896EB8AE94DDA26ECCAC64D2CC76C61E8011 (RipeMD256Digest_t99331C4A70EE55E139AEA1B2197BA0B4A316A7D3* __this, int64_t ___0_bitLength, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD256Digest_ProcessLength_m8BC4896EB8AE94DDA26ECCAC64D2CC76C61E8011_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD256Digest_ProcessLength_m8BC4896EB8AE94DDA26ECCAC64D2CC76C61E8011_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = __this->___xOff;
 		if ((((int32_t)L_0) <= ((int32_t)((int32_t)14))))
@@ -4094,14 +3819,6 @@ IL_0010:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD256Digest_DoFinal_m74036A81806670A00B968060F71CB5A79ACB3B98 (RipeMD256Digest_t99331C4A70EE55E139AEA1B2197BA0B4A316A7D3* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_output, int32_t ___1_outOff, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD256Digest_DoFinal_m74036A81806670A00B968060F71CB5A79ACB3B98_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD256Digest_DoFinal_m74036A81806670A00B968060F71CB5A79ACB3B98_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		GeneralDigest_Finish_mDFEBE12A0A64850E3A129052E5ED06607E63E67D(__this, NULL);
 		int32_t L_0 = __this->___H0;
@@ -4142,15 +3859,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD256Digest_DoFinal_m74036A818066
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RipeMD256Digest_Reset_m5049EB9C0C57E0B61F905E02479C6B1AFD8A2341 (RipeMD256Digest_t99331C4A70EE55E139AEA1B2197BA0B4A316A7D3* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD256Digest_Reset_m5049EB9C0C57E0B61F905E02479C6B1AFD8A2341_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	int32_t V_0 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD256Digest_Reset_m5049EB9C0C57E0B61F905E02479C6B1AFD8A2341_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		GeneralDigest_Reset_m85B15687A0C29CAA93F64054D0F9497250946C25(__this, NULL);
 		__this->___H0 = ((int32_t)1732584193);
@@ -4168,7 +3877,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RipeMD256Digest_Reset_m5049EB9C0C57E0B61
 
 IL_0069:
 	{
-		CHECK_PAUSE_POINT;
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_0 = __this->___X;
 		int32_t L_1 = V_0;
 		NullCheck(L_0);
@@ -4193,14 +3901,6 @@ IL_0076:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD256Digest_RL_m838D97C7FC0BAA87272EBD20437CF8D424819466 (RipeMD256Digest_t99331C4A70EE55E139AEA1B2197BA0B4A316A7D3* __this, int32_t ___0_x, int32_t ___1_n, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD256Digest_RL_m838D97C7FC0BAA87272EBD20437CF8D424819466_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD256Digest_RL_m838D97C7FC0BAA87272EBD20437CF8D424819466_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = ___0_x;
 		int32_t L_1 = ___1_n;
@@ -4211,14 +3911,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD256Digest_RL_m838D97C7FC0BAA872
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD256Digest_F1_m5C38317CD756A06A41326B53BEDFB32C9DB63D69 (RipeMD256Digest_t99331C4A70EE55E139AEA1B2197BA0B4A316A7D3* __this, int32_t ___0_x, int32_t ___1_y, int32_t ___2_z, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD256Digest_F1_m5C38317CD756A06A41326B53BEDFB32C9DB63D69_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD256Digest_F1_m5C38317CD756A06A41326B53BEDFB32C9DB63D69_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = ___0_x;
 		int32_t L_1 = ___1_y;
@@ -4228,14 +3920,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD256Digest_F1_m5C38317CD756A06A4
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD256Digest_F2_mE9FA5395453450BC72D77BE6B6293705497A11C0 (RipeMD256Digest_t99331C4A70EE55E139AEA1B2197BA0B4A316A7D3* __this, int32_t ___0_x, int32_t ___1_y, int32_t ___2_z, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD256Digest_F2_mE9FA5395453450BC72D77BE6B6293705497A11C0_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD256Digest_F2_mE9FA5395453450BC72D77BE6B6293705497A11C0_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = ___0_x;
 		int32_t L_1 = ___1_y;
@@ -4246,14 +3930,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD256Digest_F2_mE9FA5395453450BC7
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD256Digest_F3_m5B5C35E4F0F5DAAD43BC370EC78C7B391A060708 (RipeMD256Digest_t99331C4A70EE55E139AEA1B2197BA0B4A316A7D3* __this, int32_t ___0_x, int32_t ___1_y, int32_t ___2_z, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD256Digest_F3_m5B5C35E4F0F5DAAD43BC370EC78C7B391A060708_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD256Digest_F3_m5B5C35E4F0F5DAAD43BC370EC78C7B391A060708_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = ___0_x;
 		int32_t L_1 = ___1_y;
@@ -4263,14 +3939,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD256Digest_F3_m5B5C35E4F0F5DAAD4
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD256Digest_F4_m7A7B69DA972D8E72D9E67204B66F5ED29D865D01 (RipeMD256Digest_t99331C4A70EE55E139AEA1B2197BA0B4A316A7D3* __this, int32_t ___0_x, int32_t ___1_y, int32_t ___2_z, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD256Digest_F4_m7A7B69DA972D8E72D9E67204B66F5ED29D865D01_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD256Digest_F4_m7A7B69DA972D8E72D9E67204B66F5ED29D865D01_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = ___0_x;
 		int32_t L_1 = ___2_z;
@@ -4281,14 +3949,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD256Digest_F4_m7A7B69DA972D8E72D
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD256Digest_F1_m9BBBD4D404E0958AF994787688590CA209EED0DC (RipeMD256Digest_t99331C4A70EE55E139AEA1B2197BA0B4A316A7D3* __this, int32_t ___0_a, int32_t ___1_b, int32_t ___2_c, int32_t ___3_d, int32_t ___4_x, int32_t ___5_s, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD256Digest_F1_m9BBBD4D404E0958AF994787688590CA209EED0DC_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD256Digest_F1_m9BBBD4D404E0958AF994787688590CA209EED0DC_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = ___0_a;
 		int32_t L_1 = ___1_b;
@@ -4305,14 +3965,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD256Digest_F1_m9BBBD4D404E0958AF
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD256Digest_F2_m11B5E43924D5AB71F8CCD10A2D04941A4958EB4C (RipeMD256Digest_t99331C4A70EE55E139AEA1B2197BA0B4A316A7D3* __this, int32_t ___0_a, int32_t ___1_b, int32_t ___2_c, int32_t ___3_d, int32_t ___4_x, int32_t ___5_s, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD256Digest_F2_m11B5E43924D5AB71F8CCD10A2D04941A4958EB4C_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD256Digest_F2_m11B5E43924D5AB71F8CCD10A2D04941A4958EB4C_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = ___0_a;
 		int32_t L_1 = ___1_b;
@@ -4329,14 +3981,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD256Digest_F2_m11B5E43924D5AB71F
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD256Digest_F3_m82EE13C5169A46FBDFBBA8ED7A89E40A2956BF5A (RipeMD256Digest_t99331C4A70EE55E139AEA1B2197BA0B4A316A7D3* __this, int32_t ___0_a, int32_t ___1_b, int32_t ___2_c, int32_t ___3_d, int32_t ___4_x, int32_t ___5_s, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD256Digest_F3_m82EE13C5169A46FBDFBBA8ED7A89E40A2956BF5A_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD256Digest_F3_m82EE13C5169A46FBDFBBA8ED7A89E40A2956BF5A_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = ___0_a;
 		int32_t L_1 = ___1_b;
@@ -4353,14 +3997,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD256Digest_F3_m82EE13C5169A46FBD
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD256Digest_F4_m029803C4DA07A0DE45612909371EE6BF3B6CB9EB (RipeMD256Digest_t99331C4A70EE55E139AEA1B2197BA0B4A316A7D3* __this, int32_t ___0_a, int32_t ___1_b, int32_t ___2_c, int32_t ___3_d, int32_t ___4_x, int32_t ___5_s, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD256Digest_F4_m029803C4DA07A0DE45612909371EE6BF3B6CB9EB_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD256Digest_F4_m029803C4DA07A0DE45612909371EE6BF3B6CB9EB_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = ___0_a;
 		int32_t L_1 = ___1_b;
@@ -4377,14 +4013,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD256Digest_F4_m029803C4DA07A0DE4
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD256Digest_FF1_m75F0224CAC599364AC5B7088DA4BB8D31A716B72 (RipeMD256Digest_t99331C4A70EE55E139AEA1B2197BA0B4A316A7D3* __this, int32_t ___0_a, int32_t ___1_b, int32_t ___2_c, int32_t ___3_d, int32_t ___4_x, int32_t ___5_s, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD256Digest_FF1_m75F0224CAC599364AC5B7088DA4BB8D31A716B72_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD256Digest_FF1_m75F0224CAC599364AC5B7088DA4BB8D31A716B72_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = ___0_a;
 		int32_t L_1 = ___1_b;
@@ -4401,14 +4029,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD256Digest_FF1_m75F0224CAC599364
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD256Digest_FF2_m66D64DF1997459B0C99F071AD1A9283B16F5B860 (RipeMD256Digest_t99331C4A70EE55E139AEA1B2197BA0B4A316A7D3* __this, int32_t ___0_a, int32_t ___1_b, int32_t ___2_c, int32_t ___3_d, int32_t ___4_x, int32_t ___5_s, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD256Digest_FF2_m66D64DF1997459B0C99F071AD1A9283B16F5B860_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD256Digest_FF2_m66D64DF1997459B0C99F071AD1A9283B16F5B860_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = ___0_a;
 		int32_t L_1 = ___1_b;
@@ -4425,14 +4045,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD256Digest_FF2_m66D64DF1997459B0
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD256Digest_FF3_mC4D34040D4313B8039746C5125F36A89EC9E5F8B (RipeMD256Digest_t99331C4A70EE55E139AEA1B2197BA0B4A316A7D3* __this, int32_t ___0_a, int32_t ___1_b, int32_t ___2_c, int32_t ___3_d, int32_t ___4_x, int32_t ___5_s, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD256Digest_FF3_mC4D34040D4313B8039746C5125F36A89EC9E5F8B_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD256Digest_FF3_mC4D34040D4313B8039746C5125F36A89EC9E5F8B_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = ___0_a;
 		int32_t L_1 = ___1_b;
@@ -4449,14 +4061,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD256Digest_FF3_mC4D34040D4313B80
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD256Digest_FF4_mC1DF4E17CB2255D319EA01FAA86F27E2B769AEA2 (RipeMD256Digest_t99331C4A70EE55E139AEA1B2197BA0B4A316A7D3* __this, int32_t ___0_a, int32_t ___1_b, int32_t ___2_c, int32_t ___3_d, int32_t ___4_x, int32_t ___5_s, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD256Digest_FF4_mC1DF4E17CB2255D319EA01FAA86F27E2B769AEA2_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD256Digest_FF4_mC1DF4E17CB2255D319EA01FAA86F27E2B769AEA2_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = ___0_a;
 		int32_t L_1 = ___1_b;
@@ -4473,12 +4077,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD256Digest_FF4_mC1DF4E17CB2255D3
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RipeMD256Digest_ProcessBlock_m9D429382ED37DFDA44A3BBC29F66ADE7DF9EBF5F (RipeMD256Digest_t99331C4A70EE55E139AEA1B2197BA0B4A316A7D3* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD256Digest_ProcessBlock_m9D429382ED37DFDA44A3BBC29F66ADE7DF9EBF5F_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
 	int32_t V_2 = 0;
@@ -4488,8 +4086,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RipeMD256Digest_ProcessBlock_m9D429382ED
 	int32_t V_6 = 0;
 	int32_t V_7 = 0;
 	int32_t V_8 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD256Digest_ProcessBlock_m9D429382ED37DFDA44A3BBC29F66ADE7DF9EBF5F_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = __this->___H0;
 		V_0 = L_0;
@@ -5962,7 +5558,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RipeMD256Digest_ProcessBlock_m9D429382ED
 
 IL_0c9a:
 	{
-		CHECK_PAUSE_POINT;
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_1056 = __this->___X;
 		int32_t L_1057 = V_8;
 		NullCheck(L_1056);
@@ -5990,12 +5585,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* RipeMD256Digest_Copy_m21CF676F
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD256Digest_Copy_m21CF676FFEDAE831D0186098E05F57B4A02650E1_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD256Digest_t99331C4A70EE55E139AEA1B2197BA0B4A316A7D3_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD256Digest_Copy_m21CF676FFEDAE831D0186098E05F57B4A02650E1_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		RipeMD256Digest_t99331C4A70EE55E139AEA1B2197BA0B4A316A7D3* L_0 = (RipeMD256Digest_t99331C4A70EE55E139AEA1B2197BA0B4A316A7D3*)il2cpp_codegen_object_new(RipeMD256Digest_t99331C4A70EE55E139AEA1B2197BA0B4A316A7D3_il2cpp_TypeInfo_var);
 		RipeMD256Digest__ctor_mAA1104B20142EBA0D7A4ABAE5DCB2CA0D24D2E8C(L_0, __this, NULL);
@@ -6007,13 +5599,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RipeMD256Digest_Reset_mDE495F7CCFB7D86A1
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD256Digest_Reset_mDE495F7CCFB7D86A1990A2706993F40CD94F5728_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD256Digest_t99331C4A70EE55E139AEA1B2197BA0B4A316A7D3_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	RipeMD256Digest_t99331C4A70EE55E139AEA1B2197BA0B4A316A7D3* V_0 = NULL;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD256Digest_Reset_mDE495F7CCFB7D86A1990A2706993F40CD94F5728_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		RuntimeObject* L_0 = ___0_other;
 		V_0 = ((RipeMD256Digest_t99331C4A70EE55E139AEA1B2197BA0B4A316A7D3*)CastclassClass((RuntimeObject*)L_0, RipeMD256Digest_t99331C4A70EE55E139AEA1B2197BA0B4A316A7D3_il2cpp_TypeInfo_var));
@@ -6035,26 +5624,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* RipeMD320Digest_get_AlgorithmName_m
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD320Digest_get_AlgorithmName_m1B99B3292C2948BBC2876F468FB9C85D1CEEBC4E_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral6D850599050207BA3A37A2D88D63B137C63EFC8E);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD320Digest_get_AlgorithmName_m1B99B3292C2948BBC2876F468FB9C85D1CEEBC4E_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		return _stringLiteral6D850599050207BA3A37A2D88D63B137C63EFC8E;
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD320Digest_GetDigestSize_m849E1E728CFB0A0A7E9B4E82BE635CCF2CBF9C29 (RipeMD320Digest_t49706DF2C68B9597D5A790A35BCB5032E71703EB* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD320Digest_GetDigestSize_m849E1E728CFB0A0A7E9B4E82BE635CCF2CBF9C29_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD320Digest_GetDigestSize_m849E1E728CFB0A0A7E9B4E82BE635CCF2CBF9C29_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		return ((int32_t)40);
 	}
@@ -6065,11 +5643,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RipeMD320Digest__ctor_m5DB0DD2484BF18ED2
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD320Digest__ctor_m5DB0DD2484BF18ED2CD26E6215E573604577757F_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD320Digest__ctor_m5DB0DD2484BF18ED2CD26E6215E573604577757F_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_0 = (Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C*)(Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C*)SZArrayNew(Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C_il2cpp_TypeInfo_var, (uint32_t)((int32_t)16));
 		__this->___X = L_0;
@@ -6085,11 +5660,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RipeMD320Digest__ctor_m2D46C5BBE95F2E3B5
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD320Digest__ctor_m2D46C5BBE95F2E3B5785AED832D01EE72B21679C_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD320Digest__ctor_m2D46C5BBE95F2E3B5785AED832D01EE72B21679C_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_0 = (Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C*)(Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C*)SZArrayNew(Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C_il2cpp_TypeInfo_var, (uint32_t)((int32_t)16));
 		__this->___X = L_0;
@@ -6103,14 +5675,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RipeMD320Digest__ctor_m2D46C5BBE95F2E3B5
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RipeMD320Digest_CopyIn_mC127FB6BD35FBD2AAC10B9781A274476C074B688 (RipeMD320Digest_t49706DF2C68B9597D5A790A35BCB5032E71703EB* __this, RipeMD320Digest_t49706DF2C68B9597D5A790A35BCB5032E71703EB* ___0_t, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD320Digest_CopyIn_mC127FB6BD35FBD2AAC10B9781A274476C074B688_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD320Digest_CopyIn_mC127FB6BD35FBD2AAC10B9781A274476C074B688_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		RipeMD320Digest_t49706DF2C68B9597D5A790A35BCB5032E71703EB* L_0 = ___0_t;
 		GeneralDigest_CopyIn_mC1BA92836D3B770ADFFED18F4267A9FDB3F1BD04(__this, L_0, NULL);
@@ -6172,15 +5736,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RipeMD320Digest_CopyIn_mC127FB6BD35FBD2A
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RipeMD320Digest_ProcessWord_m3DECB4CC2B99A6D68F24DE03D65DF9D3C4ED69DF (RipeMD320Digest_t49706DF2C68B9597D5A790A35BCB5032E71703EB* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_input, int32_t ___1_inOff, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD320Digest_ProcessWord_m3DECB4CC2B99A6D68F24DE03D65DF9D3C4ED69DF_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	int32_t V_0 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD320Digest_ProcessWord_m3DECB4CC2B99A6D68F24DE03D65DF9D3C4ED69DF_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_0 = __this->___X;
 		int32_t L_1 = __this->___xOff;
@@ -6211,14 +5767,6 @@ IL_002f:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RipeMD320Digest_ProcessLength_m1C13227DD44E97214489BB7B5659CB11EB6C7917 (RipeMD320Digest_t49706DF2C68B9597D5A790A35BCB5032E71703EB* __this, int64_t ___0_bitLength, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD320Digest_ProcessLength_m1C13227DD44E97214489BB7B5659CB11EB6C7917_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD320Digest_ProcessLength_m1C13227DD44E97214489BB7B5659CB11EB6C7917_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = __this->___xOff;
 		if ((((int32_t)L_0) <= ((int32_t)((int32_t)14))))
@@ -6245,14 +5793,6 @@ IL_0010:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD320Digest_DoFinal_m40798F00C553DEF3D6E1C1DC4D6730B2A068E53B (RipeMD320Digest_t49706DF2C68B9597D5A790A35BCB5032E71703EB* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_output, int32_t ___1_outOff, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD320Digest_DoFinal_m40798F00C553DEF3D6E1C1DC4D6730B2A068E53B_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD320Digest_DoFinal_m40798F00C553DEF3D6E1C1DC4D6730B2A068E53B_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		GeneralDigest_Finish_mDFEBE12A0A64850E3A129052E5ED06607E63E67D(__this, NULL);
 		int32_t L_0 = __this->___H0;
@@ -6301,15 +5841,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD320Digest_DoFinal_m40798F00C553
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RipeMD320Digest_Reset_m6763D44F17189DE86F3FAA6CDE9422A89405F5C6 (RipeMD320Digest_t49706DF2C68B9597D5A790A35BCB5032E71703EB* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD320Digest_Reset_m6763D44F17189DE86F3FAA6CDE9422A89405F5C6_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	int32_t V_0 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD320Digest_Reset_m6763D44F17189DE86F3FAA6CDE9422A89405F5C6_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		GeneralDigest_Reset_m85B15687A0C29CAA93F64054D0F9497250946C25(__this, NULL);
 		__this->___H0 = ((int32_t)1732584193);
@@ -6329,7 +5861,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RipeMD320Digest_Reset_m6763D44F17189DE86
 
 IL_007f:
 	{
-		CHECK_PAUSE_POINT;
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_0 = __this->___X;
 		int32_t L_1 = V_0;
 		NullCheck(L_0);
@@ -6354,14 +5885,6 @@ IL_008c:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD320Digest_RL_m61E373F19E76AEED497CF83448FFA8DA9A4B7C0C (RipeMD320Digest_t49706DF2C68B9597D5A790A35BCB5032E71703EB* __this, int32_t ___0_x, int32_t ___1_n, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD320Digest_RL_m61E373F19E76AEED497CF83448FFA8DA9A4B7C0C_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD320Digest_RL_m61E373F19E76AEED497CF83448FFA8DA9A4B7C0C_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = ___0_x;
 		int32_t L_1 = ___1_n;
@@ -6372,14 +5895,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD320Digest_RL_m61E373F19E76AEED4
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD320Digest_F1_m411C920132D33B4E4A80DCB8BD1BD2DD67FB1B4B (RipeMD320Digest_t49706DF2C68B9597D5A790A35BCB5032E71703EB* __this, int32_t ___0_x, int32_t ___1_y, int32_t ___2_z, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD320Digest_F1_m411C920132D33B4E4A80DCB8BD1BD2DD67FB1B4B_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD320Digest_F1_m411C920132D33B4E4A80DCB8BD1BD2DD67FB1B4B_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = ___0_x;
 		int32_t L_1 = ___1_y;
@@ -6389,14 +5904,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD320Digest_F1_m411C920132D33B4E4
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD320Digest_F2_mA1D2952EF320BE474C6B445789AD6C5C7D009CC1 (RipeMD320Digest_t49706DF2C68B9597D5A790A35BCB5032E71703EB* __this, int32_t ___0_x, int32_t ___1_y, int32_t ___2_z, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD320Digest_F2_mA1D2952EF320BE474C6B445789AD6C5C7D009CC1_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD320Digest_F2_mA1D2952EF320BE474C6B445789AD6C5C7D009CC1_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = ___0_x;
 		int32_t L_1 = ___1_y;
@@ -6407,14 +5914,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD320Digest_F2_mA1D2952EF320BE474
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD320Digest_F3_mA3F828E61B6D33122C8BB76B527A0030C36E34DE (RipeMD320Digest_t49706DF2C68B9597D5A790A35BCB5032E71703EB* __this, int32_t ___0_x, int32_t ___1_y, int32_t ___2_z, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD320Digest_F3_mA3F828E61B6D33122C8BB76B527A0030C36E34DE_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD320Digest_F3_mA3F828E61B6D33122C8BB76B527A0030C36E34DE_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = ___0_x;
 		int32_t L_1 = ___1_y;
@@ -6424,14 +5923,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD320Digest_F3_mA3F828E61B6D33122
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD320Digest_F4_m5BE1B200D3A01B09425B690575611EA004C2F34A (RipeMD320Digest_t49706DF2C68B9597D5A790A35BCB5032E71703EB* __this, int32_t ___0_x, int32_t ___1_y, int32_t ___2_z, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD320Digest_F4_m5BE1B200D3A01B09425B690575611EA004C2F34A_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD320Digest_F4_m5BE1B200D3A01B09425B690575611EA004C2F34A_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = ___0_x;
 		int32_t L_1 = ___2_z;
@@ -6442,14 +5933,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD320Digest_F4_m5BE1B200D3A01B094
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD320Digest_F5_m98E19D2E84706E99D9AD9023FFAD89905A6B5669 (RipeMD320Digest_t49706DF2C68B9597D5A790A35BCB5032E71703EB* __this, int32_t ___0_x, int32_t ___1_y, int32_t ___2_z, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD320Digest_F5_m98E19D2E84706E99D9AD9023FFAD89905A6B5669_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD320Digest_F5_m98E19D2E84706E99D9AD9023FFAD89905A6B5669_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = ___0_x;
 		int32_t L_1 = ___1_y;
@@ -6459,12 +5942,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RipeMD320Digest_F5_m98E19D2E84706E99D
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RipeMD320Digest_ProcessBlock_mB1667C65AFF8C5FAB604005F1142A1542E3D59C9 (RipeMD320Digest_t49706DF2C68B9597D5A790A35BCB5032E71703EB* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD320Digest_ProcessBlock_mB1667C65AFF8C5FAB604005F1142A1542E3D59C9_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
 	int32_t V_2 = 0;
@@ -6476,8 +5953,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RipeMD320Digest_ProcessBlock_mB1667C65AF
 	int32_t V_8 = 0;
 	int32_t V_9 = 0;
 	int32_t V_10 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD320Digest_ProcessBlock_mB1667C65AFF8C5FAB604005F1142A1542E3D59C9_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = __this->___H0;
 		V_0 = L_0;
@@ -9432,7 +8907,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RipeMD320Digest_ProcessBlock_mB1667C65AF
 
 IL_20a8:
 	{
-		CHECK_PAUSE_POINT;
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_1958 = __this->___X;
 		int32_t L_1959 = V_10;
 		NullCheck(L_1958);
@@ -9460,12 +8934,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* RipeMD320Digest_Copy_mF3B31E1F
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD320Digest_Copy_mF3B31E1F8FA87701537BF0A41DFADBA91957BB6F_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD320Digest_t49706DF2C68B9597D5A790A35BCB5032E71703EB_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD320Digest_Copy_mF3B31E1F8FA87701537BF0A41DFADBA91957BB6F_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		RipeMD320Digest_t49706DF2C68B9597D5A790A35BCB5032E71703EB* L_0 = (RipeMD320Digest_t49706DF2C68B9597D5A790A35BCB5032E71703EB*)il2cpp_codegen_object_new(RipeMD320Digest_t49706DF2C68B9597D5A790A35BCB5032E71703EB_il2cpp_TypeInfo_var);
 		RipeMD320Digest__ctor_m2D46C5BBE95F2E3B5785AED832D01EE72B21679C(L_0, __this, NULL);
@@ -9477,13 +8948,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RipeMD320Digest_Reset_m086F0E98981D5699D
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD320Digest_Reset_m086F0E98981D5699D2891A50D6FDB8B063632702_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RipeMD320Digest_t49706DF2C68B9597D5A790A35BCB5032E71703EB_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	RipeMD320Digest_t49706DF2C68B9597D5A790A35BCB5032E71703EB* V_0 = NULL;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RipeMD320Digest_Reset_m086F0E98981D5699D2891A50D6FDB8B063632702_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		RuntimeObject* L_0 = ___0_other;
 		V_0 = ((RipeMD320Digest_t49706DF2C68B9597D5A790A35BCB5032E71703EB*)CastclassClass((RuntimeObject*)L_0, RipeMD320Digest_t49706DF2C68B9597D5A790A35BCB5032E71703EB_il2cpp_TypeInfo_var));
@@ -9505,12 +8973,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sha1Digest__ctor_mCB0EEF4B6C1F65564035BF
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha1Digest__ctor_mCB0EEF4B6C1F65564035BFBA4B63A2591B8C8412_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha1Digest__ctor_mCB0EEF4B6C1F65564035BFBA4B63A2591B8C8412_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_0 = (UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA*)(UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA*)SZArrayNew(UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA_il2cpp_TypeInfo_var, (uint32_t)((int32_t)80));
 		__this->___X = L_0;
@@ -9525,12 +8990,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sha1Digest__ctor_mDFD7D456A9078BF6F7D11D
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha1Digest__ctor_mDFD7D456A9078BF6F7D11D23D1F27D39703C3C85_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha1Digest__ctor_mDFD7D456A9078BF6F7D11D23D1F27D39703C3C85_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_0 = (UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA*)(UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA*)SZArrayNew(UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA_il2cpp_TypeInfo_var, (uint32_t)((int32_t)80));
 		__this->___X = L_0;
@@ -9544,14 +9006,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sha1Digest__ctor_mDFD7D456A9078BF6F7D11D
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sha1Digest_CopyIn_m9E6A71EA7773A092D17C940A16DEFBB0ACD1273F (Sha1Digest_t68243B1649E6EB6CA982E2CE61A1A303394BDAC8* __this, Sha1Digest_t68243B1649E6EB6CA982E2CE61A1A303394BDAC8* ___0_t, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha1Digest_CopyIn_m9E6A71EA7773A092D17C940A16DEFBB0ACD1273F_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha1Digest_CopyIn_m9E6A71EA7773A092D17C940A16DEFBB0ACD1273F_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Sha1Digest_t68243B1649E6EB6CA982E2CE61A1A303394BDAC8* L_0 = ___0_t;
 		GeneralDigest_CopyIn_mC1BA92836D3B770ADFFED18F4267A9FDB3F1BD04(__this, L_0, NULL);
@@ -9596,41 +9050,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Sha1Digest_get_AlgorithmName_m02C06
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha1Digest_get_AlgorithmName_m02C06C30652126358F1F8013F3BC367CB03DB2C4_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral11208C86A379F74F4A5228C6512318CCDFEF574A);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha1Digest_get_AlgorithmName_m02C06C30652126358F1F8013F3BC367CB03DB2C4_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		return _stringLiteral11208C86A379F74F4A5228C6512318CCDFEF574A;
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Sha1Digest_GetDigestSize_mA4EA9DCB1B5090101A53E3BD8F50DC61803CF433 (Sha1Digest_t68243B1649E6EB6CA982E2CE61A1A303394BDAC8* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha1Digest_GetDigestSize_mA4EA9DCB1B5090101A53E3BD8F50DC61803CF433_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha1Digest_GetDigestSize_mA4EA9DCB1B5090101A53E3BD8F50DC61803CF433_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		return ((int32_t)20);
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sha1Digest_ProcessWord_m8C1AAB4737C32CCD79E4FDA0BFB41045DB21BD05 (Sha1Digest_t68243B1649E6EB6CA982E2CE61A1A303394BDAC8* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_input, int32_t ___1_inOff, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha1Digest_ProcessWord_m8C1AAB4737C32CCD79E4FDA0BFB41045DB21BD05_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	int32_t V_0 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha1Digest_ProcessWord_m8C1AAB4737C32CCD79E4FDA0BFB41045DB21BD05_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_0 = __this->___X;
 		int32_t L_1 = __this->___xOff;
@@ -9661,14 +9096,6 @@ IL_002f:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sha1Digest_ProcessLength_m8C05F2F1EDB588FDF5574AB93380AC53615F6F53 (Sha1Digest_t68243B1649E6EB6CA982E2CE61A1A303394BDAC8* __this, int64_t ___0_bitLength, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha1Digest_ProcessLength_m8C05F2F1EDB588FDF5574AB93380AC53615F6F53_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha1Digest_ProcessLength_m8C05F2F1EDB588FDF5574AB93380AC53615F6F53_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = __this->___xOff;
 		if ((((int32_t)L_0) <= ((int32_t)((int32_t)14))))
@@ -9695,14 +9122,6 @@ IL_0010:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Sha1Digest_DoFinal_m1D1896CC9EEF609AB096A18081F915C1C612C553 (Sha1Digest_t68243B1649E6EB6CA982E2CE61A1A303394BDAC8* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_output, int32_t ___1_outOff, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha1Digest_DoFinal_m1D1896CC9EEF609AB096A18081F915C1C612C553_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha1Digest_DoFinal_m1D1896CC9EEF609AB096A18081F915C1C612C553_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		GeneralDigest_Finish_mDFEBE12A0A64850E3A129052E5ED06607E63E67D(__this, NULL);
 		uint32_t L_0 = __this->___H1;
@@ -9731,14 +9150,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Sha1Digest_DoFinal_m1D1896CC9EEF609AB
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sha1Digest_Reset_mA2D04A4223390371549D95286884D33EC4D2C3EF (Sha1Digest_t68243B1649E6EB6CA982E2CE61A1A303394BDAC8* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha1Digest_Reset_mA2D04A4223390371549D95286884D33EC4D2C3EF_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha1Digest_Reset_mA2D04A4223390371549D95286884D33EC4D2C3EF_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		GeneralDigest_Reset_m85B15687A0C29CAA93F64054D0F9497250946C25(__this, NULL);
 		__this->___H1 = ((int32_t)1732584193);
@@ -9756,14 +9167,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sha1Digest_Reset_mA2D04A4223390371549D95
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t Sha1Digest_F_m9EA9254A817FAE631FBB22B7D6445D0F4E14FA51 (uint32_t ___0_u, uint32_t ___1_v, uint32_t ___2_w, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha1Digest_F_m9EA9254A817FAE631FBB22B7D6445D0F4E14FA51_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha1Digest_F_m9EA9254A817FAE631FBB22B7D6445D0F4E14FA51_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___0_u;
 		uint32_t L_1 = ___1_v;
@@ -9774,14 +9177,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t Sha1Digest_F_m9EA9254A817FAE631FBB22
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t Sha1Digest_H_mBEB9AA47E3C6E639F557EE0F1CDF4C18A057F48B (uint32_t ___0_u, uint32_t ___1_v, uint32_t ___2_w, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha1Digest_H_mBEB9AA47E3C6E639F557EE0F1CDF4C18A057F48B_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha1Digest_H_mBEB9AA47E3C6E639F557EE0F1CDF4C18A057F48B_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___0_u;
 		uint32_t L_1 = ___1_v;
@@ -9791,14 +9186,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t Sha1Digest_H_mBEB9AA47E3C6E639F557EE
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t Sha1Digest_G_m41E356838AD07E8E8486F61C6883E452668AFC09 (uint32_t ___0_u, uint32_t ___1_v, uint32_t ___2_w, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha1Digest_G_m41E356838AD07E8E8486F61C6883E452668AFC09_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha1Digest_G_m41E356838AD07E8E8486F61C6883E452668AFC09_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___0_u;
 		uint32_t L_1 = ___1_v;
@@ -9811,12 +9198,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t Sha1Digest_G_m41E356838AD07E8E8486F6
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sha1Digest_ProcessBlock_mF74FB940229DC6B93E46F419FE4AAA28D80D2FD3 (Sha1Digest_t68243B1649E6EB6CA982E2CE61A1A303394BDAC8* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha1Digest_ProcessBlock_mF74FB940229DC6B93E46F419FE4AAA28D80D2FD3_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	uint32_t V_0 = 0;
 	uint32_t V_1 = 0;
 	uint32_t V_2 = 0;
@@ -9829,8 +9210,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sha1Digest_ProcessBlock_mF74FB940229DC6B
 	int32_t V_9 = 0;
 	int32_t V_10 = 0;
 	int32_t V_11 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha1Digest_ProcessBlock_mF74FB940229DC6B93E46F419FE4AAA28D80D2FD3_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		V_6 = ((int32_t)16);
 		goto IL_0052;
@@ -9838,7 +9217,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sha1Digest_ProcessBlock_mF74FB940229DC6B
 
 IL_0006:
 	{
-		CHECK_PAUSE_POINT;
 		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_0 = __this->___X;
 		int32_t L_1 = V_6;
 		NullCheck(L_0);
@@ -9896,7 +9274,6 @@ IL_0052:
 
 IL_0087:
 	{
-		CHECK_PAUSE_POINT;
 		uint32_t L_27 = V_4;
 		uint32_t L_28 = V_0;
 		uint32_t L_29 = V_0;
@@ -10011,7 +9388,6 @@ IL_0191:
 
 IL_01a1:
 	{
-		CHECK_PAUSE_POINT;
 		uint32_t L_99 = V_4;
 		uint32_t L_100 = V_0;
 		uint32_t L_101 = V_0;
@@ -10126,7 +9502,6 @@ IL_02ab:
 
 IL_02bb:
 	{
-		CHECK_PAUSE_POINT;
 		uint32_t L_171 = V_4;
 		uint32_t L_172 = V_0;
 		uint32_t L_173 = V_0;
@@ -10241,7 +9616,6 @@ IL_03c5:
 
 IL_03d5:
 	{
-		CHECK_PAUSE_POINT;
 		uint32_t L_243 = V_4;
 		uint32_t L_244 = V_0;
 		uint32_t L_245 = V_0;
@@ -10376,12 +9750,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Sha1Digest_Copy_mCE70174FF9F33
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha1Digest_Copy_mCE70174FF9F33CBB8D59D6B090F09575A59F9265_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha1Digest_t68243B1649E6EB6CA982E2CE61A1A303394BDAC8_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha1Digest_Copy_mCE70174FF9F33CBB8D59D6B090F09575A59F9265_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Sha1Digest_t68243B1649E6EB6CA982E2CE61A1A303394BDAC8* L_0 = (Sha1Digest_t68243B1649E6EB6CA982E2CE61A1A303394BDAC8*)il2cpp_codegen_object_new(Sha1Digest_t68243B1649E6EB6CA982E2CE61A1A303394BDAC8_il2cpp_TypeInfo_var);
 		Sha1Digest__ctor_mDFD7D456A9078BF6F7D11D23D1F27D39703C3C85(L_0, __this, NULL);
@@ -10393,13 +9764,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sha1Digest_Reset_mC8E8D940AE10F6624EA229
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha1Digest_Reset_mC8E8D940AE10F6624EA229AA9522F170AE671D4B_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha1Digest_t68243B1649E6EB6CA982E2CE61A1A303394BDAC8_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	Sha1Digest_t68243B1649E6EB6CA982E2CE61A1A303394BDAC8* V_0 = NULL;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha1Digest_Reset_mC8E8D940AE10F6624EA229AA9522F170AE671D4B_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		RuntimeObject* L_0 = ___0_other;
 		V_0 = ((Sha1Digest_t68243B1649E6EB6CA982E2CE61A1A303394BDAC8*)CastclassClass((RuntimeObject*)L_0, Sha1Digest_t68243B1649E6EB6CA982E2CE61A1A303394BDAC8_il2cpp_TypeInfo_var));
@@ -10421,12 +9789,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sha224Digest__ctor_mBFD67E7D6C43D10F118F
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha224Digest__ctor_mBFD67E7D6C43D10F118F20E05574E2F2266B9E18_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha224Digest__ctor_mBFD67E7D6C43D10F118F20E05574E2F2266B9E18_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_0 = (UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA*)(UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA*)SZArrayNew(UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA_il2cpp_TypeInfo_var, (uint32_t)((int32_t)64));
 		__this->___X = L_0;
@@ -10441,12 +9806,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sha224Digest__ctor_m34AB6660BD2E276A6FF2
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha224Digest__ctor_m34AB6660BD2E276A6FF239B9EF8DB824CB54C081_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha224Digest__ctor_m34AB6660BD2E276A6FF239B9EF8DB824CB54C081_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_0 = (UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA*)(UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA*)SZArrayNew(UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA_il2cpp_TypeInfo_var, (uint32_t)((int32_t)64));
 		__this->___X = L_0;
@@ -10460,14 +9822,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sha224Digest__ctor_m34AB6660BD2E276A6FF2
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sha224Digest_CopyIn_mADFA7CD9A627272D84335C7D3C34B9340341B242 (Sha224Digest_t6066B104EEAAB29DF1ECD1128B6D90D31010873C* __this, Sha224Digest_t6066B104EEAAB29DF1ECD1128B6D90D31010873C* ___0_t, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha224Digest_CopyIn_mADFA7CD9A627272D84335C7D3C34B9340341B242_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha224Digest_CopyIn_mADFA7CD9A627272D84335C7D3C34B9340341B242_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Sha224Digest_t6066B104EEAAB29DF1ECD1128B6D90D31010873C* L_0 = ___0_t;
 		GeneralDigest_CopyIn_mC1BA92836D3B770ADFFED18F4267A9FDB3F1BD04(__this, L_0, NULL);
@@ -10524,41 +9878,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Sha224Digest_get_AlgorithmName_m34D
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha224Digest_get_AlgorithmName_m34DC575807AD28B429CAFAC3E8BCDBD1DE0FC78A_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralF8167CCC78C1117CDBB4F4177DE66863BA21E27A);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha224Digest_get_AlgorithmName_m34DC575807AD28B429CAFAC3E8BCDBD1DE0FC78A_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		return _stringLiteralF8167CCC78C1117CDBB4F4177DE66863BA21E27A;
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Sha224Digest_GetDigestSize_m2769CE322C7BE7E29F3A98BB361B80F68D48EFE2 (Sha224Digest_t6066B104EEAAB29DF1ECD1128B6D90D31010873C* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha224Digest_GetDigestSize_m2769CE322C7BE7E29F3A98BB361B80F68D48EFE2_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha224Digest_GetDigestSize_m2769CE322C7BE7E29F3A98BB361B80F68D48EFE2_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		return ((int32_t)28);
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sha224Digest_ProcessWord_m2CA60F6A8C6B7D6DDEB2EE29864B6D0953DE7937 (Sha224Digest_t6066B104EEAAB29DF1ECD1128B6D90D31010873C* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_input, int32_t ___1_inOff, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha224Digest_ProcessWord_m2CA60F6A8C6B7D6DDEB2EE29864B6D0953DE7937_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	int32_t V_0 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha224Digest_ProcessWord_m2CA60F6A8C6B7D6DDEB2EE29864B6D0953DE7937_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_0 = __this->___X;
 		int32_t L_1 = __this->___xOff;
@@ -10589,14 +9924,6 @@ IL_002f:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sha224Digest_ProcessLength_mEFA8ABD09D3009618CAA973CBF7ABF0BCCBC55CE (Sha224Digest_t6066B104EEAAB29DF1ECD1128B6D90D31010873C* __this, int64_t ___0_bitLength, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha224Digest_ProcessLength_mEFA8ABD09D3009618CAA973CBF7ABF0BCCBC55CE_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha224Digest_ProcessLength_mEFA8ABD09D3009618CAA973CBF7ABF0BCCBC55CE_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = __this->___xOff;
 		if ((((int32_t)L_0) <= ((int32_t)((int32_t)14))))
@@ -10623,14 +9950,6 @@ IL_0010:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Sha224Digest_DoFinal_m9162094BADFD94A0CF5DE9CC29D21F8B63301266 (Sha224Digest_t6066B104EEAAB29DF1ECD1128B6D90D31010873C* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_output, int32_t ___1_outOff, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha224Digest_DoFinal_m9162094BADFD94A0CF5DE9CC29D21F8B63301266_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha224Digest_DoFinal_m9162094BADFD94A0CF5DE9CC29D21F8B63301266_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		GeneralDigest_Finish_mDFEBE12A0A64850E3A129052E5ED06607E63E67D(__this, NULL);
 		uint32_t L_0 = __this->___H1;
@@ -10667,14 +9986,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Sha224Digest_DoFinal_m9162094BADFD94A
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sha224Digest_Reset_mBE66CA09AE33CE8B638A87CDBC12A4A3FAB020FA (Sha224Digest_t6066B104EEAAB29DF1ECD1128B6D90D31010873C* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha224Digest_Reset_mBE66CA09AE33CE8B638A87CDBC12A4A3FAB020FA_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha224Digest_Reset_mBE66CA09AE33CE8B638A87CDBC12A4A3FAB020FA_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		GeneralDigest_Reset_m85B15687A0C29CAA93F64054D0F9497250946C25(__this, NULL);
 		__this->___H1 = ((int32_t)-1056596264);
@@ -10698,7 +10009,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sha224Digest_ProcessBlock_m3F8CC9ADE751D
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha224Digest_ProcessBlock_m3F8CC9ADE751D0E71A355E3DFF33A395FC18F9B5_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha224Digest_t6066B104EEAAB29DF1ECD1128B6D90D31010873C_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -10713,8 +10023,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sha224Digest_ProcessBlock_m3F8CC9ADE751D
 	int32_t V_8 = 0;
 	int32_t V_9 = 0;
 	int32_t V_10 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha224Digest_ProcessBlock_m3F8CC9ADE751D0E71A355E3DFF33A395FC18F9B5_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		V_9 = ((int32_t)16);
 		goto IL_0050;
@@ -10722,7 +10030,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sha224Digest_ProcessBlock_m3F8CC9ADE751D
 
 IL_0006:
 	{
-		CHECK_PAUSE_POINT;
 		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_0 = __this->___X;
 		int32_t L_1 = V_9;
 		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_2 = __this->___X;
@@ -10788,7 +10095,6 @@ IL_0050:
 
 IL_009d:
 	{
-		CHECK_PAUSE_POINT;
 		uint32_t L_30 = V_7;
 		uint32_t L_31 = V_4;
 		il2cpp_codegen_runtime_class_init_inline(Sha224Digest_t6066B104EEAAB29DF1ECD1128B6D90D31010873C_il2cpp_TypeInfo_var);
@@ -11115,14 +10421,6 @@ IL_02e7:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t Sha224Digest_Ch_m62E957C0E27B0D3292380E97A73B9A0CA1713FDF (uint32_t ___0_x, uint32_t ___1_y, uint32_t ___2_z, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha224Digest_Ch_m62E957C0E27B0D3292380E97A73B9A0CA1713FDF_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha224Digest_Ch_m62E957C0E27B0D3292380E97A73B9A0CA1713FDF_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___0_x;
 		uint32_t L_1 = ___1_y;
@@ -11133,14 +10431,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t Sha224Digest_Ch_m62E957C0E27B0D32923
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t Sha224Digest_Maj_mDCA8FF1CCB1EF9869C73AB597DA241CD5E2724E6 (uint32_t ___0_x, uint32_t ___1_y, uint32_t ___2_z, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha224Digest_Maj_mDCA8FF1CCB1EF9869C73AB597DA241CD5E2724E6_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha224Digest_Maj_mDCA8FF1CCB1EF9869C73AB597DA241CD5E2724E6_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___0_x;
 		uint32_t L_1 = ___1_y;
@@ -11153,14 +10443,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t Sha224Digest_Maj_mDCA8FF1CCB1EF9869C
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t Sha224Digest_Sum0_m958FD77748AE20F93DCEFEB10E78966EB4310CDD (uint32_t ___0_x, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha224Digest_Sum0_m958FD77748AE20F93DCEFEB10E78966EB4310CDD_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha224Digest_Sum0_m958FD77748AE20F93DCEFEB10E78966EB4310CDD_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___0_x;
 		uint32_t L_1 = ___0_x;
@@ -11173,14 +10455,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t Sha224Digest_Sum0_m958FD77748AE20F93
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t Sha224Digest_Sum1_m6B434D8427C533DBEB42ADD9EB09E97C99A6BAC4 (uint32_t ___0_x, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha224Digest_Sum1_m6B434D8427C533DBEB42ADD9EB09E97C99A6BAC4_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha224Digest_Sum1_m6B434D8427C533DBEB42ADD9EB09E97C99A6BAC4_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___0_x;
 		uint32_t L_1 = ___0_x;
@@ -11193,14 +10467,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t Sha224Digest_Sum1_m6B434D8427C533DBE
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t Sha224Digest_Theta0_mF0A2F4D2A454C6D3B3D8879266C403ACF38A8601 (uint32_t ___0_x, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha224Digest_Theta0_mF0A2F4D2A454C6D3B3D8879266C403ACF38A8601_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha224Digest_Theta0_mF0A2F4D2A454C6D3B3D8879266C403ACF38A8601_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___0_x;
 		uint32_t L_1 = ___0_x;
@@ -11212,14 +10478,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t Sha224Digest_Theta0_mF0A2F4D2A454C6D
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t Sha224Digest_Theta1_m7965E2ACE4A72C13B25027D4F891FA67C898B2AE (uint32_t ___0_x, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha224Digest_Theta1_m7965E2ACE4A72C13B25027D4F891FA67C898B2AE_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha224Digest_Theta1_m7965E2ACE4A72C13B25027D4F891FA67C898B2AE_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___0_x;
 		uint32_t L_1 = ___0_x;
@@ -11234,12 +10492,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Sha224Digest_Copy_mF50D2533BC3
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha224Digest_Copy_mF50D2533BC3496CBEC017D00F7B102EA302C6890_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha224Digest_t6066B104EEAAB29DF1ECD1128B6D90D31010873C_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha224Digest_Copy_mF50D2533BC3496CBEC017D00F7B102EA302C6890_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Sha224Digest_t6066B104EEAAB29DF1ECD1128B6D90D31010873C* L_0 = (Sha224Digest_t6066B104EEAAB29DF1ECD1128B6D90D31010873C*)il2cpp_codegen_object_new(Sha224Digest_t6066B104EEAAB29DF1ECD1128B6D90D31010873C_il2cpp_TypeInfo_var);
 		Sha224Digest__ctor_m34AB6660BD2E276A6FF239B9EF8DB824CB54C081(L_0, __this, NULL);
@@ -11251,13 +10506,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sha224Digest_Reset_m55E3910BB79D3D76056D
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha224Digest_Reset_m55E3910BB79D3D76056D27D95597BF50271D82E6_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha224Digest_t6066B104EEAAB29DF1ECD1128B6D90D31010873C_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	Sha224Digest_t6066B104EEAAB29DF1ECD1128B6D90D31010873C* V_0 = NULL;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha224Digest_Reset_m55E3910BB79D3D76056D27D95597BF50271D82E6_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		RuntimeObject* L_0 = ___0_other;
 		V_0 = ((Sha224Digest_t6066B104EEAAB29DF1ECD1128B6D90D31010873C*)CastclassClass((RuntimeObject*)L_0, Sha224Digest_t6066B104EEAAB29DF1ECD1128B6D90D31010873C_il2cpp_TypeInfo_var));
@@ -11271,14 +10523,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sha224Digest__cctor_m44B70E148293C3BDEEA
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha224Digest__cctor_m44B70E148293C3BDEEAF7CB5898EF76BE7DD368A_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha224Digest_t6066B104EEAAB29DF1ECD1128B6D90D31010873C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_tD0F36C0306D6FC935F6D03771148885C45C2AB3E____74EF7306E7452D6859B6463CE496B8DF30925F69E1B2969E1F3F34BBC9C6AF04_FieldInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha224Digest__cctor_m44B70E148293C3BDEEAF7CB5898EF76BE7DD368A_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_0 = (UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA*)(UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA*)SZArrayNew(UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA_il2cpp_TypeInfo_var, (uint32_t)((int32_t)64));
 		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_1 = L_0;
@@ -11302,12 +10551,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sha256Digest__ctor_mDFFAC1AD820B4AAAB9C8
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha256Digest__ctor_mDFFAC1AD820B4AAAB9C86F912DA9465395EEEDA3_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha256Digest__ctor_mDFFAC1AD820B4AAAB9C86F912DA9465395EEEDA3_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_0 = (UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA*)(UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA*)SZArrayNew(UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA_il2cpp_TypeInfo_var, (uint32_t)((int32_t)64));
 		__this->___X = L_0;
@@ -11322,12 +10568,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sha256Digest__ctor_mAFF1D98252227F327B3F
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha256Digest__ctor_mAFF1D98252227F327B3F8123D9E6A65DB1ECDF55_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha256Digest__ctor_mAFF1D98252227F327B3F8123D9E6A65DB1ECDF55_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_0 = (UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA*)(UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA*)SZArrayNew(UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA_il2cpp_TypeInfo_var, (uint32_t)((int32_t)64));
 		__this->___X = L_0;
@@ -11341,14 +10584,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sha256Digest__ctor_mAFF1D98252227F327B3F
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sha256Digest_CopyIn_m857C6FB7A69455C6CF9259259D1233F0FB63183F (Sha256Digest_t590B87D38A56BC63587E70C885DC12C2F1777774* __this, Sha256Digest_t590B87D38A56BC63587E70C885DC12C2F1777774* ___0_t, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha256Digest_CopyIn_m857C6FB7A69455C6CF9259259D1233F0FB63183F_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha256Digest_CopyIn_m857C6FB7A69455C6CF9259259D1233F0FB63183F_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Sha256Digest_t590B87D38A56BC63587E70C885DC12C2F1777774* L_0 = ___0_t;
 		GeneralDigest_CopyIn_mC1BA92836D3B770ADFFED18F4267A9FDB3F1BD04(__this, L_0, NULL);
@@ -11405,41 +10640,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Sha256Digest_get_AlgorithmName_mC0C
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha256Digest_get_AlgorithmName_mC0CEE17D6AF163790B8CC94E3E33B4DD71432731_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral4C23E639A5A412FD6FD6D1C92298ADD2B8DF4D0E);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha256Digest_get_AlgorithmName_mC0CEE17D6AF163790B8CC94E3E33B4DD71432731_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		return _stringLiteral4C23E639A5A412FD6FD6D1C92298ADD2B8DF4D0E;
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Sha256Digest_GetDigestSize_mF9DC344503BC14A5754BE5A91A56C3E69021D63E (Sha256Digest_t590B87D38A56BC63587E70C885DC12C2F1777774* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha256Digest_GetDigestSize_mF9DC344503BC14A5754BE5A91A56C3E69021D63E_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha256Digest_GetDigestSize_mF9DC344503BC14A5754BE5A91A56C3E69021D63E_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		return ((int32_t)32);
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sha256Digest_ProcessWord_mB3A0CE1F602677AB0E35DBC589372195ECD7FAE0 (Sha256Digest_t590B87D38A56BC63587E70C885DC12C2F1777774* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_input, int32_t ___1_inOff, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha256Digest_ProcessWord_mB3A0CE1F602677AB0E35DBC589372195ECD7FAE0_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	int32_t V_0 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha256Digest_ProcessWord_mB3A0CE1F602677AB0E35DBC589372195ECD7FAE0_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_0 = __this->___X;
 		int32_t L_1 = __this->___xOff;
@@ -11470,14 +10686,6 @@ IL_002f:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sha256Digest_ProcessLength_mEC6BA9ADE2F47B78596A5B8E98C8B7D87432741A (Sha256Digest_t590B87D38A56BC63587E70C885DC12C2F1777774* __this, int64_t ___0_bitLength, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha256Digest_ProcessLength_mEC6BA9ADE2F47B78596A5B8E98C8B7D87432741A_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha256Digest_ProcessLength_mEC6BA9ADE2F47B78596A5B8E98C8B7D87432741A_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = __this->___xOff;
 		if ((((int32_t)L_0) <= ((int32_t)((int32_t)14))))
@@ -11504,14 +10712,6 @@ IL_0010:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Sha256Digest_DoFinal_m8F01ACE808232964EDA6BE7D2FCBD5D6C9F34111 (Sha256Digest_t590B87D38A56BC63587E70C885DC12C2F1777774* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_output, int32_t ___1_outOff, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha256Digest_DoFinal_m8F01ACE808232964EDA6BE7D2FCBD5D6C9F34111_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha256Digest_DoFinal_m8F01ACE808232964EDA6BE7D2FCBD5D6C9F34111_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		GeneralDigest_Finish_mDFEBE12A0A64850E3A129052E5ED06607E63E67D(__this, NULL);
 		uint32_t L_0 = __this->___H1;
@@ -11552,14 +10752,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Sha256Digest_DoFinal_m8F01ACE80823296
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sha256Digest_Reset_mA5E5DD7D237D59828DB2E907EDC22040398E07C2 (Sha256Digest_t590B87D38A56BC63587E70C885DC12C2F1777774* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha256Digest_Reset_mA5E5DD7D237D59828DB2E907EDC22040398E07C2_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha256Digest_Reset_mA5E5DD7D237D59828DB2E907EDC22040398E07C2_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		GeneralDigest_Reset_m85B15687A0C29CAA93F64054D0F9497250946C25(__this, NULL);
 		Sha256Digest_initHs_m5E17FD04080C291C1F0F0E972239F7ADF6CD5C38(__this, NULL);
@@ -11573,14 +10765,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sha256Digest_Reset_mA5E5DD7D237D59828DB2
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sha256Digest_initHs_m5E17FD04080C291C1F0F0E972239F7ADF6CD5C38 (Sha256Digest_t590B87D38A56BC63587E70C885DC12C2F1777774* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha256Digest_initHs_m5E17FD04080C291C1F0F0E972239F7ADF6CD5C38_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha256Digest_initHs_m5E17FD04080C291C1F0F0E972239F7ADF6CD5C38_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		__this->___H1 = ((int32_t)1779033703);
 		__this->___H2 = ((int32_t)-1150833019);
@@ -11598,7 +10782,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sha256Digest_ProcessBlock_m79BDF7AA05FF9
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha256Digest_ProcessBlock_m79BDF7AA05FF92C2E60A1C5145605ABDCF735C1B_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha256Digest_t590B87D38A56BC63587E70C885DC12C2F1777774_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -11613,8 +10796,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sha256Digest_ProcessBlock_m79BDF7AA05FF9
 	int32_t V_8 = 0;
 	int32_t V_9 = 0;
 	int32_t V_10 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha256Digest_ProcessBlock_m79BDF7AA05FF92C2E60A1C5145605ABDCF735C1B_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		V_9 = ((int32_t)16);
 		goto IL_0050;
@@ -11622,7 +10803,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sha256Digest_ProcessBlock_m79BDF7AA05FF9
 
 IL_0006:
 	{
-		CHECK_PAUSE_POINT;
 		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_0 = __this->___X;
 		int32_t L_1 = V_9;
 		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_2 = __this->___X;
@@ -11688,7 +10868,6 @@ IL_0050:
 
 IL_009d:
 	{
-		CHECK_PAUSE_POINT;
 		uint32_t L_30 = V_7;
 		uint32_t L_31 = V_4;
 		uint32_t L_32 = V_5;
@@ -11967,14 +11146,6 @@ IL_026f:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t Sha256Digest_Sum1Ch_mBE40B2FF672C226CAEDC83D1423EF79B1DDE1BDB (uint32_t ___0_x, uint32_t ___1_y, uint32_t ___2_z, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha256Digest_Sum1Ch_mBE40B2FF672C226CAEDC83D1423EF79B1DDE1BDB_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha256Digest_Sum1Ch_mBE40B2FF672C226CAEDC83D1423EF79B1DDE1BDB_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___0_x;
 		uint32_t L_1 = ___0_x;
@@ -11991,14 +11162,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t Sha256Digest_Sum1Ch_mBE40B2FF672C226
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t Sha256Digest_Sum0Maj_m83397E66E3B5DC8C3946D87410D35383E3A5E55F (uint32_t ___0_x, uint32_t ___1_y, uint32_t ___2_z, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha256Digest_Sum0Maj_m83397E66E3B5DC8C3946D87410D35383E3A5E55F_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha256Digest_Sum0Maj_m83397E66E3B5DC8C3946D87410D35383E3A5E55F_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___0_x;
 		uint32_t L_1 = ___0_x;
@@ -12016,14 +11179,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t Sha256Digest_Sum0Maj_m83397E66E3B5DC
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t Sha256Digest_Theta0_mEB7446C202843D7EC4C43924FE01FFB1DE1BF8E1 (uint32_t ___0_x, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha256Digest_Theta0_mEB7446C202843D7EC4C43924FE01FFB1DE1BF8E1_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha256Digest_Theta0_mEB7446C202843D7EC4C43924FE01FFB1DE1BF8E1_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___0_x;
 		uint32_t L_1 = ___0_x;
@@ -12035,14 +11190,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t Sha256Digest_Theta0_mEB7446C202843D7
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t Sha256Digest_Theta1_m1987895BB335DF006F4744A7471C6356FE473BFF (uint32_t ___0_x, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha256Digest_Theta1_m1987895BB335DF006F4744A7471C6356FE473BFF_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha256Digest_Theta1_m1987895BB335DF006F4744A7471C6356FE473BFF_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___0_x;
 		uint32_t L_1 = ___0_x;
@@ -12057,12 +11204,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Sha256Digest_Copy_m01A8A87921D
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha256Digest_Copy_m01A8A87921D48CE482335C9490EFAECBC0CD0AE0_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha256Digest_t590B87D38A56BC63587E70C885DC12C2F1777774_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha256Digest_Copy_m01A8A87921D48CE482335C9490EFAECBC0CD0AE0_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Sha256Digest_t590B87D38A56BC63587E70C885DC12C2F1777774* L_0 = (Sha256Digest_t590B87D38A56BC63587E70C885DC12C2F1777774*)il2cpp_codegen_object_new(Sha256Digest_t590B87D38A56BC63587E70C885DC12C2F1777774_il2cpp_TypeInfo_var);
 		Sha256Digest__ctor_mAFF1D98252227F327B3F8123D9E6A65DB1ECDF55(L_0, __this, NULL);
@@ -12074,13 +11218,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sha256Digest_Reset_m134FA93BE9E9FDBA8EEC
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha256Digest_Reset_m134FA93BE9E9FDBA8EEC936D0C196BC3DEB17C15_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha256Digest_t590B87D38A56BC63587E70C885DC12C2F1777774_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	Sha256Digest_t590B87D38A56BC63587E70C885DC12C2F1777774* V_0 = NULL;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha256Digest_Reset_m134FA93BE9E9FDBA8EEC936D0C196BC3DEB17C15_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		RuntimeObject* L_0 = ___0_other;
 		V_0 = ((Sha256Digest_t590B87D38A56BC63587E70C885DC12C2F1777774*)CastclassClass((RuntimeObject*)L_0, Sha256Digest_t590B87D38A56BC63587E70C885DC12C2F1777774_il2cpp_TypeInfo_var));
@@ -12094,14 +11235,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sha256Digest__cctor_m5B32F92F0F2B7EB975F
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha256Digest__cctor_m5B32F92F0F2B7EB975FC8105442C18A5C55ADCE3_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Sha256Digest_t590B87D38A56BC63587E70C885DC12C2F1777774_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_tD0F36C0306D6FC935F6D03771148885C45C2AB3E____74EF7306E7452D6859B6463CE496B8DF30925F69E1B2969E1F3F34BBC9C6AF04_FieldInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Sha256Digest__cctor_m5B32F92F0F2B7EB975FC8105442C18A5C55ADCE3_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_0 = (UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA*)(UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA*)SZArrayNew(UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA_il2cpp_TypeInfo_var, (uint32_t)((int32_t)64));
 		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_1 = L_0;

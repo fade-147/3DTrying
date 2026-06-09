@@ -60,26 +60,25 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[2] =
 };
 static const int32_t s_InvokerIndices[18] = 
 {
-	11842,
-	7368,
-	20257,
-	18152,
-	20257,
-	20257,
-	20257,
-	18166,
-	20257,
-	18140,
-	5698,
-	9711,
-	5698,
-	5709,
-	5698,
-	5696,
-	5698,
-	5687,
+	11807,
+	7394,
+	20121,
+	18035,
+	20121,
+	20121,
+	20121,
+	18049,
+	20121,
+	18023,
+	5740,
+	9716,
+	5740,
+	5751,
+	5740,
+	5738,
+	5740,
+	5729,
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnityEngine_VideoModule;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_VideoModule_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_VideoModule_CodeGenModule = 
 {
@@ -95,7 +94,7 @@ const Il2CppCodeGenModule g_UnityEngine_VideoModule_CodeGenModule =
 	NULL,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnityEngine_VideoModule,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

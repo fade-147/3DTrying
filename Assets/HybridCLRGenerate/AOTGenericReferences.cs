@@ -186,6 +186,9 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// Mirror.Writer<uint>
 	// Mirror.Writer<ulong>
 	// Mirror.Writer<ushort>
+	// NodeCanvas.Framework.BBParameter.<>c<UnityEngine.Vector3>
+	// NodeCanvas.Framework.BBParameter.<>c<float>
+	// NodeCanvas.Framework.BBParameter.<>c<object>
 	// NodeCanvas.Framework.BBParameter.<>c__DisplayClass20_0<UnityEngine.Vector3>
 	// NodeCanvas.Framework.BBParameter.<>c__DisplayClass20_0<float>
 	// NodeCanvas.Framework.BBParameter.<>c__DisplayClass20_0<object>
@@ -195,6 +198,9 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// NodeCanvas.Framework.BBParameter<UnityEngine.Vector3>
 	// NodeCanvas.Framework.BBParameter<float>
 	// NodeCanvas.Framework.BBParameter<object>
+	// NodeCanvas.Framework.Variable.<>c<UnityEngine.Vector3>
+	// NodeCanvas.Framework.Variable.<>c<float>
+	// NodeCanvas.Framework.Variable.<>c<object>
 	// NodeCanvas.Framework.Variable.<>c__DisplayClass27_0<UnityEngine.Vector3>
 	// NodeCanvas.Framework.Variable.<>c__DisplayClass27_0<float>
 	// NodeCanvas.Framework.Variable.<>c__DisplayClass27_0<object>
@@ -204,9 +210,6 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// NodeCanvas.Framework.Variable.<>c__DisplayClass27_2<UnityEngine.Vector3>
 	// NodeCanvas.Framework.Variable.<>c__DisplayClass27_2<float>
 	// NodeCanvas.Framework.Variable.<>c__DisplayClass27_2<object>
-	// NodeCanvas.Framework.Variable.<>c__DisplayClass27_3<UnityEngine.Vector3>
-	// NodeCanvas.Framework.Variable.<>c__DisplayClass27_3<float>
-	// NodeCanvas.Framework.Variable.<>c__DisplayClass27_3<object>
 	// NodeCanvas.Framework.Variable<UnityEngine.Vector3>
 	// NodeCanvas.Framework.Variable<float>
 	// NodeCanvas.Framework.Variable<object>
@@ -298,6 +301,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Action<object,byte>
 	// System.Action<object,double>
 	// System.Action<object,float>
+	// System.Action<object,int,object>
 	// System.Action<object,int>
 	// System.Action<object,long>
 	// System.Action<object,object>
@@ -316,31 +320,37 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Collections.Generic.Dictionary.Enumerator<int,int>
 	// System.Collections.Generic.Dictionary.Enumerator<int,object>
 	// System.Collections.Generic.Dictionary.Enumerator<object,float>
+	// System.Collections.Generic.Dictionary.Enumerator<object,object>
 	// System.Collections.Generic.Dictionary.Enumerator<uint,object>
 	// System.Collections.Generic.Dictionary.Enumerator<ushort,object>
 	// System.Collections.Generic.Dictionary.KeyCollection.Enumerator<int,int>
 	// System.Collections.Generic.Dictionary.KeyCollection.Enumerator<int,object>
 	// System.Collections.Generic.Dictionary.KeyCollection.Enumerator<object,float>
+	// System.Collections.Generic.Dictionary.KeyCollection.Enumerator<object,object>
 	// System.Collections.Generic.Dictionary.KeyCollection.Enumerator<uint,object>
 	// System.Collections.Generic.Dictionary.KeyCollection.Enumerator<ushort,object>
 	// System.Collections.Generic.Dictionary.KeyCollection<int,int>
 	// System.Collections.Generic.Dictionary.KeyCollection<int,object>
 	// System.Collections.Generic.Dictionary.KeyCollection<object,float>
+	// System.Collections.Generic.Dictionary.KeyCollection<object,object>
 	// System.Collections.Generic.Dictionary.KeyCollection<uint,object>
 	// System.Collections.Generic.Dictionary.KeyCollection<ushort,object>
 	// System.Collections.Generic.Dictionary.ValueCollection.Enumerator<int,int>
 	// System.Collections.Generic.Dictionary.ValueCollection.Enumerator<int,object>
 	// System.Collections.Generic.Dictionary.ValueCollection.Enumerator<object,float>
+	// System.Collections.Generic.Dictionary.ValueCollection.Enumerator<object,object>
 	// System.Collections.Generic.Dictionary.ValueCollection.Enumerator<uint,object>
 	// System.Collections.Generic.Dictionary.ValueCollection.Enumerator<ushort,object>
 	// System.Collections.Generic.Dictionary.ValueCollection<int,int>
 	// System.Collections.Generic.Dictionary.ValueCollection<int,object>
 	// System.Collections.Generic.Dictionary.ValueCollection<object,float>
+	// System.Collections.Generic.Dictionary.ValueCollection<object,object>
 	// System.Collections.Generic.Dictionary.ValueCollection<uint,object>
 	// System.Collections.Generic.Dictionary.ValueCollection<ushort,object>
 	// System.Collections.Generic.Dictionary<int,int>
 	// System.Collections.Generic.Dictionary<int,object>
 	// System.Collections.Generic.Dictionary<object,float>
+	// System.Collections.Generic.Dictionary<object,object>
 	// System.Collections.Generic.Dictionary<uint,object>
 	// System.Collections.Generic.Dictionary<ushort,object>
 	// System.Collections.Generic.EqualityComparer<Mirror.NetworkRoomManager.PendingPlayer>
@@ -360,6 +370,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<int,int>>
 	// System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<int,object>>
 	// System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<object,float>>
+	// System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<object,object>>
 	// System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<uint,object>>
 	// System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<ushort,object>>
 	// System.Collections.Generic.ICollection<int>
@@ -379,6 +390,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<int,int>>
 	// System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<int,object>>
 	// System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<object,float>>
+	// System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<object,object>>
 	// System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<uint,object>>
 	// System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<ushort,object>>
 	// System.Collections.Generic.IEnumerator<int>
@@ -388,8 +400,10 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Collections.Generic.IEqualityComparer<object>
 	// System.Collections.Generic.IEqualityComparer<uint>
 	// System.Collections.Generic.IEqualityComparer<ushort>
+	// System.Collections.Generic.IList<System.Collections.Generic.KeyValuePair<object,object>>
 	// System.Collections.Generic.IList<int>
 	// System.Collections.Generic.IList<object>
+	// System.Collections.Generic.IReadOnlyList<object>
 	// System.Collections.Generic.KeyValuePair<int,int>
 	// System.Collections.Generic.KeyValuePair<int,object>
 	// System.Collections.Generic.KeyValuePair<object,float>
@@ -420,6 +434,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Comparison<int>
 	// System.Comparison<object>
 	// System.Func<UnityEngine.Vector3>
+	// System.Func<byte>
 	// System.Func<float>
 	// System.Func<object,Adrenak.UniVoice.Networks.MirrorMessage>
 	// System.Func<object,BotListMessage>
@@ -501,6 +516,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Func<object,ushort>
 	// System.Func<object>
 	// System.Nullable<UnityEngine.InputSystem.InputAction.CallbackContext>
+	// System.Nullable<byte>
 	// System.Predicate<Mirror.NetworkRoomManager.PendingPlayer>
 	// System.Predicate<int>
 	// System.Predicate<object>
@@ -508,8 +524,11 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// UnityEngine.Events.UnityAction<float>
 	// UnityEngine.Events.UnityEvent<float>
 	// UnityEngine.InputSystem.InputBindingComposite<UnityEngine.Vector2>
+	// UnityEngine.InputSystem.InputBindingComposite<float>
 	// UnityEngine.InputSystem.InputControl<UnityEngine.Vector2>
+	// UnityEngine.InputSystem.InputControl<float>
 	// UnityEngine.InputSystem.InputProcessor<UnityEngine.Vector2>
+	// UnityEngine.InputSystem.InputProcessor<float>
 	// UnityEngine.InputSystem.Utilities.InlinedArray<object>
 	// }}
 
@@ -547,11 +566,18 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 		// System.Void Mirror.NetworkWriter.Write<Mirror.SceneMessage>(Mirror.SceneMessage)
 		// System.Void Mirror.NetworkWriter.Write<int>(int)
 		// System.Void Mirror.NetworkWriterExtensions.WriteArray<int>(Mirror.NetworkWriter,int[])
+		// int System.Linq.Enumerable.Count<System.Collections.Generic.KeyValuePair<object,object>>(System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<object,object>>)
+		// int System.Linq.Enumerable.Count<object>(System.Collections.Generic.IEnumerable<object>)
+		// System.Collections.Generic.KeyValuePair<object,object> System.Linq.Enumerable.ElementAt<System.Collections.Generic.KeyValuePair<object,object>>(System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<object,object>>,int)
+		// object System.Linq.Enumerable.ElementAt<object>(System.Collections.Generic.IEnumerable<object>,int)
 		// object& System.Runtime.CompilerServices.Unsafe.As<object,object>(object&)
 		// System.Void* System.Runtime.CompilerServices.Unsafe.AsPointer<object>(object&)
 		// System.Void* Unity.Collections.LowLevel.Unsafe.UnsafeUtility.AddressOf<UnityEngine.Vector2>(UnityEngine.Vector2&)
+		// System.Void* Unity.Collections.LowLevel.Unsafe.UnsafeUtility.AddressOf<float>(float&)
 		// int Unity.Collections.LowLevel.Unsafe.UnsafeUtility.SizeOf<UnityEngine.Vector2>()
+		// int Unity.Collections.LowLevel.Unsafe.UnsafeUtility.SizeOf<float>()
 		// object UnityEngine.Component.GetComponent<object>()
+		// object UnityEngine.Component.GetComponentInChildren<object>()
 		// object UnityEngine.Component.GetComponentInChildren<object>(bool)
 		// object[] UnityEngine.Component.GetComponents<object>()
 		// object[] UnityEngine.Component.GetComponentsInChildren<object>()
@@ -559,18 +585,25 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 		// bool UnityEngine.Component.TryGetComponent<object>(object&)
 		// object UnityEngine.GameObject.AddComponent<object>()
 		// object UnityEngine.GameObject.GetComponent<object>()
+		// object UnityEngine.GameObject.GetComponentInChildren<object>()
+		// object UnityEngine.GameObject.GetComponentInChildren<object>(bool)
 		// object UnityEngine.GameObject.GetComponentInParent<object>()
 		// object UnityEngine.GameObject.GetComponentInParent<object>(bool)
 		// object[] UnityEngine.GameObject.GetComponents<object>()
 		// object[] UnityEngine.GameObject.GetComponentsInChildren<object>(bool)
 		// bool UnityEngine.GameObject.TryGetComponent<object>(object&)
+		// UnityEngine.Vector2 UnityEngine.InputSystem.InputAction.ReadValue<UnityEngine.Vector2>()
 		// UnityEngine.Vector2 UnityEngine.InputSystem.InputAction.CallbackContext.ReadValue<UnityEngine.Vector2>()
+		// float UnityEngine.InputSystem.InputAction.CallbackContext.ReadValue<float>()
 		// UnityEngine.Vector2 UnityEngine.InputSystem.InputActionState.ApplyProcessors<UnityEngine.Vector2>(int,UnityEngine.Vector2,UnityEngine.InputSystem.InputControl<UnityEngine.Vector2>)
+		// float UnityEngine.InputSystem.InputActionState.ApplyProcessors<float>(int,float,UnityEngine.InputSystem.InputControl<float>)
 		// UnityEngine.Vector2 UnityEngine.InputSystem.InputActionState.ReadValue<UnityEngine.Vector2>(int,int,bool)
+		// float UnityEngine.InputSystem.InputActionState.ReadValue<float>(int,int,bool)
 		// UnityEngine.Vector2 UnityEngine.InputSystem.InputValue.Get<UnityEngine.Vector2>()
 		// object UnityEngine.Object.FindObjectOfType<object>()
 		// object[] UnityEngine.Object.FindObjectsByType<object>(UnityEngine.FindObjectsSortMode)
 		// object[] UnityEngine.Object.FindObjectsOfType<object>()
+		// object UnityEngine.Object.Instantiate<object>(object)
 		// object UnityEngine.Object.Instantiate<object>(object,UnityEngine.Transform)
 		// object UnityEngine.Object.Instantiate<object>(object,UnityEngine.Transform,bool)
 		// object UnityEngine.Object.Instantiate<object>(object,UnityEngine.Vector3,UnityEngine.Quaternion)

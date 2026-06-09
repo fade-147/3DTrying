@@ -9,4 +9,5 @@ EditorBuildSettings:
     path: Assets/Boot/Boot.unity
     guid: 763d04cb8db4cc944947476b1c9cd950
   m_configObjects:
-    com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}
+    com.unity.input.settings: {fileID: 11400000, guid: 9eb07e2d669e9c94e9d7d3c782a916f7,
+      type: 2}

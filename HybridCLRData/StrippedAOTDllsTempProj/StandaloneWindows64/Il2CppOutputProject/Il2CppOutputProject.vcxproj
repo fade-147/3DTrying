@@ -60,8 +60,6 @@
     </ClCompile>
     <ClCompile Include="Source\Cinemachine__4.cpp">
     </ClCompile>
-    <ClCompile Include="Source\Cinemachine__5.cpp">
-    </ClCompile>
     <ClCompile Include="Source\com.rlabrecque.steamworks.net.cpp">
     </ClCompile>
     <ClCompile Include="Source\com.rlabrecque.steamworks.net__1.cpp">
@@ -81,8 +79,6 @@
     <ClCompile Include="Source\Concentus-Unity.Runtime__5.cpp">
     </ClCompile>
     <ClCompile Include="Source\Concentus-Unity.Runtime__6.cpp">
-    </ClCompile>
-    <ClCompile Include="Source\Concentus-Unity.Runtime__7.cpp">
     </ClCompile>
     <ClCompile Include="Source\FizzySteamworks.cpp">
     </ClCompile>
@@ -127,8 +123,6 @@
     <ClCompile Include="Source\GenericMethods__26.cpp">
     </ClCompile>
     <ClCompile Include="Source\GenericMethods__27.cpp">
-    </ClCompile>
-    <ClCompile Include="Source\GenericMethods__28.cpp">
     </ClCompile>
     <ClCompile Include="Source\GenericMethods__3.cpp">
     </ClCompile>
@@ -188,13 +182,7 @@
     </ClCompile>
     <ClCompile Include="Source\Generics__117.cpp">
     </ClCompile>
-    <ClCompile Include="Source\Generics__118.cpp">
-    </ClCompile>
-    <ClCompile Include="Source\Generics__119.cpp">
-    </ClCompile>
     <ClCompile Include="Source\Generics__12.cpp">
-    </ClCompile>
-    <ClCompile Include="Source\Generics__120.cpp">
     </ClCompile>
     <ClCompile Include="Source\Generics__13.cpp">
     </ClCompile>
@@ -552,8 +540,6 @@
     </ClCompile>
     <ClCompile Include="Source\Mirror__1.cpp">
     </ClCompile>
-    <ClCompile Include="Source\Mirror__2.cpp">
-    </ClCompile>
     <ClCompile Include="Source\Mono.Security.cpp">
     </ClCompile>
     <ClCompile Include="Source\Mono.Security__1.cpp">
@@ -612,15 +598,11 @@
     </ClCompile>
     <ClCompile Include="Source\NodeCanvas__2.cpp">
     </ClCompile>
-    <ClCompile Include="Source\NodeCanvas__3.cpp">
-    </ClCompile>
     <ClCompile Include="Source\ParadoxNotion.cpp">
     </ClCompile>
     <ClCompile Include="Source\ParadoxNotion__1.cpp">
     </ClCompile>
     <ClCompile Include="Source\ParadoxNotion__2.cpp">
-    </ClCompile>
-    <ClCompile Include="Source\ParadoxNotion__3.cpp">
     </ClCompile>
     <ClCompile Include="Source\SimpleWebTransport.cpp">
     </ClCompile>
@@ -652,6 +634,8 @@
     </ClCompile>
     <ClCompile Include="Source\Telepathy.cpp">
     </ClCompile>
+    <ClCompile Include="Source\Toolbox.cpp">
+    </ClCompile>
     <ClCompile Include="Source\Unity.AI.Navigation.cpp">
     </ClCompile>
     <ClCompile Include="Source\Unity.Burst.cpp">
@@ -662,8 +646,6 @@
     </ClCompile>
     <ClCompile Include="Source\Unity.Burst__2.cpp">
     </ClCompile>
-    <ClCompile Include="Source\Unity.Burst__3.cpp">
-    </ClCompile>
     <ClCompile Include="Source\Unity.InputSystem.cpp">
     </ClCompile>
     <ClCompile Include="Source\Unity.InputSystem.ForUI.cpp">
@@ -673,12 +655,6 @@
     <ClCompile Include="Source\Unity.InputSystem__10.cpp">
     </ClCompile>
     <ClCompile Include="Source\Unity.InputSystem__11.cpp">
-    </ClCompile>
-    <ClCompile Include="Source\Unity.InputSystem__12.cpp">
-    </ClCompile>
-    <ClCompile Include="Source\Unity.InputSystem__13.cpp">
-    </ClCompile>
-    <ClCompile Include="Source\Unity.InputSystem__14.cpp">
     </ClCompile>
     <ClCompile Include="Source\Unity.InputSystem__2.cpp">
     </ClCompile>
@@ -703,8 +679,6 @@
     <ClCompile Include="Source\Unity.Mathematics__10.cpp">
     </ClCompile>
     <ClCompile Include="Source\Unity.Mathematics__11.cpp">
-    </ClCompile>
-    <ClCompile Include="Source\Unity.Mathematics__12.cpp">
     </ClCompile>
     <ClCompile Include="Source\Unity.Mathematics__2.cpp">
     </ClCompile>
@@ -780,8 +754,6 @@
     </ClCompile>
     <ClCompile Include="Source\Unity.TextMeshPro__6.cpp">
     </ClCompile>
-    <ClCompile Include="Source\Unity.TextMeshPro__7.cpp">
-    </ClCompile>
     <ClCompile Include="Source\Unity.Timeline.cpp">
     </ClCompile>
     <ClCompile Include="Source\Unity.Timeline__1.cpp">
@@ -805,6 +777,8 @@
     <ClCompile Include="Source\UnityEngine.CoreModule__3.cpp">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.CoreModule__4.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.CoreModule__5.cpp">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.cpp">
     </ClCompile>
@@ -898,8 +872,6 @@
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.UI__3.cpp">
     </ClCompile>
-    <ClCompile Include="Source\UnityEngine.UI__4.cpp">
-    </ClCompile>
     <ClCompile Include="Source\UnityEngine.UnityAnalyticsModule.cpp">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.UnityWebRequestAssetBundleModule.cpp">
@@ -920,45 +892,25 @@
     </ClCompile>
     <ClCompile Include="Source\YooAsset__2.cpp">
     </ClCompile>
-    <ClCompile Include="Source\YooAsset__3.cpp">
-    </ClCompile>
     <ClCompile Include="Source\__Generated.cpp">
     </ClCompile>
     <ClCompile Include="Source\Adrenak.BRW_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\Adrenak.BRW_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\Adrenak.UniMic.Runtime_CodeGen.c">
-    </ClCompile>
-    <ClCompile Include="Source\Adrenak.UniMic.Runtime_Debugger.c">
     </ClCompile>
     <ClCompile Include="Source\Adrenak.UniVoice.Runtime_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\Adrenak.UniVoice.Runtime_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\Assembly-CSharp_CodeGen.c">
-    </ClCompile>
-    <ClCompile Include="Source\Assembly-CSharp_Debugger.c">
     </ClCompile>
     <ClCompile Include="Source\Cinemachine_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\Cinemachine_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\com.rlabrecque.steamworks.net_CodeGen.c">
-    </ClCompile>
-    <ClCompile Include="Source\com.rlabrecque.steamworks.net_Debugger.c">
     </ClCompile>
     <ClCompile Include="Source\Concentus-Unity.Runtime_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\Concentus-Unity.Runtime_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\FizzySteamworks_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\FizzySteamworks_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\HybridCLR.Runtime_CodeGen.c">
-    </ClCompile>
-    <ClCompile Include="Source\HybridCLR.Runtime_Debugger.c">
     </ClCompile>
     <ClCompile Include="Source\Il2CppGenericAdjustorThunkTable.c">
     </ClCompile>
@@ -982,275 +934,141 @@
     </ClCompile>
     <ClCompile Include="Source\kcp2k_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\kcp2k_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\Mirror.Authenticators_CodeGen.c">
-    </ClCompile>
-    <ClCompile Include="Source\Mirror.Authenticators_Debugger.c">
     </ClCompile>
     <ClCompile Include="Source\Mirror.BouncyCastle.Cryptography_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\Mirror.BouncyCastle.Cryptography_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\Mirror.Components_CodeGen.c">
-    </ClCompile>
-    <ClCompile Include="Source\Mirror.Components_Debugger.c">
     </ClCompile>
     <ClCompile Include="Source\Mirror.Examples_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\Mirror.Examples_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\Mirror.Transports_CodeGen.c">
-    </ClCompile>
-    <ClCompile Include="Source\Mirror.Transports_Debugger.c">
     </ClCompile>
     <ClCompile Include="Source\Mirror_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\Mirror_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\Mono.Security_CodeGen.c">
-    </ClCompile>
-    <ClCompile Include="Source\Mono.Security_Debugger.c">
     </ClCompile>
     <ClCompile Include="Source\mscorlib_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\mscorlib_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\NodeCanvas_CodeGen.c">
-    </ClCompile>
-    <ClCompile Include="Source\NodeCanvas_Debugger.c">
     </ClCompile>
     <ClCompile Include="Source\ParadoxNotion_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\ParadoxNotion_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\SimpleWebTransport_CodeGen.c">
-    </ClCompile>
-    <ClCompile Include="Source\SimpleWebTransport_Debugger.c">
     </ClCompile>
     <ClCompile Include="Source\System.Configuration_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\System.Configuration_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\System.Core_CodeGen.c">
-    </ClCompile>
-    <ClCompile Include="Source\System.Core_Debugger.c">
     </ClCompile>
     <ClCompile Include="Source\System.Numerics_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\System.Numerics_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\System.Xml_CodeGen.c">
-    </ClCompile>
-    <ClCompile Include="Source\System.Xml_Debugger.c">
     </ClCompile>
     <ClCompile Include="Source\System_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\System_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\Telepathy_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\Telepathy_Debugger.c">
+    <ClCompile Include="Source\Toolbox_CodeGen.c">
     </ClCompile>
     <ClCompile Include="Source\Unity.AI.Navigation_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\Unity.AI.Navigation_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\Unity.Burst.Unsafe_CodeGen.c">
-    </ClCompile>
-    <ClCompile Include="Source\Unity.Burst.Unsafe_Debugger.c">
     </ClCompile>
     <ClCompile Include="Source\Unity.Burst_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\Unity.Burst_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\Unity.InputSystem.ForUI_CodeGen.c">
-    </ClCompile>
-    <ClCompile Include="Source\Unity.InputSystem.ForUI_Debugger.c">
     </ClCompile>
     <ClCompile Include="Source\Unity.InputSystem_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\Unity.InputSystem_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\Unity.Mathematics_CodeGen.c">
-    </ClCompile>
-    <ClCompile Include="Source\Unity.Mathematics_Debugger.c">
     </ClCompile>
     <ClCompile Include="Source\Unity.Postprocessing.Runtime_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\Unity.Postprocessing.Runtime_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\Unity.RenderPipeline.Universal.ShaderLibrary_CodeGen.c">
-    </ClCompile>
-    <ClCompile Include="Source\Unity.RenderPipeline.Universal.ShaderLibrary_Debugger.c">
     </ClCompile>
     <ClCompile Include="Source\Unity.RenderPipelines.Core.Runtime_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\Unity.RenderPipelines.Core.Runtime_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\Unity.RenderPipelines.Universal.Runtime_CodeGen.c">
-    </ClCompile>
-    <ClCompile Include="Source\Unity.RenderPipelines.Universal.Runtime_Debugger.c">
     </ClCompile>
     <ClCompile Include="Source\Unity.TextMeshPro_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\Unity.TextMeshPro_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\Unity.Timeline_CodeGen.c">
-    </ClCompile>
-    <ClCompile Include="Source\Unity.Timeline_Debugger.c">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.AIModule_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\UnityEngine.AIModule_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\UnityEngine.AndroidJNIModule_CodeGen.c">
-    </ClCompile>
-    <ClCompile Include="Source\UnityEngine.AndroidJNIModule_Debugger.c">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.AnimationModule_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\UnityEngine.AnimationModule_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\UnityEngine.AssetBundleModule_CodeGen.c">
-    </ClCompile>
-    <ClCompile Include="Source\UnityEngine.AssetBundleModule_Debugger.c">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.AudioModule_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\UnityEngine.AudioModule_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\UnityEngine.CoreModule_CodeGen.c">
-    </ClCompile>
-    <ClCompile Include="Source\UnityEngine.CoreModule_Debugger.c">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.DirectorModule_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\UnityEngine.DirectorModule_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\UnityEngine.GridModule_CodeGen.c">
-    </ClCompile>
-    <ClCompile Include="Source\UnityEngine.GridModule_Debugger.c">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.IMGUIModule_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\UnityEngine.IMGUIModule_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\UnityEngine.InputLegacyModule_CodeGen.c">
-    </ClCompile>
-    <ClCompile Include="Source\UnityEngine.InputLegacyModule_Debugger.c">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.InputModule_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\UnityEngine.InputModule_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\UnityEngine.JSONSerializeModule_CodeGen.c">
-    </ClCompile>
-    <ClCompile Include="Source\UnityEngine.JSONSerializeModule_Debugger.c">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.ParticleSystemModule_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\UnityEngine.ParticleSystemModule_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\UnityEngine.Physics2DModule_CodeGen.c">
-    </ClCompile>
-    <ClCompile Include="Source\UnityEngine.Physics2DModule_Debugger.c">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.PhysicsModule_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\UnityEngine.PhysicsModule_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\UnityEngine.PropertiesModule_CodeGen.c">
-    </ClCompile>
-    <ClCompile Include="Source\UnityEngine.PropertiesModule_Debugger.c">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.SharedInternalsModule_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\UnityEngine.SharedInternalsModule_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\UnityEngine.SpriteMaskModule_CodeGen.c">
-    </ClCompile>
-    <ClCompile Include="Source\UnityEngine.SpriteMaskModule_Debugger.c">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.SpriteShapeModule_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\UnityEngine.SpriteShapeModule_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\UnityEngine.SubsystemsModule_CodeGen.c">
-    </ClCompile>
-    <ClCompile Include="Source\UnityEngine.SubsystemsModule_Debugger.c">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.TerrainModule_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\UnityEngine.TerrainModule_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\UnityEngine.TextCoreFontEngineModule_CodeGen.c">
-    </ClCompile>
-    <ClCompile Include="Source\UnityEngine.TextCoreFontEngineModule_Debugger.c">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.TextCoreTextEngineModule_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\UnityEngine.TextCoreTextEngineModule_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\UnityEngine.TextRenderingModule_CodeGen.c">
-    </ClCompile>
-    <ClCompile Include="Source\UnityEngine.TextRenderingModule_Debugger.c">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.TilemapModule_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\UnityEngine.TilemapModule_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\UnityEngine.UIElementsModule_CodeGen.c">
-    </ClCompile>
-    <ClCompile Include="Source\UnityEngine.UIElementsModule_Debugger.c">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.UIModule_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\UnityEngine.UIModule_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\UnityEngine.UI_CodeGen.c">
-    </ClCompile>
-    <ClCompile Include="Source\UnityEngine.UI_Debugger.c">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.UnityAnalyticsModule_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\UnityEngine.UnityAnalyticsModule_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\UnityEngine.UnityWebRequestAssetBundleModule_CodeGen.c">
-    </ClCompile>
-    <ClCompile Include="Source\UnityEngine.UnityWebRequestAssetBundleModule_Debugger.c">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.UnityWebRequestModule_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\UnityEngine.UnityWebRequestModule_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\UnityEngine.VFXModule_CodeGen.c">
-    </ClCompile>
-    <ClCompile Include="Source\UnityEngine.VFXModule_Debugger.c">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.VideoModule_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\UnityEngine.VideoModule_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\UnityEngine.VRModule_CodeGen.c">
-    </ClCompile>
-    <ClCompile Include="Source\UnityEngine.VRModule_Debugger.c">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.XRModule_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\UnityEngine.XRModule_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\UnityEngine_CodeGen.c">
-    </ClCompile>
-    <ClCompile Include="Source\UnityEngine_Debugger.c">
     </ClCompile>
     <ClCompile Include="Source\YooAsset_CodeGen.c">
     </ClCompile>
-    <ClCompile Include="Source\YooAsset_Debugger.c">
-    </ClCompile>
     <ClCompile Include="Source\__Generated_CodeGen.c">
-    </ClCompile>
-    <ClCompile Include="Source\__Generated_Debugger.c">
     </ClCompile>
     <ClInclude Include="IL2CPP\external\baselib\Include\Baselib.h">
     </ClInclude>
@@ -4938,19 +4756,19 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)'=='Debug'">
-    <NMakePreprocessorDefinitions>_DEBUG;DEBUG;ALL_INTERIOR_POINTERS=1;GC_GCJ_SUPPORT=1;JAVA_FINALIZATION=1;NO_EXECUTE_PERMISSION=1;GC_NO_THREADS_DISCOVERY=1;IGNORE_DYNAMIC_LOADING=1;GC_DONT_REGISTER_MAIN_STATIC_DATA=1;GC_VERSION_MAJOR=7;GC_VERSION_MINOR=7;GC_VERSION_MICRO=0;GC_THREADS=1;USE_MMAP=1;USE_MUNMAP=1;NET_4_0=1;UNITY_AOT=1;NET_STANDARD_2_0=1;NET_UNITY_4_8=1;NET_STANDARD=1;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;WIN32;WINDOWS;_UNICODE;UNICODE;WINAPI_FAMILY=WINAPI_FAMILY_DESKTOP_APP;IL2CPP_MONO_DEBUGGER=1;IL2CPP_ENABLE_WRITE_BARRIERS=1;IL2CPP_INCREMENTAL_TIME_SLICE=3</NMakePreprocessorDefinitions>
+    <NMakePreprocessorDefinitions>_DEBUG;DEBUG;ALL_INTERIOR_POINTERS=1;GC_GCJ_SUPPORT=1;JAVA_FINALIZATION=1;NO_EXECUTE_PERMISSION=1;GC_NO_THREADS_DISCOVERY=1;IGNORE_DYNAMIC_LOADING=1;GC_DONT_REGISTER_MAIN_STATIC_DATA=1;GC_VERSION_MAJOR=7;GC_VERSION_MINOR=7;GC_VERSION_MICRO=0;GC_THREADS=1;USE_MMAP=1;USE_MUNMAP=1;NET_4_0=1;UNITY_AOT=1;NET_STANDARD_2_0=1;NET_UNITY_4_8=1;NET_STANDARD=1;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;WIN32;WINDOWS;_UNICODE;UNICODE;WINAPI_FAMILY=WINAPI_FAMILY_DESKTOP_APP</NMakePreprocessorDefinitions>
     <BuilderConfiguration>Debug</BuilderConfiguration>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)'=='Release' OR '$(Configuration)'=='Master'">
-    <NMakePreprocessorDefinitions>_NDEBUG;NDEBUG;ALL_INTERIOR_POINTERS=1;GC_GCJ_SUPPORT=1;JAVA_FINALIZATION=1;NO_EXECUTE_PERMISSION=1;GC_NO_THREADS_DISCOVERY=1;IGNORE_DYNAMIC_LOADING=1;GC_DONT_REGISTER_MAIN_STATIC_DATA=1;GC_VERSION_MAJOR=7;GC_VERSION_MINOR=7;GC_VERSION_MICRO=0;GC_THREADS=1;USE_MMAP=1;USE_MUNMAP=1;NET_4_0=1;UNITY_AOT=1;NET_STANDARD_2_0=1;NET_UNITY_4_8=1;NET_STANDARD=1;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;WIN32;WINDOWS;_UNICODE;UNICODE;WINAPI_FAMILY=WINAPI_FAMILY_DESKTOP_APP;IL2CPP_MONO_DEBUGGER=1;IL2CPP_ENABLE_WRITE_BARRIERS=1;IL2CPP_INCREMENTAL_TIME_SLICE=3</NMakePreprocessorDefinitions>
+    <NMakePreprocessorDefinitions>_NDEBUG;NDEBUG;ALL_INTERIOR_POINTERS=1;GC_GCJ_SUPPORT=1;JAVA_FINALIZATION=1;NO_EXECUTE_PERMISSION=1;GC_NO_THREADS_DISCOVERY=1;IGNORE_DYNAMIC_LOADING=1;GC_DONT_REGISTER_MAIN_STATIC_DATA=1;GC_VERSION_MAJOR=7;GC_VERSION_MINOR=7;GC_VERSION_MICRO=0;GC_THREADS=1;USE_MMAP=1;USE_MUNMAP=1;NET_4_0=1;UNITY_AOT=1;NET_STANDARD_2_0=1;NET_UNITY_4_8=1;NET_STANDARD=1;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;WIN32;WINDOWS;_UNICODE;UNICODE;WINAPI_FAMILY=WINAPI_FAMILY_DESKTOP_APP</NMakePreprocessorDefinitions>
     <BuilderConfiguration>Release</BuilderConfiguration>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)'=='MasterWithLTCG'">
-    <NMakePreprocessorDefinitions>_NDEBUG;NDEBUG;ALL_INTERIOR_POINTERS=1;GC_GCJ_SUPPORT=1;JAVA_FINALIZATION=1;NO_EXECUTE_PERMISSION=1;GC_NO_THREADS_DISCOVERY=1;IGNORE_DYNAMIC_LOADING=1;GC_DONT_REGISTER_MAIN_STATIC_DATA=1;GC_VERSION_MAJOR=7;GC_VERSION_MINOR=7;GC_VERSION_MICRO=0;GC_THREADS=1;USE_MMAP=1;USE_MUNMAP=1;NET_4_0=1;UNITY_AOT=1;NET_STANDARD_2_0=1;NET_UNITY_4_8=1;NET_STANDARD=1;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;WIN32;WINDOWS;_UNICODE;UNICODE;WINAPI_FAMILY=WINAPI_FAMILY_DESKTOP_APP;IL2CPP_MONO_DEBUGGER=1;IL2CPP_ENABLE_WRITE_BARRIERS=1;IL2CPP_INCREMENTAL_TIME_SLICE=3</NMakePreprocessorDefinitions>
+    <NMakePreprocessorDefinitions>_NDEBUG;NDEBUG;ALL_INTERIOR_POINTERS=1;GC_GCJ_SUPPORT=1;JAVA_FINALIZATION=1;NO_EXECUTE_PERMISSION=1;GC_NO_THREADS_DISCOVERY=1;IGNORE_DYNAMIC_LOADING=1;GC_DONT_REGISTER_MAIN_STATIC_DATA=1;GC_VERSION_MAJOR=7;GC_VERSION_MINOR=7;GC_VERSION_MICRO=0;GC_THREADS=1;USE_MMAP=1;USE_MUNMAP=1;NET_4_0=1;UNITY_AOT=1;NET_STANDARD_2_0=1;NET_UNITY_4_8=1;NET_STANDARD=1;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;WIN32;WINDOWS;_UNICODE;UNICODE;WINAPI_FAMILY=WINAPI_FAMILY_DESKTOP_APP</NMakePreprocessorDefinitions>
     <BuilderConfiguration>ReleasePlus</BuilderConfiguration>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)'=='Debug' OR '$(Configuration)'=='Release'">
-    <Il2CppDebuggerFlags>--enable-debugger</Il2CppDebuggerFlags>
+    <Il2CppDebuggerFlags></Il2CppDebuggerFlags>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)'=='Master' OR '$(Configuration)'=='MasterWithLTCG'">
     <Il2CppDebuggerFlags></Il2CppDebuggerFlags>
@@ -4966,7 +4784,7 @@
     <IntDir>$(SolutionDir)\build\obj\il2cppOutputProject\$(PlatformShortName)\$(Configuration)\</IntDir>
     <NMakeOutput>$(OutDir)GameAssembly.dll</NMakeOutput>
     <IncludePath>$(VC_IncludePath);$(UniversalCRT_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir)\IL2CPP\libil2cpp;$(ProjectDir)\IL2CPP\libil2cpp\pch;$(ProjectDir)\IL2CPP\external\bdwgc\include</IncludePath>
-    <NMakeBuildCommandLine>"$(ProjectDir)\IL2CPP\build\deploy\il2cpp.exe" $(Il2CppDebuggerFlags) --compile-cpp --platform=WindowsDesktop --incremental-g-c-time-slice=3 --dotnetprofile=unityaot-win32 --profiler-report --print-command-line --dont-deploy-baselib --architecture=$(Il2CppArchitecture) --configuration=$(BuilderConfiguration) --outputpath="$(NMakeOutput)" --data-folder="$(OutDir)\" --cachedirectory="$(IntDir)\" --generatedcppdir="$(ProjectDir)\Source" --verbose --baselib-directory="$(SolutionDir)\build\bin\$(PlatformShortName)\$(Configuration)" --profiler-output-file="$(IntDir)profile.json"</NMakeBuildCommandLine>
+    <NMakeBuildCommandLine>"$(ProjectDir)\IL2CPP\build\deploy\il2cpp.exe" $(Il2CppDebuggerFlags) --compile-cpp --platform=WindowsDesktop --dotnetprofile=unityaot-win32 --profiler-report --print-command-line --dont-deploy-baselib --architecture=$(Il2CppArchitecture) --configuration=$(BuilderConfiguration) --outputpath="$(NMakeOutput)" --data-folder="$(OutDir)\" --cachedirectory="$(IntDir)\" --generatedcppdir="$(ProjectDir)\Source" --verbose --baselib-directory="$(SolutionDir)\build\bin\$(PlatformShortName)\$(Configuration)" --profiler-output-file="$(IntDir)profile.json"</NMakeBuildCommandLine>
     <NMakeReBuildCommandLine>$(NMakeBuildCommandLine) --forcerebuild</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>del "$(NMakeOutput)"</NMakeCleanCommandLine>
   </PropertyGroup>

@@ -456,8 +456,6 @@ struct ClientAuthorityCallback_tD9013EF9C1BA9FA8A240D80D87F90C1DED964CB0;
 struct U3CBeginAuthenticationU3Ed__9_t10675D08A7CF6DF143E7707568E4D2F488DC8966;
 struct UriInfo_t5F91F77A93545DDDA6BB24A609BAF5E232CC1A09;
 
-IL2CPP_EXTERN_C Il2CppSequencePoint g_sequencePointsMirror[];
-IL2CPP_EXTERN_C Il2CppSequencePoint g_sequencePointsMirror_Authenticators[];
 IL2CPP_EXTERN_C RuntimeClass* Action_1_t2BC1A0C82EB97CE1B4A0ED74FC158D0038C663B4_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Action_1_t6CE77E14AC0148F5F028EDED926D2CDA61C05AC9_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Action_2_t00EE65E013F88779EEEE98835E86BDF400A3BF36_il2cpp_TypeInfo_var;
@@ -845,26 +843,10 @@ IL2CPP_EXTERN_C String_t* _stringLiteral679A1E0EEED85C2CB3C1ED6DEF6EC36DF15ADEEE
 IL2CPP_EXTERN_C String_t* _stringLiteral6836D94586B3887F0DB2295A1C064F27F99A5DE2;
 IL2CPP_EXTERN_C String_t* _stringLiteralE87313A102FCC58A9E785FC8449E81A411F56F8F;
 IL2CPP_EXTERN_C String_t* _stringLiteralFC6413F4C1B57BBCDE4356C33871D8839840581A;
-IL2CPP_EXTERN_C const RuntimeMethod* BasicAuthenticator_DelayedDisconnect_mD177A1D77FE61F97CA36369643424271270E43F7_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* BasicAuthenticator_OnAuthRequestMessage_mCDBA358733186EF4B6C6555E95398016A7D9F6F1_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* BasicAuthenticator_OnAuthResponseMessage_mD79A02731A30927D7E66F005B75CA435027D7D6B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* BasicAuthenticator_OnClientAuthenticate_m5623453221E966D53087A7816679CC1BEFC89E49_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* BasicAuthenticator_OnServerAuthenticate_m39D037B4674D65EC9D7D2B8AA861C8312CD78CD6_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* BasicAuthenticator_OnStartClient_mEB6423BF99D05116542BA793CD907975BD7661AE_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* BasicAuthenticator_OnStartServer_mDEC44C044CB63ED29E3CCAA35832F06386717436_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* BasicAuthenticator_OnStopClient_mAE9F335BC83EB834FDAA06A85919B37017FDDB1C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* BasicAuthenticator_OnStopServer_m14529F3210F966D60386F4EB416AE2388568AB7B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* BasicAuthenticator__ctor_m78A344177A9D16263E840256790412079C676852_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* DeviceAuthenticator_OnAuthRequestMessage_m9394D3C7BC83ACC6B857AA22C30D007105F0A89B_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* DeviceAuthenticator_OnAuthResponseMessage_m5E7E60254B9982DC85BDD21290C25B58C7346501_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* DeviceAuthenticator_OnClientAuthenticate_m9EC9D02C73672F9B903B8FAEF2D082E5B611382D_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* DeviceAuthenticator_OnServerAuthenticate_m4ADA3D11C9450CFB15622581C9ECEABAEFFC9580_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* DeviceAuthenticator_OnStartClient_m029772620AC8AE0C3A1F6FD5469DC018790DC05A_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* DeviceAuthenticator_OnStartServer_mBC66AFA4FF6C6D997BCFE82D79C429362FF8FC37_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* DeviceAuthenticator_OnStopClient_m40FD8E68C9CBDB42C0DE19495A3AD1B5EECCB6D5_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* DeviceAuthenticator_OnStopServer_mBFD26A5F57297583375F6C0A6E9CE32414DD7667_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* DeviceAuthenticator__ctor_mDC06EA1A28F111EC51A2E7FB09EBDD1DA09BFD48_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GeneratedNetworkCode_InitReadWriters_m8FAD3DEE18E4213CD5EEF047F42C6CEFAD0EA535_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* GeneratedNetworkCode__Read_Mirror_AddPlayerMessage_mBDFF806422A977DC513A3773FF636B98FE3410A2_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* GeneratedNetworkCode__Read_Mirror_Authenticators_BasicAuthenticator_AuthRequestMessage_m2B2812432FD8479DB22275A42FD528E8A587E02A_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* GeneratedNetworkCode__Read_Mirror_Authenticators_BasicAuthenticator_AuthResponseMessage_mF3DA5AE6AA81DF78C01037A8B190925717D64750_RuntimeMethod_var;
@@ -919,7 +901,6 @@ IL2CPP_EXTERN_C const RuntimeMethod* NetworkClient_Send_TisAuthRequestMessage_t6
 IL2CPP_EXTERN_C const RuntimeMethod* NetworkClient_Send_TisAuthRequestMessage_t8AAEEE283D9AFEC2765C90E610FE9ED73FEF3CC9_m98AD84D0C709B401FFFBA1BDD19EDAC0AFF4F18A_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* NetworkClient_UnregisterHandler_TisAuthResponseMessage_tDDB9ADB12C1CFBB912FA905DD578D5DC6899B8CE_m37C13B842642AEDC5DB65E4F2375FCBFA1309458_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* NetworkClient_UnregisterHandler_TisAuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665_mBB5EDBB081452852893F317C2625925C01BE265B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NetworkClient_get_connection_m8FE7F7B376D22CEDD4AAED02297E6AA3D69A03D3_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* NetworkConnection_Send_TisAuthResponseMessage_tDDB9ADB12C1CFBB912FA905DD578D5DC6899B8CE_m0381A2D146BC45C485865F916B1DB4F3213217AC_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* NetworkConnection_Send_TisAuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665_mB08345EAA685C6F3333349B7A637AD7755F5DC81_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* NetworkReaderExtensions_ReadArraySegmentAndSize_m1FA42F4D324FA3D20E08ACDBAF00FC109F29FE41_RuntimeMethod_var;
@@ -1061,47 +1042,12 @@ IL2CPP_EXTERN_C const RuntimeMethod* NetworkWriterExtensions_WriteVector3Nullabl
 IL2CPP_EXTERN_C const RuntimeMethod* NetworkWriterExtensions_WriteVector3_m2AE5A9F7EBAE3FC01F471508D95C2928522A4A33_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* NetworkWriterExtensions_WriteVector4Nullable_m6776BD5543B06E7CE013DD1DEA897FDF53B58125_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* NetworkWriterExtensions_WriteVector4_m920AB8CC27C784743E2A927E13B441254F5925C2_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* TimeoutAuthenticator_Awake_m6F655C2CFA21572CBB178ECAB1E4BFDDF98B7077_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* TimeoutAuthenticator_BeginAuthentication_m7CA6A84A44932A107DEAD121E7699E2D8F5A3A56_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* TimeoutAuthenticator_OnClientAuthenticate_mABA59561BFD6CF20B4FA9EE0FADBC396D83CB815_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* TimeoutAuthenticator_OnServerAuthenticate_m1F6D07EB846B28C96E43E3CF10A6008D733AC770_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* TimeoutAuthenticator_OnStartClient_m24AF55F6453B3B049EFEE3DCAEA95B118DB78D41_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* TimeoutAuthenticator_OnStartServer_m4138C22F18A844778A0CB9046425D3EC115E59DB_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* TimeoutAuthenticator_OnStopClient_m8B73E6737AB11C25D31FD7CA3C07EC91BEF2019E_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* TimeoutAuthenticator_OnStopServer_m447F0AF31D508FD77A26B69E0F8FED5D96290487_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* TimeoutAuthenticator_U3CAwakeU3Eb__2_0_m5F0ABE77DFC0F5C02EC1DB46A3384A4C4BA5DFBE_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* TimeoutAuthenticator__ctor_m03B54DC87A6FF7E540C8BDDEC9D7A922D83EDDD4_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CBeginAuthenticationU3Ed__9_MoveNext_mB8736F9DCDA19547853A6770CD5E519A18EA9A7F_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CBeginAuthenticationU3Ed__9_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mE4EB02F3CE91422FF2DF4579D989420DB6331D4E_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CBeginAuthenticationU3Ed__9_System_Collections_IEnumerator_Reset_m769F6AA9805769B2A046573340D5469FEE1D74EC_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CBeginAuthenticationU3Ed__9_System_Collections_IEnumerator_get_Current_mF06E6F6AD8A1E424DE336F837A84D8EB6AED02F4_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CBeginAuthenticationU3Ed__9_System_IDisposable_Dispose_m871A0FFB682E36425BE4B741A08262362428A1E7_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CBeginAuthenticationU3Ed__9__ctor_mD220971F1815CE30ADE4AA463F9BE72A6597F520_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CDelayedDisconnectU3Ed__11_MoveNext_m95A2D4C4F5363AAF7792FB6A66D0B5E8E62CC551_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CDelayedDisconnectU3Ed__11_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mC3F4C3526A6B69D7861607DB7C100D72BB18F224_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CDelayedDisconnectU3Ed__11_System_Collections_IEnumerator_Reset_mBFDD11B423C9C2D612A54D11573DCC8B6F1CD4FC_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CDelayedDisconnectU3Ed__11_System_Collections_IEnumerator_get_Current_m5EF30450C7563B5AC0C99FCBCE6909BD55CD97D2_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CDelayedDisconnectU3Ed__11_System_IDisposable_Dispose_m0340B11448741B0C8F9B29BFF1AD10AA435DF43E_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CDelayedDisconnectU3Ed__11__ctor_m1B0BFD86BE1E21DC5BB8DB7D1A351279317E546A_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* UnityEvent_1_AddListener_m2F14DF549986D784D6AAEF0CF32F3A3F4BEA22BE_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* UnityEvent_1_Invoke_m9D3D84F4FDEA72F22EE27A17496313D507461566_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* UnityEvent_Invoke_mFBF80D59B03C30C5FE6A06F897D954ACADE061D2_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m3C857F415C59F5A5BF06DB24955F2A085DEFBF83_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m2F8B7BC199EAEBA33135A83263205CF68C63374E_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeType* AuthRequestMessage_t6F1EF2686ABA4F6CDC4B1175F4F5F01BF5D34ED0_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* AuthRequestMessage_t8AAEEE283D9AFEC2765C90E610FE9ED73FEF3CC9_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* AuthResponseMessage_tDDB9ADB12C1CFBB912FA905DD578D5DC6899B8CE_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* AuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* BasicAuthenticator_t87771DEC26A4B5ABEAC1FC4B6A408BEB4F3B486A_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* DeviceAuthenticator_t29CEB8BB38650EAF5B2E09CF4B6CE46CD0884799_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* Guid_t_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* MonoScriptData_tF0AD8EA47C11448B2283E2410CBEB0112C11F7C2_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* String_t_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* TimeoutAuthenticator_t49D2A5C5AB3EF3E0D31F9626A779B82B9C916315_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* U3CBeginAuthenticationU3Ed__9_t10675D08A7CF6DF143E7707568E4D2F488DC8966_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* U3CDelayedDisconnectU3Ed__11_t13D3A9480518371A05F48DD1FCC1D1BACBF3996E_0_0_0_var;
 struct Delegate_t_marshaled_com;
 struct Delegate_t_marshaled_pinvoke;
 struct Exception_t_marshaled_com;
@@ -1739,16 +1685,16 @@ struct U3CDelayedDisconnectU3Ed__11_t13D3A9480518371A05F48DD1FCC1D1BACBF3996E  :
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
-	NetworkConnectionToClient_t80F9FBDD786601CB93A63585D05BCAA1050C406A* ___conn;
 	float ___waitTime;
 	BasicAuthenticator_t87771DEC26A4B5ABEAC1FC4B6A408BEB4F3B486A* ___U3CU3E4__this;
+	NetworkConnectionToClient_t80F9FBDD786601CB93A63585D05BCAA1050C406A* ___conn;
 };
 struct U3CBeginAuthenticationU3Ed__9_t10675D08A7CF6DF143E7707568E4D2F488DC8966  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
-	NetworkConnection_t49880296B0FA972023F34582D7A41D7B63383E78* ___conn;
 	TimeoutAuthenticator_t49D2A5C5AB3EF3E0D31F9626A779B82B9C916315* ___U3CU3E4__this;
+	NetworkConnection_t49880296B0FA972023F34582D7A41D7B63383E78* ___conn;
 };
 struct ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 
 {
@@ -5426,64 +5372,35 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_tF0AD8EA47C11448B2283E2410CBEB
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MonoScriptData_tF0AD8EA47C11448B2283E2410CBEB0112C11F7C2_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_tC8410A9B7A55C6E064F647D6DC0012222EF10BC2____6CC2BA21A47C3D5B52BBC8272E97296621EEF685A79F171F7D78CBBBFDD2A14A_FieldInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_tC8410A9B7A55C6E064F647D6DC0012222EF10BC2____E4EA6A2C211C43573BFE25754A9330DAE623152E2BB0DA739ECABD79EB13F3A1_FieldInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m3C857F415C59F5A5BF06DB24955F2A085DEFBF83_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	MonoScriptData_tF0AD8EA47C11448B2283E2410CBEB0112C11F7C2 V_0;
 	memset((&V_0), 0, sizeof(V_0));
-	MonoScriptData_tF0AD8EA47C11448B2283E2410CBEB0112C11F7C2 V_1;
-	memset((&V_1), 0, sizeof(V_1));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m3C857F415C59F5A5BF06DB24955F2A085DEFBF83_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 0));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsMirror_Authenticators + 1));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 2));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 3));
 		il2cpp_codegen_initobj((&V_0), sizeof(MonoScriptData_tF0AD8EA47C11448B2283E2410CBEB0112C11F7C2));
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)180));
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_1 = L_0;
 		RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 L_2 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_tC8410A9B7A55C6E064F647D6DC0012222EF10BC2____E4EA6A2C211C43573BFE25754A9330DAE623152E2BB0DA739ECABD79EB13F3A1_FieldInfo_var) };
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 4));
 		RuntimeHelpers_InitializeArray_m751372AA3F24FBF6DA9B9D687CBFA2DE436CAB9B((RuntimeArray*)L_1, L_2, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 4));
 		(&V_0)->___FilePathsData = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&(&V_0)->___FilePathsData), (void*)L_1);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_3 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)398));
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_4 = L_3;
 		RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 L_5 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_tC8410A9B7A55C6E064F647D6DC0012222EF10BC2____6CC2BA21A47C3D5B52BBC8272E97296621EEF685A79F171F7D78CBBBFDD2A14A_FieldInfo_var) };
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 5));
 		RuntimeHelpers_InitializeArray_m751372AA3F24FBF6DA9B9D687CBFA2DE436CAB9B((RuntimeArray*)L_4, L_5, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 5));
 		(&V_0)->___TypesData = L_4;
 		Il2CppCodeGenWriteBarrier((void**)(&(&V_0)->___TypesData), (void*)L_4);
 		(&V_0)->___TotalFiles = 3;
 		(&V_0)->___TotalTypes = 7;
 		(&V_0)->___IsEditorOnly = (bool)0;
 		MonoScriptData_tF0AD8EA47C11448B2283E2410CBEB0112C11F7C2 L_6 = V_0;
-		V_1 = L_6;
-		goto IL_005d;
-	}
-
-IL_005d:
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 6));
-		MonoScriptData_tF0AD8EA47C11448B2283E2410CBEB0112C11F7C2 L_7 = V_1;
-		return L_7;
+		return L_6;
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m2F8B7BC199EAEBA33135A83263205CF68C63374E (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_t47D9B05E35F1C5F2BBF45787979ACF496274BCF6* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m2F8B7BC199EAEBA33135A83263205CF68C63374E_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m2F8B7BC199EAEBA33135A83263205CF68C63374E_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
 		return;
@@ -5586,28 +5503,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BasicAuthenticator_OnStartServer_mDEC44C
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_2_t3B2D135F9AA6CAC4AD95233BB29285DF2B8A4969_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BasicAuthenticator_OnAuthRequestMessage_mCDBA358733186EF4B6C6555E95398016A7D9F6F1_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BasicAuthenticator_OnStartServer_mDEC44C044CB63ED29E3CCAA35832F06386717436_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BasicAuthenticator_t87771DEC26A4B5ABEAC1FC4B6A408BEB4F3B486A_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NetworkServer_RegisterHandler_TisAuthRequestMessage_t6F1EF2686ABA4F6CDC4B1175F4F5F01BF5D34ED0_mA7FD14FEB6F1BC6ECFFF3C3A181AA8D4F167CC69_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NetworkServer_t90298DAB739AB649EFA5EE04950D68A903D6E920_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, BasicAuthenticator_OnStartServer_mDEC44C044CB63ED29E3CCAA35832F06386717436_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 7));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsMirror_Authenticators + 8));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 9));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 10));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 11));
 		Action_2_t3B2D135F9AA6CAC4AD95233BB29285DF2B8A4969* L_0 = (Action_2_t3B2D135F9AA6CAC4AD95233BB29285DF2B8A4969*)il2cpp_codegen_object_new(Action_2_t3B2D135F9AA6CAC4AD95233BB29285DF2B8A4969_il2cpp_TypeInfo_var);
 		Action_2__ctor_m512DB6C7474A1C01718BE3E24BA7F558111C48B4(L_0, __this, (intptr_t)((void*)BasicAuthenticator_OnAuthRequestMessage_mCDBA358733186EF4B6C6555E95398016A7D9F6F1_RuntimeMethod_var), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 11));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 12));
 		il2cpp_codegen_runtime_class_init_inline(NetworkServer_t90298DAB739AB649EFA5EE04950D68A903D6E920_il2cpp_TypeInfo_var);
 		NetworkServer_RegisterHandler_TisAuthRequestMessage_t6F1EF2686ABA4F6CDC4B1175F4F5F01BF5D34ED0_mA7FD14FEB6F1BC6ECFFF3C3A181AA8D4F167CC69(L_0, (bool)0, NetworkServer_RegisterHandler_TisAuthRequestMessage_t6F1EF2686ABA4F6CDC4B1175F4F5F01BF5D34ED0_mA7FD14FEB6F1BC6ECFFF3C3A181AA8D4F167CC69_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 12));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 13));
 		return;
 	}
 }
@@ -5616,44 +5520,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BasicAuthenticator_OnStopServer_m14529F3
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BasicAuthenticator_OnStopServer_m14529F3210F966D60386F4EB416AE2388568AB7B_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BasicAuthenticator_t87771DEC26A4B5ABEAC1FC4B6A408BEB4F3B486A_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NetworkServer_UnregisterHandler_TisAuthRequestMessage_t6F1EF2686ABA4F6CDC4B1175F4F5F01BF5D34ED0_m272FFB38D2FC6D1F72A9AC3E1C0607CFCC70938D_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NetworkServer_t90298DAB739AB649EFA5EE04950D68A903D6E920_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, BasicAuthenticator_OnStopServer_m14529F3210F966D60386F4EB416AE2388568AB7B_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 14));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsMirror_Authenticators + 15));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 16));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 17));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 18));
 		il2cpp_codegen_runtime_class_init_inline(NetworkServer_t90298DAB739AB649EFA5EE04950D68A903D6E920_il2cpp_TypeInfo_var);
 		NetworkServer_UnregisterHandler_TisAuthRequestMessage_t6F1EF2686ABA4F6CDC4B1175F4F5F01BF5D34ED0_m272FFB38D2FC6D1F72A9AC3E1C0607CFCC70938D(NetworkServer_UnregisterHandler_TisAuthRequestMessage_t6F1EF2686ABA4F6CDC4B1175F4F5F01BF5D34ED0_m272FFB38D2FC6D1F72A9AC3E1C0607CFCC70938D_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 18));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 19));
 		return;
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BasicAuthenticator_OnServerAuthenticate_m39D037B4674D65EC9D7D2B8AA861C8312CD78CD6 (BasicAuthenticator_t87771DEC26A4B5ABEAC1FC4B6A408BEB4F3B486A* __this, NetworkConnectionToClient_t80F9FBDD786601CB93A63585D05BCAA1050C406A* ___0_conn, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BasicAuthenticator_OnServerAuthenticate_m39D037B4674D65EC9D7D2B8AA861C8312CD78CD6_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BasicAuthenticator_t87771DEC26A4B5ABEAC1FC4B6A408BEB4F3B486A_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_conn));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, BasicAuthenticator_OnServerAuthenticate_m39D037B4674D65EC9D7D2B8AA861C8312CD78CD6_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 20));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsMirror_Authenticators + 21));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 22));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 23));
 		return;
 	}
 }
@@ -5662,10 +5541,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BasicAuthenticator_OnAuthRequestMessage_
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BasicAuthenticator_OnAuthRequestMessage_mCDBA358733186EF4B6C6555E95398016A7D9F6F1_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BasicAuthenticator_t87771DEC26A4B5ABEAC1FC4B6A408BEB4F3B486A_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1_Add_mB56DC75C81C181E933CF2EE7D73AF3508340B916_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1_Contains_mCC112BE0CB11FAE28AD17A1256A4880B4522E1C0_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NetworkConnection_Send_TisAuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665_mB08345EAA685C6F3333349B7A637AD7755F5DC81_RuntimeMethod_var);
@@ -5673,157 +5548,91 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BasicAuthenticator_OnAuthRequestMessage_
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralFC6413F4C1B57BBCDE4356C33871D8839840581A);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
-	bool V_1 = false;
+	AuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	AuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665 V_1;
+	memset((&V_1), 0, sizeof(V_1));
 	AuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665 V_2;
 	memset((&V_2), 0, sizeof(V_2));
-	AuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665 V_3;
-	memset((&V_3), 0, sizeof(V_3));
-	AuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665 V_4;
-	memset((&V_4), 0, sizeof(V_4));
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_conn), (&___1_msg));
-	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_2), (&V_4));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, BasicAuthenticator_OnAuthRequestMessage_mCDBA358733186EF4B6C6555E95398016A7D9F6F1_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 24));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsMirror_Authenticators + 25));
-	int32_t G_B5_0 = 0;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 26));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 27));
 		HashSet_1_t3CC91E8470E60D0E8ECDE4033177783BBD3894BA* L_0 = __this->___connectionsPendingDisconnect;
 		NetworkConnectionToClient_t80F9FBDD786601CB93A63585D05BCAA1050C406A* L_1 = ___0_conn;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 28));
 		NullCheck(L_0);
 		bool L_2;
 		L_2 = HashSet_1_Contains_mCC112BE0CB11FAE28AD17A1256A4880B4522E1C0(L_0, L_1, HashSet_1_Contains_mCC112BE0CB11FAE28AD17A1256A4880B4522E1C0_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 28));
-		V_0 = L_2;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 29));
-		bool L_3 = V_0;
-		if (!L_3)
+		if (!L_2)
 		{
-			goto IL_0016;
+			goto IL_000f;
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 30));
-		goto IL_00cb;
+		return;
 	}
 
-IL_0016:
+IL_000f:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 31));
-		AuthRequestMessage_t6F1EF2686ABA4F6CDC4B1175F4F5F01BF5D34ED0 L_4 = ___1_msg;
-		String_t* L_5 = L_4.___authUsername;
-		String_t* L_6 = __this->___serverUsername;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 32));
-		bool L_7;
-		L_7 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_5, L_6, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 32));
-		if (!L_7)
+		AuthRequestMessage_t6F1EF2686ABA4F6CDC4B1175F4F5F01BF5D34ED0 L_3 = ___1_msg;
+		String_t* L_4 = L_3.___authUsername;
+		String_t* L_5 = __this->___serverUsername;
+		bool L_6;
+		L_6 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_4, L_5, NULL);
+		if (!L_6)
 		{
-			goto IL_003c;
+			goto IL_0064;
 		}
 	}
 	{
-		AuthRequestMessage_t6F1EF2686ABA4F6CDC4B1175F4F5F01BF5D34ED0 L_8 = ___1_msg;
-		String_t* L_9 = L_8.___authPassword;
-		String_t* L_10 = __this->___serverPassword;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 33));
-		bool L_11;
-		L_11 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_9, L_10, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 33));
-		G_B5_0 = ((int32_t)(L_11));
-		goto IL_003d;
-	}
-
-IL_003c:
-	{
-		G_B5_0 = 0;
-	}
-
-IL_003d:
-	{
-		V_1 = (bool)G_B5_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 34));
-		bool L_12 = V_1;
-		if (!L_12)
+		AuthRequestMessage_t6F1EF2686ABA4F6CDC4B1175F4F5F01BF5D34ED0 L_7 = ___1_msg;
+		String_t* L_8 = L_7.___authPassword;
+		String_t* L_9 = __this->___serverPassword;
+		bool L_10;
+		L_10 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_8, L_9, NULL);
+		if (!L_10)
 		{
-			goto IL_0075;
+			goto IL_0064;
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 35));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 36));
-		il2cpp_codegen_initobj((&V_3), sizeof(AuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665));
-		(&V_3)->___code = (uint8_t)((int32_t)100);
-		(&V_3)->___message = _stringLiteral6477FB0CBF4E978465F5CB8C51161A34304B3890;
-		Il2CppCodeGenWriteBarrier((void**)(&(&V_3)->___message), (void*)_stringLiteral6477FB0CBF4E978465F5CB8C51161A34304B3890);
-		AuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665 L_13 = V_3;
-		V_2 = L_13;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 37));
+		il2cpp_codegen_initobj((&V_1), sizeof(AuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665));
+		(&V_1)->___code = (uint8_t)((int32_t)100);
+		(&V_1)->___message = _stringLiteral6477FB0CBF4E978465F5CB8C51161A34304B3890;
+		Il2CppCodeGenWriteBarrier((void**)(&(&V_1)->___message), (void*)_stringLiteral6477FB0CBF4E978465F5CB8C51161A34304B3890);
+		AuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665 L_11 = V_1;
+		V_0 = L_11;
+		NetworkConnectionToClient_t80F9FBDD786601CB93A63585D05BCAA1050C406A* L_12 = ___0_conn;
+		AuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665 L_13 = V_0;
+		NullCheck(L_12);
+		NetworkConnection_Send_TisAuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665_mB08345EAA685C6F3333349B7A637AD7755F5DC81(L_12, L_13, 0, NetworkConnection_Send_TisAuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665_mB08345EAA685C6F3333349B7A637AD7755F5DC81_RuntimeMethod_var);
 		NetworkConnectionToClient_t80F9FBDD786601CB93A63585D05BCAA1050C406A* L_14 = ___0_conn;
-		AuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665 L_15 = V_2;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 38));
-		NullCheck(L_14);
-		NetworkConnection_Send_TisAuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665_mB08345EAA685C6F3333349B7A637AD7755F5DC81(L_14, L_15, 0, NetworkConnection_Send_TisAuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665_mB08345EAA685C6F3333349B7A637AD7755F5DC81_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 38));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 39));
+		NetworkAuthenticator_ServerAccept_mACF91D447AFB44C815ECBC7C79295C23AB6D22A5(__this, L_14, NULL);
+		return;
+	}
+
+IL_0064:
+	{
+		HashSet_1_t3CC91E8470E60D0E8ECDE4033177783BBD3894BA* L_15 = __this->___connectionsPendingDisconnect;
 		NetworkConnectionToClient_t80F9FBDD786601CB93A63585D05BCAA1050C406A* L_16 = ___0_conn;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 40));
-		NetworkAuthenticator_ServerAccept_mACF91D447AFB44C815ECBC7C79295C23AB6D22A5(__this, L_16, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 40));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 41));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 42));
-		goto IL_00cb;
-	}
-
-IL_0075:
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 43));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 44));
-		HashSet_1_t3CC91E8470E60D0E8ECDE4033177783BBD3894BA* L_17 = __this->___connectionsPendingDisconnect;
-		NetworkConnectionToClient_t80F9FBDD786601CB93A63585D05BCAA1050C406A* L_18 = ___0_conn;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 45));
-		NullCheck(L_17);
-		bool L_19;
-		L_19 = HashSet_1_Add_mB56DC75C81C181E933CF2EE7D73AF3508340B916(L_17, L_18, HashSet_1_Add_mB56DC75C81C181E933CF2EE7D73AF3508340B916_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 45));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 46));
-		il2cpp_codegen_initobj((&V_3), sizeof(AuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665));
-		(&V_3)->___code = (uint8_t)((int32_t)200);
-		(&V_3)->___message = _stringLiteralFC6413F4C1B57BBCDE4356C33871D8839840581A;
-		Il2CppCodeGenWriteBarrier((void**)(&(&V_3)->___message), (void*)_stringLiteralFC6413F4C1B57BBCDE4356C33871D8839840581A);
-		AuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665 L_20 = V_3;
-		V_4 = L_20;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 47));
+		NullCheck(L_15);
+		bool L_17;
+		L_17 = HashSet_1_Add_mB56DC75C81C181E933CF2EE7D73AF3508340B916(L_15, L_16, HashSet_1_Add_mB56DC75C81C181E933CF2EE7D73AF3508340B916_RuntimeMethod_var);
+		il2cpp_codegen_initobj((&V_1), sizeof(AuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665));
+		(&V_1)->___code = (uint8_t)((int32_t)200);
+		(&V_1)->___message = _stringLiteralFC6413F4C1B57BBCDE4356C33871D8839840581A;
+		Il2CppCodeGenWriteBarrier((void**)(&(&V_1)->___message), (void*)_stringLiteralFC6413F4C1B57BBCDE4356C33871D8839840581A);
+		AuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665 L_18 = V_1;
+		V_2 = L_18;
+		NetworkConnectionToClient_t80F9FBDD786601CB93A63585D05BCAA1050C406A* L_19 = ___0_conn;
+		AuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665 L_20 = V_2;
+		NullCheck(L_19);
+		NetworkConnection_Send_TisAuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665_mB08345EAA685C6F3333349B7A637AD7755F5DC81(L_19, L_20, 0, NetworkConnection_Send_TisAuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665_mB08345EAA685C6F3333349B7A637AD7755F5DC81_RuntimeMethod_var);
 		NetworkConnectionToClient_t80F9FBDD786601CB93A63585D05BCAA1050C406A* L_21 = ___0_conn;
-		AuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665 L_22 = V_4;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 48));
 		NullCheck(L_21);
-		NetworkConnection_Send_TisAuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665_mB08345EAA685C6F3333349B7A637AD7755F5DC81(L_21, L_22, 0, NetworkConnection_Send_TisAuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665_mB08345EAA685C6F3333349B7A637AD7755F5DC81_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 48));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 49));
-		NetworkConnectionToClient_t80F9FBDD786601CB93A63585D05BCAA1050C406A* L_23 = ___0_conn;
-		NullCheck(L_23);
-		((NetworkConnection_t49880296B0FA972023F34582D7A41D7B63383E78*)L_23)->___isAuthenticated = (bool)0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 50));
-		NetworkConnectionToClient_t80F9FBDD786601CB93A63585D05BCAA1050C406A* L_24 = ___0_conn;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 51));
-		RuntimeObject* L_25;
-		L_25 = BasicAuthenticator_DelayedDisconnect_mD177A1D77FE61F97CA36369643424271270E43F7(__this, L_24, (1.0f), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 51));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 52));
-		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_26;
-		L_26 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_25, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 52));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 53));
-	}
-
-IL_00cb:
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 54));
+		((NetworkConnection_t49880296B0FA972023F34582D7A41D7B63383E78*)L_21)->___isAuthenticated = (bool)0;
+		NetworkConnectionToClient_t80F9FBDD786601CB93A63585D05BCAA1050C406A* L_22 = ___0_conn;
+		RuntimeObject* L_23;
+		L_23 = BasicAuthenticator_DelayedDisconnect_mD177A1D77FE61F97CA36369643424271270E43F7(__this, L_22, (1.0f), NULL);
+		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_24;
+		L_24 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_23, NULL);
 		return;
 	}
 }
@@ -5832,12 +5641,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BasicAuthenticator_DelayedDisc
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BasicAuthenticator_DelayedDisconnect_mD177A1D77FE61F97CA36369643424271270E43F7_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CDelayedDisconnectU3Ed__11_t13D3A9480518371A05F48DD1FCC1D1BACBF3996E_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, BasicAuthenticator_DelayedDisconnect_mD177A1D77FE61F97CA36369643424271270E43F7_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		U3CDelayedDisconnectU3Ed__11_t13D3A9480518371A05F48DD1FCC1D1BACBF3996E* L_0 = (U3CDelayedDisconnectU3Ed__11_t13D3A9480518371A05F48DD1FCC1D1BACBF3996E*)il2cpp_codegen_object_new(U3CDelayedDisconnectU3Ed__11_t13D3A9480518371A05F48DD1FCC1D1BACBF3996E_il2cpp_TypeInfo_var);
 		U3CDelayedDisconnectU3Ed__11__ctor_m1B0BFD86BE1E21DC5BB8DB7D1A351279317E546A(L_0, 0, NULL);
@@ -5864,28 +5670,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BasicAuthenticator_OnStartClient_mEB6423
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_1_t2BC1A0C82EB97CE1B4A0ED74FC158D0038C663B4_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BasicAuthenticator_OnAuthResponseMessage_mD79A02731A30927D7E66F005B75CA435027D7D6B_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BasicAuthenticator_OnStartClient_mEB6423BF99D05116542BA793CD907975BD7661AE_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BasicAuthenticator_t87771DEC26A4B5ABEAC1FC4B6A408BEB4F3B486A_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NetworkClient_RegisterHandler_TisAuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665_mA8EA911718B7EE8FCB5008975F501E6B830015FC_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NetworkClient_tF466F1FE2B449DC347BADC11F85EFB8F22453031_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, BasicAuthenticator_OnStartClient_mEB6423BF99D05116542BA793CD907975BD7661AE_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 55));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsMirror_Authenticators + 56));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 57));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 58));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 59));
 		Action_1_t2BC1A0C82EB97CE1B4A0ED74FC158D0038C663B4* L_0 = (Action_1_t2BC1A0C82EB97CE1B4A0ED74FC158D0038C663B4*)il2cpp_codegen_object_new(Action_1_t2BC1A0C82EB97CE1B4A0ED74FC158D0038C663B4_il2cpp_TypeInfo_var);
 		Action_1__ctor_m5A8AE8D8678701B9FF0A2322C6E0C14490DC1885(L_0, __this, (intptr_t)((void*)BasicAuthenticator_OnAuthResponseMessage_mD79A02731A30927D7E66F005B75CA435027D7D6B_RuntimeMethod_var), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 59));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 60));
 		il2cpp_codegen_runtime_class_init_inline(NetworkClient_tF466F1FE2B449DC347BADC11F85EFB8F22453031_il2cpp_TypeInfo_var);
 		NetworkClient_RegisterHandler_TisAuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665_mA8EA911718B7EE8FCB5008975F501E6B830015FC(L_0, (bool)0, NetworkClient_RegisterHandler_TisAuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665_mA8EA911718B7EE8FCB5008975F501E6B830015FC_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 60));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 61));
 		return;
 	}
 }
@@ -5894,25 +5687,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BasicAuthenticator_OnStopClient_mAE9F335
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BasicAuthenticator_OnStopClient_mAE9F335BC83EB834FDAA06A85919B37017FDDB1C_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BasicAuthenticator_t87771DEC26A4B5ABEAC1FC4B6A408BEB4F3B486A_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NetworkClient_UnregisterHandler_TisAuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665_mBB5EDBB081452852893F317C2625925C01BE265B_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NetworkClient_tF466F1FE2B449DC347BADC11F85EFB8F22453031_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, BasicAuthenticator_OnStopClient_mAE9F335BC83EB834FDAA06A85919B37017FDDB1C_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 62));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsMirror_Authenticators + 63));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 64));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 65));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 66));
 		il2cpp_codegen_runtime_class_init_inline(NetworkClient_tF466F1FE2B449DC347BADC11F85EFB8F22453031_il2cpp_TypeInfo_var);
 		bool L_0;
 		L_0 = NetworkClient_UnregisterHandler_TisAuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665_mBB5EDBB081452852893F317C2625925C01BE265B(NetworkClient_UnregisterHandler_TisAuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665_mBB5EDBB081452852893F317C2625925C01BE265B_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 66));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 67));
 		return;
 	}
 }
@@ -5921,41 +5703,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BasicAuthenticator_OnClientAuthenticate_
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AuthRequestMessage_t6F1EF2686ABA4F6CDC4B1175F4F5F01BF5D34ED0_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BasicAuthenticator_OnClientAuthenticate_m5623453221E966D53087A7816679CC1BEFC89E49_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BasicAuthenticator_t87771DEC26A4B5ABEAC1FC4B6A408BEB4F3B486A_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NetworkClient_Send_TisAuthRequestMessage_t6F1EF2686ABA4F6CDC4B1175F4F5F01BF5D34ED0_mC03382F62EE7CB69072EB7190E5F3A30827D7116_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NetworkClient_tF466F1FE2B449DC347BADC11F85EFB8F22453031_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	AuthRequestMessage_t6F1EF2686ABA4F6CDC4B1175F4F5F01BF5D34ED0 V_0;
 	memset((&V_0), 0, sizeof(V_0));
-	AuthRequestMessage_t6F1EF2686ABA4F6CDC4B1175F4F5F01BF5D34ED0 V_1;
-	memset((&V_1), 0, sizeof(V_1));
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, BasicAuthenticator_OnClientAuthenticate_m5623453221E966D53087A7816679CC1BEFC89E49_RuntimeMethod_var, methodExecutionContextThis, NULL, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 68));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsMirror_Authenticators + 69));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 70));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 71));
-		il2cpp_codegen_initobj((&V_1), sizeof(AuthRequestMessage_t6F1EF2686ABA4F6CDC4B1175F4F5F01BF5D34ED0));
+		il2cpp_codegen_initobj((&V_0), sizeof(AuthRequestMessage_t6F1EF2686ABA4F6CDC4B1175F4F5F01BF5D34ED0));
 		String_t* L_0 = __this->___username;
-		(&V_1)->___authUsername = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&(&V_1)->___authUsername), (void*)L_0);
+		(&V_0)->___authUsername = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&(&V_0)->___authUsername), (void*)L_0);
 		String_t* L_1 = __this->___password;
-		(&V_1)->___authPassword = L_1;
-		Il2CppCodeGenWriteBarrier((void**)(&(&V_1)->___authPassword), (void*)L_1);
-		AuthRequestMessage_t6F1EF2686ABA4F6CDC4B1175F4F5F01BF5D34ED0 L_2 = V_1;
-		V_0 = L_2;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 72));
-		AuthRequestMessage_t6F1EF2686ABA4F6CDC4B1175F4F5F01BF5D34ED0 L_3 = V_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 73));
+		(&V_0)->___authPassword = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&(&V_0)->___authPassword), (void*)L_1);
+		AuthRequestMessage_t6F1EF2686ABA4F6CDC4B1175F4F5F01BF5D34ED0 L_2 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(NetworkClient_tF466F1FE2B449DC347BADC11F85EFB8F22453031_il2cpp_TypeInfo_var);
-		NetworkClient_Send_TisAuthRequestMessage_t6F1EF2686ABA4F6CDC4B1175F4F5F01BF5D34ED0_mC03382F62EE7CB69072EB7190E5F3A30827D7116(L_3, 0, NetworkClient_Send_TisAuthRequestMessage_t6F1EF2686ABA4F6CDC4B1175F4F5F01BF5D34ED0_mC03382F62EE7CB69072EB7190E5F3A30827D7116_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 73));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 74));
+		NetworkClient_Send_TisAuthRequestMessage_t6F1EF2686ABA4F6CDC4B1175F4F5F01BF5D34ED0_mC03382F62EE7CB69072EB7190E5F3A30827D7116(L_2, 0, NetworkClient_Send_TisAuthRequestMessage_t6F1EF2686ABA4F6CDC4B1175F4F5F01BF5D34ED0_mC03382F62EE7CB69072EB7190E5F3A30827D7116_RuntimeMethod_var);
 		return;
 	}
 }
@@ -5964,67 +5728,32 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BasicAuthenticator_OnAuthResponseMessage
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BasicAuthenticator_OnAuthResponseMessage_mD79A02731A30927D7E66F005B75CA435027D7D6B_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BasicAuthenticator_t87771DEC26A4B5ABEAC1FC4B6A408BEB4F3B486A_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral679A1E0EEED85C2CB3C1ED6DEF6EC36DF15ADEEE);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_msg));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, BasicAuthenticator_OnAuthResponseMessage_mD79A02731A30927D7E66F005B75CA435027D7D6B_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 75));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsMirror_Authenticators + 76));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 77));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 78));
 		AuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665 L_0 = ___0_msg;
 		uint8_t L_1 = L_0.___code;
-		V_0 = (bool)((((int32_t)L_1) == ((int32_t)((int32_t)100)))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 79));
-		bool L_2 = V_0;
-		if (!L_2)
+		if ((!(((uint32_t)L_1) == ((uint32_t)((int32_t)100)))))
 		{
-			goto IL_001a;
+			goto IL_0011;
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 80));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 81));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 82));
 		NetworkAuthenticator_ClientAccept_m35557AF9301C3105E4E1DDA474A8972141179DF4(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 82));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 83));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 84));
-		goto IL_0039;
+		return;
 	}
 
-IL_001a:
+IL_0011:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 85));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 86));
-		AuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665 L_3 = ___0_msg;
-		String_t* L_4 = L_3.___message;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 87));
-		String_t* L_5;
-		L_5 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral679A1E0EEED85C2CB3C1ED6DEF6EC36DF15ADEEE, L_4, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 87));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 88));
+		AuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665 L_2 = ___0_msg;
+		String_t* L_3 = L_2.___message;
+		String_t* L_4;
+		L_4 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral679A1E0EEED85C2CB3C1ED6DEF6EC36DF15ADEEE, L_3, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_5, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 88));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 89));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 90));
+		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_4, NULL);
 		NetworkAuthenticator_ClientReject_m97E6B85AC941084DE35435FD35DE280804D64C66(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 90));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 91));
-	}
-
-IL_0039:
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 92));
 		return;
 	}
 }
@@ -6033,27 +5762,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BasicAuthenticator__ctor_m78A344177A9D16
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BasicAuthenticator__ctor_m78A344177A9D16263E840256790412079C676852_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BasicAuthenticator_t87771DEC26A4B5ABEAC1FC4B6A408BEB4F3B486A_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1__ctor_m81F21AC4A67BBE808ADC0B677E74B8767980F44A_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1_t3CC91E8470E60D0E8ECDE4033177783BBD3894BA_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, BasicAuthenticator__ctor_m78A344177A9D16263E840256790412079C676852_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 93));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsMirror_Authenticators + 94));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 95));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 96));
 		HashSet_1_t3CC91E8470E60D0E8ECDE4033177783BBD3894BA* L_0 = (HashSet_1_t3CC91E8470E60D0E8ECDE4033177783BBD3894BA*)il2cpp_codegen_object_new(HashSet_1_t3CC91E8470E60D0E8ECDE4033177783BBD3894BA_il2cpp_TypeInfo_var);
 		HashSet_1__ctor_m81F21AC4A67BBE808ADC0B677E74B8767980F44A(L_0, HashSet_1__ctor_m81F21AC4A67BBE808ADC0B677E74B8767980F44A_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 96));
 		__this->___connectionsPendingDisconnect = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___connectionsPendingDisconnect), (void*)L_0);
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 97));
 		NetworkAuthenticator__ctor_mB7C72F9607CD3EE26A45F1702FA61FC1E226B855(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 97));
 		return;
 	}
 }
@@ -6157,14 +5875,6 @@ IL2CPP_EXTERN_C void AuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F56
 #endif
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDelayedDisconnectU3Ed__11__ctor_m1B0BFD86BE1E21DC5BB8DB7D1A351279317E546A (U3CDelayedDisconnectU3Ed__11_t13D3A9480518371A05F48DD1FCC1D1BACBF3996E* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CDelayedDisconnectU3Ed__11__ctor_m1B0BFD86BE1E21DC5BB8DB7D1A351279317E546A_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, U3CDelayedDisconnectU3Ed__11__ctor_m1B0BFD86BE1E21DC5BB8DB7D1A351279317E546A_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
 		int32_t L_0 = ___0_U3CU3E1__state;
@@ -6174,14 +5884,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDelayedDisconnectU3Ed__11__ctor_m1B0B
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDelayedDisconnectU3Ed__11_System_IDisposable_Dispose_m0340B11448741B0C8F9B29BFF1AD10AA435DF43E (U3CDelayedDisconnectU3Ed__11_t13D3A9480518371A05F48DD1FCC1D1BACBF3996E* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CDelayedDisconnectU3Ed__11_System_IDisposable_Dispose_m0340B11448741B0C8F9B29BFF1AD10AA435DF43E_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, U3CDelayedDisconnectU3Ed__11_System_IDisposable_Dispose_m0340B11448741B0C8F9B29BFF1AD10AA435DF43E_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		return;
 	}
@@ -6192,124 +5894,77 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CDelayedDisconnectU3Ed__11_MoveNext_m9
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1_Remove_mD1CFEC9192E0A26D1AD3A6F0F0892421588B1782_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CDelayedDisconnectU3Ed__11_MoveNext_m95A2D4C4F5363AAF7792FB6A66D0B5E8E62CC551_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CDelayedDisconnectU3Ed__11_t13D3A9480518371A05F48DD1FCC1D1BACBF3996E_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	int32_t V_0 = 0;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, U3CDelayedDisconnectU3Ed__11_MoveNext_m95A2D4C4F5363AAF7792FB6A66D0B5E8E62CC551_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 98));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsMirror_Authenticators + 99));
+	BasicAuthenticator_t87771DEC26A4B5ABEAC1FC4B6A408BEB4F3B486A* V_1 = NULL;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 100));
 		int32_t L_0 = __this->___U3CU3E1__state;
 		V_0 = L_0;
-		int32_t L_1 = V_0;
-		switch (L_1)
+		BasicAuthenticator_t87771DEC26A4B5ABEAC1FC4B6A408BEB4F3B486A* L_1 = __this->___U3CU3E4__this;
+		V_1 = L_1;
+		int32_t L_2 = V_0;
+		switch (L_2)
 		{
 			case 0:
 			{
-				goto IL_001b;
+				goto IL_0022;
 			}
 			case 1:
 			{
-				goto IL_001d;
+				goto IL_0043;
 			}
 			case 2:
 			{
-				goto IL_001f;
+				goto IL_0066;
 			}
 		}
 	}
 	{
-		goto IL_0021;
-	}
-
-IL_001b:
-	{
-		goto IL_0023;
-	}
-
-IL_001d:
-	{
-		goto IL_0045;
-	}
-
-IL_001f:
-	{
-		goto IL_006e;
-	}
-
-IL_0021:
-	{
 		return (bool)0;
 	}
 
-IL_0023:
+IL_0022:
 	{
 		__this->___U3CU3E1__state = (-1);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 101));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 102));
-		float L_2 = __this->___waitTime;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 103));
-		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_3 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
-		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_3, L_2, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 103));
-		__this->___U3CU3E2__current = L_3;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)L_3);
+		float L_3 = __this->___waitTime;
+		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_4 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
+		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_4, L_3, NULL);
+		__this->___U3CU3E2__current = L_4;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)L_4);
 		__this->___U3CU3E1__state = 1;
 		return (bool)1;
 	}
 
-IL_0045:
+IL_0043:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 104));
 		__this->___U3CU3E1__state = (-1);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 105));
-		BasicAuthenticator_t87771DEC26A4B5ABEAC1FC4B6A408BEB4F3B486A* L_4 = __this->___U3CU3E4__this;
-		NetworkConnectionToClient_t80F9FBDD786601CB93A63585D05BCAA1050C406A* L_5 = __this->___conn;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 106));
-		NullCheck(L_4);
-		NetworkAuthenticator_ServerReject_m7A761D9E757E5426A8B9EAE9699AB6EA473AB1BE(L_4, L_5, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 106));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 107));
+		BasicAuthenticator_t87771DEC26A4B5ABEAC1FC4B6A408BEB4F3B486A* L_5 = V_1;
+		NetworkConnectionToClient_t80F9FBDD786601CB93A63585D05BCAA1050C406A* L_6 = __this->___conn;
+		NullCheck(L_5);
+		NetworkAuthenticator_ServerReject_m7A761D9E757E5426A8B9EAE9699AB6EA473AB1BE(L_5, L_6, NULL);
 		__this->___U3CU3E2__current = NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)NULL);
 		__this->___U3CU3E1__state = 2;
 		return (bool)1;
 	}
 
-IL_006e:
+IL_0066:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 108));
 		__this->___U3CU3E1__state = (-1);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 109));
-		BasicAuthenticator_t87771DEC26A4B5ABEAC1FC4B6A408BEB4F3B486A* L_6 = __this->___U3CU3E4__this;
-		NullCheck(L_6);
-		HashSet_1_t3CC91E8470E60D0E8ECDE4033177783BBD3894BA* L_7 = L_6->___connectionsPendingDisconnect;
-		NetworkConnectionToClient_t80F9FBDD786601CB93A63585D05BCAA1050C406A* L_8 = __this->___conn;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 110));
+		BasicAuthenticator_t87771DEC26A4B5ABEAC1FC4B6A408BEB4F3B486A* L_7 = V_1;
 		NullCheck(L_7);
-		bool L_9;
-		L_9 = HashSet_1_Remove_mD1CFEC9192E0A26D1AD3A6F0F0892421588B1782(L_7, L_8, HashSet_1_Remove_mD1CFEC9192E0A26D1AD3A6F0F0892421588B1782_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 110));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 111));
+		HashSet_1_t3CC91E8470E60D0E8ECDE4033177783BBD3894BA* L_8 = L_7->___connectionsPendingDisconnect;
+		NetworkConnectionToClient_t80F9FBDD786601CB93A63585D05BCAA1050C406A* L_9 = __this->___conn;
+		NullCheck(L_8);
+		bool L_10;
+		L_10 = HashSet_1_Remove_mD1CFEC9192E0A26D1AD3A6F0F0892421588B1782(L_8, L_9, HashSet_1_Remove_mD1CFEC9192E0A26D1AD3A6F0F0892421588B1782_RuntimeMethod_var);
 		return (bool)0;
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDelayedDisconnectU3Ed__11_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mC3F4C3526A6B69D7861607DB7C100D72BB18F224 (U3CDelayedDisconnectU3Ed__11_t13D3A9480518371A05F48DD1FCC1D1BACBF3996E* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CDelayedDisconnectU3Ed__11_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mC3F4C3526A6B69D7861607DB7C100D72BB18F224_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, U3CDelayedDisconnectU3Ed__11_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mC3F4C3526A6B69D7861607DB7C100D72BB18F224_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		RuntimeObject* L_0 = __this->___U3CU3E2__current;
 		return L_0;
@@ -6317,14 +5972,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDelayedDisconnectU3Ed__11_S
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDelayedDisconnectU3Ed__11_System_Collections_IEnumerator_Reset_mBFDD11B423C9C2D612A54D11573DCC8B6F1CD4FC (U3CDelayedDisconnectU3Ed__11_t13D3A9480518371A05F48DD1FCC1D1BACBF3996E* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CDelayedDisconnectU3Ed__11_System_Collections_IEnumerator_Reset_mBFDD11B423C9C2D612A54D11573DCC8B6F1CD4FC_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, U3CDelayedDisconnectU3Ed__11_System_Collections_IEnumerator_Reset_mBFDD11B423C9C2D612A54D11573DCC8B6F1CD4FC_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
 		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
@@ -6333,14 +5980,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDelayedDisconnectU3Ed__11_System_Coll
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDelayedDisconnectU3Ed__11_System_Collections_IEnumerator_get_Current_m5EF30450C7563B5AC0C99FCBCE6909BD55CD97D2 (U3CDelayedDisconnectU3Ed__11_t13D3A9480518371A05F48DD1FCC1D1BACBF3996E* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CDelayedDisconnectU3Ed__11_System_Collections_IEnumerator_get_Current_m5EF30450C7563B5AC0C99FCBCE6909BD55CD97D2_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, U3CDelayedDisconnectU3Ed__11_System_Collections_IEnumerator_get_Current_m5EF30450C7563B5AC0C99FCBCE6909BD55CD97D2_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		RuntimeObject* L_0 = __this->___U3CU3E2__current;
 		return L_0;
@@ -6361,28 +6000,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeviceAuthenticator_OnStartServer_mBC66A
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_2_tC0A98C3F2390782A684C9CDD430DDE2314D755EB_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DeviceAuthenticator_OnAuthRequestMessage_m9394D3C7BC83ACC6B857AA22C30D007105F0A89B_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DeviceAuthenticator_OnStartServer_mBC66AFA4FF6C6D997BCFE82D79C429362FF8FC37_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DeviceAuthenticator_t29CEB8BB38650EAF5B2E09CF4B6CE46CD0884799_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NetworkServer_RegisterHandler_TisAuthRequestMessage_t8AAEEE283D9AFEC2765C90E610FE9ED73FEF3CC9_m1BE8DB3EA897426C0D779559BA34EAF9E93B35A5_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NetworkServer_t90298DAB739AB649EFA5EE04950D68A903D6E920_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, DeviceAuthenticator_OnStartServer_mBC66AFA4FF6C6D997BCFE82D79C429362FF8FC37_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 112));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsMirror_Authenticators + 113));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 114));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 115));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 116));
 		Action_2_tC0A98C3F2390782A684C9CDD430DDE2314D755EB* L_0 = (Action_2_tC0A98C3F2390782A684C9CDD430DDE2314D755EB*)il2cpp_codegen_object_new(Action_2_tC0A98C3F2390782A684C9CDD430DDE2314D755EB_il2cpp_TypeInfo_var);
 		Action_2__ctor_m85994E2520083468BA00590EBA15C942AD000AB8(L_0, __this, (intptr_t)((void*)DeviceAuthenticator_OnAuthRequestMessage_m9394D3C7BC83ACC6B857AA22C30D007105F0A89B_RuntimeMethod_var), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 116));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 117));
 		il2cpp_codegen_runtime_class_init_inline(NetworkServer_t90298DAB739AB649EFA5EE04950D68A903D6E920_il2cpp_TypeInfo_var);
 		NetworkServer_RegisterHandler_TisAuthRequestMessage_t8AAEEE283D9AFEC2765C90E610FE9ED73FEF3CC9_m1BE8DB3EA897426C0D779559BA34EAF9E93B35A5(L_0, (bool)0, NetworkServer_RegisterHandler_TisAuthRequestMessage_t8AAEEE283D9AFEC2765C90E610FE9ED73FEF3CC9_m1BE8DB3EA897426C0D779559BA34EAF9E93B35A5_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 117));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 118));
 		return;
 	}
 }
@@ -6391,44 +6017,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeviceAuthenticator_OnStopServer_mBFD26A
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DeviceAuthenticator_OnStopServer_mBFD26A5F57297583375F6C0A6E9CE32414DD7667_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DeviceAuthenticator_t29CEB8BB38650EAF5B2E09CF4B6CE46CD0884799_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NetworkServer_UnregisterHandler_TisAuthRequestMessage_t8AAEEE283D9AFEC2765C90E610FE9ED73FEF3CC9_mCE9033FA99E26085EF57DBC0152CE34AFF13D1AE_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NetworkServer_t90298DAB739AB649EFA5EE04950D68A903D6E920_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, DeviceAuthenticator_OnStopServer_mBFD26A5F57297583375F6C0A6E9CE32414DD7667_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 119));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsMirror_Authenticators + 120));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 121));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 122));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 123));
 		il2cpp_codegen_runtime_class_init_inline(NetworkServer_t90298DAB739AB649EFA5EE04950D68A903D6E920_il2cpp_TypeInfo_var);
 		NetworkServer_UnregisterHandler_TisAuthRequestMessage_t8AAEEE283D9AFEC2765C90E610FE9ED73FEF3CC9_mCE9033FA99E26085EF57DBC0152CE34AFF13D1AE(NetworkServer_UnregisterHandler_TisAuthRequestMessage_t8AAEEE283D9AFEC2765C90E610FE9ED73FEF3CC9_mCE9033FA99E26085EF57DBC0152CE34AFF13D1AE_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 123));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 124));
 		return;
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeviceAuthenticator_OnServerAuthenticate_m4ADA3D11C9450CFB15622581C9ECEABAEFFC9580 (DeviceAuthenticator_t29CEB8BB38650EAF5B2E09CF4B6CE46CD0884799* __this, NetworkConnectionToClient_t80F9FBDD786601CB93A63585D05BCAA1050C406A* ___0_conn, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DeviceAuthenticator_OnServerAuthenticate_m4ADA3D11C9450CFB15622581C9ECEABAEFFC9580_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DeviceAuthenticator_t29CEB8BB38650EAF5B2E09CF4B6CE46CD0884799_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_conn));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, DeviceAuthenticator_OnServerAuthenticate_m4ADA3D11C9450CFB15622581C9ECEABAEFFC9580_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 125));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsMirror_Authenticators + 126));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 127));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 128));
 		return;
 	}
 }
@@ -6437,10 +6038,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeviceAuthenticator_OnAuthRequestMessage
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AuthResponseMessage_tDDB9ADB12C1CFBB912FA905DD578D5DC6899B8CE_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DeviceAuthenticator_OnAuthRequestMessage_m9394D3C7BC83ACC6B857AA22C30D007105F0A89B_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DeviceAuthenticator_t29CEB8BB38650EAF5B2E09CF4B6CE46CD0884799_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NetworkConnection_Send_TisAuthResponseMessage_tDDB9ADB12C1CFBB912FA905DD578D5DC6899B8CE_m0381A2D146BC45C485865F916B1DB4F3213217AC_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralE87313A102FCC58A9E785FC8449E81A411F56F8F);
@@ -6448,14 +6046,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeviceAuthenticator_OnAuthRequestMessage
 	}
 	AuthResponseMessage_tDDB9ADB12C1CFBB912FA905DD578D5DC6899B8CE V_0;
 	memset((&V_0), 0, sizeof(V_0));
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_conn), (&___1_msg));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, DeviceAuthenticator_OnAuthRequestMessage_m9394D3C7BC83ACC6B857AA22C30D007105F0A89B_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 129));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsMirror_Authenticators + 130));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 131));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 132));
 		NetworkConnectionToClient_t80F9FBDD786601CB93A63585D05BCAA1050C406A* L_0 = ___0_conn;
 		NullCheck(L_0);
 		int32_t L_1 = L_0->___connectionId;
@@ -6463,35 +6054,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeviceAuthenticator_OnAuthRequestMessage
 		RuntimeObject* L_3 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_2);
 		AuthRequestMessage_t8AAEEE283D9AFEC2765C90E610FE9ED73FEF3CC9 L_4 = ___1_msg;
 		String_t* L_5 = L_4.___clientDeviceID;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 133));
 		String_t* L_6;
 		L_6 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteralE87313A102FCC58A9E785FC8449E81A411F56F8F, L_3, L_5, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 133));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 134));
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_6, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 134));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 135));
 		NetworkConnectionToClient_t80F9FBDD786601CB93A63585D05BCAA1050C406A* L_7 = ___0_conn;
 		AuthRequestMessage_t8AAEEE283D9AFEC2765C90E610FE9ED73FEF3CC9 L_8 = ___1_msg;
 		String_t* L_9 = L_8.___clientDeviceID;
 		NullCheck(L_7);
 		((NetworkConnection_t49880296B0FA972023F34582D7A41D7B63383E78*)L_7)->___authenticationData = L_9;
 		Il2CppCodeGenWriteBarrier((void**)(&((NetworkConnection_t49880296B0FA972023F34582D7A41D7B63383E78*)L_7)->___authenticationData), (void*)L_9);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 136));
 		NetworkConnectionToClient_t80F9FBDD786601CB93A63585D05BCAA1050C406A* L_10 = ___0_conn;
 		il2cpp_codegen_initobj((&V_0), sizeof(AuthResponseMessage_tDDB9ADB12C1CFBB912FA905DD578D5DC6899B8CE));
 		AuthResponseMessage_tDDB9ADB12C1CFBB912FA905DD578D5DC6899B8CE L_11 = V_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 137));
 		NullCheck(L_10);
 		NetworkConnection_Send_TisAuthResponseMessage_tDDB9ADB12C1CFBB912FA905DD578D5DC6899B8CE_m0381A2D146BC45C485865F916B1DB4F3213217AC(L_10, L_11, 0, NetworkConnection_Send_TisAuthResponseMessage_tDDB9ADB12C1CFBB912FA905DD578D5DC6899B8CE_m0381A2D146BC45C485865F916B1DB4F3213217AC_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 137));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 138));
 		NetworkConnectionToClient_t80F9FBDD786601CB93A63585D05BCAA1050C406A* L_12 = ___0_conn;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 139));
 		NetworkAuthenticator_ServerAccept_mACF91D447AFB44C815ECBC7C79295C23AB6D22A5(__this, L_12, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 139));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 140));
 		return;
 	}
 }
@@ -6502,28 +6081,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeviceAuthenticator_OnStartClient_m02977
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_1_t6CE77E14AC0148F5F028EDED926D2CDA61C05AC9_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DeviceAuthenticator_OnAuthResponseMessage_m5E7E60254B9982DC85BDD21290C25B58C7346501_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DeviceAuthenticator_OnStartClient_m029772620AC8AE0C3A1F6FD5469DC018790DC05A_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DeviceAuthenticator_t29CEB8BB38650EAF5B2E09CF4B6CE46CD0884799_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NetworkClient_RegisterHandler_TisAuthResponseMessage_tDDB9ADB12C1CFBB912FA905DD578D5DC6899B8CE_m04C8C21C7C2453A519C8A376B66911235C5D151C_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NetworkClient_tF466F1FE2B449DC347BADC11F85EFB8F22453031_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, DeviceAuthenticator_OnStartClient_m029772620AC8AE0C3A1F6FD5469DC018790DC05A_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 141));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsMirror_Authenticators + 142));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 143));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 144));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 145));
 		Action_1_t6CE77E14AC0148F5F028EDED926D2CDA61C05AC9* L_0 = (Action_1_t6CE77E14AC0148F5F028EDED926D2CDA61C05AC9*)il2cpp_codegen_object_new(Action_1_t6CE77E14AC0148F5F028EDED926D2CDA61C05AC9_il2cpp_TypeInfo_var);
 		Action_1__ctor_mDE22EDD56D3079FFB72E4F3C9CAC8F692862F131(L_0, __this, (intptr_t)((void*)DeviceAuthenticator_OnAuthResponseMessage_m5E7E60254B9982DC85BDD21290C25B58C7346501_RuntimeMethod_var), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 145));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 146));
 		il2cpp_codegen_runtime_class_init_inline(NetworkClient_tF466F1FE2B449DC347BADC11F85EFB8F22453031_il2cpp_TypeInfo_var);
 		NetworkClient_RegisterHandler_TisAuthResponseMessage_tDDB9ADB12C1CFBB912FA905DD578D5DC6899B8CE_m04C8C21C7C2453A519C8A376B66911235C5D151C(L_0, (bool)0, NetworkClient_RegisterHandler_TisAuthResponseMessage_tDDB9ADB12C1CFBB912FA905DD578D5DC6899B8CE_m04C8C21C7C2453A519C8A376B66911235C5D151C_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 146));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 147));
 		return;
 	}
 }
@@ -6532,25 +6098,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeviceAuthenticator_OnStopClient_m40FD8E
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DeviceAuthenticator_OnStopClient_m40FD8E68C9CBDB42C0DE19495A3AD1B5EECCB6D5_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DeviceAuthenticator_t29CEB8BB38650EAF5B2E09CF4B6CE46CD0884799_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NetworkClient_UnregisterHandler_TisAuthResponseMessage_tDDB9ADB12C1CFBB912FA905DD578D5DC6899B8CE_m37C13B842642AEDC5DB65E4F2375FCBFA1309458_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NetworkClient_tF466F1FE2B449DC347BADC11F85EFB8F22453031_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, DeviceAuthenticator_OnStopClient_m40FD8E68C9CBDB42C0DE19495A3AD1B5EECCB6D5_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 148));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsMirror_Authenticators + 149));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 150));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 151));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 152));
 		il2cpp_codegen_runtime_class_init_inline(NetworkClient_tF466F1FE2B449DC347BADC11F85EFB8F22453031_il2cpp_TypeInfo_var);
 		bool L_0;
 		L_0 = NetworkClient_UnregisterHandler_TisAuthResponseMessage_tDDB9ADB12C1CFBB912FA905DD578D5DC6899B8CE_m37C13B842642AEDC5DB65E4F2375FCBFA1309458(NetworkClient_UnregisterHandler_TisAuthResponseMessage_tDDB9ADB12C1CFBB912FA905DD578D5DC6899B8CE_m37C13B842642AEDC5DB65E4F2375FCBFA1309458_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 152));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 153));
 		return;
 	}
 }
@@ -6559,91 +6114,53 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeviceAuthenticator_OnClientAuthenticate
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AuthRequestMessage_t8AAEEE283D9AFEC2765C90E610FE9ED73FEF3CC9_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DeviceAuthenticator_OnClientAuthenticate_m9EC9D02C73672F9B903B8FAEF2D082E5B611382D_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DeviceAuthenticator_t29CEB8BB38650EAF5B2E09CF4B6CE46CD0884799_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Guid_t_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Guid_t_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NetworkClient_Send_TisAuthRequestMessage_t8AAEEE283D9AFEC2765C90E610FE9ED73FEF3CC9_m98AD84D0C709B401FFFBA1BDD19EDAC0AFF4F18A_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NetworkClient_tF466F1FE2B449DC347BADC11F85EFB8F22453031_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&String_t_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral25FCFBD128DE861A3BD0518FA355C68762F3D3A0);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral6836D94586B3887F0DB2295A1C064F27F99A5DE2);
 		s_Il2CppMethodInitialized = true;
 	}
 	String_t* V_0 = NULL;
-	bool V_1 = false;
-	Guid_t V_2;
+	Guid_t V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	AuthRequestMessage_t8AAEEE283D9AFEC2765C90E610FE9ED73FEF3CC9 V_2;
 	memset((&V_2), 0, sizeof(V_2));
-	AuthRequestMessage_t8AAEEE283D9AFEC2765C90E610FE9ED73FEF3CC9 V_3;
-	memset((&V_3), 0, sizeof(V_3));
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, DeviceAuthenticator_OnClientAuthenticate_m9EC9D02C73672F9B903B8FAEF2D082E5B611382D_RuntimeMethod_var, methodExecutionContextThis, NULL, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 154));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsMirror_Authenticators + 155));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 156));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 157));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 158));
 		String_t* L_0;
 		L_0 = SystemInfo_get_deviceUniqueIdentifier_m61BA4CB77ADA09730B8B575700D85027EFDB4EFC(NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 158));
 		V_0 = L_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 159));
 		String_t* L_1 = V_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 160));
 		bool L_2;
 		L_2 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_1, _stringLiteral6836D94586B3887F0DB2295A1C064F27F99A5DE2, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 160));
-		V_1 = L_2;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 161));
-		bool L_3 = V_1;
-		if (!L_3)
+		if (!L_2)
 		{
-			goto IL_0042;
+			goto IL_003c;
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 162));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 163));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 164));
 		il2cpp_codegen_runtime_class_init_inline(Guid_t_il2cpp_TypeInfo_var);
-		Guid_t L_4;
-		L_4 = Guid_NewGuid_m1F4894E8DC089811D6252148AD5858E58D43A7BD(NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 164));
-		V_2 = L_4;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 165));
+		Guid_t L_3;
+		L_3 = Guid_NewGuid_m1F4894E8DC089811D6252148AD5858E58D43A7BD(NULL);
+		V_1 = L_3;
+		String_t* L_4;
+		L_4 = Guid_ToString_m2BFFD5FA726E03FA707AAFCCF065896C46D5290C((&V_1), NULL);
 		String_t* L_5;
-		L_5 = Guid_ToString_m2BFFD5FA726E03FA707AAFCCF065896C46D5290C((&V_2), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 165));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 166));
-		String_t* L_6;
-		L_6 = PlayerPrefs_GetString_mE80FED64ACC3134149C8202FDDDE774C29CB0AF2(_stringLiteral25FCFBD128DE861A3BD0518FA355C68762F3D3A0, L_5, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 166));
-		V_0 = L_6;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 167));
-		String_t* L_7 = V_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 168));
-		PlayerPrefs_SetString_mF4F457C81BB75F0213547C6287BA36E15E1F0256(_stringLiteral25FCFBD128DE861A3BD0518FA355C68762F3D3A0, L_7, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 168));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 169));
+		L_5 = PlayerPrefs_GetString_mE80FED64ACC3134149C8202FDDDE774C29CB0AF2(_stringLiteral25FCFBD128DE861A3BD0518FA355C68762F3D3A0, L_4, NULL);
+		V_0 = L_5;
+		String_t* L_6 = V_0;
+		PlayerPrefs_SetString_mF4F457C81BB75F0213547C6287BA36E15E1F0256(_stringLiteral25FCFBD128DE861A3BD0518FA355C68762F3D3A0, L_6, NULL);
 	}
 
-IL_0042:
+IL_003c:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 170));
-		il2cpp_codegen_initobj((&V_3), sizeof(AuthRequestMessage_t8AAEEE283D9AFEC2765C90E610FE9ED73FEF3CC9));
-		String_t* L_8 = V_0;
-		(&V_3)->___clientDeviceID = L_8;
-		Il2CppCodeGenWriteBarrier((void**)(&(&V_3)->___clientDeviceID), (void*)L_8);
-		AuthRequestMessage_t8AAEEE283D9AFEC2765C90E610FE9ED73FEF3CC9 L_9 = V_3;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 171));
+		il2cpp_codegen_initobj((&V_2), sizeof(AuthRequestMessage_t8AAEEE283D9AFEC2765C90E610FE9ED73FEF3CC9));
+		String_t* L_7 = V_0;
+		(&V_2)->___clientDeviceID = L_7;
+		Il2CppCodeGenWriteBarrier((void**)(&(&V_2)->___clientDeviceID), (void*)L_7);
+		AuthRequestMessage_t8AAEEE283D9AFEC2765C90E610FE9ED73FEF3CC9 L_8 = V_2;
 		il2cpp_codegen_runtime_class_init_inline(NetworkClient_tF466F1FE2B449DC347BADC11F85EFB8F22453031_il2cpp_TypeInfo_var);
-		NetworkClient_Send_TisAuthRequestMessage_t8AAEEE283D9AFEC2765C90E610FE9ED73FEF3CC9_m98AD84D0C709B401FFFBA1BDD19EDAC0AFF4F18A(L_9, 0, NetworkClient_Send_TisAuthRequestMessage_t8AAEEE283D9AFEC2765C90E610FE9ED73FEF3CC9_m98AD84D0C709B401FFFBA1BDD19EDAC0AFF4F18A_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 171));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 172));
+		NetworkClient_Send_TisAuthRequestMessage_t8AAEEE283D9AFEC2765C90E610FE9ED73FEF3CC9_m98AD84D0C709B401FFFBA1BDD19EDAC0AFF4F18A(L_8, 0, NetworkClient_Send_TisAuthRequestMessage_t8AAEEE283D9AFEC2765C90E610FE9ED73FEF3CC9_m98AD84D0C709B401FFFBA1BDD19EDAC0AFF4F18A_RuntimeMethod_var);
 		return;
 	}
 }
@@ -6653,41 +6170,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeviceAuthenticator_OnAuthResponseMessag
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DeviceAuthenticator_OnAuthResponseMessage_m5E7E60254B9982DC85BDD21290C25B58C7346501_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DeviceAuthenticator_t29CEB8BB38650EAF5B2E09CF4B6CE46CD0884799_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral327DB37C35DBE64713BF3C8F1AFDCA141CDD2A9B);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_msg));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, DeviceAuthenticator_OnAuthResponseMessage_m5E7E60254B9982DC85BDD21290C25B58C7346501_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 173));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsMirror_Authenticators + 174));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 175));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 176));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 177));
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral327DB37C35DBE64713BF3C8F1AFDCA141CDD2A9B, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 177));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 178));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 179));
 		NetworkAuthenticator_ClientAccept_m35557AF9301C3105E4E1DDA474A8972141179DF4(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 179));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 180));
 		return;
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeviceAuthenticator__ctor_mDC06EA1A28F111EC51A2E7FB09EBDD1DA09BFD48 (DeviceAuthenticator_t29CEB8BB38650EAF5B2E09CF4B6CE46CD0884799* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DeviceAuthenticator__ctor_mDC06EA1A28F111EC51A2E7FB09EBDD1DA09BFD48_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, DeviceAuthenticator__ctor_mDC06EA1A28F111EC51A2E7FB09EBDD1DA09BFD48_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		NetworkAuthenticator__ctor_mB7C72F9607CD3EE26A45F1702FA61FC1E226B855(__this, NULL);
 		return;
@@ -6750,201 +6244,91 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TimeoutAuthenticator_Awake_m6F655C2CFA21
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TimeoutAuthenticator_Awake_m6F655C2CFA21572CBB178ECAB1E4BFDDF98B7077_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TimeoutAuthenticator_U3CAwakeU3Eb__2_0_m5F0ABE77DFC0F5C02EC1DB46A3384A4C4BA5DFBE_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TimeoutAuthenticator_t49D2A5C5AB3EF3E0D31F9626A779B82B9C916315_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnityAction_1_t66F6C41A85FAB46B3C9DF99686F260AABFE404EA_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnityEvent_1_AddListener_m2F14DF549986D784D6AAEF0CF32F3A3F4BEA22BE_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnityEvent_Invoke_mFBF80D59B03C30C5FE6A06F897D954ACADE061D2_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, TimeoutAuthenticator_Awake_m6F655C2CFA21572CBB178ECAB1E4BFDDF98B7077_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 181));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsMirror_Authenticators + 182));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 183));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 184));
 		NetworkAuthenticator_tC028847267A43082A100FF3C6342109E073EDC67* L_0 = __this->___authenticator;
 		NullCheck(L_0);
 		UnityEventNetworkConnection_t65FB1A08CE9590BE6BF00D67C0FAE686D4DE7C01* L_1 = L_0->___OnServerAuthenticated;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 185));
 		UnityAction_1_t66F6C41A85FAB46B3C9DF99686F260AABFE404EA* L_2 = (UnityAction_1_t66F6C41A85FAB46B3C9DF99686F260AABFE404EA*)il2cpp_codegen_object_new(UnityAction_1_t66F6C41A85FAB46B3C9DF99686F260AABFE404EA_il2cpp_TypeInfo_var);
 		UnityAction_1__ctor_m0D94D2DB8B44D1095CECAC02F18C06C97E0E5F4A(L_2, __this, (intptr_t)((void*)TimeoutAuthenticator_U3CAwakeU3Eb__2_0_m5F0ABE77DFC0F5C02EC1DB46A3384A4C4BA5DFBE_RuntimeMethod_var), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 185));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 186));
 		NullCheck(L_1);
 		UnityEvent_1_AddListener_m2F14DF549986D784D6AAEF0CF32F3A3F4BEA22BE(L_1, L_2, UnityEvent_1_AddListener_m2F14DF549986D784D6AAEF0CF32F3A3F4BEA22BE_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 186));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 187));
 		NetworkAuthenticator_tC028847267A43082A100FF3C6342109E073EDC67* L_3 = __this->___authenticator;
 		NullCheck(L_3);
 		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_4 = L_3->___OnClientAuthenticated;
 		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_5 = ((NetworkAuthenticator_tC028847267A43082A100FF3C6342109E073EDC67*)__this)->___OnClientAuthenticated;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 188));
 		UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* L_6 = (UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7*)il2cpp_codegen_object_new(UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7_il2cpp_TypeInfo_var);
 		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_6, L_5, (intptr_t)((void*)UnityEvent_Invoke_mFBF80D59B03C30C5FE6A06F897D954ACADE061D2_RuntimeMethod_var), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 188));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 189));
 		NullCheck(L_4);
 		UnityEvent_AddListener_m8AA4287C16628486B41DA41CA5E7A856A706D302(L_4, L_6, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 189));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 190));
 		return;
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TimeoutAuthenticator_OnStartServer_m4138C22F18A844778A0CB9046425D3EC115E59DB (TimeoutAuthenticator_t49D2A5C5AB3EF3E0D31F9626A779B82B9C916315* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TimeoutAuthenticator_OnStartServer_m4138C22F18A844778A0CB9046425D3EC115E59DB_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TimeoutAuthenticator_t49D2A5C5AB3EF3E0D31F9626A779B82B9C916315_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, TimeoutAuthenticator_OnStartServer_m4138C22F18A844778A0CB9046425D3EC115E59DB_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 191));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsMirror_Authenticators + 192));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 193));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 194));
 		NetworkAuthenticator_tC028847267A43082A100FF3C6342109E073EDC67* L_0 = __this->___authenticator;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 195));
 		NullCheck(L_0);
 		VirtualActionInvoker0::Invoke(4, L_0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 195));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 196));
 		return;
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TimeoutAuthenticator_OnStopServer_m447F0AF31D508FD77A26B69E0F8FED5D96290487 (TimeoutAuthenticator_t49D2A5C5AB3EF3E0D31F9626A779B82B9C916315* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TimeoutAuthenticator_OnStopServer_m447F0AF31D508FD77A26B69E0F8FED5D96290487_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TimeoutAuthenticator_t49D2A5C5AB3EF3E0D31F9626A779B82B9C916315_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, TimeoutAuthenticator_OnStopServer_m447F0AF31D508FD77A26B69E0F8FED5D96290487_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 197));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsMirror_Authenticators + 198));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 199));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 200));
 		NetworkAuthenticator_tC028847267A43082A100FF3C6342109E073EDC67* L_0 = __this->___authenticator;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 201));
 		NullCheck(L_0);
 		VirtualActionInvoker0::Invoke(5, L_0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 201));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 202));
 		return;
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TimeoutAuthenticator_OnStartClient_m24AF55F6453B3B049EFEE3DCAEA95B118DB78D41 (TimeoutAuthenticator_t49D2A5C5AB3EF3E0D31F9626A779B82B9C916315* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TimeoutAuthenticator_OnStartClient_m24AF55F6453B3B049EFEE3DCAEA95B118DB78D41_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TimeoutAuthenticator_t49D2A5C5AB3EF3E0D31F9626A779B82B9C916315_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, TimeoutAuthenticator_OnStartClient_m24AF55F6453B3B049EFEE3DCAEA95B118DB78D41_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 203));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsMirror_Authenticators + 204));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 205));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 206));
 		NetworkAuthenticator_tC028847267A43082A100FF3C6342109E073EDC67* L_0 = __this->___authenticator;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 207));
 		NullCheck(L_0);
 		VirtualActionInvoker0::Invoke(7, L_0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 207));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 208));
 		return;
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TimeoutAuthenticator_OnStopClient_m8B73E6737AB11C25D31FD7CA3C07EC91BEF2019E (TimeoutAuthenticator_t49D2A5C5AB3EF3E0D31F9626A779B82B9C916315* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TimeoutAuthenticator_OnStopClient_m8B73E6737AB11C25D31FD7CA3C07EC91BEF2019E_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TimeoutAuthenticator_t49D2A5C5AB3EF3E0D31F9626A779B82B9C916315_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, TimeoutAuthenticator_OnStopClient_m8B73E6737AB11C25D31FD7CA3C07EC91BEF2019E_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 209));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsMirror_Authenticators + 210));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 211));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 212));
 		NetworkAuthenticator_tC028847267A43082A100FF3C6342109E073EDC67* L_0 = __this->___authenticator;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 213));
 		NullCheck(L_0);
 		VirtualActionInvoker0::Invoke(8, L_0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 213));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 214));
 		return;
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TimeoutAuthenticator_OnServerAuthenticate_m1F6D07EB846B28C96E43E3CF10A6008D733AC770 (TimeoutAuthenticator_t49D2A5C5AB3EF3E0D31F9626A779B82B9C916315* __this, NetworkConnectionToClient_t80F9FBDD786601CB93A63585D05BCAA1050C406A* ___0_conn, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TimeoutAuthenticator_OnServerAuthenticate_m1F6D07EB846B28C96E43E3CF10A6008D733AC770_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TimeoutAuthenticator_t49D2A5C5AB3EF3E0D31F9626A779B82B9C916315_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	bool V_0 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_conn));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, TimeoutAuthenticator_OnServerAuthenticate_m1F6D07EB846B28C96E43E3CF10A6008D733AC770_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 215));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsMirror_Authenticators + 216));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 217));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 218));
 		NetworkAuthenticator_tC028847267A43082A100FF3C6342109E073EDC67* L_0 = __this->___authenticator;
 		NetworkConnectionToClient_t80F9FBDD786601CB93A63585D05BCAA1050C406A* L_1 = ___0_conn;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 219));
 		NullCheck(L_0);
 		VirtualActionInvoker1< NetworkConnectionToClient_t80F9FBDD786601CB93A63585D05BCAA1050C406A* >::Invoke(6, L_0, L_1);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 219));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 220));
 		float L_2 = __this->___timeout;
-		V_0 = (bool)((((float)L_2) > ((float)(0.0f)))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 221));
-		bool L_3 = V_0;
-		if (!L_3)
+		if ((!(((float)L_2) > ((float)(0.0f)))))
 		{
-			goto IL_002d;
+			goto IL_0027;
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 222));
-		NetworkConnectionToClient_t80F9FBDD786601CB93A63585D05BCAA1050C406A* L_4 = ___0_conn;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 223));
-		RuntimeObject* L_5;
-		L_5 = TimeoutAuthenticator_BeginAuthentication_m7CA6A84A44932A107DEAD121E7699E2D8F5A3A56(__this, L_4, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 223));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 224));
-		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_6;
-		L_6 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_5, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 224));
+		NetworkConnectionToClient_t80F9FBDD786601CB93A63585D05BCAA1050C406A* L_3 = ___0_conn;
+		RuntimeObject* L_4;
+		L_4 = TimeoutAuthenticator_BeginAuthentication_m7CA6A84A44932A107DEAD121E7699E2D8F5A3A56(__this, L_3, NULL);
+		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_5;
+		L_5 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_4, NULL);
 	}
 
-IL_002d:
+IL_0027:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 225));
 		return;
 	}
 }
@@ -6953,55 +6337,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TimeoutAuthenticator_OnClientAuthenticat
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NetworkClient_tF466F1FE2B449DC347BADC11F85EFB8F22453031_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TimeoutAuthenticator_OnClientAuthenticate_mABA59561BFD6CF20B4FA9EE0FADBC396D83CB815_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TimeoutAuthenticator_t49D2A5C5AB3EF3E0D31F9626A779B82B9C916315_0_0_0_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, TimeoutAuthenticator_OnClientAuthenticate_mABA59561BFD6CF20B4FA9EE0FADBC396D83CB815_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 226));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsMirror_Authenticators + 227));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 228));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 229));
 		NetworkAuthenticator_tC028847267A43082A100FF3C6342109E073EDC67* L_0 = __this->___authenticator;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 230));
 		NullCheck(L_0);
 		VirtualActionInvoker0::Invoke(9, L_0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 230));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 231));
 		float L_1 = __this->___timeout;
-		V_0 = (bool)((((float)L_1) > ((float)(0.0f)))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 232));
-		bool L_2 = V_0;
-		if (!L_2)
+		if ((!(((float)L_1) > ((float)(0.0f)))))
 		{
-			goto IL_0030;
+			goto IL_002a;
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 233));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 234));
 		il2cpp_codegen_runtime_class_init_inline(NetworkClient_tF466F1FE2B449DC347BADC11F85EFB8F22453031_il2cpp_TypeInfo_var);
-		NetworkConnectionToServer_tABF88FD679833405BCFD6846C73D06F503A23F9F* L_3;
-		L_3 = NetworkClient_get_connection_m8FE7F7B376D22CEDD4AAED02297E6AA3D69A03D3_inline(NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 234));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 235));
-		RuntimeObject* L_4;
-		L_4 = TimeoutAuthenticator_BeginAuthentication_m7CA6A84A44932A107DEAD121E7699E2D8F5A3A56(__this, L_3, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 235));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 236));
-		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_5;
-		L_5 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_4, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 236));
+		NetworkConnectionToServer_tABF88FD679833405BCFD6846C73D06F503A23F9F* L_2;
+		L_2 = NetworkClient_get_connection_m8FE7F7B376D22CEDD4AAED02297E6AA3D69A03D3_inline(NULL);
+		RuntimeObject* L_3;
+		L_3 = TimeoutAuthenticator_BeginAuthentication_m7CA6A84A44932A107DEAD121E7699E2D8F5A3A56(__this, L_2, NULL);
+		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_4;
+		L_4 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_3, NULL);
 	}
 
-IL_0030:
+IL_002a:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 237));
 		return;
 	}
 }
@@ -7010,12 +6370,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* TimeoutAuthenticator_BeginAuth
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TimeoutAuthenticator_BeginAuthentication_m7CA6A84A44932A107DEAD121E7699E2D8F5A3A56_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CBeginAuthenticationU3Ed__9_t10675D08A7CF6DF143E7707568E4D2F488DC8966_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, TimeoutAuthenticator_BeginAuthentication_m7CA6A84A44932A107DEAD121E7699E2D8F5A3A56_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		U3CBeginAuthenticationU3Ed__9_t10675D08A7CF6DF143E7707568E4D2F488DC8966* L_0 = (U3CBeginAuthenticationU3Ed__9_t10675D08A7CF6DF143E7707568E4D2F488DC8966*)il2cpp_codegen_object_new(U3CBeginAuthenticationU3Ed__9_t10675D08A7CF6DF143E7707568E4D2F488DC8966_il2cpp_TypeInfo_var);
 		U3CBeginAuthenticationU3Ed__9__ctor_mD220971F1815CE30ADE4AA463F9BE72A6597F520(L_0, 0, NULL);
@@ -7033,23 +6390,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* TimeoutAuthenticator_BeginAuth
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TimeoutAuthenticator__ctor_m03B54DC87A6FF7E540C8BDDEC9D7A922D83EDDD4 (TimeoutAuthenticator_t49D2A5C5AB3EF3E0D31F9626A779B82B9C916315* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TimeoutAuthenticator__ctor_m03B54DC87A6FF7E540C8BDDEC9D7A922D83EDDD4_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TimeoutAuthenticator_t49D2A5C5AB3EF3E0D31F9626A779B82B9C916315_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, TimeoutAuthenticator__ctor_m03B54DC87A6FF7E540C8BDDEC9D7A922D83EDDD4_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 238));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsMirror_Authenticators + 239));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 240));
 		__this->___timeout = (60.0f);
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 241));
 		NetworkAuthenticator__ctor_mB7C72F9607CD3EE26A45F1702FA61FC1E226B855(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 241));
 		return;
 	}
 }
@@ -7058,24 +6401,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TimeoutAuthenticator_U3CAwakeU3Eb__2_0_m
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TimeoutAuthenticator_U3CAwakeU3Eb__2_0_m5F0ABE77DFC0F5C02EC1DB46A3384A4C4BA5DFBE_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TimeoutAuthenticator_t49D2A5C5AB3EF3E0D31F9626A779B82B9C916315_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnityEvent_1_Invoke_m9D3D84F4FDEA72F22EE27A17496313D507461566_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_connection));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, TimeoutAuthenticator_U3CAwakeU3Eb__2_0_m5F0ABE77DFC0F5C02EC1DB46A3384A4C4BA5DFBE_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 242));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsMirror_Authenticators + 243));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 244));
 		UnityEventNetworkConnection_t65FB1A08CE9590BE6BF00D67C0FAE686D4DE7C01* L_0 = ((NetworkAuthenticator_tC028847267A43082A100FF3C6342109E073EDC67*)__this)->___OnServerAuthenticated;
 		NetworkConnectionToClient_t80F9FBDD786601CB93A63585D05BCAA1050C406A* L_1 = ___0_connection;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 245));
 		NullCheck(L_0);
 		UnityEvent_1_Invoke_m9D3D84F4FDEA72F22EE27A17496313D507461566(L_0, L_1, UnityEvent_1_Invoke_m9D3D84F4FDEA72F22EE27A17496313D507461566_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 245));
 		return;
 	}
 }
@@ -7089,14 +6422,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TimeoutAuthenticator_U3CAwakeU3Eb__2_0_m
 #endif
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CBeginAuthenticationU3Ed__9__ctor_mD220971F1815CE30ADE4AA463F9BE72A6597F520 (U3CBeginAuthenticationU3Ed__9_t10675D08A7CF6DF143E7707568E4D2F488DC8966* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CBeginAuthenticationU3Ed__9__ctor_mD220971F1815CE30ADE4AA463F9BE72A6597F520_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, U3CBeginAuthenticationU3Ed__9__ctor_mD220971F1815CE30ADE4AA463F9BE72A6597F520_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
 		int32_t L_0 = ___0_U3CU3E1__state;
@@ -7106,14 +6431,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CBeginAuthenticationU3Ed__9__ctor_mD22
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CBeginAuthenticationU3Ed__9_System_IDisposable_Dispose_m871A0FFB682E36425BE4B741A08262362428A1E7 (U3CBeginAuthenticationU3Ed__9_t10675D08A7CF6DF143E7707568E4D2F488DC8966* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CBeginAuthenticationU3Ed__9_System_IDisposable_Dispose_m871A0FFB682E36425BE4B741A08262362428A1E7_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, U3CBeginAuthenticationU3Ed__9_System_IDisposable_Dispose_m871A0FFB682E36425BE4B741A08262362428A1E7_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		return;
 	}
@@ -7123,133 +6440,78 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CBeginAuthenticationU3Ed__9_MoveNext_m
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CBeginAuthenticationU3Ed__9_MoveNext_mB8736F9DCDA19547853A6770CD5E519A18EA9A7F_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CBeginAuthenticationU3Ed__9_t10675D08A7CF6DF143E7707568E4D2F488DC8966_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&WaitForSecondsRealtime_tA8CE0AAB4B0C872B843E7973637037D17682BA01_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral3AD05EFE8CB3658B1A431326CF3294CF97AAB885);
 		s_Il2CppMethodInitialized = true;
 	}
 	int32_t V_0 = 0;
-	bool V_1 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, U3CBeginAuthenticationU3Ed__9_MoveNext_mB8736F9DCDA19547853A6770CD5E519A18EA9A7F_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 246));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsMirror_Authenticators + 247));
+	TimeoutAuthenticator_t49D2A5C5AB3EF3E0D31F9626A779B82B9C916315* V_1 = NULL;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 248));
 		int32_t L_0 = __this->___U3CU3E1__state;
 		V_0 = L_0;
-		int32_t L_1 = V_0;
-		if (!L_1)
-		{
-			goto IL_0012;
-		}
-	}
-	{
-		goto IL_000c;
-	}
-
-IL_000c:
-	{
+		TimeoutAuthenticator_t49D2A5C5AB3EF3E0D31F9626A779B82B9C916315* L_1 = __this->___U3CU3E4__this;
+		V_1 = L_1;
 		int32_t L_2 = V_0;
-		if ((((int32_t)L_2) == ((int32_t)1)))
+		if (!L_2)
 		{
-			goto IL_0014;
+			goto IL_0017;
 		}
 	}
 	{
-		goto IL_0016;
+		int32_t L_3 = V_0;
+		if ((((int32_t)L_3) == ((int32_t)1)))
+		{
+			goto IL_0038;
+		}
 	}
-
-IL_0012:
-	{
-		goto IL_0018;
-	}
-
-IL_0014:
-	{
-		goto IL_003f;
-	}
-
-IL_0016:
 	{
 		return (bool)0;
 	}
 
-IL_0018:
+IL_0017:
 	{
 		__this->___U3CU3E1__state = (-1);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 249));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 250));
-		TimeoutAuthenticator_t49D2A5C5AB3EF3E0D31F9626A779B82B9C916315* L_3 = __this->___U3CU3E4__this;
-		NullCheck(L_3);
-		float L_4 = L_3->___timeout;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 251));
-		WaitForSecondsRealtime_tA8CE0AAB4B0C872B843E7973637037D17682BA01* L_5 = (WaitForSecondsRealtime_tA8CE0AAB4B0C872B843E7973637037D17682BA01*)il2cpp_codegen_object_new(WaitForSecondsRealtime_tA8CE0AAB4B0C872B843E7973637037D17682BA01_il2cpp_TypeInfo_var);
-		WaitForSecondsRealtime__ctor_mBFC1E4F0E042D5EC6E7EEB211A2FE5193A8F6D6F(L_5, L_4, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 251));
-		__this->___U3CU3E2__current = L_5;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)L_5);
+		TimeoutAuthenticator_t49D2A5C5AB3EF3E0D31F9626A779B82B9C916315* L_4 = V_1;
+		NullCheck(L_4);
+		float L_5 = L_4->___timeout;
+		WaitForSecondsRealtime_tA8CE0AAB4B0C872B843E7973637037D17682BA01* L_6 = (WaitForSecondsRealtime_tA8CE0AAB4B0C872B843E7973637037D17682BA01*)il2cpp_codegen_object_new(WaitForSecondsRealtime_tA8CE0AAB4B0C872B843E7973637037D17682BA01_il2cpp_TypeInfo_var);
+		WaitForSecondsRealtime__ctor_mBFC1E4F0E042D5EC6E7EEB211A2FE5193A8F6D6F(L_6, L_5, NULL);
+		__this->___U3CU3E2__current = L_6;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)L_6);
 		__this->___U3CU3E1__state = 1;
 		return (bool)1;
 	}
 
-IL_003f:
+IL_0038:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 252));
 		__this->___U3CU3E1__state = (-1);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 253));
-		NetworkConnection_t49880296B0FA972023F34582D7A41D7B63383E78* L_6 = __this->___conn;
-		NullCheck(L_6);
-		bool L_7 = L_6->___isAuthenticated;
-		V_1 = (bool)((((int32_t)L_7) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 254));
-		bool L_8 = V_1;
-		if (!L_8)
+		NetworkConnection_t49880296B0FA972023F34582D7A41D7B63383E78* L_7 = __this->___conn;
+		NullCheck(L_7);
+		bool L_8 = L_7->___isAuthenticated;
+		if (L_8)
 		{
-			goto IL_007c;
+			goto IL_006c;
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 255));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 256));
 		NetworkConnection_t49880296B0FA972023F34582D7A41D7B63383E78* L_9 = __this->___conn;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 257));
 		String_t* L_10;
 		L_10 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral3AD05EFE8CB3658B1A431326CF3294CF97AAB885, L_9, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 257));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 258));
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_10, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 258));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 259));
 		NetworkConnection_t49880296B0FA972023F34582D7A41D7B63383E78* L_11 = __this->___conn;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 260));
 		NullCheck(L_11);
 		VirtualActionInvoker0::Invoke(8, L_11);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 260));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 261));
 	}
 
-IL_007c:
+IL_006c:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror_Authenticators + 262));
 		return (bool)0;
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CBeginAuthenticationU3Ed__9_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mE4EB02F3CE91422FF2DF4579D989420DB6331D4E (U3CBeginAuthenticationU3Ed__9_t10675D08A7CF6DF143E7707568E4D2F488DC8966* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CBeginAuthenticationU3Ed__9_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mE4EB02F3CE91422FF2DF4579D989420DB6331D4E_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, U3CBeginAuthenticationU3Ed__9_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mE4EB02F3CE91422FF2DF4579D989420DB6331D4E_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		RuntimeObject* L_0 = __this->___U3CU3E2__current;
 		return L_0;
@@ -7257,14 +6519,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CBeginAuthenticationU3Ed__9_
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CBeginAuthenticationU3Ed__9_System_Collections_IEnumerator_Reset_m769F6AA9805769B2A046573340D5469FEE1D74EC (U3CBeginAuthenticationU3Ed__9_t10675D08A7CF6DF143E7707568E4D2F488DC8966* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CBeginAuthenticationU3Ed__9_System_Collections_IEnumerator_Reset_m769F6AA9805769B2A046573340D5469FEE1D74EC_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, U3CBeginAuthenticationU3Ed__9_System_Collections_IEnumerator_Reset_m769F6AA9805769B2A046573340D5469FEE1D74EC_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
 		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
@@ -7273,14 +6527,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CBeginAuthenticationU3Ed__9_System_Col
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CBeginAuthenticationU3Ed__9_System_Collections_IEnumerator_get_Current_mF06E6F6AD8A1E424DE336F837A84D8EB6AED02F4 (U3CBeginAuthenticationU3Ed__9_t10675D08A7CF6DF143E7707568E4D2F488DC8966* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CBeginAuthenticationU3Ed__9_System_Collections_IEnumerator_get_Current_mF06E6F6AD8A1E424DE336F837A84D8EB6AED02F4_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, U3CBeginAuthenticationU3Ed__9_System_Collections_IEnumerator_get_Current_mF06E6F6AD8A1E424DE336F837A84D8EB6AED02F4_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		RuntimeObject* L_0 = __this->___U3CU3E2__current;
 		return L_0;
@@ -7320,16 +6566,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CBeginAuthenticationU3Ed__9_
 #endif
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TimeSnapshotMessage_t825D93BBF7ACFFD92A2DDA6320710F7A0923064B GeneratedNetworkCode__Read_Mirror_TimeSnapshotMessage_mC88C6F1BC63ACAAB935F5D58F8A4F6293E9F37BC (NetworkReader_t85516183CC81F0937A89B9B6A92FE815896935E1* ___0_reader, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Read_Mirror_TimeSnapshotMessage_mC88C6F1BC63ACAAB935F5D58F8A4F6293E9F37BC_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	TimeSnapshotMessage_t825D93BBF7ACFFD92A2DDA6320710F7A0923064B V_0;
 	memset((&V_0), 0, sizeof(V_0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Read_Mirror_TimeSnapshotMessage_mC88C6F1BC63ACAAB935F5D58F8A4F6293E9F37BC_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		il2cpp_codegen_initobj((&V_0), sizeof(TimeSnapshotMessage_t825D93BBF7ACFFD92A2DDA6320710F7A0923064B));
 		TimeSnapshotMessage_t825D93BBF7ACFFD92A2DDA6320710F7A0923064B L_0 = V_0;
@@ -7338,30 +6576,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TimeSnapshotMessage_t825D93BBF7ACFFD92A2DDA63
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode__Write_Mirror_TimeSnapshotMessage_mD474A065119B677B82B4E88CDE6FF6F6E38668FD (NetworkWriter_t27BA8C1DA1F8507E98CBD409717A57125ABDC37C* ___0_writer, TimeSnapshotMessage_t825D93BBF7ACFFD92A2DDA6320710F7A0923064B ___1_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Write_Mirror_TimeSnapshotMessage_mD474A065119B677B82B4E88CDE6FF6F6E38668FD_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Write_Mirror_TimeSnapshotMessage_mD474A065119B677B82B4E88CDE6FF6F6E38668FD_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		return;
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ReadyMessage_t827D165B99D0F8834C4F35860876486AFB9867F8 GeneratedNetworkCode__Read_Mirror_ReadyMessage_m2268492B5BCC8B3E0E6D9CC6170E8372F51D6372 (NetworkReader_t85516183CC81F0937A89B9B6A92FE815896935E1* ___0_reader, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Read_Mirror_ReadyMessage_m2268492B5BCC8B3E0E6D9CC6170E8372F51D6372_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	ReadyMessage_t827D165B99D0F8834C4F35860876486AFB9867F8 V_0;
 	memset((&V_0), 0, sizeof(V_0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Read_Mirror_ReadyMessage_m2268492B5BCC8B3E0E6D9CC6170E8372F51D6372_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		il2cpp_codegen_initobj((&V_0), sizeof(ReadyMessage_t827D165B99D0F8834C4F35860876486AFB9867F8));
 		ReadyMessage_t827D165B99D0F8834C4F35860876486AFB9867F8 L_0 = V_0;
@@ -7370,30 +6592,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ReadyMessage_t827D165B99D0F8834C4F35860876486
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode__Write_Mirror_ReadyMessage_mA733F4BF17D88D5324907371F78B38FBBA133294 (NetworkWriter_t27BA8C1DA1F8507E98CBD409717A57125ABDC37C* ___0_writer, ReadyMessage_t827D165B99D0F8834C4F35860876486AFB9867F8 ___1_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Write_Mirror_ReadyMessage_mA733F4BF17D88D5324907371F78B38FBBA133294_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Write_Mirror_ReadyMessage_mA733F4BF17D88D5324907371F78B38FBBA133294_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		return;
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NotReadyMessage_tF34CF670A9AD115E0FDC1F7BCE4F75A4C9172036 GeneratedNetworkCode__Read_Mirror_NotReadyMessage_m75AC1ADE5066DF172B611BD0951C57EE714C4B54 (NetworkReader_t85516183CC81F0937A89B9B6A92FE815896935E1* ___0_reader, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Read_Mirror_NotReadyMessage_m75AC1ADE5066DF172B611BD0951C57EE714C4B54_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	NotReadyMessage_tF34CF670A9AD115E0FDC1F7BCE4F75A4C9172036 V_0;
 	memset((&V_0), 0, sizeof(V_0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Read_Mirror_NotReadyMessage_m75AC1ADE5066DF172B611BD0951C57EE714C4B54_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		il2cpp_codegen_initobj((&V_0), sizeof(NotReadyMessage_tF34CF670A9AD115E0FDC1F7BCE4F75A4C9172036));
 		NotReadyMessage_tF34CF670A9AD115E0FDC1F7BCE4F75A4C9172036 L_0 = V_0;
@@ -7402,30 +6608,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NotReadyMessage_tF34CF670A9AD115E0FDC1F7BCE4F
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode__Write_Mirror_NotReadyMessage_m55A92C5E4DB9ACDC7BAA56991BF9472437E76EC9 (NetworkWriter_t27BA8C1DA1F8507E98CBD409717A57125ABDC37C* ___0_writer, NotReadyMessage_tF34CF670A9AD115E0FDC1F7BCE4F75A4C9172036 ___1_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Write_Mirror_NotReadyMessage_m55A92C5E4DB9ACDC7BAA56991BF9472437E76EC9_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Write_Mirror_NotReadyMessage_m55A92C5E4DB9ACDC7BAA56991BF9472437E76EC9_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		return;
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AddPlayerMessage_t8B70DF20613DB8A7E5B2A4DAAF2674D0DFD2F8F6 GeneratedNetworkCode__Read_Mirror_AddPlayerMessage_mBDFF806422A977DC513A3773FF636B98FE3410A2 (NetworkReader_t85516183CC81F0937A89B9B6A92FE815896935E1* ___0_reader, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Read_Mirror_AddPlayerMessage_mBDFF806422A977DC513A3773FF636B98FE3410A2_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	AddPlayerMessage_t8B70DF20613DB8A7E5B2A4DAAF2674D0DFD2F8F6 V_0;
 	memset((&V_0), 0, sizeof(V_0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Read_Mirror_AddPlayerMessage_mBDFF806422A977DC513A3773FF636B98FE3410A2_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		il2cpp_codegen_initobj((&V_0), sizeof(AddPlayerMessage_t8B70DF20613DB8A7E5B2A4DAAF2674D0DFD2F8F6));
 		AddPlayerMessage_t8B70DF20613DB8A7E5B2A4DAAF2674D0DFD2F8F6 L_0 = V_0;
@@ -7434,30 +6624,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AddPlayerMessage_t8B70DF20613DB8A7E5B2A4DAAF2
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode__Write_Mirror_AddPlayerMessage_m21EEEB53DA686936C128E40457834A481A471311 (NetworkWriter_t27BA8C1DA1F8507E98CBD409717A57125ABDC37C* ___0_writer, AddPlayerMessage_t8B70DF20613DB8A7E5B2A4DAAF2674D0DFD2F8F6 ___1_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Write_Mirror_AddPlayerMessage_m21EEEB53DA686936C128E40457834A481A471311_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Write_Mirror_AddPlayerMessage_m21EEEB53DA686936C128E40457834A481A471311_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		return;
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SceneMessage_t47621E5F4F96B23FBA41C9E4015DCDB9F0BE6C26 GeneratedNetworkCode__Read_Mirror_SceneMessage_m749061C67E71AD675E0ECFBF5AA135CF09F67EBF (NetworkReader_t85516183CC81F0937A89B9B6A92FE815896935E1* ___0_reader, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Read_Mirror_SceneMessage_m749061C67E71AD675E0ECFBF5AA135CF09F67EBF_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	SceneMessage_t47621E5F4F96B23FBA41C9E4015DCDB9F0BE6C26 V_0;
 	memset((&V_0), 0, sizeof(V_0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Read_Mirror_SceneMessage_m749061C67E71AD675E0ECFBF5AA135CF09F67EBF_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		il2cpp_codegen_initobj((&V_0), sizeof(SceneMessage_t47621E5F4F96B23FBA41C9E4015DCDB9F0BE6C26));
 		NetworkReader_t85516183CC81F0937A89B9B6A92FE815896935E1* L_0 = ___0_reader;
@@ -7479,14 +6653,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SceneMessage_t47621E5F4F96B23FBA41C9E4015DCDB
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t GeneratedNetworkCode__Read_Mirror_SceneOperation_m64AB2F1C551673FCFF29A394117A6BB469B63865 (NetworkReader_t85516183CC81F0937A89B9B6A92FE815896935E1* ___0_reader, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Read_Mirror_SceneOperation_m64AB2F1C551673FCFF29A394117A6BB469B63865_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Read_Mirror_SceneOperation_m64AB2F1C551673FCFF29A394117A6BB469B63865_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		NetworkReader_t85516183CC81F0937A89B9B6A92FE815896935E1* L_0 = ___0_reader;
 		uint8_t L_1;
@@ -7496,14 +6662,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t GeneratedNetworkCode__Read_Mirror_Sce
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode__Write_Mirror_SceneMessage_mDEEBCF74E078624D7D2C77F9DC46F40CDBE9517E (NetworkWriter_t27BA8C1DA1F8507E98CBD409717A57125ABDC37C* ___0_writer, SceneMessage_t47621E5F4F96B23FBA41C9E4015DCDB9F0BE6C26 ___1_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Write_Mirror_SceneMessage_mDEEBCF74E078624D7D2C77F9DC46F40CDBE9517E_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Write_Mirror_SceneMessage_mDEEBCF74E078624D7D2C77F9DC46F40CDBE9517E_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		NetworkWriter_t27BA8C1DA1F8507E98CBD409717A57125ABDC37C* L_0 = ___0_writer;
 		SceneMessage_t47621E5F4F96B23FBA41C9E4015DCDB9F0BE6C26 L_1 = ___1_value;
@@ -7522,14 +6680,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode__Write_Mirror_Scene
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode__Write_Mirror_SceneOperation_m6ED06B03680B3065FA23C580DCD41494B056E16B (NetworkWriter_t27BA8C1DA1F8507E98CBD409717A57125ABDC37C* ___0_writer, uint8_t ___1_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Write_Mirror_SceneOperation_m6ED06B03680B3065FA23C580DCD41494B056E16B_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Write_Mirror_SceneOperation_m6ED06B03680B3065FA23C580DCD41494B056E16B_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		NetworkWriter_t27BA8C1DA1F8507E98CBD409717A57125ABDC37C* L_0 = ___0_writer;
 		uint8_t L_1 = ___1_value;
@@ -7539,16 +6689,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode__Write_Mirror_Scene
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CommandMessage_t33C5D102BB2924A7CB43AC46B166A390E5EB893E GeneratedNetworkCode__Read_Mirror_CommandMessage_mEAC67ECBCCBE8BCBB7D048C26AF26E7687D5D125 (NetworkReader_t85516183CC81F0937A89B9B6A92FE815896935E1* ___0_reader, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Read_Mirror_CommandMessage_mEAC67ECBCCBE8BCBB7D048C26AF26E7687D5D125_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	CommandMessage_t33C5D102BB2924A7CB43AC46B166A390E5EB893E V_0;
 	memset((&V_0), 0, sizeof(V_0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Read_Mirror_CommandMessage_mEAC67ECBCCBE8BCBB7D048C26AF26E7687D5D125_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		il2cpp_codegen_initobj((&V_0), sizeof(CommandMessage_t33C5D102BB2924A7CB43AC46B166A390E5EB893E));
 		NetworkReader_t85516183CC81F0937A89B9B6A92FE815896935E1* L_0 = ___0_reader;
@@ -7574,14 +6716,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CommandMessage_t33C5D102BB2924A7CB43AC46B166A
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode__Write_Mirror_CommandMessage_mB5D784E5CBD1FE80C6E8EDD3FF3F379B9FA08B71 (NetworkWriter_t27BA8C1DA1F8507E98CBD409717A57125ABDC37C* ___0_writer, CommandMessage_t33C5D102BB2924A7CB43AC46B166A390E5EB893E ___1_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Write_Mirror_CommandMessage_mB5D784E5CBD1FE80C6E8EDD3FF3F379B9FA08B71_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Write_Mirror_CommandMessage_mB5D784E5CBD1FE80C6E8EDD3FF3F379B9FA08B71_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		NetworkWriter_t27BA8C1DA1F8507E98CBD409717A57125ABDC37C* L_0 = ___0_writer;
 		CommandMessage_t33C5D102BB2924A7CB43AC46B166A390E5EB893E L_1 = ___1_value;
@@ -7604,16 +6738,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode__Write_Mirror_Comma
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RpcMessage_tA24B1AA9AB9593C9491786C4AD6EBD8CD822D4AD GeneratedNetworkCode__Read_Mirror_RpcMessage_m639ED4ABD37D0D9853D7AA99D487EF49B7CEED9D (NetworkReader_t85516183CC81F0937A89B9B6A92FE815896935E1* ___0_reader, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Read_Mirror_RpcMessage_m639ED4ABD37D0D9853D7AA99D487EF49B7CEED9D_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	RpcMessage_tA24B1AA9AB9593C9491786C4AD6EBD8CD822D4AD V_0;
 	memset((&V_0), 0, sizeof(V_0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Read_Mirror_RpcMessage_m639ED4ABD37D0D9853D7AA99D487EF49B7CEED9D_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		il2cpp_codegen_initobj((&V_0), sizeof(RpcMessage_tA24B1AA9AB9593C9491786C4AD6EBD8CD822D4AD));
 		NetworkReader_t85516183CC81F0937A89B9B6A92FE815896935E1* L_0 = ___0_reader;
@@ -7639,14 +6765,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RpcMessage_tA24B1AA9AB9593C9491786C4AD6EBD8CD
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode__Write_Mirror_RpcMessage_mA88AD536365DE4A9F088A1F8F7798640496225A1 (NetworkWriter_t27BA8C1DA1F8507E98CBD409717A57125ABDC37C* ___0_writer, RpcMessage_tA24B1AA9AB9593C9491786C4AD6EBD8CD822D4AD ___1_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Write_Mirror_RpcMessage_mA88AD536365DE4A9F088A1F8F7798640496225A1_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Write_Mirror_RpcMessage_mA88AD536365DE4A9F088A1F8F7798640496225A1_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		NetworkWriter_t27BA8C1DA1F8507E98CBD409717A57125ABDC37C* L_0 = ___0_writer;
 		RpcMessage_tA24B1AA9AB9593C9491786C4AD6EBD8CD822D4AD L_1 = ___1_value;
@@ -7669,16 +6787,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode__Write_Mirror_RpcMe
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SpawnMessage_tE475B0CF6074D61D6776360B70400F64B15E1475 GeneratedNetworkCode__Read_Mirror_SpawnMessage_m64A4C27C35547E0F15AA641CBB37211EBD437E2B (NetworkReader_t85516183CC81F0937A89B9B6A92FE815896935E1* ___0_reader, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Read_Mirror_SpawnMessage_m64A4C27C35547E0F15AA641CBB37211EBD437E2B_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	SpawnMessage_tE475B0CF6074D61D6776360B70400F64B15E1475 V_0;
 	memset((&V_0), 0, sizeof(V_0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Read_Mirror_SpawnMessage_m64A4C27C35547E0F15AA641CBB37211EBD437E2B_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		il2cpp_codegen_initobj((&V_0), sizeof(SpawnMessage_tE475B0CF6074D61D6776360B70400F64B15E1475));
 		NetworkReader_t85516183CC81F0937A89B9B6A92FE815896935E1* L_0 = ___0_reader;
@@ -7720,14 +6830,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SpawnMessage_tE475B0CF6074D61D6776360B70400F6
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t GeneratedNetworkCode__Read_Mirror_SpawnFlags_m078F22F8088C2C1D53A5793238117073CA1AC70B (NetworkReader_t85516183CC81F0937A89B9B6A92FE815896935E1* ___0_reader, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Read_Mirror_SpawnFlags_m078F22F8088C2C1D53A5793238117073CA1AC70B_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Read_Mirror_SpawnFlags_m078F22F8088C2C1D53A5793238117073CA1AC70B_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		NetworkReader_t85516183CC81F0937A89B9B6A92FE815896935E1* L_0 = ___0_reader;
 		uint8_t L_1;
@@ -7737,14 +6839,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t GeneratedNetworkCode__Read_Mirror_Spa
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode__Write_Mirror_SpawnMessage_mB55AC296BCD25F436044E6EE6DAB2060314EE099 (NetworkWriter_t27BA8C1DA1F8507E98CBD409717A57125ABDC37C* ___0_writer, SpawnMessage_tE475B0CF6074D61D6776360B70400F64B15E1475 ___1_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Write_Mirror_SpawnMessage_mB55AC296BCD25F436044E6EE6DAB2060314EE099_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Write_Mirror_SpawnMessage_mB55AC296BCD25F436044E6EE6DAB2060314EE099_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		NetworkWriter_t27BA8C1DA1F8507E98CBD409717A57125ABDC37C* L_0 = ___0_writer;
 		SpawnMessage_tE475B0CF6074D61D6776360B70400F64B15E1475 L_1 = ___1_value;
@@ -7783,14 +6877,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode__Write_Mirror_Spawn
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode__Write_Mirror_SpawnFlags_m9D7D4FFC16333B63EF9D0C79B44C96EB5A227298 (NetworkWriter_t27BA8C1DA1F8507E98CBD409717A57125ABDC37C* ___0_writer, uint8_t ___1_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Write_Mirror_SpawnFlags_m9D7D4FFC16333B63EF9D0C79B44C96EB5A227298_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Write_Mirror_SpawnFlags_m9D7D4FFC16333B63EF9D0C79B44C96EB5A227298_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		NetworkWriter_t27BA8C1DA1F8507E98CBD409717A57125ABDC37C* L_0 = ___0_writer;
 		uint8_t L_1 = ___1_value;
@@ -7800,16 +6886,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode__Write_Mirror_Spawn
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ChangeOwnerMessage_t6539B3468B62CDA56EBE80C50BA9CF93FEF8F55F GeneratedNetworkCode__Read_Mirror_ChangeOwnerMessage_mF48D67DA99C89F1653C5D687247833C4F5DB3768 (NetworkReader_t85516183CC81F0937A89B9B6A92FE815896935E1* ___0_reader, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Read_Mirror_ChangeOwnerMessage_mF48D67DA99C89F1653C5D687247833C4F5DB3768_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	ChangeOwnerMessage_t6539B3468B62CDA56EBE80C50BA9CF93FEF8F55F V_0;
 	memset((&V_0), 0, sizeof(V_0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Read_Mirror_ChangeOwnerMessage_mF48D67DA99C89F1653C5D687247833C4F5DB3768_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		il2cpp_codegen_initobj((&V_0), sizeof(ChangeOwnerMessage_t6539B3468B62CDA56EBE80C50BA9CF93FEF8F55F));
 		NetworkReader_t85516183CC81F0937A89B9B6A92FE815896935E1* L_0 = ___0_reader;
@@ -7826,14 +6904,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ChangeOwnerMessage_t6539B3468B62CDA56EBE80C50
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode__Write_Mirror_ChangeOwnerMessage_mCEC6166A2C9F66ABE88949CC332C783172130834 (NetworkWriter_t27BA8C1DA1F8507E98CBD409717A57125ABDC37C* ___0_writer, ChangeOwnerMessage_t6539B3468B62CDA56EBE80C50BA9CF93FEF8F55F ___1_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Write_Mirror_ChangeOwnerMessage_mCEC6166A2C9F66ABE88949CC332C783172130834_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Write_Mirror_ChangeOwnerMessage_mCEC6166A2C9F66ABE88949CC332C783172130834_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		NetworkWriter_t27BA8C1DA1F8507E98CBD409717A57125ABDC37C* L_0 = ___0_writer;
 		ChangeOwnerMessage_t6539B3468B62CDA56EBE80C50BA9CF93FEF8F55F L_1 = ___1_value;
@@ -7848,16 +6918,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode__Write_Mirror_Chang
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ObjectSpawnStartedMessage_tD4E40048359CFB70648E9DEEDF4DD292084FD774 GeneratedNetworkCode__Read_Mirror_ObjectSpawnStartedMessage_m44D1F9EECB9EBB218EE21EF895C0A6D07CC007D6 (NetworkReader_t85516183CC81F0937A89B9B6A92FE815896935E1* ___0_reader, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Read_Mirror_ObjectSpawnStartedMessage_m44D1F9EECB9EBB218EE21EF895C0A6D07CC007D6_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	ObjectSpawnStartedMessage_tD4E40048359CFB70648E9DEEDF4DD292084FD774 V_0;
 	memset((&V_0), 0, sizeof(V_0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Read_Mirror_ObjectSpawnStartedMessage_m44D1F9EECB9EBB218EE21EF895C0A6D07CC007D6_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		il2cpp_codegen_initobj((&V_0), sizeof(ObjectSpawnStartedMessage_tD4E40048359CFB70648E9DEEDF4DD292084FD774));
 		ObjectSpawnStartedMessage_tD4E40048359CFB70648E9DEEDF4DD292084FD774 L_0 = V_0;
@@ -7866,30 +6928,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ObjectSpawnStartedMessage_tD4E40048359CFB7064
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode__Write_Mirror_ObjectSpawnStartedMessage_m764558235A541001C9B569D1529719208C3CCA37 (NetworkWriter_t27BA8C1DA1F8507E98CBD409717A57125ABDC37C* ___0_writer, ObjectSpawnStartedMessage_tD4E40048359CFB70648E9DEEDF4DD292084FD774 ___1_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Write_Mirror_ObjectSpawnStartedMessage_m764558235A541001C9B569D1529719208C3CCA37_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Write_Mirror_ObjectSpawnStartedMessage_m764558235A541001C9B569D1529719208C3CCA37_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		return;
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ObjectSpawnFinishedMessage_t2E367844E4D843D90ED9E273573BF341B04658D8 GeneratedNetworkCode__Read_Mirror_ObjectSpawnFinishedMessage_mC0167E1E67F691C5A42077919F37063F8F67A2F4 (NetworkReader_t85516183CC81F0937A89B9B6A92FE815896935E1* ___0_reader, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Read_Mirror_ObjectSpawnFinishedMessage_mC0167E1E67F691C5A42077919F37063F8F67A2F4_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	ObjectSpawnFinishedMessage_t2E367844E4D843D90ED9E273573BF341B04658D8 V_0;
 	memset((&V_0), 0, sizeof(V_0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Read_Mirror_ObjectSpawnFinishedMessage_mC0167E1E67F691C5A42077919F37063F8F67A2F4_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		il2cpp_codegen_initobj((&V_0), sizeof(ObjectSpawnFinishedMessage_t2E367844E4D843D90ED9E273573BF341B04658D8));
 		ObjectSpawnFinishedMessage_t2E367844E4D843D90ED9E273573BF341B04658D8 L_0 = V_0;
@@ -7898,30 +6944,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ObjectSpawnFinishedMessage_t2E367844E4D843D90
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode__Write_Mirror_ObjectSpawnFinishedMessage_m5159CE24A2BA7DD52674109D36E1F78BEECFAF90 (NetworkWriter_t27BA8C1DA1F8507E98CBD409717A57125ABDC37C* ___0_writer, ObjectSpawnFinishedMessage_t2E367844E4D843D90ED9E273573BF341B04658D8 ___1_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Write_Mirror_ObjectSpawnFinishedMessage_m5159CE24A2BA7DD52674109D36E1F78BEECFAF90_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Write_Mirror_ObjectSpawnFinishedMessage_m5159CE24A2BA7DD52674109D36E1F78BEECFAF90_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		return;
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ObjectDestroyMessage_tF205F01F24B264A63044BA3FAC1E9B080DB068D2 GeneratedNetworkCode__Read_Mirror_ObjectDestroyMessage_m5AD72F0780D461499534B9DA74E57CC522E5E77F (NetworkReader_t85516183CC81F0937A89B9B6A92FE815896935E1* ___0_reader, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Read_Mirror_ObjectDestroyMessage_m5AD72F0780D461499534B9DA74E57CC522E5E77F_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	ObjectDestroyMessage_tF205F01F24B264A63044BA3FAC1E9B080DB068D2 V_0;
 	memset((&V_0), 0, sizeof(V_0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Read_Mirror_ObjectDestroyMessage_m5AD72F0780D461499534B9DA74E57CC522E5E77F_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		il2cpp_codegen_initobj((&V_0), sizeof(ObjectDestroyMessage_tF205F01F24B264A63044BA3FAC1E9B080DB068D2));
 		NetworkReader_t85516183CC81F0937A89B9B6A92FE815896935E1* L_0 = ___0_reader;
@@ -7934,14 +6964,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ObjectDestroyMessage_tF205F01F24B264A63044BA3
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode__Write_Mirror_ObjectDestroyMessage_m289325149E153F59196F0CC1E46BDC0AB0B91C8B (NetworkWriter_t27BA8C1DA1F8507E98CBD409717A57125ABDC37C* ___0_writer, ObjectDestroyMessage_tF205F01F24B264A63044BA3FAC1E9B080DB068D2 ___1_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Write_Mirror_ObjectDestroyMessage_m289325149E153F59196F0CC1E46BDC0AB0B91C8B_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Write_Mirror_ObjectDestroyMessage_m289325149E153F59196F0CC1E46BDC0AB0B91C8B_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		NetworkWriter_t27BA8C1DA1F8507E98CBD409717A57125ABDC37C* L_0 = ___0_writer;
 		ObjectDestroyMessage_tF205F01F24B264A63044BA3FAC1E9B080DB068D2 L_1 = ___1_value;
@@ -7952,16 +6974,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode__Write_Mirror_Objec
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ObjectHideMessage_t13A7D352E4B0A0D08A38BCAC3E454CDB59756F3C GeneratedNetworkCode__Read_Mirror_ObjectHideMessage_m0D332D3D3FFC1A8B02CBFAB6E70C9DA60F333470 (NetworkReader_t85516183CC81F0937A89B9B6A92FE815896935E1* ___0_reader, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Read_Mirror_ObjectHideMessage_m0D332D3D3FFC1A8B02CBFAB6E70C9DA60F333470_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	ObjectHideMessage_t13A7D352E4B0A0D08A38BCAC3E454CDB59756F3C V_0;
 	memset((&V_0), 0, sizeof(V_0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Read_Mirror_ObjectHideMessage_m0D332D3D3FFC1A8B02CBFAB6E70C9DA60F333470_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		il2cpp_codegen_initobj((&V_0), sizeof(ObjectHideMessage_t13A7D352E4B0A0D08A38BCAC3E454CDB59756F3C));
 		NetworkReader_t85516183CC81F0937A89B9B6A92FE815896935E1* L_0 = ___0_reader;
@@ -7974,14 +6988,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ObjectHideMessage_t13A7D352E4B0A0D08A38BCAC3E
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode__Write_Mirror_ObjectHideMessage_mE6EC2DB8F1A820EF20FE6F9AF3C48EC3E2F6B672 (NetworkWriter_t27BA8C1DA1F8507E98CBD409717A57125ABDC37C* ___0_writer, ObjectHideMessage_t13A7D352E4B0A0D08A38BCAC3E454CDB59756F3C ___1_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Write_Mirror_ObjectHideMessage_mE6EC2DB8F1A820EF20FE6F9AF3C48EC3E2F6B672_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Write_Mirror_ObjectHideMessage_mE6EC2DB8F1A820EF20FE6F9AF3C48EC3E2F6B672_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		NetworkWriter_t27BA8C1DA1F8507E98CBD409717A57125ABDC37C* L_0 = ___0_writer;
 		ObjectHideMessage_t13A7D352E4B0A0D08A38BCAC3E454CDB59756F3C L_1 = ___1_value;
@@ -7992,16 +6998,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode__Write_Mirror_Objec
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR EntityStateMessage_t741DD321283AD1933F59FB67E67905E4DE9A744E GeneratedNetworkCode__Read_Mirror_EntityStateMessage_m3BF3C40391DEE9A9FAC3041A67D0A06CAC95D88A (NetworkReader_t85516183CC81F0937A89B9B6A92FE815896935E1* ___0_reader, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Read_Mirror_EntityStateMessage_m3BF3C40391DEE9A9FAC3041A67D0A06CAC95D88A_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	EntityStateMessage_t741DD321283AD1933F59FB67E67905E4DE9A744E V_0;
 	memset((&V_0), 0, sizeof(V_0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Read_Mirror_EntityStateMessage_m3BF3C40391DEE9A9FAC3041A67D0A06CAC95D88A_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		il2cpp_codegen_initobj((&V_0), sizeof(EntityStateMessage_t741DD321283AD1933F59FB67E67905E4DE9A744E));
 		NetworkReader_t85516183CC81F0937A89B9B6A92FE815896935E1* L_0 = ___0_reader;
@@ -8019,14 +7017,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR EntityStateMessage_t741DD321283AD1933F59FB67E
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode__Write_Mirror_EntityStateMessage_m30F8AC2C36A09ED97300CFA40A48CAF5EA7A7CA3 (NetworkWriter_t27BA8C1DA1F8507E98CBD409717A57125ABDC37C* ___0_writer, EntityStateMessage_t741DD321283AD1933F59FB67E67905E4DE9A744E ___1_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Write_Mirror_EntityStateMessage_m30F8AC2C36A09ED97300CFA40A48CAF5EA7A7CA3_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Write_Mirror_EntityStateMessage_m30F8AC2C36A09ED97300CFA40A48CAF5EA7A7CA3_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		NetworkWriter_t27BA8C1DA1F8507E98CBD409717A57125ABDC37C* L_0 = ___0_writer;
 		EntityStateMessage_t741DD321283AD1933F59FB67E67905E4DE9A744E L_1 = ___1_value;
@@ -8041,16 +7031,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode__Write_Mirror_Entit
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NetworkPingMessage_t254AA1B47CDBC1136A16C49B6147AC5462C60B27 GeneratedNetworkCode__Read_Mirror_NetworkPingMessage_m266EA2FD13202B58FE1121FA10BD08A14F450D9B (NetworkReader_t85516183CC81F0937A89B9B6A92FE815896935E1* ___0_reader, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Read_Mirror_NetworkPingMessage_m266EA2FD13202B58FE1121FA10BD08A14F450D9B_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	NetworkPingMessage_t254AA1B47CDBC1136A16C49B6147AC5462C60B27 V_0;
 	memset((&V_0), 0, sizeof(V_0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Read_Mirror_NetworkPingMessage_m266EA2FD13202B58FE1121FA10BD08A14F450D9B_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		il2cpp_codegen_initobj((&V_0), sizeof(NetworkPingMessage_t254AA1B47CDBC1136A16C49B6147AC5462C60B27));
 		NetworkReader_t85516183CC81F0937A89B9B6A92FE815896935E1* L_0 = ___0_reader;
@@ -8067,14 +7049,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NetworkPingMessage_t254AA1B47CDBC1136A16C49B6
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode__Write_Mirror_NetworkPingMessage_m4637EA8ECEBB1144531A650AEF9E866476FCCC6C (NetworkWriter_t27BA8C1DA1F8507E98CBD409717A57125ABDC37C* ___0_writer, NetworkPingMessage_t254AA1B47CDBC1136A16C49B6147AC5462C60B27 ___1_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Write_Mirror_NetworkPingMessage_m4637EA8ECEBB1144531A650AEF9E866476FCCC6C_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Write_Mirror_NetworkPingMessage_m4637EA8ECEBB1144531A650AEF9E866476FCCC6C_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		NetworkWriter_t27BA8C1DA1F8507E98CBD409717A57125ABDC37C* L_0 = ___0_writer;
 		NetworkPingMessage_t254AA1B47CDBC1136A16C49B6147AC5462C60B27 L_1 = ___1_value;
@@ -8089,16 +7063,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode__Write_Mirror_Netwo
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NetworkPongMessage_tD0BD2C925B3E72156657A78E2D9AD09D3E3B4EC6 GeneratedNetworkCode__Read_Mirror_NetworkPongMessage_m15BCCA7E721EE3652571FB908E1A946365F2F101 (NetworkReader_t85516183CC81F0937A89B9B6A92FE815896935E1* ___0_reader, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Read_Mirror_NetworkPongMessage_m15BCCA7E721EE3652571FB908E1A946365F2F101_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	NetworkPongMessage_tD0BD2C925B3E72156657A78E2D9AD09D3E3B4EC6 V_0;
 	memset((&V_0), 0, sizeof(V_0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Read_Mirror_NetworkPongMessage_m15BCCA7E721EE3652571FB908E1A946365F2F101_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		il2cpp_codegen_initobj((&V_0), sizeof(NetworkPongMessage_tD0BD2C925B3E72156657A78E2D9AD09D3E3B4EC6));
 		NetworkReader_t85516183CC81F0937A89B9B6A92FE815896935E1* L_0 = ___0_reader;
@@ -8119,14 +7085,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NetworkPongMessage_tD0BD2C925B3E72156657A78E2
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode__Write_Mirror_NetworkPongMessage_mDB0894F00E6A04BAEFDB47D5FF7E4E8C15EDDB4E (NetworkWriter_t27BA8C1DA1F8507E98CBD409717A57125ABDC37C* ___0_writer, NetworkPongMessage_tD0BD2C925B3E72156657A78E2D9AD09D3E3B4EC6 ___1_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Write_Mirror_NetworkPongMessage_mDB0894F00E6A04BAEFDB47D5FF7E4E8C15EDDB4E_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Write_Mirror_NetworkPongMessage_mDB0894F00E6A04BAEFDB47D5FF7E4E8C15EDDB4E_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		NetworkWriter_t27BA8C1DA1F8507E98CBD409717A57125ABDC37C* L_0 = ___0_writer;
 		NetworkPongMessage_tD0BD2C925B3E72156657A78E2D9AD09D3E3B4EC6 L_1 = ___1_value;
@@ -8145,16 +7103,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode__Write_Mirror_Netwo
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AuthRequestMessage_t6F1EF2686ABA4F6CDC4B1175F4F5F01BF5D34ED0 GeneratedNetworkCode__Read_Mirror_Authenticators_BasicAuthenticator_AuthRequestMessage_m2B2812432FD8479DB22275A42FD528E8A587E02A (NetworkReader_t85516183CC81F0937A89B9B6A92FE815896935E1* ___0_reader, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Read_Mirror_Authenticators_BasicAuthenticator_AuthRequestMessage_m2B2812432FD8479DB22275A42FD528E8A587E02A_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	AuthRequestMessage_t6F1EF2686ABA4F6CDC4B1175F4F5F01BF5D34ED0 V_0;
 	memset((&V_0), 0, sizeof(V_0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Read_Mirror_Authenticators_BasicAuthenticator_AuthRequestMessage_m2B2812432FD8479DB22275A42FD528E8A587E02A_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		il2cpp_codegen_initobj((&V_0), sizeof(AuthRequestMessage_t6F1EF2686ABA4F6CDC4B1175F4F5F01BF5D34ED0));
 		NetworkReader_t85516183CC81F0937A89B9B6A92FE815896935E1* L_0 = ___0_reader;
@@ -8173,14 +7123,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AuthRequestMessage_t6F1EF2686ABA4F6CDC4B1175F
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode__Write_Mirror_Authenticators_BasicAuthenticator_AuthRequestMessage_mFA24E71441D65B4A2FA456B4CD6A033E969ABE38 (NetworkWriter_t27BA8C1DA1F8507E98CBD409717A57125ABDC37C* ___0_writer, AuthRequestMessage_t6F1EF2686ABA4F6CDC4B1175F4F5F01BF5D34ED0 ___1_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Write_Mirror_Authenticators_BasicAuthenticator_AuthRequestMessage_mFA24E71441D65B4A2FA456B4CD6A033E969ABE38_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Write_Mirror_Authenticators_BasicAuthenticator_AuthRequestMessage_mFA24E71441D65B4A2FA456B4CD6A033E969ABE38_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		NetworkWriter_t27BA8C1DA1F8507E98CBD409717A57125ABDC37C* L_0 = ___0_writer;
 		AuthRequestMessage_t6F1EF2686ABA4F6CDC4B1175F4F5F01BF5D34ED0 L_1 = ___1_value;
@@ -8195,16 +7137,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode__Write_Mirror_Authe
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665 GeneratedNetworkCode__Read_Mirror_Authenticators_BasicAuthenticator_AuthResponseMessage_mF3DA5AE6AA81DF78C01037A8B190925717D64750 (NetworkReader_t85516183CC81F0937A89B9B6A92FE815896935E1* ___0_reader, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Read_Mirror_Authenticators_BasicAuthenticator_AuthResponseMessage_mF3DA5AE6AA81DF78C01037A8B190925717D64750_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	AuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665 V_0;
 	memset((&V_0), 0, sizeof(V_0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Read_Mirror_Authenticators_BasicAuthenticator_AuthResponseMessage_mF3DA5AE6AA81DF78C01037A8B190925717D64750_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		il2cpp_codegen_initobj((&V_0), sizeof(AuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665));
 		NetworkReader_t85516183CC81F0937A89B9B6A92FE815896935E1* L_0 = ___0_reader;
@@ -8222,14 +7156,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61E
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode__Write_Mirror_Authenticators_BasicAuthenticator_AuthResponseMessage_mF2B4CDCA349E96FBECF8BF8C01C57896F0778B9B (NetworkWriter_t27BA8C1DA1F8507E98CBD409717A57125ABDC37C* ___0_writer, AuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665 ___1_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Write_Mirror_Authenticators_BasicAuthenticator_AuthResponseMessage_mF2B4CDCA349E96FBECF8BF8C01C57896F0778B9B_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Write_Mirror_Authenticators_BasicAuthenticator_AuthResponseMessage_mF2B4CDCA349E96FBECF8BF8C01C57896F0778B9B_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		NetworkWriter_t27BA8C1DA1F8507E98CBD409717A57125ABDC37C* L_0 = ___0_writer;
 		AuthResponseMessage_tEEDBCA72E13E4F8BEDB7A61EC6B152366F1F5665 L_1 = ___1_value;
@@ -8244,16 +7170,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode__Write_Mirror_Authe
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AuthRequestMessage_t8AAEEE283D9AFEC2765C90E610FE9ED73FEF3CC9 GeneratedNetworkCode__Read_Mirror_Authenticators_DeviceAuthenticator_AuthRequestMessage_mFAE5B29E53DAE2FA2F025178459B37BB523C16CD (NetworkReader_t85516183CC81F0937A89B9B6A92FE815896935E1* ___0_reader, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Read_Mirror_Authenticators_DeviceAuthenticator_AuthRequestMessage_mFAE5B29E53DAE2FA2F025178459B37BB523C16CD_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	AuthRequestMessage_t8AAEEE283D9AFEC2765C90E610FE9ED73FEF3CC9 V_0;
 	memset((&V_0), 0, sizeof(V_0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Read_Mirror_Authenticators_DeviceAuthenticator_AuthRequestMessage_mFAE5B29E53DAE2FA2F025178459B37BB523C16CD_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		il2cpp_codegen_initobj((&V_0), sizeof(AuthRequestMessage_t8AAEEE283D9AFEC2765C90E610FE9ED73FEF3CC9));
 		NetworkReader_t85516183CC81F0937A89B9B6A92FE815896935E1* L_0 = ___0_reader;
@@ -8267,14 +7185,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AuthRequestMessage_t8AAEEE283D9AFEC2765C90E61
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode__Write_Mirror_Authenticators_DeviceAuthenticator_AuthRequestMessage_mC8AD10F12689E13953CE416D5B487C4188977D91 (NetworkWriter_t27BA8C1DA1F8507E98CBD409717A57125ABDC37C* ___0_writer, AuthRequestMessage_t8AAEEE283D9AFEC2765C90E610FE9ED73FEF3CC9 ___1_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Write_Mirror_Authenticators_DeviceAuthenticator_AuthRequestMessage_mC8AD10F12689E13953CE416D5B487C4188977D91_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Write_Mirror_Authenticators_DeviceAuthenticator_AuthRequestMessage_mC8AD10F12689E13953CE416D5B487C4188977D91_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		NetworkWriter_t27BA8C1DA1F8507E98CBD409717A57125ABDC37C* L_0 = ___0_writer;
 		AuthRequestMessage_t8AAEEE283D9AFEC2765C90E610FE9ED73FEF3CC9 L_1 = ___1_value;
@@ -8285,16 +7195,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode__Write_Mirror_Authe
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AuthResponseMessage_tDDB9ADB12C1CFBB912FA905DD578D5DC6899B8CE GeneratedNetworkCode__Read_Mirror_Authenticators_DeviceAuthenticator_AuthResponseMessage_m66DFF99F81606D7A546A7F0740F1D1FA541091EE (NetworkReader_t85516183CC81F0937A89B9B6A92FE815896935E1* ___0_reader, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Read_Mirror_Authenticators_DeviceAuthenticator_AuthResponseMessage_m66DFF99F81606D7A546A7F0740F1D1FA541091EE_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	AuthResponseMessage_tDDB9ADB12C1CFBB912FA905DD578D5DC6899B8CE V_0;
 	memset((&V_0), 0, sizeof(V_0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Read_Mirror_Authenticators_DeviceAuthenticator_AuthResponseMessage_m66DFF99F81606D7A546A7F0740F1D1FA541091EE_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		il2cpp_codegen_initobj((&V_0), sizeof(AuthResponseMessage_tDDB9ADB12C1CFBB912FA905DD578D5DC6899B8CE));
 		AuthResponseMessage_tDDB9ADB12C1CFBB912FA905DD578D5DC6899B8CE L_0 = V_0;
@@ -8303,14 +7205,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AuthResponseMessage_tDDB9ADB12C1CFBB912FA905D
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode__Write_Mirror_Authenticators_DeviceAuthenticator_AuthResponseMessage_m01E8CB65060B01D3867F56C603EAA524D6AF43A5 (NetworkWriter_t27BA8C1DA1F8507E98CBD409717A57125ABDC37C* ___0_writer, AuthResponseMessage_tDDB9ADB12C1CFBB912FA905DD578D5DC6899B8CE ___1_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Write_Mirror_Authenticators_DeviceAuthenticator_AuthResponseMessage_m01E8CB65060B01D3867F56C603EAA524D6AF43A5_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode__Write_Mirror_Authenticators_DeviceAuthenticator_AuthResponseMessage_m01E8CB65060B01D3867F56C603EAA524D6AF43A5_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		return;
 	}
@@ -8499,7 +7393,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode_InitReadWriters_m8F
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Func_2_tFB31016B91F9F5C6B2CAC98095F7D025353DD033_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Func_2_tFCC2EC1AD9537A656DD7FC0849A9FC206EA7C392_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Func_2_tFD61C39BCF897AD7E0777243349B4558DB639EC5_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode_InitReadWriters_m8FAD3DEE18E4213CD5EEF047F42C6CEFAD0EA535_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Read_Mirror_AddPlayerMessage_mBDFF806422A977DC513A3773FF636B98FE3410A2_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Read_Mirror_Authenticators_BasicAuthenticator_AuthRequestMessage_m2B2812432FD8479DB22275A42FD528E8A587E02A_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GeneratedNetworkCode__Read_Mirror_Authenticators_BasicAuthenticator_AuthResponseMessage_mF3DA5AE6AA81DF78C01037A8B190925717D64750_RuntimeMethod_var);
@@ -8860,8 +7753,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedNetworkCode_InitReadWriters_m8F
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Writer_1_tFB29484EAFF97FE2C50FDB48351489533752921F_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GeneratedNetworkCode_InitReadWriters_m8FAD3DEE18E4213CD5EEF047F42C6CEFAD0EA535_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Action_2_tDDEAD4B308FD0F5A9299458AF5A6B47CA5D3732F* L_0 = (Action_2_tDDEAD4B308FD0F5A9299458AF5A6B47CA5D3732F*)il2cpp_codegen_object_new(Action_2_tDDEAD4B308FD0F5A9299458AF5A6B47CA5D3732F_il2cpp_TypeInfo_var);
 		Action_2__ctor_m450CD99F88341CB21DB0FC2C3DD7C89F4D5C0AD0(L_0, NULL, (intptr_t)((void*)NetworkWriterExtensions_WriteByte_m10546533E9DE9678F358E446DC8D1D970CF1D9BD_RuntimeMethod_var), NULL);
@@ -9590,15 +8481,10 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR NetworkConnectionToServer_tABF88F
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NetworkClient_get_connection_m8FE7F7B376D22CEDD4AAED02297E6AA3D69A03D3_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NetworkClient_tF466F1FE2B449DC347BADC11F85EFB8F22453031_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NetworkClient_get_connection_m8FE7F7B376D22CEDD4AAED02297E6AA3D69A03D3_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror + 3258));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsMirror + 3259));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsMirror + 3260));
 		il2cpp_codegen_runtime_class_init_inline(NetworkClient_tF466F1FE2B449DC347BADC11F85EFB8F22453031_il2cpp_TypeInfo_var);
 		NetworkConnectionToServer_tABF88FD679833405BCFD6846C73D06F503A23F9F* L_0 = ((NetworkClient_tF466F1FE2B449DC347BADC11F85EFB8F22453031_StaticFields*)il2cpp_codegen_static_fields_for(NetworkClient_tF466F1FE2B449DC347BADC11F85EFB8F22453031_il2cpp_TypeInfo_var))->___U3CconnectionU3Ek__BackingField;
 		return L_0;

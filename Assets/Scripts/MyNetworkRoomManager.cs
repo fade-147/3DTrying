@@ -316,8 +316,15 @@ public class MyNetworkRoomManager : NetworkRoomManager
     public override bool OnRoomServerSceneLoadedForPlayer(NetworkConnectionToClient conn, GameObject roomPlayer, GameObject gamePlayer)
     {
         MyNetworkRoomPlayer roomP = roomPlayer.GetComponent<MyNetworkRoomPlayer>();
-        ThirdPersonController tpc = gamePlayer.GetComponent<ThirdPersonController>();
-        if (roomP != null && tpc != null)
+        StarterAssets.PlayerNetworkBridge pnb = gamePlayer.GetComponent<StarterAssets.PlayerNetworkBridge>();
+        if (roomP != null && pnb != null)
+        {
+            pnb.teamId = roomP.teamId;
+        }
+
+        // Backward compat: also set teamId on ThirdPersonController if present
+        StarterAssets.ThirdPersonController tpc = gamePlayer.GetComponent<StarterAssets.ThirdPersonController>();
+        if (tpc != null)
         {
             tpc.teamId = roomP.teamId;
         }
@@ -519,7 +526,10 @@ public class MyNetworkRoomManager : NetworkRoomManager
             BotController bc = bot.GetComponent<BotController>();
             if (bc != null) bc.teamId = teamId;
 
-            ThirdPersonController tpc = bot.GetComponent<ThirdPersonController>();
+            StarterAssets.PlayerNetworkBridge pnbBot = bot.GetComponent<StarterAssets.PlayerNetworkBridge>();
+            if (pnbBot != null) pnbBot.teamId = teamId;
+
+            StarterAssets.ThirdPersonController tpc = bot.GetComponent<StarterAssets.ThirdPersonController>();
             if (tpc != null) tpc.teamId = teamId;
 
             NetworkServer.Spawn(bot);

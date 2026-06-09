@@ -4,18 +4,31 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - PlayerList
+  - Wall
+  - Metal
+  - Blood
+  - Dirt
+  - Concrete
+  - ExplosiveBarrel
+  - Target
+  - GasTank
+  - Metal (Static)
+  - Wood (Static)
+  - Dirt (Static)
+  - Wood
+  - AmmoText
+  - BlueBase
   - CinemachineTarget
   - DeathCanvas
-  - HealthBar
   - DrinkUI
+  - HealthBar
+  - PlayerList
+  - RedBase
   - ReloadUI
-  - AmmoText
   - Settings
   - Team1PlayerList
   - Team2PlayerList
-  - RedBase
-  - BlueBase
+  - Way
   layers:
   - Default
   - TransparentFX
@@ -23,17 +36,17 @@ TagManager:
   - 
   - Water
   - UI
-  - MapCamera
-  - MapThings
-  - MapFlool
-  - Ragdoll
-  - Bullet
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Wall
+  - First Person View
+  - Character
+  - Post Processing
+  - Post Processing Weapon
+  - Post Processing Scope
+  - Invisible Wall
+  - Projectile
+  - Interactable
   - 
   - 
   - 

@@ -115,105 +115,9 @@ IL2CPP_EXTERN_C String_t* _stringLiteralB046EE4D604069F424C787BA79D61FA1FB618A92
 IL2CPP_EXTERN_C String_t* _stringLiteralB251E9F9D901A586886679186D7DD70C6D87A1F7;
 IL2CPP_EXTERN_C String_t* _stringLiteralBFABF1DFE0A3075A42B52418152963556DB40B0A;
 IL2CPP_EXTERN_C String_t* _stringLiteralE9CDE9F8C71CEE9F3AF0E3D076103CE799798447;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconFPR__ctor_m24B90F028C0D558D32DE9996390CE7CC06E55724_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconKeyGenerationParameters__ctor_m5EECB39EA968A53B7BD82AAF0FBD5D86689E4223_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconKeyGenerationParameters_get_Parameters_mB069FFFE8D9598238408677F81B6EFE674780822_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconKeyPairGenerator_GenerateKeyPair_m1EC638FED59CB1467B0EBF68C26188CF22F9E5C7_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconKeyPairGenerator_Init_mD0E8596BA0C8C9BBD3C3815198F9145A3C257D83_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconKeyPairGenerator__ctor_mA3CA6DE1A38C34DEC5EDE17C51EC7AD15FF4FC46_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconKeyParameters__ctor_m05CF3347042CA22E63612AC6FF8F013F46546262_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconKeyParameters_get_Parameters_m22DC7B0FF7B094818EA3C061F9D2544A718FC467_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconNist__ctor_m0F96AF41FB4BF675A3F78D1C73572E6E868BB493_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* FalconNist_crypto_sign_keypair_mB9677CA858596C17EED43B4E8FCFA725B0DD11C0_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* FalconNist_crypto_sign_m9F1149026A91F003CBE5FDB0E8FFCA86927445D4_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconNist_crypto_sign_open_mEEE0A39E2CDDE490917CDB3BC6D75DB712981019_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconNist_get_CryptoBytes_m3D474F3F920B10BBC1750ECCB6BA38FD1BE64431_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconNist_get_LogN_m27FF9EBFED63B0D592A765141A201634CFD5D5E6_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconNist_get_NonceLength_m2D699568AF2AD1D3B7B7F6B21E4A13E2578BFBEE_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconParameters__cctor_m6550E761D25E6873CA367C96DFDAF83E8EF99D45_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconParameters__ctor_mC9ECD6308B4FE43B827BDFCADE54D6380D72D7AD_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconParameters_get_LogN_mE56DF93D62A8615CAB5B9F5975F04B8B4E8E4699_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconParameters_get_Name_mCA409EF492164BAB47E34B4A1084C14F6345E82C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconParameters_get_NonceLength_mB94A0115D47DAD962C4EBBB7917D90EE6C217BF3_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconPrivateKeyParameters_GetEncoded_m11164C075B5CE75DFCDCA6EA4D6F8DAAA70EF85C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconPrivateKeyParameters_GetG_m11F8AF9F3AE411BFE40574F5D9369B1891CC60AB_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconPrivateKeyParameters_GetPublicKey_m766C5C6EA46536CAC6FF39113D6675F30379E7DB_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconPrivateKeyParameters_GetSpolyBigF_m96FE42E90DA8AA5371695A805AF3E969A73043BA_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconPrivateKeyParameters_GetSpolyLittleF_m26AC93B96FFC45631276D7659C3691D817E96655_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconPrivateKeyParameters__ctor_m126F57BE3363835459244869DBEE151D1092226F_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconPublicKeyParameters_GetEncoded_m9CECBC1306F40DF465C24C17FAB4F2A33557055A_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconPublicKeyParameters__ctor_m1E046D63DDA2B6E15D52B51D61D1C3A0EA1CDFBC_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconRNG_QROUND_mE8B60160DF7E4F451358F6DDC2CD9B523314392C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconRNG__ctor_mAE9633500413F18C4E9A71B6E80333E4F6EFBCFA_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconRNG_prng_get_bytes_m4DD200C7AF7BAFD4A103283650060E1261241CE7_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconRNG_prng_get_u64_m8CAFACF5002988055028628ECFF53EBF88EED2C8_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconRNG_prng_get_u8_m4932C2ED03BEF135BB34559BE00D0DBB17E4A1B3_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconRNG_prng_init_mCC0887559E130D513FAD34AEADBADFDC1C2A22E1_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconRNG_prng_refill_m77BFCFF6B689310564908550EF46488B332E7E15_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconSign__ctor_m99F3070E37A5D404312D0F8463504DCFB00C25A3_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconSign_do_sign_dyn_m51F2DD1E4B1DB3AB3056EE4E1B7FBDD12DD013AF_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconSign_do_sign_tree_m2BD24B922AEF59F5E4CCF1E0D638004F16192A72_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconSign_ffLDL_binary_normalize_m2101159A0D75E6E282FC8F2730AB813B3E9BEE77_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconSign_ffLDL_fft_inner_mADCBA0BBFD5E5DF31CF0DAACA38C4FA9D88B9E28_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconSign_ffLDL_fft_m791926560E1F740CCAE596D6A120A3257CD4B525_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconSign_ffLDL_treesize_m3C624B87E006DF04B427F357E46408F85F4905B7_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconSign_ffSampling_fft_dyntree_m54A6783689BB0185983622F67E1FC1265EF3CECA_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconSign_ffSampling_fft_m5F5A30695F0821F2D1B4BE8CA01888AFEB468938_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconSign_sign_dyn_m06AC2DB455B3A208B264B132A63C8019A38BED68_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconSign_sign_tree_m6E3AD9EEDCBC597CE568897A44098718F1BC3AEE_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconSign_skoff_b00_m65C8E229E9366EC2429BFF7FC6C6AB4C3032FFEA_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconSign_skoff_b01_m77D1E823C813E520BC85D113D0BC0A5A2FD73639_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconSign_skoff_b10_m5FAE869A61A1F7060F0B286B2DCB099278AC92B0_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconSign_skoff_b11_mE707CE1C9723C85F70E15E273BF3DC0361C3B187_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconSign_skoff_tree_m63CE04CAD3BD88BC7C807888F73CDE50C239C1EB_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconSign_smallints_to_fpr_mBAB0B0E6FF84DCDF48A65D61141F365DA41FCAB0_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconSigner_GenerateSignature_mCBB185EF9A8D57EBF25CA7D78859585463C0677F_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconSigner_Init_m02ED1478E472C22C64061B3C34DB3E91940110CC_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* FalconSigner_VerifySignature_mC9F3A4CB86ED10ED6894C7E8AC7D7E2D18746092_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconSigner__ctor_mC43D21CA416BFC5CA0E76A8D45C432BF4D134FB8_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconSmallPrime__ctor_m138ADB965459DA46D6AE76DCF82812FD8854AD07_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconSmallPrimes__ctor_m092759D2761BD69D191446CB78498C7FD74839FF_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconVrfy__ctor_m12B701BFBE375B2214AAA66D51CBDB672E2D83D8_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconVrfy__ctor_m7218294B61F033CABB6414B24063767167384767_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconVrfy_complete_private_mC5D9EC75FBE53D1AA47F88B565B1EBA24CD815CE_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconVrfy_compute_public_m4D5B0E49C1F7D518C76405E67901A308A112FAD5_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconVrfy_count_nttzero_mD77949B4784D0C2DFE6DACBFAF40C251A24BB3AA_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconVrfy_is_invertible_mC48C9816793001DD3A7B0D1608DF991197C15DF5_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconVrfy_mq_NTT_mAFAA4609E703D73EFF5F634BE7EF50F4522C46B7_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconVrfy_mq_add_mB11B3BB6F02CFDF4642DC7D3F04D2E27D7F77E47_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconVrfy_mq_conv_small_mC2D2C5A30280B87258742722B821656FAEF74B2B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconVrfy_mq_div_12289_mEBD44C7E11C14CFBA9BE0F0E5470AEDB95AF9A55_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconVrfy_mq_iNTT_m6FAEF47DDEDF515158BFFE449C0F76755D0EC5ED_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconVrfy_mq_montymul_m15091D7F9F9F8FBBFA1C1A15CCFDD3A660CEE5DB_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconVrfy_mq_montysqr_m75E61668F050C15730949D6565122E5E81FDAAFE_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconVrfy_mq_poly_montymul_ntt_m8691CE0D6B097C86BDB57D80495C0E0807A3663B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconVrfy_mq_poly_sub_mF9D5E8188F697DFF831F477FC43CE1CC42168D35_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconVrfy_mq_poly_tomonty_m66091DBF31FBBB554466A504747D9DA1677509CC_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconVrfy_mq_rshift1_mA9E6E328BB4BFE6A1C542E184EBEF61C901CAD8A_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconVrfy_mq_sub_m42B7D3296EF76A99850650BCE318ACB5C089D7CC_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconVrfy_to_ntt_monty_m4CC798BC2AB93A94564B28B548DCF7DA816B29AA_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconVrfy_verify_raw_mE4D2E876EDADDB94C5CA1D4C167EA9603CA2C3AE_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FalconVrfy_verify_recover_m0049CE5BDACBD74AFED6BCF6CEC97966C546C31B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FprEngine_Fpr_mEC76011FDA98F7249C8C14CC84E32DDCE1F0EDA7_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FprEngine_fpr_add_m9C66C173CDAE129783FCE61DF5001E7FF681341A_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FprEngine_fpr_div_mDDD601C18E9D1320205EEC7D662714E4563E8186_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FprEngine_fpr_double_mB4A9520432DEFC9CC29119A28642D6D87AC05644_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FprEngine_fpr_expm_p63_mA7198BD9185C76331A667F7251C4028BEB406D12_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FprEngine_fpr_floor_m9F745DC833BDA76CC2D72457AEF7C7F1043FDF79_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FprEngine_fpr_half_m31663CD95C2FC0BD60F3E5FD4EF575885E3F9EBE_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FprEngine_fpr_inv_m8317C767E493509D5F18EAB626FBFE97D9E29DE4_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FprEngine_fpr_lt_mAFBEF27AF21358475BA406EBA81E4F0DD07E6CA6_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FprEngine_fpr_mul_m15DC16B5AA7E87A53A723B6A55E39DF5F2AEAAFD_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FprEngine_fpr_neg_m2BC0CA484A233841F5D70249283040AA0FBB431C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FprEngine_fpr_of_m76C23229B604A851F9688949D03D2E815A9D66A9_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FprEngine_fpr_rint_m3FC623BDACBECE77E87490608E5FD05D199F81D7_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FprEngine_fpr_sqr_m2A89D615E12F58DA681322D0BB81AEC13584C30A_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FprEngine_fpr_sqrt_m0C287BF7FE8F6901D1ACF03AE0B7BB08E83D9995_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FprEngine_fpr_sub_m7E4B08B0A31116ABBE94004679AA5D6DEE43837C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FprEngine_fpr_trunc_m5B6F3A6BBD9CA447CD2CBB6F3E8FF16E212C4803_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* KeyGenerationParameters_get_Random_m19B9F0624F1A88863EBD9F26258DC620FE82C491_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* ParametersWithRandom_get_Parameters_m7FA845EEBA1898FEB7FD883D146173B41D9CDC55_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* ParametersWithRandom_get_Random_mD73DE04E2132FCD1F3DF508FBAC4B6FDF1477342_RuntimeMethod_var;
 struct Exception_t_marshaled_com;
 struct Exception_t_marshaled_pinvoke;
 
@@ -973,14 +877,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FalconFPR_tF678FE27AD39A86C7588997C662EB82A57
 #endif
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconKeyGenerationParameters__ctor_m5EECB39EA968A53B7BD82AAF0FBD5D86689E4223 (FalconKeyGenerationParameters_t8C98A946252BAB913F2355B8D4C41BE512AC5788* __this, SecureRandom_t287D2AB9F2B890FBCB659A46C495D2F5A84D0F8A* ___0_random, FalconParameters_t4BC91591D71D76A750823F2815CBAC4C9799D5CE* ___1_parameters, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconKeyGenerationParameters__ctor_m5EECB39EA968A53B7BD82AAF0FBD5D86689E4223_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconKeyGenerationParameters__ctor_m5EECB39EA968A53B7BD82AAF0FBD5D86689E4223_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		SecureRandom_t287D2AB9F2B890FBCB659A46C495D2F5A84D0F8A* L_0 = ___0_random;
 		KeyGenerationParameters__ctor_m69E6E594D9B04818D080746A1CA2BB71BD98EA39(__this, L_0, ((int32_t)320), NULL);
@@ -992,14 +888,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconKeyGenerationParameters__ctor_m5EE
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FalconParameters_t4BC91591D71D76A750823F2815CBAC4C9799D5CE* FalconKeyGenerationParameters_get_Parameters_mB069FFFE8D9598238408677F81B6EFE674780822 (FalconKeyGenerationParameters_t8C98A946252BAB913F2355B8D4C41BE512AC5788* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconKeyGenerationParameters_get_Parameters_mB069FFFE8D9598238408677F81B6EFE674780822_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconKeyGenerationParameters_get_Parameters_mB069FFFE8D9598238408677F81B6EFE674780822_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		FalconParameters_t4BC91591D71D76A750823F2815CBAC4C9799D5CE* L_0 = __this->___parameters;
 		return L_0;
@@ -1019,13 +907,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconKeyPairGenerator_Init_mD0E8596BA0C
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconKeyGenerationParameters_t8C98A946252BAB913F2355B8D4C41BE512AC5788_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconKeyPairGenerator_Init_mD0E8596BA0C8C9BBD3C3815198F9145A3C257D83_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconNist_t8D468F8C5EA63A9CC43685DA5ACBAC23CCCC1E78_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	int32_t V_0 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconKeyPairGenerator_Init_mD0E8596BA0C8C9BBD3C3815198F9145A3C257D83_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		KeyGenerationParameters_tDB47B76F384802932A93CF7E81518A40032CE9D8* L_0 = ___0_param;
 		__this->___parameters = ((FalconKeyGenerationParameters_t8C98A946252BAB913F2355B8D4C41BE512AC5788*)CastclassClass((RuntimeObject*)L_0, FalconKeyGenerationParameters_t8C98A946252BAB913F2355B8D4C41BE512AC5788_il2cpp_TypeInfo_var));
@@ -1072,7 +957,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AsymmetricCipherKeyPair_tF8A8D6076C1067402BB1
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AsymmetricCipherKeyPair_tF8A8D6076C1067402BB1477E179C4190BECB03EF_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconKeyPairGenerator_GenerateKeyPair_m1EC638FED59CB1467B0EBF68C26188CF22F9E5C7_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconPrivateKeyParameters_t884C740CF83A33C472CA65FFD7D16E174B2287E1_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconPublicKeyParameters_t3BD7DDD42ED3E38FD932EF9EB555AB32DBEFF5D8_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
@@ -1082,8 +966,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AsymmetricCipherKeyPair_tF8A8D6076C1067402BB1
 	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* V_2 = NULL;
 	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* V_3 = NULL;
 	FalconPrivateKeyParameters_t884C740CF83A33C472CA65FFD7D16E174B2287E1* V_4 = NULL;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconKeyPairGenerator_GenerateKeyPair_m1EC638FED59CB1467B0EBF68C26188CF22F9E5C7_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		FalconNist_t8D468F8C5EA63A9CC43685DA5ACBAC23CCCC1E78* L_0 = __this->___nist;
 		NullCheck(L_0);
@@ -1112,14 +994,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AsymmetricCipherKeyPair_tF8A8D6076C1067402BB1
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconKeyPairGenerator__ctor_mA3CA6DE1A38C34DEC5EDE17C51EC7AD15FF4FC46 (FalconKeyPairGenerator_t247DF5E7D3BFA01AD8FAC9BA2FFA5BA366BC76A7* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconKeyPairGenerator__ctor_mA3CA6DE1A38C34DEC5EDE17C51EC7AD15FF4FC46_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconKeyPairGenerator__ctor_mA3CA6DE1A38C34DEC5EDE17C51EC7AD15FF4FC46_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
 		return;
@@ -1135,14 +1009,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconKeyPairGenerator__ctor_mA3CA6DE1A3
 #endif
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconKeyParameters__ctor_m05CF3347042CA22E63612AC6FF8F013F46546262 (FalconKeyParameters_tE955BD466E9C12E62DBE614CD760BA03E96C1459* __this, bool ___0_isprivate, FalconParameters_t4BC91591D71D76A750823F2815CBAC4C9799D5CE* ___1_parameters, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconKeyParameters__ctor_m05CF3347042CA22E63612AC6FF8F013F46546262_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconKeyParameters__ctor_m05CF3347042CA22E63612AC6FF8F013F46546262_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		bool L_0 = ___0_isprivate;
 		AsymmetricKeyParameter__ctor_m1B06D392FB6BE6E070C7A1F84576D29EC8EB228B(__this, L_0, NULL);
@@ -1154,14 +1020,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconKeyParameters__ctor_m05CF3347042CA
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FalconParameters_t4BC91591D71D76A750823F2815CBAC4C9799D5CE* FalconKeyParameters_get_Parameters_m22DC7B0FF7B094818EA3C061F9D2544A718FC467 (FalconKeyParameters_tE955BD466E9C12E62DBE614CD760BA03E96C1459* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconKeyParameters_get_Parameters_m22DC7B0FF7B094818EA3C061F9D2544A718FC467_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconKeyParameters_get_Parameters_m22DC7B0FF7B094818EA3C061F9D2544A718FC467_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		FalconParameters_t4BC91591D71D76A750823F2815CBAC4C9799D5CE* L_0 = __this->___m_parameters;
 		return L_0;
@@ -1177,14 +1035,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FalconParameters_t4BC91591D71D76A750823F2815C
 #endif
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t FalconNist_get_NonceLength_m2D699568AF2AD1D3B7B7F6B21E4A13E2578BFBEE (FalconNist_t8D468F8C5EA63A9CC43685DA5ACBAC23CCCC1E78* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconNist_get_NonceLength_m2D699568AF2AD1D3B7B7F6B21E4A13E2578BFBEE_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconNist_get_NonceLength_m2D699568AF2AD1D3B7B7F6B21E4A13E2578BFBEE_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = __this->___noncelen;
 		return L_0;
@@ -1192,14 +1042,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t FalconNist_get_NonceLength_m2D699568
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t FalconNist_get_LogN_m27FF9EBFED63B0D592A765141A201634CFD5D5E6 (FalconNist_t8D468F8C5EA63A9CC43685DA5ACBAC23CCCC1E78* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconNist_get_LogN_m27FF9EBFED63B0D592A765141A201634CFD5D5E6_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconNist_get_LogN_m27FF9EBFED63B0D592A765141A201634CFD5D5E6_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = __this->___logn;
 		return L_0;
@@ -1207,14 +1049,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t FalconNist_get_LogN_m27FF9EBFED63B0D
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FalconNist_get_CryptoBytes_m3D474F3F920B10BBC1750ECCB6BA38FD1BE64431 (FalconNist_t8D468F8C5EA63A9CC43685DA5ACBAC23CCCC1E78* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconNist_get_CryptoBytes_m3D474F3F920B10BBC1750ECCB6BA38FD1BE64431_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconNist_get_CryptoBytes_m3D474F3F920B10BBC1750ECCB6BA38FD1BE64431_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = __this->___CRYPTO_BYTES;
 		return L_0;
@@ -1227,13 +1061,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconNist__ctor_m0F96AF41FB4BF675A3F78D
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconCodec_t38BD76D8E7D504F542342D43C45CFB984281B2A8_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconCommon_tBF6F8BB4EF57C830E63B748C936553125839FA6E_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconNist__ctor_m0F96AF41FB4BF675A3F78D1C73572E6E868BB493_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconVrfy_t1E4222827BB496E1516E72A4D787A92D1A66C2B3_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	int32_t V_0 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconNist__ctor_m0F96AF41FB4BF675A3F78D1C73572E6E868BB493_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
 		uint32_t L_0 = ___1_logn;
@@ -1339,7 +1170,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FalconNist_crypto_sign_keypair_mB9677
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Arrays_tB427528651FB4A564AE712360C5DB38FFB1BF525_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconKeygen_tEDEB5F72537BC7A74B85F5A5CC07D085B59B5AAB_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconNist_crypto_sign_keypair_mB9677CA858596C17EED43B4E8FCFA725B0DD11C0_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SByteU5BU5D_t88116DA68378C3333DB73E7D36C1A06AFAA91913_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SHAKE256_t0D56B2692CF3D3122895057C0F9EF203A53414D3_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83_il2cpp_TypeInfo_var);
@@ -1354,8 +1184,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FalconNist_crypto_sign_keypair_mB9677
 	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* V_6 = NULL;
 	int32_t V_7 = 0;
 	int32_t V_8 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconNist_crypto_sign_keypair_mB9677CA858596C17EED43B4E8FCFA725B0DD11C0_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = __this->___CRYPTO_SECRETKEYBYTES;
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_1 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)L_0);
@@ -1639,8 +1467,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* V_11 = NULL;
 	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* V_12 = NULL;
 	SHAKE256_t0D56B2692CF3D3122895057C0F9EF203A53414D3* V_13 = NULL;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconNist_crypto_sign_m9F1149026A91F003CBE5FDB0E8FFCA86927445D4_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	FalconSign_t3C20D7D93F41B4C770BA09FD1793BA67901068A5* G_B2_0 = NULL;
 	FalconSign_t3C20D7D93F41B4C770BA09FD1793BA67901068A5* G_B1_0 = NULL;
 	FalconSign_t3C20D7D93F41B4C770BA09FD1793BA67901068A5* G_B4_0 = NULL;
@@ -1995,7 +1821,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FalconNist_crypto_sign_open_mEEE0A39E
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconNist_crypto_sign_open_mEEE0A39E2CDDE490917CDB3BC6D75DB712981019_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SHAKE256_t0D56B2692CF3D3122895057C0F9EF203A53414D3_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83_il2cpp_TypeInfo_var);
@@ -2007,8 +1832,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FalconNist_crypto_sign_open_mEEE0A39E
 	UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* V_3 = NULL;
 	Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB* V_4 = NULL;
 	SHAKE256_t0D56B2692CF3D3122895057C0F9EF203A53414D3* V_5 = NULL;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconNist_crypto_sign_open_mEEE0A39E2CDDE490917CDB3BC6D75DB712981019_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = __this->___logn;
 		V_1 = ((int32_t)(1<<((int32_t)((int32_t)L_0&((int32_t)31)))));
@@ -2193,14 +2016,6 @@ IL_012b:
 #endif
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconParameters__ctor_mC9ECD6308B4FE43B827BDFCADE54D6380D72D7AD (FalconParameters_t4BC91591D71D76A750823F2815CBAC4C9799D5CE* __this, String_t* ___0_name, uint32_t ___1_logn, uint32_t ___2_nonce_length, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconParameters__ctor_mC9ECD6308B4FE43B827BDFCADE54D6380D72D7AD_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconParameters__ctor_mC9ECD6308B4FE43B827BDFCADE54D6380D72D7AD_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
 		String_t* L_0 = ___0_name;
@@ -2219,11 +2034,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FalconParameters_get_LogN_mE56DF93D62
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Convert_t7097FF336D592F7C06D88A98349A44646F91EFFC_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconParameters_get_LogN_mE56DF93D62A8615CAB5B9F5975F04B8B4E8E4699_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconParameters_get_LogN_mE56DF93D62A8615CAB5B9F5975F04B8B4E8E4699_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = __this->___logn;
 		il2cpp_codegen_runtime_class_init_inline(Convert_t7097FF336D592F7C06D88A98349A44646F91EFFC_il2cpp_TypeInfo_var);
@@ -2238,11 +2050,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FalconParameters_get_NonceLength_mB94
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Convert_t7097FF336D592F7C06D88A98349A44646F91EFFC_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconParameters_get_NonceLength_mB94A0115D47DAD962C4EBBB7917D90EE6C217BF3_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconParameters_get_NonceLength_mB94A0115D47DAD962C4EBBB7917D90EE6C217BF3_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = __this->___nonce_length;
 		il2cpp_codegen_runtime_class_init_inline(Convert_t7097FF336D592F7C06D88A98349A44646F91EFFC_il2cpp_TypeInfo_var);
@@ -2253,14 +2062,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FalconParameters_get_NonceLength_mB94
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* FalconParameters_get_Name_mCA409EF492164BAB47E34B4A1084C14F6345E82C (FalconParameters_t4BC91591D71D76A750823F2815CBAC4C9799D5CE* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconParameters_get_Name_mCA409EF492164BAB47E34B4A1084C14F6345E82C_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconParameters_get_Name_mCA409EF492164BAB47E34B4A1084C14F6345E82C_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		String_t* L_0 = __this->___name;
 		return L_0;
@@ -2271,14 +2072,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconParameters__cctor_m6550E761D25E687
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconParameters__cctor_m6550E761D25E6873CA367C96DFDAF83E8EF99D45_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconParameters_t4BC91591D71D76A750823F2815CBAC4C9799D5CE_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral06C87DD619DED138A2E8252C55E880BE8747DF41);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral8DA2B4CD7D8AF8C4D306F0130E7F138C5056E363);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconParameters__cctor_m6550E761D25E6873CA367C96DFDAF83E8EF99D45_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		FalconParameters_t4BC91591D71D76A750823F2815CBAC4C9799D5CE* L_0 = (FalconParameters_t4BC91591D71D76A750823F2815CBAC4C9799D5CE*)il2cpp_codegen_object_new(FalconParameters_t4BC91591D71D76A750823F2815CBAC4C9799D5CE_il2cpp_TypeInfo_var);
 		FalconParameters__ctor_mC9ECD6308B4FE43B827BDFCADE54D6380D72D7AD(L_0, _stringLiteral06C87DD619DED138A2E8252C55E880BE8747DF41, ((int32_t)9), ((int32_t)40), NULL);
@@ -2305,11 +2103,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconPrivateKeyParameters__ctor_m126F57
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Arrays_tB427528651FB4A564AE712360C5DB38FFB1BF525_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconPrivateKeyParameters__ctor_m126F57BE3363835459244869DBEE151D1092226F_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconPrivateKeyParameters__ctor_m126F57BE3363835459244869DBEE151D1092226F_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		FalconParameters_t4BC91591D71D76A750823F2815CBAC4C9799D5CE* L_0 = ___0_parameters;
 		FalconKeyParameters__ctor_m05CF3347042CA22E63612AC6FF8F013F46546262(__this, (bool)1, L_0, NULL);
@@ -2344,11 +2139,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Arrays_tB427528651FB4A564AE712360C5DB38FFB1BF525_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ByteU5BU5DU5BU5D_t19A0C6D66F22DF673E9CDB37DEF566FE0EC947FA_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconPrivateKeyParameters_GetEncoded_m11164C075B5CE75DFCDCA6EA4D6F8DAAA70EF85C_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconPrivateKeyParameters_GetEncoded_m11164C075B5CE75DFCDCA6EA4D6F8DAAA70EF85C_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		ByteU5BU5DU5BU5D_t19A0C6D66F22DF673E9CDB37DEF566FE0EC947FA* L_0 = (ByteU5BU5DU5BU5D_t19A0C6D66F22DF673E9CDB37DEF566FE0EC947FA*)(ByteU5BU5DU5BU5D_t19A0C6D66F22DF673E9CDB37DEF566FE0EC947FA*)SZArrayNew(ByteU5BU5DU5BU5D_t19A0C6D66F22DF673E9CDB37DEF566FE0EC947FA_il2cpp_TypeInfo_var, (uint32_t)3);
 		ByteU5BU5DU5BU5D_t19A0C6D66F22DF673E9CDB37DEF566FE0EC947FA* L_1 = L_0;
@@ -2375,11 +2167,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Arrays_tB427528651FB4A564AE712360C5DB38FFB1BF525_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconPrivateKeyParameters_GetPublicKey_m766C5C6EA46536CAC6FF39113D6675F30379E7DB_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconPrivateKeyParameters_GetPublicKey_m766C5C6EA46536CAC6FF39113D6675F30379E7DB_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = __this->___pk;
 		il2cpp_codegen_runtime_class_init_inline(Arrays_tB427528651FB4A564AE712360C5DB38FFB1BF525_il2cpp_TypeInfo_var);
@@ -2394,11 +2183,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Arrays_tB427528651FB4A564AE712360C5DB38FFB1BF525_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconPrivateKeyParameters_GetSpolyLittleF_m26AC93B96FFC45631276D7659C3691D817E96655_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconPrivateKeyParameters_GetSpolyLittleF_m26AC93B96FFC45631276D7659C3691D817E96655_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = __this->___f;
 		il2cpp_codegen_runtime_class_init_inline(Arrays_tB427528651FB4A564AE712360C5DB38FFB1BF525_il2cpp_TypeInfo_var);
@@ -2413,11 +2199,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Arrays_tB427528651FB4A564AE712360C5DB38FFB1BF525_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconPrivateKeyParameters_GetG_m11F8AF9F3AE411BFE40574F5D9369B1891CC60AB_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconPrivateKeyParameters_GetG_m11F8AF9F3AE411BFE40574F5D9369B1891CC60AB_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = __this->___g;
 		il2cpp_codegen_runtime_class_init_inline(Arrays_tB427528651FB4A564AE712360C5DB38FFB1BF525_il2cpp_TypeInfo_var);
@@ -2432,11 +2215,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Arrays_tB427528651FB4A564AE712360C5DB38FFB1BF525_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconPrivateKeyParameters_GetSpolyBigF_m96FE42E90DA8AA5371695A805AF3E969A73043BA_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconPrivateKeyParameters_GetSpolyBigF_m96FE42E90DA8AA5371695A805AF3E969A73043BA_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = __this->___F;
 		il2cpp_codegen_runtime_class_init_inline(Arrays_tB427528651FB4A564AE712360C5DB38FFB1BF525_il2cpp_TypeInfo_var);
@@ -2459,11 +2239,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconPublicKeyParameters__ctor_m1E046D6
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Arrays_tB427528651FB4A564AE712360C5DB38FFB1BF525_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconPublicKeyParameters__ctor_m1E046D63DDA2B6E15D52B51D61D1C3A0EA1CDFBC_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconPublicKeyParameters__ctor_m1E046D63DDA2B6E15D52B51D61D1C3A0EA1CDFBC_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		FalconParameters_t4BC91591D71D76A750823F2815CBAC4C9799D5CE* L_0 = ___0_parameters;
 		FalconKeyParameters__ctor_m05CF3347042CA22E63612AC6FF8F013F46546262(__this, (bool)0, L_0, NULL);
@@ -2482,11 +2259,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Arrays_tB427528651FB4A564AE712360C5DB38FFB1BF525_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconPublicKeyParameters_GetEncoded_m9CECBC1306F40DF465C24C17FAB4F2A33557055A_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconPublicKeyParameters_GetEncoded_m9CECBC1306F40DF465C24C17FAB4F2A33557055A_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = __this->___publicKey;
 		il2cpp_codegen_runtime_class_init_inline(Arrays_tB427528651FB4A564AE712360C5DB38FFB1BF525_il2cpp_TypeInfo_var);
@@ -2510,11 +2284,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconRNG__ctor_mAE9633500413F18C4E9A71B
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconConversions_t939A508C0B22ABF00E1DB2D5E4D358932A0FD7D9_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconRNG__ctor_mAE9633500413F18C4E9A71B6E80333E4F6EFBCFA_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconRNG__ctor_mAE9633500413F18C4E9A71B6E80333E4F6EFBCFA_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)512));
@@ -2536,7 +2307,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconRNG_prng_init_mCC0887559E130D513FA
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconRNG_prng_init_mCC0887559E130D513FAD34AEADBADFDC1C2A22E1_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* V_0 = NULL;
@@ -2544,8 +2314,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconRNG_prng_init_mCC0887559E130D513FA
 	uint64_t V_2 = 0;
 	int32_t V_3 = 0;
 	uint32_t V_4 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconRNG_prng_init_mCC0887559E130D513FAD34AEADBADFDC1C2A22E1_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)56));
 		V_0 = L_0;
@@ -2559,7 +2327,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconRNG_prng_init_mCC0887559E130D513FA
 
 IL_0016:
 	{
-		CHECK_PAUSE_POINT;
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_3 = V_0;
 		int32_t L_4 = V_3;
 		NullCheck(L_3);
@@ -2628,14 +2395,6 @@ IL_005e:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconRNG_QROUND_mE8B60160DF7E4F451358F6DDC2CD9B523314392C (FalconRNG_tDF0A80FEBD252A3D530FD905BAE0FA34E18EE147* __this, UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* ___0_state, int32_t ___1_a, int32_t ___2_b, int32_t ___3_c, int32_t ___4_d, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconRNG_QROUND_mE8B60160DF7E4F451358F6DDC2CD9B523314392C_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconRNG_QROUND_mE8B60160DF7E4F451358F6DDC2CD9B523314392C_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_0 = ___0_state;
 		int32_t L_1 = ___1_a;
@@ -2789,7 +2548,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconRNG_prng_refill_m77BFCFF6B68931056
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconRNG_prng_refill_m77BFCFF6B689310564908550EF46488B332E7E15_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_tD0F36C0306D6FC935F6D03771148885C45C2AB3E____869512F4925E92315DFF511768B46527A5E189549284F0CE5DCEC5CD221385D3_FieldInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
@@ -2800,8 +2558,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconRNG_prng_refill_m77BFCFF6B68931056
 	UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* V_3 = NULL;
 	int32_t V_4 = 0;
 	int32_t V_5 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconRNG_prng_refill_m77BFCFF6B689310564908550EF46488B332E7E15_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_0 = (UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA*)(UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA*)SZArrayNew(UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA_il2cpp_TypeInfo_var, (uint32_t)4);
 		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_1 = L_0;
@@ -2820,7 +2576,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconRNG_prng_refill_m77BFCFF6B68931056
 
 IL_002d:
 	{
-		CHECK_PAUSE_POINT;
 		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_6 = (UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA*)(UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA*)SZArrayNew(UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA_il2cpp_TypeInfo_var, (uint32_t)((int32_t)16));
 		V_3 = L_6;
 		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_7 = V_0;
@@ -2851,7 +2606,6 @@ IL_002d:
 
 IL_0081:
 	{
-		CHECK_PAUSE_POINT;
 		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_21 = V_3;
 		FalconRNG_QROUND_mE8B60160DF7E4F451358F6DDC2CD9B523314392C(__this, L_21, 0, 4, 8, ((int32_t)12), NULL);
 		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_22 = V_3;
@@ -2887,7 +2641,6 @@ IL_00ed:
 
 IL_00f8:
 	{
-		CHECK_PAUSE_POINT;
 		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_31 = V_3;
 		int32_t L_32 = V_4;
 		NullCheck(L_31);
@@ -2918,7 +2671,6 @@ IL_010e:
 
 IL_0118:
 	{
-		CHECK_PAUSE_POINT;
 		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_41 = V_3;
 		int32_t L_42 = V_4;
 		NullCheck(L_41);
@@ -2974,7 +2726,6 @@ IL_0142:
 
 IL_019f:
 	{
-		CHECK_PAUSE_POINT;
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_66 = __this->___bd;
 		int32_t L_67 = V_2;
 		int32_t L_68 = V_4;
@@ -3054,16 +2805,8 @@ IL_020d:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconRNG_prng_get_bytes_m4DD200C7AF7BAFD4A103283650060E1261241CE7 (FalconRNG_tDF0A80FEBD252A3D530FD905BAE0FA34E18EE147* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_dstsrc, int32_t ___1_dst, int32_t ___2_len, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconRNG_prng_get_bytes_m4DD200C7AF7BAFD4A103283650060E1261241CE7_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconRNG_prng_get_bytes_m4DD200C7AF7BAFD4A103283650060E1261241CE7_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = ___1_dst;
 		V_0 = L_0;
@@ -3072,7 +2815,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconRNG_prng_get_bytes_m4DD200C7AF7BAF
 
 IL_0004:
 	{
-		CHECK_PAUSE_POINT;
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_1 = __this->___bd;
 		NullCheck(L_1);
 		int32_t L_2 = __this->___ptr;
@@ -3131,15 +2873,7 @@ IL_0056:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint64_t FalconRNG_prng_get_u64_m8CAFACF5002988055028628ECFF53EBF88EED2C8 (FalconRNG_tDF0A80FEBD252A3D530FD905BAE0FA34E18EE147* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconRNG_prng_get_u64_m8CAFACF5002988055028628ECFF53EBF88EED2C8_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	int32_t V_0 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconRNG_prng_get_u64_m8CAFACF5002988055028628ECFF53EBF88EED2C8_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = __this->___ptr;
 		V_0 = L_0;
@@ -3205,15 +2939,7 @@ IL_001d:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t FalconRNG_prng_get_u8_m4932C2ED03BEF135BB34559BE00D0DBB17E4A1B3 (FalconRNG_tDF0A80FEBD252A3D530FD905BAE0FA34E18EE147* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconRNG_prng_get_u8_m4932C2ED03BEF135BB34559BE00D0DBB17E4A1B3_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	int32_t V_0 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconRNG_prng_get_u8_m4932C2ED03BEF135BB34559BE00D0DBB17E4A1B3_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	int32_t G_B2_0 = 0;
 	int32_t G_B1_0 = 0;
 	{
@@ -3260,12 +2986,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconSign__ctor_m99F3070E37A5D404312D0F
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconFFT_t919332BAA96334E8A4676883D22311BE793EC903_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconSign__ctor_m99F3070E37A5D404312D0F8463504DCFB00C25A3_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FprEngine_tF13CEDC792A5EC18BA833B3E832E526BA651784C_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconSign__ctor_m99F3070E37A5D404312D0F8463504DCFB00C25A3_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
 		FalconFFT_t919332BAA96334E8A4676883D22311BE793EC903* L_0 = (FalconFFT_t919332BAA96334E8A4676883D22311BE793EC903*)il2cpp_codegen_object_new(FalconFFT_t919332BAA96334E8A4676883D22311BE793EC903_il2cpp_TypeInfo_var);
@@ -3284,14 +3007,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconSign__ctor_m99F3070E37A5D404312D0F
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t FalconSign_ffLDL_treesize_m3C624B87E006DF04B427F357E46408F85F4905B7 (FalconSign_t3C20D7D93F41B4C770BA09FD1793BA67901068A5* __this, uint32_t ___0_logn, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconSign_ffLDL_treesize_m3C624B87E006DF04B427F357E46408F85F4905B7_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconSign_ffLDL_treesize_m3C624B87E006DF04B427F357E46408F85F4905B7_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___0_logn;
 		uint32_t L_1 = ___0_logn;
@@ -3300,16 +3015,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t FalconSign_ffLDL_treesize_m3C624B87E
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconSign_ffLDL_fft_inner_mADCBA0BBFD5E5DF31CF0DAACA38C4FA9D88B9E28 (FalconSign_t3C20D7D93F41B4C770BA09FD1793BA67901068A5* __this, FalconFPRU5BU5D_t90B1378389E570965EB98059FD04351C9CCCADB0* ___0_treesrc, int32_t ___1_tree, FalconFPRU5BU5D_t90B1378389E570965EB98059FD04351C9CCCADB0* ___2_g0src, int32_t ___3_g0, FalconFPRU5BU5D_t90B1378389E570965EB98059FD04351C9CCCADB0* ___4_g1src, int32_t ___5_g1, uint32_t ___6_logn, FalconFPRU5BU5D_t90B1378389E570965EB98059FD04351C9CCCADB0* ___7_tmpsrc, int32_t ___8_tmp, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconSign_ffLDL_fft_inner_mADCBA0BBFD5E5DF31CF0DAACA38C4FA9D88B9E28_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconSign_ffLDL_fft_inner_mADCBA0BBFD5E5DF31CF0DAACA38C4FA9D88B9E28_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___6_logn;
 		V_0 = ((int32_t)(1<<((int32_t)((int32_t)L_0&((int32_t)31)))));
@@ -3404,18 +3111,10 @@ IL_001c:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconSign_ffLDL_fft_m791926560E1F740CCAE596D6A120A3257CD4B525 (FalconSign_t3C20D7D93F41B4C770BA09FD1793BA67901068A5* __this, FalconFPRU5BU5D_t90B1378389E570965EB98059FD04351C9CCCADB0* ___0_treesrc, int32_t ___1_tree, FalconFPRU5BU5D_t90B1378389E570965EB98059FD04351C9CCCADB0* ___2_g00src, int32_t ___3_g00, FalconFPRU5BU5D_t90B1378389E570965EB98059FD04351C9CCCADB0* ___4_g01src, int32_t ___5_g01, FalconFPRU5BU5D_t90B1378389E570965EB98059FD04351C9CCCADB0* ___6_g11src, int32_t ___7_g11, uint32_t ___8_logn, FalconFPRU5BU5D_t90B1378389E570965EB98059FD04351C9CCCADB0* ___9_tmpsrc, int32_t ___10_tmp, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconSign_ffLDL_fft_m791926560E1F740CCAE596D6A120A3257CD4B525_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
 	int32_t V_2 = 0;
 	int32_t V_3 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconSign_ffLDL_fft_m791926560E1F740CCAE596D6A120A3257CD4B525_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___8_logn;
 		V_0 = ((int32_t)(1<<((int32_t)((int32_t)L_0&((int32_t)31)))));
@@ -3530,15 +3229,7 @@ IL_001c:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconSign_ffLDL_binary_normalize_m2101159A0D75E6E282FC8F2730AB813B3E9BEE77 (FalconSign_t3C20D7D93F41B4C770BA09FD1793BA67901068A5* __this, FalconFPRU5BU5D_t90B1378389E570965EB98059FD04351C9CCCADB0* ___0_treesrc, int32_t ___1_tree, uint32_t ___2_orig_logn, uint32_t ___3_logn, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconSign_ffLDL_binary_normalize_m2101159A0D75E6E282FC8F2730AB813B3E9BEE77_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	int32_t V_0 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconSign_ffLDL_binary_normalize_m2101159A0D75E6E282FC8F2730AB813B3E9BEE77_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___3_logn;
 		V_0 = ((int32_t)(1<<((int32_t)((int32_t)L_0&((int32_t)31)))));
@@ -3598,16 +3289,8 @@ IL_0042:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconSign_smallints_to_fpr_mBAB0B0E6FF84DCDF48A65D61141F365DA41FCAB0 (FalconSign_t3C20D7D93F41B4C770BA09FD1793BA67901068A5* __this, FalconFPRU5BU5D_t90B1378389E570965EB98059FD04351C9CCCADB0* ___0_rsrc, int32_t ___1_r, SByteU5BU5D_t88116DA68378C3333DB73E7D36C1A06AFAA91913* ___2_tsrc, int32_t ___3_t, uint32_t ___4_logn, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconSign_smallints_to_fpr_mBAB0B0E6FF84DCDF48A65D61141F365DA41FCAB0_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconSign_smallints_to_fpr_mBAB0B0E6FF84DCDF48A65D61141F365DA41FCAB0_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___4_logn;
 		V_0 = ((int32_t)(1<<((int32_t)((int32_t)L_0&((int32_t)31)))));
@@ -3617,7 +3300,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconSign_smallints_to_fpr_mBAB0B0E6FF8
 
 IL_000c:
 	{
-		CHECK_PAUSE_POINT;
 		FalconFPRU5BU5D_t90B1378389E570965EB98059FD04351C9CCCADB0* L_1 = ___0_rsrc;
 		int32_t L_2 = ___1_r;
 		int32_t L_3 = V_1;
@@ -3652,28 +3334,12 @@ IL_002b:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FalconSign_skoff_b00_m65C8E229E9366EC2429BFF7FC6C6AB4C3032FFEA (FalconSign_t3C20D7D93F41B4C770BA09FD1793BA67901068A5* __this, uint32_t ___0_logn, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconSign_skoff_b00_m65C8E229E9366EC2429BFF7FC6C6AB4C3032FFEA_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconSign_skoff_b00_m65C8E229E9366EC2429BFF7FC6C6AB4C3032FFEA_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		return 0;
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FalconSign_skoff_b01_m77D1E823C813E520BC85D113D0BC0A5A2FD73639 (FalconSign_t3C20D7D93F41B4C770BA09FD1793BA67901068A5* __this, uint32_t ___0_logn, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconSign_skoff_b01_m77D1E823C813E520BC85D113D0BC0A5A2FD73639_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconSign_skoff_b01_m77D1E823C813E520BC85D113D0BC0A5A2FD73639_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___0_logn;
 		return ((int32_t)(1<<((int32_t)((int32_t)L_0&((int32_t)31)))));
@@ -3681,14 +3347,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FalconSign_skoff_b01_m77D1E823C813E52
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FalconSign_skoff_b10_m5FAE869A61A1F7060F0B286B2DCB099278AC92B0 (FalconSign_t3C20D7D93F41B4C770BA09FD1793BA67901068A5* __this, uint32_t ___0_logn, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconSign_skoff_b10_m5FAE869A61A1F7060F0B286B2DCB099278AC92B0_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconSign_skoff_b10_m5FAE869A61A1F7060F0B286B2DCB099278AC92B0_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___0_logn;
 		return ((int32_t)(2<<((int32_t)((int32_t)L_0&((int32_t)31)))));
@@ -3696,14 +3354,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FalconSign_skoff_b10_m5FAE869A61A1F70
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FalconSign_skoff_b11_mE707CE1C9723C85F70E15E273BF3DC0361C3B187 (FalconSign_t3C20D7D93F41B4C770BA09FD1793BA67901068A5* __this, uint32_t ___0_logn, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconSign_skoff_b11_mE707CE1C9723C85F70E15E273BF3DC0361C3B187_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconSign_skoff_b11_mE707CE1C9723C85F70E15E273BF3DC0361C3B187_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___0_logn;
 		return ((int32_t)(3<<((int32_t)((int32_t)L_0&((int32_t)31)))));
@@ -3711,14 +3361,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FalconSign_skoff_b11_mE707CE1C9723C85
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FalconSign_skoff_tree_m63CE04CAD3BD88BC7C807888F73CDE50C239C1EB (FalconSign_t3C20D7D93F41B4C770BA09FD1793BA67901068A5* __this, uint32_t ___0_logn, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconSign_skoff_tree_m63CE04CAD3BD88BC7C807888F73CDE50C239C1EB_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconSign_skoff_tree_m63CE04CAD3BD88BC7C807888F73CDE50C239C1EB_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___0_logn;
 		return ((int32_t)(4<<((int32_t)((int32_t)L_0&((int32_t)31)))));
@@ -3726,20 +3368,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FalconSign_skoff_tree_m63CE04CAD3BD88
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconSign_ffSampling_fft_dyntree_m54A6783689BB0185983622F67E1FC1265EF3CECA (FalconSign_t3C20D7D93F41B4C770BA09FD1793BA67901068A5* __this, SamplerZ_t845AF24690095CBE8FC5272AC4BD4494F4FD74CA* ___0_samp, FalconFPRU5BU5D_t90B1378389E570965EB98059FD04351C9CCCADB0* ___1_t0src, int32_t ___2_t0, FalconFPRU5BU5D_t90B1378389E570965EB98059FD04351C9CCCADB0* ___3_t1src, int32_t ___4_t1, FalconFPRU5BU5D_t90B1378389E570965EB98059FD04351C9CCCADB0* ___5_g00src, int32_t ___6_g00, FalconFPRU5BU5D_t90B1378389E570965EB98059FD04351C9CCCADB0* ___7_g01src, int32_t ___8_g01, FalconFPRU5BU5D_t90B1378389E570965EB98059FD04351C9CCCADB0* ___9_g11src, int32_t ___10_g11, uint32_t ___11_orig_logn, uint32_t ___12_logn, FalconFPRU5BU5D_t90B1378389E570965EB98059FD04351C9CCCADB0* ___13_tmpsrc, int32_t ___14_tmp, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconSign_ffSampling_fft_dyntree_m54A6783689BB0185983622F67E1FC1265EF3CECA_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
 	int32_t V_2 = 0;
 	int32_t V_3 = 0;
 	FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 V_4;
 	memset((&V_4), 0, sizeof(V_4));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconSign_ffSampling_fft_dyntree_m54A6783689BB0185983622F67E1FC1265EF3CECA_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___12_logn;
 		if (L_0)
@@ -4011,12 +3645,6 @@ IL_0087:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconSign_ffSampling_fft_m5F5A30695F0821F2D1B4BE8CA01888AFEB468938 (FalconSign_t3C20D7D93F41B4C770BA09FD1793BA67901068A5* __this, SamplerZ_t845AF24690095CBE8FC5272AC4BD4494F4FD74CA* ___0_samp, FalconFPRU5BU5D_t90B1378389E570965EB98059FD04351C9CCCADB0* ___1_z0src, int32_t ___2_z0, FalconFPRU5BU5D_t90B1378389E570965EB98059FD04351C9CCCADB0* ___3_z1src, int32_t ___4_z1, FalconFPRU5BU5D_t90B1378389E570965EB98059FD04351C9CCCADB0* ___5_treesrc, int32_t ___6_tree, FalconFPRU5BU5D_t90B1378389E570965EB98059FD04351C9CCCADB0* ___7_t0src, int32_t ___8_t0, FalconFPRU5BU5D_t90B1378389E570965EB98059FD04351C9CCCADB0* ___9_t1src, int32_t ___10_t1, uint32_t ___11_logn, FalconFPRU5BU5D_t90B1378389E570965EB98059FD04351C9CCCADB0* ___12_tmpsrc, int32_t ___13_tmp, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconSign_ffSampling_fft_m5F5A30695F0821F2D1B4BE8CA01888AFEB468938_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
 	int32_t V_2 = 0;
@@ -4073,8 +3701,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconSign_ffSampling_fft_m5F5A30695F082
 	memset((&V_28), 0, sizeof(V_28));
 	FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 V_29;
 	memset((&V_29), 0, sizeof(V_29));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconSign_ffSampling_fft_m5F5A30695F0821F2D1B4BE8CA01888AFEB468938_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___11_logn;
 		if ((!(((uint32_t)L_0) == ((uint32_t)2))))
@@ -5189,7 +4815,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FalconSign_do_sign_tree_m2BD24B922AEF
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconSign_do_sign_tree_m2BD24B922AEF59F5E4CCF1E0D638004F16192A72_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -5211,8 +4836,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FalconSign_do_sign_tree_m2BD24B922AEF
 	Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB* V_14 = NULL;
 	Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB* V_15 = NULL;
 	int32_t V_16 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconSign_do_sign_tree_m2BD24B922AEF59F5E4CCF1E0D638004F16192A72_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___7_logn;
 		V_0 = ((int32_t)(1<<((int32_t)((int32_t)L_0&((int32_t)31)))));
@@ -5252,7 +4875,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FalconSign_do_sign_tree_m2BD24B922AEF
 
 IL_0054:
 	{
-		CHECK_PAUSE_POINT;
 		FalconFPRU5BU5D_t90B1378389E570965EB98059FD04351C9CCCADB0* L_19 = ___8_tmpsrc;
 		int32_t L_20 = V_2;
 		int32_t L_21 = V_1;
@@ -5452,7 +5074,6 @@ IL_0075:
 
 IL_020f:
 	{
-		CHECK_PAUSE_POINT;
 		UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* L_154 = ___5_hmsrc;
 		int32_t L_155 = ___6_hm;
 		int32_t L_156 = V_1;
@@ -5505,7 +5126,6 @@ IL_024b:
 
 IL_0260:
 	{
-		CHECK_PAUSE_POINT;
 		Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB* L_179 = V_15;
 		int32_t L_180 = V_1;
 		FprEngine_tF13CEDC792A5EC18BA833B3E832E526BA651784C* L_181 = __this->___fpre;
@@ -5570,7 +5190,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FalconSign_do_sign_dyn_m51F2DD1E4B1DB
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconSign_do_sign_dyn_m51F2DD1E4B1DB3AB3056EE4E1B7FBDD12DD013AF_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -5594,8 +5213,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FalconSign_do_sign_dyn_m51F2DD1E4B1DB
 	Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB* V_16 = NULL;
 	Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB* V_17 = NULL;
 	int32_t V_18 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconSign_do_sign_dyn_m51F2DD1E4B1DB3AB3056EE4E1B7FBDD12DD013AF_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___13_logn;
 		V_0 = ((int32_t)(1<<((int32_t)((int32_t)L_0&((int32_t)31)))));
@@ -5784,7 +5401,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FalconSign_do_sign_dyn_m51F2DD1E4B1DB
 
 IL_01c4:
 	{
-		CHECK_PAUSE_POINT;
 		FalconFPRU5BU5D_t90B1378389E570965EB98059FD04351C9CCCADB0* L_130 = ___14_tmpsrc;
 		int32_t L_131 = V_2;
 		int32_t L_132 = V_1;
@@ -6078,7 +5694,6 @@ IL_01e6:
 
 IL_0467:
 	{
-		CHECK_PAUSE_POINT;
 		UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* L_334 = ___11_hmsrc;
 		int32_t L_335 = ___12_hm;
 		int32_t L_336 = V_1;
@@ -6134,7 +5749,6 @@ IL_04a3:
 
 IL_04c0:
 	{
-		CHECK_PAUSE_POINT;
 		Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB* L_361 = V_17;
 		int32_t L_362 = V_1;
 		FprEngine_tF13CEDC792A5EC18BA833B3E832E526BA651784C* L_363 = __this->___fpre;
@@ -6195,14 +5809,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconSign_sign_tree_m6E3AD9EEDCBC597CE5
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconRNG_tDF0A80FEBD252A3D530FD905BAE0FA34E18EE147_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconSign_sign_tree_m6E3AD9EEDCBC597CE568897A44098718F1BC3AEE_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SamplerZ_t845AF24690095CBE8FC5272AC4BD4494F4FD74CA_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	int32_t V_0 = 0;
 	SamplerZ_t845AF24690095CBE8FC5272AC4BD4494F4FD74CA* V_1 = NULL;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconSign_sign_tree_m6E3AD9EEDCBC597CE568897A44098718F1BC3AEE_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = ___9_tmp;
 		V_0 = L_0;
@@ -6210,7 +5821,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconSign_sign_tree_m6E3AD9EEDCBC597CE5
 
 IL_0003:
 	{
-		CHECK_PAUSE_POINT;
 		FalconRNG_tDF0A80FEBD252A3D530FD905BAE0FA34E18EE147* L_1 = (FalconRNG_tDF0A80FEBD252A3D530FD905BAE0FA34E18EE147*)il2cpp_codegen_object_new(FalconRNG_tDF0A80FEBD252A3D530FD905BAE0FA34E18EE147_il2cpp_TypeInfo_var);
 		FalconRNG__ctor_mAE9633500413F18C4E9A71B6E80333E4F6EFBCFA(L_1, NULL);
 		FalconRNG_tDF0A80FEBD252A3D530FD905BAE0FA34E18EE147* L_2 = L_1;
@@ -6255,17 +5865,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconSign_sign_dyn_m06AC2DB455B3A208B26
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconRNG_tDF0A80FEBD252A3D530FD905BAE0FA34E18EE147_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconSign_sign_dyn_m06AC2DB455B3A208B264B132A63C8019A38BED68_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SamplerZ_t845AF24690095CBE8FC5272AC4BD4494F4FD74CA_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	SamplerZ_t845AF24690095CBE8FC5272AC4BD4494F4FD74CA* V_0 = NULL;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconSign_sign_dyn_m06AC2DB455B3A208B264B132A63C8019A38BED68_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 
 IL_0000:
 	{
-		CHECK_PAUSE_POINT;
 		FalconRNG_tDF0A80FEBD252A3D530FD905BAE0FA34E18EE147* L_0 = (FalconRNG_tDF0A80FEBD252A3D530FD905BAE0FA34E18EE147*)il2cpp_codegen_object_new(FalconRNG_tDF0A80FEBD252A3D530FD905BAE0FA34E18EE147_il2cpp_TypeInfo_var);
 		FalconRNG__ctor_mAE9633500413F18C4E9A71B6E80333E4F6EFBCFA(L_0, NULL);
 		FalconRNG_tDF0A80FEBD252A3D530FD905BAE0FA34E18EE147* L_1 = L_0;
@@ -6326,7 +5932,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconSigner_Init_m02ED1478E472C22C64061
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconNist_t8D468F8C5EA63A9CC43685DA5ACBAC23CCCC1E78_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconPrivateKeyParameters_t884C740CF83A33C472CA65FFD7D16E174B2287E1_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconPublicKeyParameters_t3BD7DDD42ED3E38FD932EF9EB555AB32DBEFF5D8_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconSigner_Init_m02ED1478E472C22C64061B3C34DB3E91940110CC_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ParametersWithRandom_tDB253615CB46C1C30CBBF2052ECC7F42E78F2219_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -6335,8 +5940,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconSigner_Init_m02ED1478E472C22C64061
 	FalconPrivateKeyParameters_t884C740CF83A33C472CA65FFD7D16E174B2287E1* V_2 = NULL;
 	ParametersWithRandom_tDB253615CB46C1C30CBBF2052ECC7F42E78F2219* V_3 = NULL;
 	FalconPublicKeyParameters_t3BD7DDD42ED3E38FD932EF9EB555AB32DBEFF5D8* V_4 = NULL;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconSigner_Init_m02ED1478E472C22C64061B3C34DB3E91940110CC_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		bool L_0 = ___0_forSigning;
 		if (!L_0)
@@ -6434,12 +6037,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconSigner_GenerateSignature_mCBB185EF9A8D57EBF25CA7D78859585463C0677F_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* V_0 = NULL;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconSigner_GenerateSignature_mCBB185EF9A8D57EBF25CA7D78859585463C0677F_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		FalconNist_t8D468F8C5EA63A9CC43685DA5ACBAC23CCCC1E78* L_0 = __this->___nist;
 		NullCheck(L_0);
@@ -6470,8 +6070,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool FalconSigner_VerifySignature_mC9F3A4CB86
 	}
 	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* V_0 = NULL;
 	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* V_1 = NULL;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconSigner_VerifySignature_mC9F3A4CB86ED10ED6894C7E8AC7D7E2D18746092_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = ___1_signature;
 		NullCheck(L_0);
@@ -6540,14 +6138,6 @@ IL_0016:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconSigner__ctor_mC43D21CA416BFC5CA0E76A8D45C432BF4D134FB8 (FalconSigner_t0D7BF885F37FD94DCB16E77733851C0E0846539A* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconSigner__ctor_mC43D21CA416BFC5CA0E76A8D45C432BF4D134FB8_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconSigner__ctor_mC43D21CA416BFC5CA0E76A8D45C432BF4D134FB8_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
 		return;
@@ -6563,14 +6153,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconSigner__ctor_mC43D21CA416BFC5CA0E7
 #endif
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconSmallPrime__ctor_m138ADB965459DA46D6AE76DCF82812FD8854AD07 (FalconSmallPrime_tD7D3CBDB6BD422ABF34FD37CA5BEC5A1660662CF* __this, uint32_t ___0_p, uint32_t ___1_g, uint32_t ___2_s, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconSmallPrime__ctor_m138ADB965459DA46D6AE76DCF82812FD8854AD07_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconSmallPrime__ctor_m138ADB965459DA46D6AE76DCF82812FD8854AD07_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
 		uint32_t L_0 = ___0_p;
@@ -6597,11 +6179,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconSmallPrimes__ctor_m092759D2761BD69
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconSmallPrimeU5BU5D_tD1805B03C9F3D07409542F0DD87AAE3846DA7316_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconSmallPrime_tD7D3CBDB6BD422ABF34FD37CA5BEC5A1660662CF_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconSmallPrimes__ctor_m092759D2761BD69D191446CB78498C7FD74839FF_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconSmallPrimes__ctor_m092759D2761BD69D191446CB78498C7FD74839FF_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		FalconSmallPrimeU5BU5D_tD1805B03C9F3D07409542F0DD87AAE3846DA7316* L_0 = (FalconSmallPrimeU5BU5D_tD1805B03C9F3D07409542F0DD87AAE3846DA7316*)(FalconSmallPrimeU5BU5D_tD1805B03C9F3D07409542F0DD87AAE3846DA7316*)SZArrayNew(FalconSmallPrimeU5BU5D_tD1805B03C9F3D07409542F0DD87AAE3846DA7316_il2cpp_TypeInfo_var, (uint32_t)((int32_t)522));
 		FalconSmallPrimeU5BU5D_tD1805B03C9F3D07409542F0DD87AAE3846DA7316* L_1 = L_0;
@@ -9756,14 +9335,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconVrfy__ctor_m12B701BFBE375B2214AAA6
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconCommon_tBF6F8BB4EF57C830E63B748C936553125839FA6E_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconVrfy__ctor_m12B701BFBE375B2214AAA66D51CBDB672E2D83D8_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_tD0F36C0306D6FC935F6D03771148885C45C2AB3E____40B7C5D256B01A9D3CAEEB482C3EFAC0DF7C77D82AC844FA48581AF28CDDEADF_FieldInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_tD0F36C0306D6FC935F6D03771148885C45C2AB3E____C756EE85B4DA1713569FCED39D0AA9C7009DC57ED998306E5B308B52C3D708DE_FieldInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconVrfy__ctor_m12B701BFBE375B2214AAA66D51CBDB672E2D83D8_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* L_0 = (UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83*)(UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83*)SZArrayNew(UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83_il2cpp_TypeInfo_var, (uint32_t)((int32_t)1024));
 		UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* L_1 = L_0;
@@ -9790,14 +9366,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconVrfy__ctor_m7218294B61F033CABB6414
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconVrfy__ctor_m7218294B61F033CABB6414B24063767167384767_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_tD0F36C0306D6FC935F6D03771148885C45C2AB3E____40B7C5D256B01A9D3CAEEB482C3EFAC0DF7C77D82AC844FA48581AF28CDDEADF_FieldInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_tD0F36C0306D6FC935F6D03771148885C45C2AB3E____C756EE85B4DA1713569FCED39D0AA9C7009DC57ED998306E5B308B52C3D708DE_FieldInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconVrfy__ctor_m7218294B61F033CABB6414B24063767167384767_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* L_0 = (UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83*)(UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83*)SZArrayNew(UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83_il2cpp_TypeInfo_var, (uint32_t)((int32_t)1024));
 		UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* L_1 = L_0;
@@ -9820,15 +9393,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconVrfy__ctor_m7218294B61F033CABB6414
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t FalconVrfy_mq_conv_small_mC2D2C5A30280B87258742722B821656FAEF74B2B (FalconVrfy_t1E4222827BB496E1516E72A4D787A92D1A66C2B3* __this, int32_t ___0_x, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconVrfy_mq_conv_small_mC2D2C5A30280B87258742722B821656FAEF74B2B_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	uint32_t V_0 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconVrfy_mq_conv_small_mC2D2C5A30280B87258742722B821656FAEF74B2B_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = ___0_x;
 		V_0 = L_0;
@@ -9841,15 +9406,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t FalconVrfy_mq_conv_small_mC2D2C5A302
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t FalconVrfy_mq_add_mB11B3BB6F02CFDF4642DC7D3F04D2E27D7F77E47 (FalconVrfy_t1E4222827BB496E1516E72A4D787A92D1A66C2B3* __this, uint32_t ___0_x, uint32_t ___1_y, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconVrfy_mq_add_mB11B3BB6F02CFDF4642DC7D3F04D2E27D7F77E47_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	uint32_t V_0 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconVrfy_mq_add_mB11B3BB6F02CFDF4642DC7D3F04D2E27D7F77E47_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___0_x;
 		uint32_t L_1 = ___1_y;
@@ -9863,15 +9420,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t FalconVrfy_mq_add_mB11B3BB6F02CFDF46
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t FalconVrfy_mq_sub_m42B7D3296EF76A99850650BCE318ACB5C089D7CC (FalconVrfy_t1E4222827BB496E1516E72A4D787A92D1A66C2B3* __this, uint32_t ___0_x, uint32_t ___1_y, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconVrfy_mq_sub_m42B7D3296EF76A99850650BCE318ACB5C089D7CC_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	uint32_t V_0 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconVrfy_mq_sub_m42B7D3296EF76A99850650BCE318ACB5C089D7CC_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___0_x;
 		uint32_t L_1 = ___1_y;
@@ -9885,14 +9434,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t FalconVrfy_mq_sub_m42B7D3296EF76A998
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t FalconVrfy_mq_rshift1_mA9E6E328BB4BFE6A1C542E184EBEF61C901CAD8A (FalconVrfy_t1E4222827BB496E1516E72A4D787A92D1A66C2B3* __this, uint32_t ___0_x, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconVrfy_mq_rshift1_mA9E6E328BB4BFE6A1C542E184EBEF61C901CAD8A_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconVrfy_mq_rshift1_mA9E6E328BB4BFE6A1C542E184EBEF61C901CAD8A_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___0_x;
 		uint32_t L_1 = ___0_x;
@@ -9903,16 +9444,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t FalconVrfy_mq_rshift1_mA9E6E328BB4BF
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t FalconVrfy_mq_montymul_m15091D7F9F9F8FBBFA1C1A15CCFDD3A660CEE5DB (FalconVrfy_t1E4222827BB496E1516E72A4D787A92D1A66C2B3* __this, uint32_t ___0_x, uint32_t ___1_y, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconVrfy_mq_montymul_m15091D7F9F9F8FBBFA1C1A15CCFDD3A660CEE5DB_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	uint32_t V_0 = 0;
 	uint32_t V_1 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconVrfy_mq_montymul_m15091D7F9F9F8FBBFA1C1A15CCFDD3A660CEE5DB_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___0_x;
 		uint32_t L_1 = ___1_y;
@@ -9933,14 +9466,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t FalconVrfy_mq_montymul_m15091D7F9F9F
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t FalconVrfy_mq_montysqr_m75E61668F050C15730949D6565122E5E81FDAAFE (FalconVrfy_t1E4222827BB496E1516E72A4D787A92D1A66C2B3* __this, uint32_t ___0_x, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconVrfy_mq_montysqr_m75E61668F050C15730949D6565122E5E81FDAAFE_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconVrfy_mq_montysqr_m75E61668F050C15730949D6565122E5E81FDAAFE_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___0_x;
 		uint32_t L_1 = ___0_x;
@@ -9951,12 +9476,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t FalconVrfy_mq_montysqr_m75E61668F050
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t FalconVrfy_mq_div_12289_mEBD44C7E11C14CFBA9BE0F0E5470AEDB95AF9A55 (FalconVrfy_t1E4222827BB496E1516E72A4D787A92D1A66C2B3* __this, uint32_t ___0_x, uint32_t ___1_y, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconVrfy_mq_div_12289_mEBD44C7E11C14CFBA9BE0F0E5470AEDB95AF9A55_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	uint32_t V_0 = 0;
 	uint32_t V_1 = 0;
 	uint32_t V_2 = 0;
@@ -9976,8 +9495,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t FalconVrfy_mq_div_12289_mEBD44C7E11C
 	uint32_t V_16 = 0;
 	uint32_t V_17 = 0;
 	uint32_t V_18 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconVrfy_mq_div_12289_mEBD44C7E11C14CFBA9BE0F0E5470AEDB95AF9A55_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___1_y;
 		uint32_t L_1;
@@ -10071,12 +9588,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t FalconVrfy_mq_div_12289_mEBD44C7E11C
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconVrfy_mq_NTT_mAFAA4609E703D73EFF5F634BE7EF50F4522C46B7 (FalconVrfy_t1E4222827BB496E1516E72A4D787A92D1A66C2B3* __this, UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* ___0_asrc, int32_t ___1_a, uint32_t ___2_logn, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconVrfy_mq_NTT_mAFAA4609E703D73EFF5F634BE7EF50F4522C46B7_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
 	int32_t V_2 = 0;
@@ -10088,8 +9599,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconVrfy_mq_NTT_mAFAA4609E703D73EFF5F6
 	uint32_t V_8 = 0;
 	uint32_t V_9 = 0;
 	uint32_t V_10 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconVrfy_mq_NTT_mAFAA4609E703D73EFF5F634BE7EF50F4522C46B7_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___2_logn;
 		V_0 = ((int32_t)(1<<((int32_t)((int32_t)L_0&((int32_t)31)))));
@@ -10101,7 +9610,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconVrfy_mq_NTT_mAFAA4609E703D73EFF5F6
 
 IL_0010:
 	{
-		CHECK_PAUSE_POINT;
 		int32_t L_2 = V_1;
 		V_3 = ((int32_t)(L_2>>1));
 		V_4 = 0;
@@ -10111,7 +9619,6 @@ IL_0010:
 
 IL_001c:
 	{
-		CHECK_PAUSE_POINT;
 		UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* L_3 = __this->___GMb;
 		int32_t L_4 = V_2;
 		int32_t L_5 = V_4;
@@ -10129,7 +9636,6 @@ IL_001c:
 
 IL_0035:
 	{
-		CHECK_PAUSE_POINT;
 		UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* L_11 = ___0_asrc;
 		int32_t L_12 = ___1_a;
 		int32_t L_13 = V_6;
@@ -10219,12 +9725,6 @@ IL_0096:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconVrfy_mq_iNTT_m6FAEF47DDEDF515158BFFE449C0F76755D0EC5ED (FalconVrfy_t1E4222827BB496E1516E72A4D787A92D1A66C2B3* __this, UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* ___0_asrc, int32_t ___1_a, uint32_t ___2_logn, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconVrfy_mq_iNTT_m6FAEF47DDEDF515158BFFE449C0F76755D0EC5ED_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
 	int32_t V_2 = 0;
@@ -10239,8 +9739,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconVrfy_mq_iNTT_m6FAEF47DDEDF515158BF
 	uint32_t V_11 = 0;
 	uint32_t V_12 = 0;
 	uint32_t V_13 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconVrfy_mq_iNTT_m6FAEF47DDEDF515158BFFE449C0F76755D0EC5ED_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___2_logn;
 		V_0 = ((int32_t)(1<<((int32_t)((int32_t)L_0&((int32_t)31)))));
@@ -10252,7 +9750,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconVrfy_mq_iNTT_m6FAEF47DDEDF515158BF
 
 IL_0010:
 	{
-		CHECK_PAUSE_POINT;
 		int32_t L_2 = V_2;
 		V_4 = ((int32_t)(L_2>>1));
 		int32_t L_3 = V_1;
@@ -10264,7 +9761,6 @@ IL_0010:
 
 IL_0022:
 	{
-		CHECK_PAUSE_POINT;
 		int32_t L_4 = V_7;
 		int32_t L_5 = V_1;
 		V_9 = ((int32_t)il2cpp_codegen_add(L_4, L_5));
@@ -10282,7 +9778,6 @@ IL_0022:
 
 IL_003c:
 	{
-		CHECK_PAUSE_POINT;
 		UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* L_12 = ___0_asrc;
 		int32_t L_13 = ___1_a;
 		int32_t L_14 = V_8;
@@ -10376,7 +9871,6 @@ IL_00a3:
 
 IL_00b4:
 	{
-		CHECK_PAUSE_POINT;
 		uint32_t L_51 = V_3;
 		uint32_t L_52;
 		L_52 = FalconVrfy_mq_rshift1_mA9E6E328BB4BFE6A1C542E184EBEF61C901CAD8A(__this, L_51, NULL);
@@ -10400,7 +9894,6 @@ IL_00c0:
 
 IL_00c8:
 	{
-		CHECK_PAUSE_POINT;
 		UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* L_55 = ___0_asrc;
 		int32_t L_56 = ___1_a;
 		int32_t L_57 = V_2;
@@ -10434,16 +9927,8 @@ IL_00de:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconVrfy_mq_poly_tomonty_m66091DBF31FBBB554466A504747D9DA1677509CC (FalconVrfy_t1E4222827BB496E1516E72A4D787A92D1A66C2B3* __this, UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* ___0_fsrc, int32_t ___1_f, uint32_t ___2_logn, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconVrfy_mq_poly_tomonty_m66091DBF31FBBB554466A504747D9DA1677509CC_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconVrfy_mq_poly_tomonty_m66091DBF31FBBB554466A504747D9DA1677509CC_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___2_logn;
 		V_1 = ((int32_t)(1<<((int32_t)((int32_t)L_0&((int32_t)31)))));
@@ -10453,7 +9938,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconVrfy_mq_poly_tomonty_m66091DBF31FB
 
 IL_000b:
 	{
-		CHECK_PAUSE_POINT;
 		UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* L_1 = ___0_fsrc;
 		int32_t L_2 = ___1_f;
 		int32_t L_3 = V_0;
@@ -10486,16 +9970,8 @@ IL_0025:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconVrfy_mq_poly_montymul_ntt_m8691CE0D6B097C86BDB57D80495C0E0807A3663B (FalconVrfy_t1E4222827BB496E1516E72A4D787A92D1A66C2B3* __this, UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* ___0_fsrc, int32_t ___1_f, UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* ___2_gsrc, int32_t ___3_g, uint32_t ___4_logn, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconVrfy_mq_poly_montymul_ntt_m8691CE0D6B097C86BDB57D80495C0E0807A3663B_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconVrfy_mq_poly_montymul_ntt_m8691CE0D6B097C86BDB57D80495C0E0807A3663B_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___4_logn;
 		V_1 = ((int32_t)(1<<((int32_t)((int32_t)L_0&((int32_t)31)))));
@@ -10505,7 +9981,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconVrfy_mq_poly_montymul_ntt_m8691CE0
 
 IL_000c:
 	{
-		CHECK_PAUSE_POINT;
 		UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* L_1 = ___0_fsrc;
 		int32_t L_2 = ___1_f;
 		int32_t L_3 = V_0;
@@ -10544,16 +10019,8 @@ IL_0027:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconVrfy_mq_poly_sub_mF9D5E8188F697DFF831F477FC43CE1CC42168D35 (FalconVrfy_t1E4222827BB496E1516E72A4D787A92D1A66C2B3* __this, UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* ___0_fsrc, int32_t ___1_f, UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* ___2_gsrc, int32_t ___3_g, uint32_t ___4_logn, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconVrfy_mq_poly_sub_mF9D5E8188F697DFF831F477FC43CE1CC42168D35_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconVrfy_mq_poly_sub_mF9D5E8188F697DFF831F477FC43CE1CC42168D35_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___4_logn;
 		V_1 = ((int32_t)(1<<((int32_t)((int32_t)L_0&((int32_t)31)))));
@@ -10563,7 +10030,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconVrfy_mq_poly_sub_mF9D5E8188F697DFF
 
 IL_000c:
 	{
-		CHECK_PAUSE_POINT;
 		UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* L_1 = ___0_fsrc;
 		int32_t L_2 = ___1_f;
 		int32_t L_3 = V_0;
@@ -10602,14 +10068,6 @@ IL_0027:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FalconVrfy_to_ntt_monty_m4CC798BC2AB93A94564B28B548DCF7DA816B29AA (FalconVrfy_t1E4222827BB496E1516E72A4D787A92D1A66C2B3* __this, UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* ___0_hsrc, int32_t ___1_h, uint32_t ___2_logn, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconVrfy_to_ntt_monty_m4CC798BC2AB93A94564B28B548DCF7DA816B29AA_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconVrfy_to_ntt_monty_m4CC798BC2AB93A94564B28B548DCF7DA816B29AA_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* L_0 = ___0_hsrc;
 		int32_t L_1 = ___1_h;
@@ -10627,7 +10085,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool FalconVrfy_verify_raw_mE4D2E876EDADDB94C
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconVrfy_verify_raw_mE4D2E876EDADDB94C5CA1D4C167EA9603CA2C3AE_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -10637,8 +10094,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool FalconVrfy_verify_raw_mE4D2E876EDADDB94C
 	Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB* V_3 = NULL;
 	uint32_t V_4 = 0;
 	int32_t V_5 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconVrfy_verify_raw_mE4D2E876EDADDB94C5CA1D4C167EA9603CA2C3AE_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___6_logn;
 		V_1 = ((int32_t)(1<<((int32_t)((int32_t)L_0&((int32_t)31)))));
@@ -10650,7 +10105,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool FalconVrfy_verify_raw_mE4D2E876EDADDB94C
 
 IL_000f:
 	{
-		CHECK_PAUSE_POINT;
 		Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB* L_2 = ___2_s2src;
 		int32_t L_3 = ___3_s2;
 		int32_t L_4 = V_0;
@@ -10710,7 +10164,6 @@ IL_0038:
 
 IL_0079:
 	{
-		CHECK_PAUSE_POINT;
 		UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* L_34 = ___7_tmpsrc;
 		int32_t L_35 = V_2;
 		int32_t L_36 = V_0;
@@ -10764,17 +10217,9 @@ IL_00b2:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FalconVrfy_compute_public_m4D5B0E49C1F7D518C76405E67901A308A112FAD5 (FalconVrfy_t1E4222827BB496E1516E72A4D787A92D1A66C2B3* __this, UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* ___0_hsrc, int32_t ___1_h, SByteU5BU5D_t88116DA68378C3333DB73E7D36C1A06AFAA91913* ___2_fsrc, int32_t ___3_f, SByteU5BU5D_t88116DA68378C3333DB73E7D36C1A06AFAA91913* ___4_gsrc, int32_t ___5_g, uint32_t ___6_logn, UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* ___7_tmpsrc, int32_t ___8_tmp, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconVrfy_compute_public_m4D5B0E49C1F7D518C76405E67901A308A112FAD5_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
 	int32_t V_2 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconVrfy_compute_public_m4D5B0E49C1F7D518C76405E67901A308A112FAD5_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___6_logn;
 		V_1 = ((int32_t)(1<<((int32_t)((int32_t)L_0&((int32_t)31)))));
@@ -10786,7 +10231,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FalconVrfy_compute_public_m4D5B0E49C1
 
 IL_000f:
 	{
-		CHECK_PAUSE_POINT;
 		UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* L_2 = ___7_tmpsrc;
 		int32_t L_3 = V_2;
 		int32_t L_4 = V_0;
@@ -10841,7 +10285,6 @@ IL_0039:
 
 IL_0056:
 	{
-		CHECK_PAUSE_POINT;
 		UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* L_29 = ___7_tmpsrc;
 		int32_t L_30 = V_2;
 		int32_t L_31 = V_0;
@@ -10901,12 +10344,6 @@ IL_007b:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FalconVrfy_complete_private_mC5D9EC75FBE53D1AA47F88B565B1EBA24CD815CE (FalconVrfy_t1E4222827BB496E1516E72A4D787A92D1A66C2B3* __this, SByteU5BU5D_t88116DA68378C3333DB73E7D36C1A06AFAA91913* ___0_Gsrc, int32_t ___1_G, SByteU5BU5D_t88116DA68378C3333DB73E7D36C1A06AFAA91913* ___2_fsrc, int32_t ___3_f, SByteU5BU5D_t88116DA68378C3333DB73E7D36C1A06AFAA91913* ___4_gsrc, int32_t ___5_g, SByteU5BU5D_t88116DA68378C3333DB73E7D36C1A06AFAA91913* ___6_Fsrc, int32_t ___7_F, uint32_t ___8_logn, UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* ___9_tmpsrc, int32_t ___10_tmp, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconVrfy_complete_private_mC5D9EC75FBE53D1AA47F88B565B1EBA24CD815CE_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
 	int32_t V_2 = 0;
@@ -10914,8 +10351,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FalconVrfy_complete_private_mC5D9EC75
 	int32_t V_4 = 0;
 	uint32_t V_5 = 0;
 	int32_t V_6 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconVrfy_complete_private_mC5D9EC75FBE53D1AA47F88B565B1EBA24CD815CE_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		V_0 = 1;
 		uint32_t L_0 = ___8_logn;
@@ -10931,7 +10366,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FalconVrfy_complete_private_mC5D9EC75
 
 IL_0016:
 	{
-		CHECK_PAUSE_POINT;
 		UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* L_4 = ___9_tmpsrc;
 		int32_t L_5 = V_3;
 		int32_t L_6 = V_1;
@@ -10996,7 +10430,6 @@ IL_0043:
 
 IL_007c:
 	{
-		CHECK_PAUSE_POINT;
 		UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* L_39 = ___9_tmpsrc;
 		int32_t L_40 = V_4;
 		int32_t L_41 = V_1;
@@ -11034,7 +10467,6 @@ IL_0094:
 
 IL_00a8:
 	{
-		CHECK_PAUSE_POINT;
 		UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* L_54 = ___9_tmpsrc;
 		int32_t L_55 = V_4;
 		int32_t L_56 = V_1;
@@ -11095,7 +10527,6 @@ IL_00d1:
 
 IL_00e4:
 	{
-		CHECK_PAUSE_POINT;
 		UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* L_79 = ___9_tmpsrc;
 		int32_t L_80 = V_3;
 		int32_t L_81 = V_1;
@@ -11155,19 +10586,11 @@ IL_0125:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FalconVrfy_is_invertible_mC48C9816793001DD3A7B0D1608DF991197C15DF5 (FalconVrfy_t1E4222827BB496E1516E72A4D787A92D1A66C2B3* __this, Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB* ___0_s2src, int32_t ___1_s2, uint32_t ___2_logn, UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* ___3_tmpsrc, int32_t ___4_tmp, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconVrfy_is_invertible_mC48C9816793001DD3A7B0D1608DF991197C15DF5_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
 	int32_t V_2 = 0;
 	uint32_t V_3 = 0;
 	uint32_t V_4 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconVrfy_is_invertible_mC48C9816793001DD3A7B0D1608DF991197C15DF5_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___2_logn;
 		V_1 = ((int32_t)(1<<((int32_t)((int32_t)L_0&((int32_t)31)))));
@@ -11179,7 +10602,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FalconVrfy_is_invertible_mC48C9816793
 
 IL_000e:
 	{
-		CHECK_PAUSE_POINT;
 		Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB* L_2 = ___0_s2src;
 		int32_t L_3 = ___1_s2;
 		int32_t L_4 = V_0;
@@ -11221,7 +10643,6 @@ IL_0036:
 
 IL_004a:
 	{
-		CHECK_PAUSE_POINT;
 		uint32_t L_19 = V_3;
 		UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* L_20 = ___3_tmpsrc;
 		int32_t L_21 = V_2;
@@ -11250,19 +10671,11 @@ IL_0059:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FalconVrfy_verify_recover_m0049CE5BDACBD74AFED6BCF6CEC97966C546C31B (FalconVrfy_t1E4222827BB496E1516E72A4D787A92D1A66C2B3* __this, UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* ___0_hsrc, int32_t ___1_h, UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* ___2_c0src, int32_t ___3_c0, Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB* ___4_s1src, int32_t ___5_s1, Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB* ___6_s2src, int32_t ___7_s2, uint32_t ___8_logn, UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* ___9_tmpsrc, int32_t ___10_tmp, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconVrfy_verify_recover_m0049CE5BDACBD74AFED6BCF6CEC97966C546C31B_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
 	int32_t V_2 = 0;
 	uint32_t V_3 = 0;
 	uint32_t V_4 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconVrfy_verify_recover_m0049CE5BDACBD74AFED6BCF6CEC97966C546C31B_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___8_logn;
 		V_1 = ((int32_t)(1<<((int32_t)((int32_t)L_0&((int32_t)31)))));
@@ -11274,7 +10687,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FalconVrfy_verify_recover_m0049CE5BDA
 
 IL_000f:
 	{
-		CHECK_PAUSE_POINT;
 		Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB* L_2 = ___6_s2src;
 		int32_t L_3 = ___7_s2;
 		int32_t L_4 = V_0;
@@ -11346,7 +10758,6 @@ IL_006e:
 
 IL_008d:
 	{
-		CHECK_PAUSE_POINT;
 		uint32_t L_40 = V_3;
 		UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* L_41 = ___9_tmpsrc;
 		int32_t L_42 = V_2;
@@ -11409,20 +10820,12 @@ IL_00b3:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FalconVrfy_count_nttzero_mD77949B4784D0C2DFE6DACBFAF40C251A24BB3AA (FalconVrfy_t1E4222827BB496E1516E72A4D787A92D1A66C2B3* __this, Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB* ___0_sigsrc, int32_t ___1_sig, uint32_t ___2_logn, UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* ___3_tmpsrc, int32_t ___4_tmp, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconVrfy_count_nttzero_mD77949B4784D0C2DFE6DACBFAF40C251A24BB3AA_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
 	int32_t V_2 = 0;
 	uint32_t V_3 = 0;
 	uint32_t V_4 = 0;
 	uint32_t V_5 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconVrfy_count_nttzero_mD77949B4784D0C2DFE6DACBFAF40C251A24BB3AA_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = ___2_logn;
 		V_2 = ((int32_t)(1<<((int32_t)((int32_t)L_0&((int32_t)31)))));
@@ -11434,7 +10837,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FalconVrfy_count_nttzero_mD77949B4784
 
 IL_000e:
 	{
-		CHECK_PAUSE_POINT;
 		Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB* L_2 = ___0_sigsrc;
 		int32_t L_3 = ___1_sig;
 		int32_t L_4 = V_1;
@@ -11476,7 +10878,6 @@ IL_0036:
 
 IL_004a:
 	{
-		CHECK_PAUSE_POINT;
 		UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* L_19 = ___3_tmpsrc;
 		int32_t L_20 = V_0;
 		int32_t L_21 = V_1;
@@ -11515,14 +10916,6 @@ IL_0060:
 #endif
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 FprEngine_Fpr_mEC76011FDA98F7249C8C14CC84E32DDCE1F0EDA7 (FprEngine_tF13CEDC792A5EC18BA833B3E832E526BA651784C* __this, double ___0_v, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FprEngine_Fpr_mEC76011FDA98F7249C8C14CC84E32DDCE1F0EDA7_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FprEngine_Fpr_mEC76011FDA98F7249C8C14CC84E32DDCE1F0EDA7_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		double L_0 = ___0_v;
 		FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 L_1;
@@ -11533,14 +10926,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FalconFPR_tF678FE27AD39A86C7588997C662EB82A57
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 FprEngine_fpr_of_m76C23229B604A851F9688949D03D2E815A9D66A9 (FprEngine_tF13CEDC792A5EC18BA833B3E832E526BA651784C* __this, int64_t ___0_i, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FprEngine_fpr_of_m76C23229B604A851F9688949D03D2E815A9D66A9_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FprEngine_fpr_of_m76C23229B604A851F9688949D03D2E815A9D66A9_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int64_t L_0 = ___0_i;
 		FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 L_1;
@@ -11550,18 +10935,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FalconFPR_tF678FE27AD39A86C7588997C662EB82A57
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t FprEngine_fpr_rint_m3FC623BDACBECE77E87490608E5FD05D199F81D7 (FprEngine_tF13CEDC792A5EC18BA833B3E832E526BA651784C* __this, FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 ___0_x, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FprEngine_fpr_rint_m3FC623BDACBECE77E87490608E5FD05D199F81D7_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	int64_t V_0 = 0;
 	int64_t V_1 = 0;
 	int64_t V_2 = 0;
 	int64_t V_3 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FprEngine_fpr_rint_m3FC623BDACBECE77E87490608E5FD05D199F81D7_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 L_0 = ___0_x;
 		double L_1 = L_0.___v;
@@ -11600,15 +10977,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t FprEngine_fpr_rint_m3FC623BDACBECE77E
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t FprEngine_fpr_floor_m9F745DC833BDA76CC2D72457AEF7C7F1043FDF79 (FprEngine_tF13CEDC792A5EC18BA833B3E832E526BA651784C* __this, FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 ___0_x, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FprEngine_fpr_floor_m9F745DC833BDA76CC2D72457AEF7C7F1043FDF79_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	int64_t V_0 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FprEngine_fpr_floor_m9F745DC833BDA76CC2D72457AEF7C7F1043FDF79_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 L_0 = ___0_x;
 		double L_1 = L_0.___v;
@@ -11622,14 +10991,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t FprEngine_fpr_floor_m9F745DC833BDA76C
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t FprEngine_fpr_trunc_m5B6F3A6BBD9CA447CD2CBB6F3E8FF16E212C4803 (FprEngine_tF13CEDC792A5EC18BA833B3E832E526BA651784C* __this, FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 ___0_x, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FprEngine_fpr_trunc_m5B6F3A6BBD9CA447CD2CBB6F3E8FF16E212C4803_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FprEngine_fpr_trunc_m5B6F3A6BBD9CA447CD2CBB6F3E8FF16E212C4803_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 L_0 = ___0_x;
 		double L_1 = L_0.___v;
@@ -11638,14 +10999,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t FprEngine_fpr_trunc_m5B6F3A6BBD9CA447
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 FprEngine_fpr_add_m9C66C173CDAE129783FCE61DF5001E7FF681341A (FprEngine_tF13CEDC792A5EC18BA833B3E832E526BA651784C* __this, FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 ___0_x, FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 ___1_y, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FprEngine_fpr_add_m9C66C173CDAE129783FCE61DF5001E7FF681341A_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FprEngine_fpr_add_m9C66C173CDAE129783FCE61DF5001E7FF681341A_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 L_0 = ___0_x;
 		double L_1 = L_0.___v;
@@ -11658,14 +11011,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FalconFPR_tF678FE27AD39A86C7588997C662EB82A57
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 FprEngine_fpr_sub_m7E4B08B0A31116ABBE94004679AA5D6DEE43837C (FprEngine_tF13CEDC792A5EC18BA833B3E832E526BA651784C* __this, FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 ___0_x, FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 ___1_y, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FprEngine_fpr_sub_m7E4B08B0A31116ABBE94004679AA5D6DEE43837C_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FprEngine_fpr_sub_m7E4B08B0A31116ABBE94004679AA5D6DEE43837C_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 L_0 = ___0_x;
 		double L_1 = L_0.___v;
@@ -11678,14 +11023,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FalconFPR_tF678FE27AD39A86C7588997C662EB82A57
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 FprEngine_fpr_neg_m2BC0CA484A233841F5D70249283040AA0FBB431C (FprEngine_tF13CEDC792A5EC18BA833B3E832E526BA651784C* __this, FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 ___0_x, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FprEngine_fpr_neg_m2BC0CA484A233841F5D70249283040AA0FBB431C_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FprEngine_fpr_neg_m2BC0CA484A233841F5D70249283040AA0FBB431C_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 L_0 = ___0_x;
 		double L_1 = L_0.___v;
@@ -11696,14 +11033,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FalconFPR_tF678FE27AD39A86C7588997C662EB82A57
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 FprEngine_fpr_half_m31663CD95C2FC0BD60F3E5FD4EF575885E3F9EBE (FprEngine_tF13CEDC792A5EC18BA833B3E832E526BA651784C* __this, FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 ___0_x, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FprEngine_fpr_half_m31663CD95C2FC0BD60F3E5FD4EF575885E3F9EBE_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FprEngine_fpr_half_m31663CD95C2FC0BD60F3E5FD4EF575885E3F9EBE_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 L_0 = ___0_x;
 		double L_1 = L_0.___v;
@@ -11714,14 +11043,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FalconFPR_tF678FE27AD39A86C7588997C662EB82A57
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 FprEngine_fpr_double_mB4A9520432DEFC9CC29119A28642D6D87AC05644 (FprEngine_tF13CEDC792A5EC18BA833B3E832E526BA651784C* __this, FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 ___0_x, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FprEngine_fpr_double_mB4A9520432DEFC9CC29119A28642D6D87AC05644_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FprEngine_fpr_double_mB4A9520432DEFC9CC29119A28642D6D87AC05644_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 L_0 = ___0_x;
 		double L_1 = L_0.___v;
@@ -11734,14 +11055,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FalconFPR_tF678FE27AD39A86C7588997C662EB82A57
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 FprEngine_fpr_mul_m15DC16B5AA7E87A53A723B6A55E39DF5F2AEAAFD (FprEngine_tF13CEDC792A5EC18BA833B3E832E526BA651784C* __this, FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 ___0_x, FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 ___1_y, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FprEngine_fpr_mul_m15DC16B5AA7E87A53A723B6A55E39DF5F2AEAAFD_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FprEngine_fpr_mul_m15DC16B5AA7E87A53A723B6A55E39DF5F2AEAAFD_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 L_0 = ___0_x;
 		double L_1 = L_0.___v;
@@ -11754,14 +11067,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FalconFPR_tF678FE27AD39A86C7588997C662EB82A57
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 FprEngine_fpr_sqr_m2A89D615E12F58DA681322D0BB81AEC13584C30A (FprEngine_tF13CEDC792A5EC18BA833B3E832E526BA651784C* __this, FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 ___0_x, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FprEngine_fpr_sqr_m2A89D615E12F58DA681322D0BB81AEC13584C30A_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FprEngine_fpr_sqr_m2A89D615E12F58DA681322D0BB81AEC13584C30A_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 L_0 = ___0_x;
 		double L_1 = L_0.___v;
@@ -11774,14 +11079,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FalconFPR_tF678FE27AD39A86C7588997C662EB82A57
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 FprEngine_fpr_inv_m8317C767E493509D5F18EAB626FBFE97D9E29DE4 (FprEngine_tF13CEDC792A5EC18BA833B3E832E526BA651784C* __this, FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 ___0_x, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FprEngine_fpr_inv_m8317C767E493509D5F18EAB626FBFE97D9E29DE4_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FprEngine_fpr_inv_m8317C767E493509D5F18EAB626FBFE97D9E29DE4_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 L_0 = ___0_x;
 		double L_1 = L_0.___v;
@@ -11792,14 +11089,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FalconFPR_tF678FE27AD39A86C7588997C662EB82A57
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 FprEngine_fpr_div_mDDD601C18E9D1320205EEC7D662714E4563E8186 (FprEngine_tF13CEDC792A5EC18BA833B3E832E526BA651784C* __this, FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 ___0_x, FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 ___1_y, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FprEngine_fpr_div_mDDD601C18E9D1320205EEC7D662714E4563E8186_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FprEngine_fpr_div_mDDD601C18E9D1320205EEC7D662714E4563E8186_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 L_0 = ___0_x;
 		double L_1 = L_0.___v;
@@ -11815,12 +11104,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FalconFPR_tF678FE27AD39A86C7588997C662EB82A57
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FprEngine_fpr_sqrt_m0C287BF7FE8F6901D1ACF03AE0B7BB08E83D9995_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FprEngine_fpr_sqrt_m0C287BF7FE8F6901D1ACF03AE0B7BB08E83D9995_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 L_0 = ___0_x;
 		double L_1 = L_0.___v;
@@ -11834,14 +11120,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FalconFPR_tF678FE27AD39A86C7588997C662EB82A57
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool FprEngine_fpr_lt_mAFBEF27AF21358475BA406EBA81E4F0DD07E6CA6 (FprEngine_tF13CEDC792A5EC18BA833B3E832E526BA651784C* __this, FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 ___0_x, FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 ___1_y, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FprEngine_fpr_lt_mAFBEF27AF21358475BA406EBA81E4F0DD07E6CA6_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FprEngine_fpr_lt_mAFBEF27AF21358475BA406EBA81E4F0DD07E6CA6_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 L_0 = ___0_x;
 		double L_1 = L_0.___v;
@@ -11852,16 +11130,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool FprEngine_fpr_lt_mAFBEF27AF21358475BA406
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint64_t FprEngine_fpr_expm_p63_mA7198BD9185C76331A667F7251C4028BEB406D12 (FprEngine_tF13CEDC792A5EC18BA833B3E832E526BA651784C* __this, FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 ___0_x, FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 ___1_ccs, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FprEngine_fpr_expm_p63_mA7198BD9185C76331A667F7251C4028BEB406D12_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	double V_0 = 0.0;
 	double V_1 = 0.0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FprEngine_fpr_expm_p63_mA7198BD9185C76331A667F7251C4028BEB406D12_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730 L_0 = ___0_x;
 		double L_1 = L_0.___v;
@@ -11918,14 +11188,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint64_t FprEngine_fpr_expm_p63_mA7198BD9185C
 #endif
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR SecureRandom_t287D2AB9F2B890FBCB659A46C495D2F5A84D0F8A* KeyGenerationParameters_get_Random_m19B9F0624F1A88863EBD9F26258DC620FE82C491_inline (KeyGenerationParameters_tDB47B76F384802932A93CF7E81518A40032CE9D8* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KeyGenerationParameters_get_Random_m19B9F0624F1A88863EBD9F26258DC620FE82C491_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, KeyGenerationParameters_get_Random_m19B9F0624F1A88863EBD9F26258DC620FE82C491_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		SecureRandom_t287D2AB9F2B890FBCB659A46C495D2F5A84D0F8A* L_0 = __this->___random;
 		return L_0;
@@ -11933,14 +11195,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR SecureRandom_t287D2AB9F2B890FBCB6
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR FalconParameters_t4BC91591D71D76A750823F2815CBAC4C9799D5CE* FalconKeyGenerationParameters_get_Parameters_mB069FFFE8D9598238408677F81B6EFE674780822_inline (FalconKeyGenerationParameters_t8C98A946252BAB913F2355B8D4C41BE512AC5788* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconKeyGenerationParameters_get_Parameters_mB069FFFE8D9598238408677F81B6EFE674780822_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconKeyGenerationParameters_get_Parameters_mB069FFFE8D9598238408677F81B6EFE674780822_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		FalconParameters_t4BC91591D71D76A750823F2815CBAC4C9799D5CE* L_0 = __this->___parameters;
 		return L_0;
@@ -11948,14 +11202,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR FalconParameters_t4BC91591D71D76A
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* ParametersWithRandom_get_Parameters_m7FA845EEBA1898FEB7FD883D146173B41D9CDC55_inline (ParametersWithRandom_tDB253615CB46C1C30CBBF2052ECC7F42E78F2219* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ParametersWithRandom_get_Parameters_m7FA845EEBA1898FEB7FD883D146173B41D9CDC55_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, ParametersWithRandom_get_Parameters_m7FA845EEBA1898FEB7FD883D146173B41D9CDC55_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		RuntimeObject* L_0 = __this->___m_parameters;
 		return L_0;
@@ -11963,14 +11209,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* ParametersWithRand
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR SecureRandom_t287D2AB9F2B890FBCB659A46C495D2F5A84D0F8A* ParametersWithRandom_get_Random_mD73DE04E2132FCD1F3DF508FBAC4B6FDF1477342_inline (ParametersWithRandom_tDB253615CB46C1C30CBBF2052ECC7F42E78F2219* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ParametersWithRandom_get_Random_mD73DE04E2132FCD1F3DF508FBAC4B6FDF1477342_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, ParametersWithRandom_get_Random_mD73DE04E2132FCD1F3DF508FBAC4B6FDF1477342_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		SecureRandom_t287D2AB9F2B890FBCB659A46C495D2F5A84D0F8A* L_0 = __this->___m_random;
 		return L_0;
@@ -11978,14 +11216,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR SecureRandom_t287D2AB9F2B890FBCB6
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR FalconParameters_t4BC91591D71D76A750823F2815CBAC4C9799D5CE* FalconKeyParameters_get_Parameters_m22DC7B0FF7B094818EA3C061F9D2544A718FC467_inline (FalconKeyParameters_tE955BD466E9C12E62DBE614CD760BA03E96C1459* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconKeyParameters_get_Parameters_m22DC7B0FF7B094818EA3C061F9D2544A718FC467_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconKeyParameters_get_Parameters_m22DC7B0FF7B094818EA3C061F9D2544A718FC467_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		FalconParameters_t4BC91591D71D76A750823F2815CBAC4C9799D5CE* L_0 = __this->___m_parameters;
 		return L_0;
@@ -11993,14 +11223,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR FalconParameters_t4BC91591D71D76A
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t FalconNist_get_CryptoBytes_m3D474F3F920B10BBC1750ECCB6BA38FD1BE64431_inline (FalconNist_t8D468F8C5EA63A9CC43685DA5ACBAC23CCCC1E78* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconNist_get_CryptoBytes_m3D474F3F920B10BBC1750ECCB6BA38FD1BE64431_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconNist_get_CryptoBytes_m3D474F3F920B10BBC1750ECCB6BA38FD1BE64431_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = __this->___CRYPTO_BYTES;
 		return L_0;
@@ -12008,14 +11230,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t FalconNist_get_CryptoByte
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint32_t FalconNist_get_LogN_m27FF9EBFED63B0D592A765141A201634CFD5D5E6_inline (FalconNist_t8D468F8C5EA63A9CC43685DA5ACBAC23CCCC1E78* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconNist_get_LogN_m27FF9EBFED63B0D592A765141A201634CFD5D5E6_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconNist_get_LogN_m27FF9EBFED63B0D592A765141A201634CFD5D5E6_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = __this->___logn;
 		return L_0;
@@ -12023,14 +11237,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint32_t FalconNist_get_LogN_m27F
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint32_t FalconNist_get_NonceLength_m2D699568AF2AD1D3B7B7F6B21E4A13E2578BFBEE_inline (FalconNist_t8D468F8C5EA63A9CC43685DA5ACBAC23CCCC1E78* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconNist_get_NonceLength_m2D699568AF2AD1D3B7B7F6B21E4A13E2578BFBEE_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconNist_get_NonceLength_m2D699568AF2AD1D3B7B7F6B21E4A13E2578BFBEE_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		uint32_t L_0 = __this->___noncelen;
 		return L_0;
@@ -12038,14 +11244,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint32_t FalconNist_get_NonceLeng
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void FalconFPR__ctor_m24B90F028C0D558D32DE9996390CE7CC06E55724_inline (FalconFPR_tF678FE27AD39A86C7588997C662EB82A57736730* __this, double ___0_v, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FalconFPR__ctor_m24B90F028C0D558D32DE9996390CE7CC06E55724_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FalconFPR__ctor_m24B90F028C0D558D32DE9996390CE7CC06E55724_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		double L_0 = ___0_v;
 		__this->___v = L_0;

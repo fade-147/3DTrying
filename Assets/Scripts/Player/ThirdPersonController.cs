@@ -1,22 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using static Unity.Burst.Intrinsics.X86;
 using System.Collections;
-using Unity.VisualScripting;
-
-
-#if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 using UnityEngine.InputSystem;
-#endif
-
 using Mirror;
 
 namespace StarterAssets
 {
     [RequireComponent(typeof(CharacterController))]
-#if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
     [RequireComponent(typeof(PlayerInput))]
-#endif
     public class ThirdPersonController : NetworkBehaviour
     {
         [Header("Player")]
@@ -52,16 +43,19 @@ namespace StarterAssets
 
         [Header("First Person Switch (L键切换)")]
         [Space(10)]
-        public GameObject thirdPersonModel;   // 第三人称角色模型
-        public GameObject firstPersonModel;   // 第一人称模型
+        [Tooltip("View model management is now handled by PlayerNetworkBridge.")]
         public GameObject firstPersonModelGun;   // 第一人称模型手里的枪
 
         public Animator firstPersonAnimator;  // 第一人称Animator
         public Camera fpCamera;              // 第一人称相机
         public Transform fpCameraRoot;     // 第一人称相机父物体（脖子/头部）
         public GameObject cameraMap;       // 小地图专用相机
-        private bool isFirstPerson = false;   // 是否为第一人称
-        public bool startInFirstPerson = false;  // 初始是否为第一人称（Inspector勾选）
+        /// <summary>
+        /// True when the local player is in first-person mode.
+        /// Read from PlayerNetworkBridge each frame.
+        /// </summary>
+        private bool IsInFirstPerson => _pnb != null && _pnb.IsFirstPerson;
+        private PlayerNetworkBridge _pnb;
         private Cinemachine.CinemachineVirtualCamera thirdPersonVCam; // 第三人称相机
 
         private float fpYaw;       // 左右转向
@@ -100,7 +94,6 @@ namespace StarterAssets
         public Camera MainCamera; // 主相机（拖拽赋值）
         public Transform thirdPersonMuzzle;  // 第三人称枪口
         public Transform firstPersonMuzzle;   // 第一人称枪口
-        //public Transform MuzzlePoint; // 枪口位置（枪上创建空物体）
         public float FireRate = 0.2f; // 射速（每秒10发）
         public float MaxShootDistance = 100f; // 最大射击距离
         public GameObject HitEffect; // 命中特效预制体
@@ -117,6 +110,26 @@ namespace StarterAssets
         private float _currentRecoil;
 
         private float _originalTopClamp; // 记录初始的TopClamp值
+
+        /// <summary>
+        /// Cached original localRotation of SOCKET_Camera (fpCameraRoot).
+        /// TPC uses quaternion multiplication to preserve this base rotation for pitch.
+        /// </summary>
+        private Quaternion _originalCameraRootRotation = Quaternion.identity;
+
+        /// <summary>
+        /// Per-frame check: true when LPSP Character is active (Editor mode).
+        /// When true, TPC yields animation/camera/fire control to Character/CameraLook.
+        /// Not cached — Character is enabled mid-lifecycle (OnStartLocalPlayer).
+        /// </summary>
+        private bool IsLpspCharacterActive
+        {
+            get
+            {
+                var c = GetComponentInChildren<InfimaGames.LowPolyShooterPack.CharacterBehaviour>(true);
+                return c != null && c.enabled;
+            }
+        }
 
         private float _cinemachineTargetYaw;
         private float _cinemachineTargetPitch;
@@ -172,7 +185,6 @@ namespace StarterAssets
         private NetworkAnimator _networkAnimator;
 
         private CharacterController _controller;
-        private StarterAssetsInputs _input;
         private GameObject _mainCamera;
         private const float _threshold = 0.01f;
         private bool _hasAnimator;
@@ -214,6 +226,13 @@ namespace StarterAssets
         [Tooltip("开镜散布倍率")] public float AimSpreadMultiplier = 0.2f;
         [SerializeField] private float _currentSpread; // 当前实时散布值
 
+        // IA_Player input state — updated by PlayerInput SendMessage callbacks
+        private Vector2 _moveInput;
+        private Vector2 _lookInput;
+        private bool _sprintHeld;
+        private bool _jumpTriggered;
+        private bool _cursorInputForLook = true;
+
         private void Awake()
         {
             if (_mainCamera == null)
@@ -249,6 +268,14 @@ namespace StarterAssets
                 }
             }
             player = GetComponent<PlayerCharacter>();
+            _pnb = GetComponent<PlayerNetworkBridge>();
+        }
+
+        public override void OnStartServer()
+        {
+            base.OnStartServer();
+            // Default to holding gun — syncs to all clients via SyncVar hook.
+            isHoldingGun = true;
         }
 
         // 本地玩家相机跟随设置
@@ -278,6 +305,12 @@ namespace StarterAssets
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
 
+            // FP gun visible by default in 1P mode.
+            // isHoldingGun SyncVar starts false (hides gun), but R key toggle
+            // works normally via OnHoldGunStateChanged hook.
+            if (firstPersonModelGun != null)
+                firstPersonModelGun.SetActive(true);
+
             UpdateEnemyOutlines();  //给敌人加描边
         }
 
@@ -287,11 +320,80 @@ namespace StarterAssets
             Cursor.lockState = CursorLockMode.None;
         }
 
+        /// <summary>
+        /// Auto-resolves serialized references that may not be wired in the prefab.
+        /// Uses LPSP Character hierarchy at runtime instead of Inspector wiring.
+        /// </summary>
+        private void ResolveMissingReferences()
+        {
+            if (_pnb == null) _pnb = GetComponent<PlayerNetworkBridge>();
+
+            // firstPersonAnimator — use PNB's wired fpAnimator as fallback
+            if (firstPersonAnimator == null && _pnb != null)
+                firstPersonAnimator = _pnb.FpAnimator;
+
+            // firstPersonMuzzle / firstPersonModelGun — search LPSP weapon hierarchy.
+            // Weapons are disabled children under Inventory. Use (true) to find inactive ones,
+            // then pick the one that Inventory.Init() has activated (activeInHierarchy).
+            if (firstPersonMuzzle == null || firstPersonModelGun == null)
+            {
+                var allWeapons = GetComponentsInChildren<InfimaGames.LowPolyShooterPack.WeaponBehaviour>(true);
+                InfimaGames.LowPolyShooterPack.WeaponBehaviour equippedWeapon = null;
+
+                // Prefer the active weapon (equipped by Inventory.Init)
+                foreach (var w in allWeapons)
+                {
+                    if (w.gameObject.activeInHierarchy) { equippedWeapon = w; break; }
+                }
+                // Fallback: if none active yet (timing), take first found
+                if (equippedWeapon == null && allWeapons.Length > 0)
+                    equippedWeapon = allWeapons[0];
+
+                if (equippedWeapon != null)
+                {
+                    if (firstPersonModelGun == null)
+                        firstPersonModelGun = equippedWeapon.gameObject;
+
+                    if (firstPersonMuzzle == null)
+                    {
+                        // Muzzle is NOT a direct child — it's nested under WeaponAttachmentManager.
+                        // Use the LPSP API: AttachmentManager → GetEquippedMuzzle() → GetSocket().
+                        var attachMgr = equippedWeapon.GetComponent<InfimaGames.LowPolyShooterPack.WeaponAttachmentManagerBehaviour>();
+                        if (attachMgr != null)
+                        {
+                            var muzzle = attachMgr.GetEquippedMuzzle();
+                            if (muzzle != null)
+                                firstPersonMuzzle = muzzle.GetSocket();
+                        }
+                    }
+
+                    Debug.Log($"[TPC] Resolved weapon: gun='{equippedWeapon.gameObject.name}', muzzle='{(firstPersonMuzzle != null ? firstPersonMuzzle.name : "NULL")}'");
+                }
+            }
+
+            // fpCameraRoot — prefab doesn't wire this (fileID: 0).
+            // The FP Camera's parent is SOCKET_Camera (a socket under the head bone).
+            // Use the camera's parent transform for vertical pitch rotation.
+            if (fpCameraRoot == null && fpCamera != null)
+            {
+                fpCameraRoot = fpCamera.transform.parent;
+                _originalCameraRootRotation = fpCameraRoot.localRotation;
+                Debug.Log($"[TPC] Resolved fpCameraRoot: '{(fpCameraRoot != null ? fpCameraRoot.name : "NULL")}'");
+            }
+
+            if (firstPersonAnimator == null)
+                Debug.LogWarning("[TPC] firstPersonAnimator not resolved — FP animations disabled.");
+            if (firstPersonMuzzle == null)
+                Debug.LogWarning("[TPC] firstPersonMuzzle not resolved — shooting will fall back to 3P muzzle.");
+            if (firstPersonModelGun == null)
+                Debug.LogWarning("[TPC] firstPersonModelGun not resolved — gun visibility toggle disabled.");
+        }
+
         private void Start()
         {
             _hasAnimator = TryGetComponent(out _animator);
             _controller = GetComponent<CharacterController>();
-            _input = GetComponent<StarterAssetsInputs>();
+            ResolveMissingReferences();
             AssignAnimationIDs();
 
 
@@ -359,32 +461,12 @@ namespace StarterAssets
                 SetupSensitivitySettings();
             }
 
-            // 根据 startInFirstPerson 决定初始视角
-            if (isLocalPlayer)
+            // Visual mode initialization is now handled by PlayerNetworkBridge.
+            // Cinemachine binding for local player:
+            if (isLocalPlayer && thirdPersonVCam != null && CinemachineCameraTarget != null)
             {
-                isFirstPerson = startInFirstPerson;
-
-                // 必须在 ApplyPersonView 之前赋值，因为 ApplyPersonView 可能禁用 vcam，
-                // 之后 OnStartLocalPlayer 的 FindObjectOfType 找不到禁用对象，Follow/LookAt 就永远不会被赋值
-                if (thirdPersonVCam != null && CinemachineCameraTarget != null)
-                {
-                    thirdPersonVCam.Follow = CinemachineCameraTarget.transform;
-                    thirdPersonVCam.LookAt = CinemachineCameraTarget.transform;
-                }
-
-                ApplyPersonView();
-                if (firstPersonAnimator != null)
-                {
-                    firstPersonAnimator.SetBool("Holstered", !isHoldingGun);
-                }
-            }
-            else
-            {
-                if (thirdPersonModel != null) thirdPersonModel.SetActive(true);
-                // 远程玩家的第一人称永远隐藏！
-                if (firstPersonModel != null) firstPersonModel.SetActive(false);
-                if (firstPersonModelGun != null) firstPersonModelGun.SetActive(false);
-                if (fpCamera != null) fpCamera.gameObject.SetActive(false);
+                thirdPersonVCam.Follow = CinemachineCameraTarget.transform;
+                thirdPersonVCam.LookAt = CinemachineCameraTarget.transform;
             }
         }
 
@@ -443,10 +525,24 @@ namespace StarterAssets
         // 更新弹药UI显示
         private void UpdateAmmoUI()
         {
-            if (ammoTextUI != null)
+            if (ammoTextUI == null) return;
+
+            // Editor mode: read ammo directly from the active LPSP weapon, since
+            // Character.OnTryFire → equippedWeapon.Fire() is the source of truth.
+            if (IsLpspCharacterActive)
             {
-                ammoTextUI.text = currentAmmo + "/" + maxAmmo;
+                var allWeapons = GetComponentsInChildren<InfimaGames.LowPolyShooterPack.WeaponBehaviour>(true);
+                foreach (var w in allWeapons)
+                {
+                    if (w.gameObject.activeInHierarchy)
+                    {
+                        ammoTextUI.text = $"{w.GetAmmunitionCurrent()}/{w.GetAmmunitionTotal()}";
+                        return;
+                    }
+                }
             }
+
+            ammoTextUI.text = currentAmmo + "/" + maxAmmo;
         }
 
         //Update仅本地玩家执行，死亡后禁用输入
@@ -456,8 +552,27 @@ namespace StarterAssets
             if (!isLocalPlayer || player == null || player.isDead) return;
 
             _hasAnimator = TryGetComponent(out _animator);
+            PollPlayerInput();
             JumpAndGravity();
             GroundedCheck();
+
+            // --- BUILD DIAG: periodic debug log ---
+            if (Time.frameCount % 120 == 0) // every ~2 seconds at 60fps
+            {
+                var pi2 = GetComponent<PlayerInput>();
+                // Also detect if LPSP Character is active (Editor mode).
+                var lpspChar = GetComponentInChildren<InfimaGames.LowPolyShooterPack.CharacterBehaviour>(true);
+                Debug.Log($"[BUILD_DIAG] moveIn={_moveInput:F4} mag={_moveInput.magnitude:F4} | " +
+                          $"lookIn={_lookInput:F4} | speed={_speed:F4} sprint={_sprintHeld} | " +
+                          $"grounded={Grounded} vVel={_verticalVelocity:F2} | " +
+                          $"ccVel={(_controller != null ? _controller.velocity : Vector3.zero)} ccEn={_controller?.enabled} | " +
+                          $"is1P={IsInFirstPerson} holdGun={isHoldingGun} | " +
+                          $"fpGun={(firstPersonModelGun != null ? (firstPersonModelGun.activeSelf ? "ON" : "off") : "NULL")} | " +
+                          $"fpAnim={(firstPersonAnimator != null ? "OK" : "NULL")} | " +
+                          $"fpCamRoot={(fpCameraRoot != null ? "OK" : "NULL")} | " +
+                          $"PI={pi2 != null} PIActions={pi2?.actions != null} PIEn={pi2?.enabled} | " +
+                          $"lpspChar={(lpspChar != null && lpspChar.enabled ? "ON" : "off")}");
+            }
 
             // 喝水逻辑优先级最高
             if (Input.GetKeyDown(DrinkKey) && !_isDrinking && !isHoldingGun)
@@ -491,17 +606,17 @@ namespace StarterAssets
             UpdateFpRecoil();
             UpdateReloadProgress();  //更新换弹进度
 
-            if (Input.GetKeyDown(KeyCode.T) && isLocalPlayer && isFirstPerson && isHoldingGun && !_isDrinking && !isInspecting)
+            if (Input.GetKeyDown(KeyCode.T) && isLocalPlayer && IsInFirstPerson && isHoldingGun && !_isDrinking && !isInspecting)
             {
                 StartInspect();
             }
-            if (Input.GetKeyDown(KeyCode.Z) && isLocalPlayer && isFirstPerson && isHoldingGun && !_isDrinking && !isInspecting && !isReloading && currentAmmo < maxAmmo)
+            if (Input.GetKeyDown(KeyCode.Z) && isLocalPlayer && IsInFirstPerson && isHoldingGun && !_isDrinking && !isInspecting && !isReloading && currentAmmo < maxAmmo)
             {
                 StartReload();
             }
 
-            // 原有换枪逻辑
-            if (Input.GetKeyDown(KeyCode.R) && _canToggleGun && !_isDrinking)
+            // R 键换枪：Character 活跃时由 LPSP InputAction 处理（IA_Player → InvokeUnityEvents → Character.OnTryToggleGun）
+            if (Input.GetKeyDown(KeyCode.R) && _canToggleGun && !_isDrinking && !IsLpspCharacterActive)
             {
                 ToggleGun();
                 _canToggleGun = false;
@@ -518,26 +633,29 @@ namespace StarterAssets
             {
                 isInspecting = false;
 
-                if (_input.sprint == true)
+                if (_sprintHeld == true)
                 {
-                    _input.sprint = false;
+                    _sprintHeld = false;
                     firstPersonAnimator.SetBool("Running", false);
                     return;
                 }
 
-                //计算当前散布值
-                CalculateCurrentSpread();
-                //累积射击散布
-                _currentSpread = Mathf.Min(_currentSpread + SpreadPerShot, MaxSpread);
-                //触发第一人称枪口上跳
-                ApplyFpRecoil();
+                // When LPSP Character is active (Editor mode), it handles local effects:
+                // ammo, recoil, spread, muzzle flash, sound, casing — via OnTryFire → Fire().
+                // TPC only sends the networked bullet (CmdFire).
+                bool handledByLpsp = IsLpspCharacterActive;
 
-                // 消耗弹药
-                currentAmmo--;
-                UpdateAmmoUI();
+                if (!handledByLpsp)
+                {
+                    CalculateCurrentSpread();
+                    _currentSpread = Mathf.Min(_currentSpread + SpreadPerShot, MaxSpread);
+                    ApplyFpRecoil();
+                    currentAmmo--;
+                    UpdateAmmoUI();
+                }
 
                 // 计算带散射的射击方向（核心）
-                Camera currentCamera = isFirstPerson ? fpCamera : MainCamera;
+                Camera currentCamera = IsInFirstPerson ? fpCamera : MainCamera;
                 if (currentCamera == null) currentCamera = Camera.main;
 
                 // 准星中心射线
@@ -545,7 +663,7 @@ namespace StarterAssets
                 Vector3 shootDirection = baseRay.direction;
 
                 // 第一人称持枪时，应用腰射散射
-                if (isFirstPerson && isHoldingGun)
+                if (IsInFirstPerson && isHoldingGun)
                 {
                     // 生成随机散布偏移
                     float randomX = Random.Range(-_currentSpread, _currentSpread);
@@ -557,17 +675,16 @@ namespace StarterAssets
                 }
 
                 //获取对应枪口位置
-                Vector3 targetMuzzlePos = isFirstPerson ? firstPersonMuzzle.position : thirdPersonMuzzle.position;
+                Transform muzzle = IsInFirstPerson ? firstPersonMuzzle : thirdPersonMuzzle;
+                if (muzzle == null) muzzle = thirdPersonMuzzle; // fallback to 3P muzzle
+                if (muzzle == null) return; // no muzzle available, can't fire
+                Vector3 targetMuzzlePos = muzzle.position;
                 //传给服务端生成子弹
                 CmdFire(shootDirection, targetMuzzlePos);
                 // 重置射速冷却
                 _fireTimer = FireRate;
             }
 
-            if (Input.GetKeyDown(KeyCode.L) && !_isDrinking)  //按L键切换视角
-            {
-                ToggleFirstPerson();
-            }
             if (Input.GetKeyDown(KeyCode.Tab))
             {
                 SettingOpen = !SettingOpen;
@@ -577,14 +694,14 @@ namespace StarterAssets
                 {
                     Cursor.visible = true;
                     Cursor.lockState = CursorLockMode.None;
-                    _input.cursorInputForLook = false;
-                    _input.LookInput(Vector2.zero);  // 清空残留的鼠标 delta，防止视角继续转动
+                    _cursorInputForLook = false;
+                    _lookInput = Vector2.zero;  // 清空残留的鼠标 delta，防止视角继续转动
                 }
                 else
                 {
                     Cursor.visible = false;
                     Cursor.lockState = CursorLockMode.Locked;
-                    _input.cursorInputForLook = true;
+                    _cursorInputForLook = true;
                 }
             }
 
@@ -604,9 +721,9 @@ namespace StarterAssets
             float finalSpread = BaseSpread;
 
             // 移动状态倍率
-            if (_input.sprint)
+            if (_sprintHeld)
                 finalSpread *= SprintSpreadMultiplier;
-            else if (_input.move.sqrMagnitude > _threshold)
+            else if (_moveInput.sqrMagnitude > _threshold)
                 finalSpread *= WalkSpreadMultiplier;
 
             // 开镜倍率
@@ -620,7 +737,7 @@ namespace StarterAssets
         // 应用单次射击的枪口上跳
         private void ApplyFpRecoil()
         {
-            if (!isFirstPerson) return;
+            if (!IsInFirstPerson) return;
 
             // 计算上跳幅度（连续射击累积）
             float verticalRecoil = FpVerticalRecoil * Mathf.Pow(RecoilRampMultiplier, _shotCount);
@@ -634,7 +751,7 @@ namespace StarterAssets
         // 更新后坐力平滑+回弹
         private void UpdateFpRecoil()
         {
-            if (!isFirstPerson)
+            if (!IsInFirstPerson)
             {
                 // 第三人称时重置后坐力
                 _targetRecoilOffset = Vector2.Lerp(_targetRecoilOffset, Vector2.zero, Time.deltaTime * RecoilReturnSpeed * 2f);
@@ -897,7 +1014,6 @@ namespace StarterAssets
             {
                 _animator.SetBool(_animIDIsDrinking, false);
             }
-            Debug.Log("喝水完成 + 加血30");
         }
 
         // 打断喝水（同步）
@@ -930,7 +1046,6 @@ namespace StarterAssets
             {
                 firstPersonAnimator.SetTrigger("NotDrink");
             }
-            Debug.Log("喝水被打断！");
         }
 
         #endregion
@@ -946,7 +1061,7 @@ namespace StarterAssets
         {
             if (!isLocalPlayer) return;
 
-            if (isFirstPerson)
+            if (IsInFirstPerson)
             {
                 UpdateFPSCamera(); // 第一人称：FPS鼠标控制
             }
@@ -970,11 +1085,17 @@ namespace StarterAssets
         //X轴俯仰
         private void UpdateFPSCamera()
         {
-            if (_input == null || fpCameraRoot == null) return;
+            // Editor: LPSP CameraLook handles FP camera rotation (preserves bone base rotation).
+            // Build: CameraLook disabled, TPC takes over.
+            var cameraLook = GetComponentInChildren<InfimaGames.LowPolyShooterPack.CameraLook>(true);
+            if (cameraLook != null && cameraLook.enabled)
+                return;
+
+            if (fpCameraRoot == null) return;
 
             // 鼠标输入
-            float mouseX = _input.look.x * fpMouseSensitivity * Time.deltaTime* sensitivityX;    //可以调整灵敏度
-            float mouseY = _input.look.y * fpMouseSensitivity * Time.deltaTime*sensitivityY;
+            float mouseX = _lookInput.x * fpMouseSensitivity * Time.deltaTime* sensitivityX;    //可以调整灵敏度
+            float mouseY = _lookInput.y * fpMouseSensitivity * Time.deltaTime*sensitivityY;
 
             // 基础视角旋转
             fpYaw += mouseX;
@@ -986,7 +1107,8 @@ namespace StarterAssets
 
             // 应用最终旋转节点
             transform.rotation = Quaternion.Euler(0f, finalYaw, 0f);
-            fpCameraRoot.localEulerAngles = new Vector3(finalPitch, 0f, 0f);
+            // Use quaternion multiply to preserve SOCKET_Camera's base rotation
+            fpCameraRoot.localRotation = _originalCameraRootRotation * Quaternion.Euler(finalPitch, 0f, 0f);
 
             // 确保第一人称相机方向 = 人物前方向
             if (fpCamera != null)
@@ -998,12 +1120,12 @@ namespace StarterAssets
         // 弯腰核心方法
         private void UpdateAimBend()
         {
-            if (_spine2 == null || _input == null || _isDrinking) return; // 喝水时禁用弯腰
+            if (_spine2 == null || _isDrinking) return; // 喝水时禁用弯腰
 
-            if (isHoldingGun && _input.move.sqrMagnitude > _threshold)
+            if (isHoldingGun && _moveInput.sqrMagnitude > _threshold)
             {
                 // 计算Spine2的弯腰角度
-                float mouseYInput = _input.look.y * AimSensitivity;
+                float mouseYInput = _lookInput.y * AimSensitivity;
                 float targetBendAngle = Mathf.Clamp(_currentBendAngle + mouseYInput, MinBendAngle, MaxBendAngle);
                 _currentBendAngle = Mathf.SmoothDamp(_currentBendAngle, targetBendAngle, ref _bendVelocity, BendSmoothTime);
 
@@ -1079,9 +1201,6 @@ namespace StarterAssets
             isInspecting = false;
             if (!_hasAnimator) return;
             CmdToggleGun();
-
-            Debug.Log(isHoldingGun ? "拿起枪" : "卸下枪");
-
         }
         // 服务端命令：仅修改同步变量
         [Command]
@@ -1112,17 +1231,15 @@ namespace StarterAssets
             if (newValue)
             {
                 TopClamp = 20f;
-                Debug.Log("持枪状态，TopClamp已改为20");
             }
             else
             {
                 TopClamp = _originalTopClamp;
-                Debug.Log("卸枪状态，TopClamp恢复为" + _originalTopClamp);
             }
 
             if (isLocalPlayer && firstPersonModelGun != null)
             {
-                firstPersonModelGun.SetActive(isFirstPerson && newValue);
+                firstPersonModelGun.SetActive(IsInFirstPerson && newValue);
             }
 
             CanShoot = newValue;
@@ -1133,7 +1250,6 @@ namespace StarterAssets
         private void UnlockGunToggle()
         {
             _canToggleGun = true;
-            Debug.Log("可以再次换枪了");
         }
 
         // 地面检测
@@ -1150,10 +1266,13 @@ namespace StarterAssets
         // 相机旋转
         private void CameraRotation()
         {
-            if (_input.look.sqrMagnitude >= _threshold && !LockCameraPosition)
+            // In 1P mode, CameraLook handles FP camera rotation.
+            if (IsInFirstPerson) return;
+
+            if (_lookInput.sqrMagnitude >= _threshold && !LockCameraPosition)
             {
-                _cinemachineTargetYaw += _input.look.x * Time.deltaTime;
-                _cinemachineTargetPitch += _input.look.y * Time.deltaTime;
+                _cinemachineTargetYaw += _lookInput.x * Time.deltaTime;
+                _cinemachineTargetPitch += _lookInput.y * Time.deltaTime;
             }
 
             _cinemachineTargetYaw = ClampAngle(_cinemachineTargetYaw, float.MinValue, float.MaxValue);
@@ -1171,11 +1290,11 @@ namespace StarterAssets
         private void Move()
         {
             if (!isLocalPlayer) return;
-            float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
-            if (_input.move == Vector2.zero) targetSpeed = 0.0f;
+            float targetSpeed = _sprintHeld ? SprintSpeed : MoveSpeed;
+            if (_moveInput == Vector2.zero) targetSpeed = 0.0f;
             float currentHorizontalSpeed = new Vector3(_controller.velocity.x, 0.0f, _controller.velocity.z).magnitude;
             float speedOffset = 0.1f;
-            float inputMagnitude = _input.analogMovement ? _input.move.magnitude : 1f;
+            float inputMagnitude = _moveInput.magnitude;
 
             if (currentHorizontalSpeed < targetSpeed - speedOffset || currentHorizontalSpeed > targetSpeed + speedOffset)
             {
@@ -1186,14 +1305,23 @@ namespace StarterAssets
             {
                 _speed = targetSpeed;
             }
+
+            // --- Move diagnostic: log once per ~3s ---
+            if (Time.frameCount % 180 == 0)
+            {
+                Debug.Log($"[MOVE_DIAG] holdingGun={isHoldingGun} is1P={IsInFirstPerson} | " +
+                          $"spd={_speed:F4} targetSpd={targetSpeed:F2} curHSpeed={currentHorizontalSpeed:F4} | " +
+                          $"ccVel_before={_controller.velocity} | dt={Time.deltaTime:F4} | " +
+                          $"pos={transform.position:F4}");
+            }
             _animationBlend = Mathf.Lerp(_animationBlend, targetSpeed, Time.deltaTime * SpeedChangeRate);
 
-            float moveX = _input.move.x;
-            float moveY = _input.move.y;
+            float moveX = _moveInput.x;
+            float moveY = _moveInput.y;
 
             Vector3 cameraForward;
             Vector3 cameraRight;
-            if (isFirstPerson)
+            if (IsInFirstPerson)
             {
                 //鼠标看哪，哪就是前
                 cameraForward = transform.forward;
@@ -1213,7 +1341,7 @@ namespace StarterAssets
             if (!isHoldingGun)
             {
                 //第一人称无枪 正常鼠标转向
-                if (isFirstPerson)
+                if (IsInFirstPerson)
                 {
                     Vector3 moveDirection = cameraRight * moveX + cameraForward * moveY;
                     _controller.Move(moveDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
@@ -1221,8 +1349,8 @@ namespace StarterAssets
                 // 第三人称无枪逻辑不变
                 else
                 {
-                    Vector3 inputDirection = new Vector3(_input.move.x, 0.0f, _input.move.y).normalized;
-                    if (_input.move != Vector2.zero)
+                    Vector3 inputDirection = new Vector3(_moveInput.x, 0.0f, _moveInput.y).normalized;
+                    if (_moveInput != Vector2.zero)
                     {
                         _targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg + _mainCamera.transform.eulerAngles.y;
                         float rotation = Mathf.SmoothDampAngle(transform.eulerAngles.y, _targetRotation, ref _rotationVelocity, RotationSmoothTime);
@@ -1237,7 +1365,7 @@ namespace StarterAssets
                 Vector3 moveDirection = cameraRight * moveX + cameraForward * moveY;
 
                 // 第一人称不旋转角色，只保持朝向；第三人称正常旋转
-                if (!isFirstPerson)
+                if (!IsInFirstPerson)
                 {
                     _targetRotation = _mainCamera.transform.eulerAngles.y;
                     float rotation = Mathf.SmoothDampAngle(transform.eulerAngles.y, _targetRotation, ref _rotationVelocity, RotationSmoothTime);
@@ -1246,6 +1374,9 @@ namespace StarterAssets
 
                 _controller.Move(moveDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
             }
+
+            if (Time.frameCount % 180 == 0)
+                Debug.Log($"[MOVE_DIAG] ccVel_after={_controller.velocity}");
 
             // 动画逻辑
             if (_hasAnimator)
@@ -1293,7 +1424,7 @@ namespace StarterAssets
                 {
                     _verticalVelocity = -2f;
                 }
-                if (_input.jump && _jumpTimeoutDelta <= 0.0f && !_isDrinking)
+                if (_jumpTriggered && _jumpTimeoutDelta <= 0.0f && !_isDrinking)
                 {
                     _verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
                     if (_hasAnimator)
@@ -1320,7 +1451,7 @@ namespace StarterAssets
                         _animator.SetBool(_animIDFreeFall, true);
                     }
                 }
-                _input.jump = false;
+                _jumpTriggered = false;
             }
             if (_verticalVelocity < _terminalVelocity)
             {
@@ -1345,109 +1476,33 @@ namespace StarterAssets
             Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z), GroundedRadius);
         }
 
-        // 应用人称视角的模型/相机显隐 + FPS角度重置
-        private void ApplyPersonView()
-        {
-            if (thirdPersonModel != null) thirdPersonModel.SetActive(!isFirstPerson);
-            if (firstPersonModel != null) firstPersonModel.SetActive(isFirstPerson);
-            if (firstPersonModelGun != null) firstPersonModelGun.SetActive(isFirstPerson && isHoldingGun);
-
-            if (fpCamera != null) fpCamera.gameObject.SetActive(isFirstPerson);
-            if (_mainCamera != null) _mainCamera.SetActive(!isFirstPerson);
-            if (thirdPersonVCam != null) thirdPersonVCam.gameObject.SetActive(!isFirstPerson);
-
-            if (isFirstPerson)
-            {
-                fpYaw = transform.eulerAngles.y;
-                fpPitch = 0;
-                if (fpCameraRoot != null) fpCameraRoot.localRotation = Quaternion.Euler(0f, 0f, 0f);
-            }
-        }
-
-        //切换人称视角
-        private void ToggleFirstPerson()
-        {
-            isInspecting = false;
-            if (!isLocalPlayer) return; // 仅本地玩家可切换
-            _shotCount = 0;
-            //重置后坐力和散布
-            _targetRecoilOffset = Vector2.zero;
-            _currentRecoilOffset = Vector2.zero;
-            _currentSpread = BaseSpread;
-
-            isFirstPerson = !isFirstPerson;
-            ApplyPersonView();
-
-            if (!isFirstPerson)
-            {
-                _targetRotation = _mainCamera.transform.eulerAngles.y;
-                transform.rotation = Quaternion.Euler(0, _targetRotation, 0);
-
-                if (isHoldingGun)
-                {
-                    CmdTriggerChangeGun();
-                }
-            }
-
-            ResetAnimatorAndNetwork();
-
-            CanShoot = isHoldingGun;
-            Debug.Log("切换至：" + (isFirstPerson ? "第一人称" : "第三人称"));
-        }
-
-        // 服务端命令触发ChangeGun并同步给所有玩家
-        [Command]
-        private void CmdTriggerChangeGun()
-        {
-            RpcTriggerChangeGun();
-        }
-
-        // 所有客户端播放ChangeGun动画
-        [ClientRpc]
-        private void RpcTriggerChangeGun()
-        {
-            if (_hasAnimator)
-            {
-                _networkAnimator.SetTrigger("ChangeGun");
-            }
-        }
-
         private void UpdateFirstPersonAnim()   //第一人称动画同步
         {
             if (!isLocalPlayer || firstPersonAnimator == null) return;
 
-            //移动速度
+            // Editor: LPSP Character.UpdateAnimator handles all animator parameters
+            // with smooth damping. Skip TPC version to avoid overwriting.
+            if (IsLpspCharacterActive) return;
+
+            // Locomotion blend (magnitude)
             firstPersonAnimator.SetFloat("Movement", _animationBlend);
+            // Per-axis for directional blending (strafe / forward-back)
+            firstPersonAnimator.SetFloat("Horizontal", _moveInput.x);
+            firstPersonAnimator.SetFloat("Vertical", _moveInput.y);
 
-            //冲刺
-            firstPersonAnimator.SetBool("Running", _input.sprint);
-
-            // 持枪状态
+            // Sprint / holster
+            firstPersonAnimator.SetBool("Running", _sprintHeld);
             firstPersonAnimator.SetBool("Holstered", !isHoldingGun);
-        }
-
-        private void ResetAnimatorAndNetwork()
-        {
-            if (_animator != null)
-            {
-                _animator.enabled = false; // 先关闭
-                _animator.enabled = true;  // 再开启
-                _animator.Rebind();        // 加固重置
-                _animator.Play(0, 0);      // 强制播放
-            }
-
-            if (_networkAnimator != null && _animator != null)
-            {
-                _networkAnimator.animator = _animator; // 重新赋值
-            }
         }
 
         // 右键瞄准动画
         private void Aim()
         {
             // 限制条件：有动画组件、第一人称、持枪、非喝水状态 才能瞄准
-            if (!firstPersonAnimator || !isFirstPerson || !isHoldingGun || _isDrinking) return;
-            Debug.Log("瞄准状态：" + Input.GetMouseButton(1));
+            if (!firstPersonAnimator || !IsInFirstPerson || !isHoldingGun || _isDrinking) return;
+            // Editor: LPSP Character handles aiming via UpdateAnimator/OnAim.
+            // Skip TPC version to avoid conflicting parameter writes.
+            if (IsLpspCharacterActive) return;
             // 鼠标右键按住进入瞄准
             if (Input.GetMouseButton(1))
             {
@@ -1535,6 +1590,7 @@ namespace StarterAssets
 
         void OnGUI()
         {
+            // --- Player name tag (above head, all players) ---
             if (Camera.main == null) return;
 
             Vector3 screenPos = Camera.main.WorldToScreenPoint(transform.position);
@@ -1546,6 +1602,85 @@ namespace StarterAssets
             string teamName = teamId == 0 ? "红队" : "蓝队";
             string text = $"{(isLocal ? "我" : "")} T:{teamId}({teamName})";
             GUI.Label(new Rect(screenPos.x - 40, screenPos.y - 20, 200, 20), text);
+        }
+
+        #region IA_Player Input
+
+        /// <summary>
+        /// Polls IA_Player actions directly each frame. FP_CH's PlayerInput uses
+        /// InvokeUnityEvents mode, so SendMessage callbacks (OnMove/OnLook/etc.) are
+        /// never invoked. Per-frame polling bypasses the notification mode entirely.
+        /// </summary>
+        private void PollPlayerInput()
+        {
+            var pi = GetComponent<PlayerInput>();
+            if (pi == null || pi.actions == null) return;
+
+            _moveInput = pi.actions["Movement"].ReadValue<Vector2>();
+            if (_cursorInputForLook)
+            {
+                // Bypass ScaleVector2(0.05) processor on the Look action's Pointer/delta binding.
+                // LPSP CameraLook uses Quaternion accumulation (needs tiny values), but TPC uses
+                // Euler-angle addition (needs raw pixel delta). Reading Mouse.current.delta directly
+                // gives us the raw hardware value.
+                var mouse = Mouse.current;
+                if (mouse != null)
+                    _lookInput = mouse.delta.ReadValue();
+            }
+            _sprintHeld = pi.actions["Run"].IsPressed();
+            if (pi.actions["Jump"].WasPressedThisFrame())
+                _jumpTriggered = true;
+        }
+
+        #endregion
+
+        #region Deprecated SendMessage Callbacks
+        // These were designed for SendMessage mode but PlayerInput uses InvokeUnityEvents.
+        // Left for reference; not called at runtime. See PollPlayerInput() above.
+
+        /// <summary>
+        /// Receives Move input from the IA_Player PlayerInput component via SendMessage.
+        /// </summary>
+        public void OnMove(InputAction.CallbackContext context)
+        {
+            _moveInput = context.ReadValue<Vector2>();
+        }
+
+        /// <summary>
+        /// Receives Look input from the IA_Player PlayerInput component via SendMessage.
+        /// </summary>
+        public void OnLook(InputAction.CallbackContext context)
+        {
+            if (_cursorInputForLook)
+                _lookInput = context.ReadValue<Vector2>();
+        }
+
+        /// <summary>
+        /// Receives Sprint input from the IA_Player PlayerInput component via SendMessage.
+        /// </summary>
+        public void OnSprint(InputAction.CallbackContext context)
+        {
+            _sprintHeld = context.ReadValueAsButton();
+        }
+
+        /// <summary>
+        /// Receives Jump input from the IA_Player PlayerInput component via SendMessage.
+        /// </summary>
+        public void OnJump(InputAction.CallbackContext context)
+        {
+            if (context.performed)
+                _jumpTriggered = true;
+        }
+
+        #endregion
+
+        /// <summary>
+        /// Triggers a jump. Called by ThirdPersonMovementBridge when the LPSP Character
+        /// requests a jump through MovementBehaviour.Jump().
+        /// </summary>
+        public void TriggerJump()
+        {
+            _jumpTriggered = true;
         }
     }
 }
