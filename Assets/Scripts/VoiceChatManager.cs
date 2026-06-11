@@ -195,7 +195,10 @@ public class VoiceChatManager : MonoBehaviour
         if (Instance == this)
         {
             ClientSession?.Dispose();
-            AudioServer?.Dispose();
+            // AudioServer?.Dispose() 内部访问 NetworkManager.singleton.transport，
+            // 服务端关闭时 singleton 可能已销毁导致 NRE。需在 NetworkManager 存活时才释放。
+            if (NetworkManager.singleton != null)
+                AudioServer?.Dispose();
         }
     }
 #endif

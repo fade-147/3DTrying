@@ -52,6 +52,15 @@ public class PlayerCharacter : NetworkBehaviour
     {
         _animator = GetComponent<Animator>();
         if (_animator != null) _originalController = _animator.runtimeAnimatorController;
+
+        // Player_FPS_TP 的 3P Animator 在子物体上，从 PlayerNetworkBridge 获取
+        if (_animator == null)
+        {
+            var pnb = GetComponent<StarterAssets.PlayerNetworkBridge>();
+            if (pnb != null) _animator = pnb.TpAnimator;
+            if (_animator != null) _originalController = _animator.runtimeAnimatorController;
+        }
+
         _characterController = GetComponent<CharacterController>();
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _rootColliders = GetComponents<Collider>();

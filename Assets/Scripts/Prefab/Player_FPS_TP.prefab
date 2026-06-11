@@ -4245,6 +4245,8 @@ GameObject:
   - component: {fileID: 1637694643086085521}
   - component: {fileID: 2482790335043080306}
   - component: {fileID: 67040393585991976}
+  - component: {fileID: 1441212589942155161}
+  - component: {fileID: 2828060690696036812}
   m_Layer: 10
   m_Name: Player_FPS_TP
   m_TagString: Player
@@ -5034,13 +5036,13 @@ MonoBehaviour:
   CurrentHealth: 0
   isDead: 0
   behaviourTreeOwner: {fileID: 0}
-  networkAnimator: {fileID: 0}
+  networkAnimator: {fileID: 5894780746224883722}
   deathCanvas: {fileID: 0}
   playerVisual: {fileID: 0}
-  deathThirdPersonModel: {fileID: 0}
-  deathFirstPersonModel: {fileID: 0}
+  deathThirdPersonModel: {fileID: 8835345289339370267}
+  deathFirstPersonModel: {fileID: 9144016917351435942}
   deathFirstPersonModelGun: {fileID: 0}
-  deadCamera: {fileID: 0}
+  deadCamera: {fileID: 7529845444540618747}
   healthFillImage: {fileID: 0}
 --- !u!82 &67040393585991976
 AudioSource:
@@ -5138,6 +5140,42 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1441212589942155161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2751027687307977091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c9e17797d08124ba780e7feab5d64e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMaterial: {fileID: 2100000, guid: 5f512f12b3f213a4ba30a0a3595b56e1, type: 2}
+--- !u!136 &2828060690696036812
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2751027687307977091}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.23024449
+  m_Height: 1.8031541
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: -0.04}
 --- !u!1 &2825526234971183696
 GameObject:
   m_ObjectHideFlags: 0

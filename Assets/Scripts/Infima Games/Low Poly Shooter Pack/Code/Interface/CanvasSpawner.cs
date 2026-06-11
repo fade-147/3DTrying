@@ -1,4 +1,4 @@
-﻿//Copyright 2022, Infima Games. All Rights Reserved.
+//Copyright 2022, Infima Games. All Rights Reserved.
 
 using UnityEngine;
 
@@ -27,7 +27,6 @@ namespace InfimaGames.LowPolyShooterPack.Interface
 
         /// <summary>
         /// Static flag to ensure only one canvas is spawned per process.
-        /// In multiplayer, each player prefab instance would otherwise spawn its own canvas.
         /// </summary>
         private static bool _canvasSpawned;
 
@@ -35,20 +34,36 @@ namespace InfimaGames.LowPolyShooterPack.Interface
 
         #region UNITY
 
-        /// <summary>
-        /// Awake.
-        /// </summary>
         private void Awake()
         {
-            //Only spawn the UI canvas once per game instance.
-            if (_canvasSpawned)
-                return;
+            // No longer spawns automatically — PlayerNetworkBridge.OnStartLocalPlayer()
+            // calls SpawnForCharacter() at the right time with the local player's Character.
+        }
+
+        #endregion
+
+        #region METHODS
+
+        /// <summary>
+        /// Spawns the UI Canvas and injects the local player's Character into all UI Elements.
+        /// Called by PlayerNetworkBridge.OnStartLocalPlayer() — ensures the Canvas always
+        /// references the local player, not a remote player.
+        /// </summary>
+        public void SpawnForCharacter(CharacterBehaviour character)
+        {
+            if (_canvasSpawned) return;
             _canvasSpawned = true;
 
-            //Spawn Interface.
             if (canvasPrefab != null)
-                Instantiate(canvasPrefab);
-            //Spawn Quality Settings Menu (only if assigned).
+            {
+                var canvas = Instantiate(canvasPrefab);
+                // Wire the local Character into every UI Element on the Canvas.
+                foreach (var element in canvas.GetComponentsInChildren<Element>(true))
+                {
+                    element.SetCharacter(character);
+                }
+            }
+
             if (qualitySettingsPrefab != null)
                 Instantiate(qualitySettingsPrefab);
         }

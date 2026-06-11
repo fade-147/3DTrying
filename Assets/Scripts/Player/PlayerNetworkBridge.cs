@@ -69,6 +69,11 @@ namespace StarterAssets
         /// </summary>
         public Animator FpAnimator => fpAnimator;
 
+        /// <summary>
+        /// 3P Animator reference (wired in prefab). Exposed for PlayerCharacter ragdoll.
+        /// </summary>
+        public Animator TpAnimator => tpAnimator;
+
         private NetworkAnimator _networkAnimator;
         private Cinemachine.CinemachineVirtualCamera _thirdPersonVCam;
         private bool _referencesCached;
@@ -183,6 +188,14 @@ namespace StarterAssets
                 Debug.Log("[PNB] LPSP Character enabled.");
             }
             Debug.Log("[PNB] Unified mode: all LPSP components enabled (Editor + Build).");
+
+            // Spawn UI Canvas for the local player only, with correct Character reference.
+            var canvasSpawner = GetComponent<InfimaGames.LowPolyShooterPack.Interface.CanvasSpawner>();
+            if (canvasSpawner != null)
+            {
+                canvasSpawner.SpawnForCharacter(characterBehaviour);
+                Debug.Log("[PNB] Canvas spawned for local player.");
+            }
 
             // Enable input
             if (playerInput != null)

@@ -69,6 +69,18 @@ namespace InfimaGames.LowPolyShooterPack.Interface
         #region METHODS
 
         /// <summary>
+        /// Sets the Character reference for this UI Element.
+        /// Called by CanvasSpawner after spawning the Canvas, so the Canvas always
+        /// references the local player's Character (not a remote player's).
+        /// </summary>
+        public void SetCharacter(CharacterBehaviour character)
+        {
+            characterBehaviour = character;
+            if (character != null)
+                inventoryBehaviour = character.GetInventory();
+        }
+
+        /// <summary>
         /// Tick.
         /// </summary>
         protected virtual void Tick() {}

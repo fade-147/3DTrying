@@ -4605,7 +4605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
-  _boundGraphSerialization: '{"type":"NodeCanvas.BehaviourTrees.BehaviourTree","nodes":[{"dynamic":true,"$type":"NodeCanvas.BehaviourTrees.Parallel","$id":"0"},{"_position":{"x":-100.0,"y":200.0},"$type":"NodeCanvas.BehaviourTrees.Selector","$id":"1"},{"_position":{"x":-1200.0,"y":300.0},"$type":"NodeCanvas.BehaviourTrees.Sequencer","$id":"2"},{"_condition":{"threshold":{"_value":40.0},"$type":"NodeCanvas.Tasks.Conditions.BotCheckHealth"},"_position":{"x":-1517.22,"y":401.7508},"$type":"NodeCanvas.BehaviourTrees.ConditionNode","$id":"3"},{"_condition":{"$type":"NodeCanvas.Tasks.Conditions.BotCheckIsReloading"},"_position":{"x":-1400.0,"y":520.0},"$type":"NodeCanvas.BehaviourTrees.ConditionNode","$id":"4"},{"_condition":{"$type":"NodeCanvas.Tasks.Conditions.BotCheckIsDrinking"},"_position":{"x":-1300.0,"y":590.0},"$type":"NodeCanvas.BehaviourTrees.ConditionNode","$id":"5"},{"_action":{"speedMultiplier":{},"$type":"NodeCanvas.Tasks.Actions.BotSetSpeed"},"_position":{"x":-1200.0,"y":660.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"6"},{"_action":{"$type":"NodeCanvas.Tasks.Actions.BotSetDrinkingAction"},"_position":{"x":-1100.0,"y":730.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"7"},{"_action":{"parameter":{"_value":"Drink"},"parameterHashID":{},"$type":"NodeCanvas.Tasks.Actions.MecanimSetTrigger"},"_position":{"x":-1000.0,"y":800.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"8"},{"_action":{"waitTime":{"_value":4.0},"$type":"NodeCanvas.Tasks.Actions.Wait"},"_position":{"x":-900.0,"y":870.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"9"},{"_action":{"amount":{"_value":30.0},"$type":"NodeCanvas.Tasks.Actions.BotHealAction"},"_position":{"x":-800.0,"y":940.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"10"},{"_action":{"setTo":false,"$type":"NodeCanvas.Tasks.Actions.BotSetDrinkingAction"},"_position":{"x":-700.0,"y":1010.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"11"},{"_position":{"x":-500.0,"y":300.0},"$type":"NodeCanvas.BehaviourTrees.Sequencer","$id":"12"},{"_condition":{"threshold":{},"$type":"NodeCanvas.Tasks.Conditions.BotCheckAmmo"},"_position":{"x":-800.0,"y":450.0},"$type":"NodeCanvas.BehaviourTrees.ConditionNode","$id":"13"},{"_condition":{"$type":"NodeCanvas.Tasks.Conditions.BotCheckIsReloading"},"_position":{"x":-700.0,"y":520.0},"$type":"NodeCanvas.BehaviourTrees.ConditionNode","$id":"14"},{"_action":{"$type":"NodeCanvas.Tasks.Actions.BotSetReloadingAction"},"_position":{"x":-600.0,"y":590.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"15"},{"_action":{"speedMultiplier":{"_value":0.9},"$type":"NodeCanvas.Tasks.Actions.BotSetSpeed"},"_position":{"x":-500.0,"y":660.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"16"},{"_action":{"waitTime":{"_value":2.0},"$type":"NodeCanvas.Tasks.Actions.Wait"},"_position":{"x":-400.0,"y":730.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"17"},{"_action":{"$type":"NodeCanvas.Tasks.Actions.BotRefillAmmoAction"},"_position":{"x":-300.0,"y":800.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"18"},{"_action":{"setTo":false,"$type":"NodeCanvas.Tasks.Actions.BotSetReloadingAction"},"_position":{"x":-200.0,"y":870.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"19"},{"_action":{"speedMultiplier":{"_value":1.0},"$type":"NodeCanvas.Tasks.Actions.BotSetSpeed"},"_position":{"x":-100.0,"y":940.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"20"},{"_position":{"x":188.3219,"y":312.9758},"$type":"NodeCanvas.BehaviourTrees.Sequencer","$id":"21"},{"_action":{"targetEnemy":{"_name":"targetEnemy","_targetVariableID":"a1b2c3d4-e5f6-7890-abcd-ef1234567890"},"$type":"NodeCanvas.Tasks.Actions.BotFindEnemy"},"_position":{"x":100.0,"y":500.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"22"},{"_condition":{"$type":"NodeCanvas.Tasks.Conditions.BotCheckIsDrinking"},"_position":{"x":200.0,"y":657.565},"$type":"NodeCanvas.BehaviourTrees.ConditionNode","$id":"23"},{"_condition":{"threshold":{},"checkType":1,"$type":"NodeCanvas.Tasks.Conditions.BotCheckAmmo"},"_position":{"x":300.0,"y":730.0},"$type":"NodeCanvas.BehaviourTrees.ConditionNode","$id":"24"},{"_position":{"x":467.1858,"y":795.188},"$type":"NodeCanvas.BehaviourTrees.Parallel","$id":"25"},{"_action":{"targetEnemy":{"_name":"targetEnemy","_targetVariableID":"a1b2c3d4-e5f6-7890-abcd-ef1234567890"},"reEvaluateInterval":{"_value":0.5},"maxDistance":{"_value":50.0},"switchThreshold":{"_value":0.2},"$type":"NodeCanvas.Tasks.Actions.BotSelectTarget"},"_position":{"x":380.0,"y":800.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"26"},{"_action":{"targetEnemy":{"_name":"targetEnemy","_targetVariableID":"a1b2c3d4-e5f6-7890-abcd-ef1234567890"},"fireRate":{"_value":0.35},"effectiveRange":{"_value":30.0},"maxChaseDistance":{"_value":60.0},"lostTargetTimeout":{"_value":5.0},"noLOSTimeout":{"_value":8.0},"$type":"NodeCanvas.Tasks.Actions.BotAimAndShoot"},"_position":{"x":500.0,"y":870.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"27"},{"_position":{"x":700.0,"y":450.0},"$type":"NodeCanvas.BehaviourTrees.Sequencer","$id":"28"},{"_action":{"patrolTarget":{"_name":"patrolTarget","_targetVariableID":"c4d5e6f7-a8b9-0123-4567-890abcdef012"},"fallbackRadius":{"_value":30.0},"$type":"NodeCanvas.Tasks.Actions.BotPickPatrolPoint"},"_position":{"x":700.0,"y":520.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"29"},{"_action":{"targetPosition":{"_name":"patrolTarget","_targetVariableID":"c4d5e6f7-a8b9-0123-4567-890abcdef012"},"speed":{"_value":4.0},"keepDistance":{"_value":0.5},"$type":"NodeCanvas.Tasks.Actions.BotMoveToPosition"},"_position":{"x":700.0,"y":590.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"30"},{"_action":{"waitTime":{"_value":2.0},"$type":"NodeCanvas.Tasks.Actions.Wait"},"_position":{"x":699.0,"y":660.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"31"},{"_action":{"$type":"NodeCanvas.Tasks.Actions.BotUpdateAnim"},"_position":{"x":979.4371,"y":559.6975},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"32"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"32"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"12"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"21"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"28"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"4"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"5"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"6"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"7"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"8"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"9"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"10"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"11"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"12"},"_targetNode":{"$ref":"13"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"12"},"_targetNode":{"$ref":"14"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"12"},"_targetNode":{"$ref":"15"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"12"},"_targetNode":{"$ref":"16"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"12"},"_targetNode":{"$ref":"17"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"12"},"_targetNode":{"$ref":"18"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"12"},"_targetNode":{"$ref":"19"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"12"},"_targetNode":{"$ref":"20"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"21"},"_targetNode":{"$ref":"22"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"21"},"_targetNode":{"$ref":"23"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"21"},"_targetNode":{"$ref":"24"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"21"},"_targetNode":{"$ref":"25"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"25"},"_targetNode":{"$ref":"26"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"25"},"_targetNode":{"$ref":"27"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"28"},"_targetNode":{"$ref":"29"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"28"},"_targetNode":{"$ref":"30"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"28"},"_targetNode":{"$ref":"31"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{"Health":{"_value":100.0,"_name":"Health","_id":"9538b576-19e1-41fc-ac74-9a25529b1acf","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+  _boundGraphSerialization: '{"type":"NodeCanvas.BehaviourTrees.BehaviourTree","nodes":[{"dynamic":true,"$type":"NodeCanvas.BehaviourTrees.Parallel","$id":"0"},{"_position":{"x":-100.0,"y":200.0},"$type":"NodeCanvas.BehaviourTrees.Selector","$id":"1"},{"_position":{"x":-1200.0,"y":300.0},"$type":"NodeCanvas.BehaviourTrees.Sequencer","$id":"2"},{"_condition":{"threshold":{"_value":40.0},"$type":"NodeCanvas.Tasks.Conditions.BotCheckHealth"},"_position":{"x":-1517.22,"y":401.7508},"$type":"NodeCanvas.BehaviourTrees.ConditionNode","$id":"3"},{"_condition":{"$type":"NodeCanvas.Tasks.Conditions.BotCheckIsReloading"},"_position":{"x":-1400.0,"y":520.0},"$type":"NodeCanvas.BehaviourTrees.ConditionNode","$id":"4"},{"_condition":{"$type":"NodeCanvas.Tasks.Conditions.BotCheckIsDrinking"},"_position":{"x":-1300.0,"y":590.0},"$type":"NodeCanvas.BehaviourTrees.ConditionNode","$id":"5"},{"_action":{"speedMultiplier":{},"$type":"NodeCanvas.Tasks.Actions.BotSetSpeed"},"_position":{"x":-1217.687,"y":673.1227},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"6"},{"_action":{"$type":"NodeCanvas.Tasks.Actions.BotSetDrinkingAction"},"_position":{"x":-1100.0,"y":730.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"7"},{"_action":{"parameter":{"_value":"Drink"},"parameterHashID":{},"$type":"NodeCanvas.Tasks.Actions.MecanimSetTrigger"},"_position":{"x":-1000.0,"y":800.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"8"},{"_action":{"waitTime":{"_value":4.0},"$type":"NodeCanvas.Tasks.Actions.Wait"},"_position":{"x":-900.0,"y":870.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"9"},{"_action":{"amount":{"_value":30.0},"$type":"NodeCanvas.Tasks.Actions.BotHealAction"},"_position":{"x":-800.0,"y":940.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"10"},{"_action":{"setTo":false,"$type":"NodeCanvas.Tasks.Actions.BotSetDrinkingAction"},"_position":{"x":-700.0,"y":1010.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"11"},{"_position":{"x":-500.0,"y":300.0},"$type":"NodeCanvas.BehaviourTrees.Sequencer","$id":"12"},{"_condition":{"threshold":{},"$type":"NodeCanvas.Tasks.Conditions.BotCheckAmmo"},"_position":{"x":-800.0,"y":450.0},"$type":"NodeCanvas.BehaviourTrees.ConditionNode","$id":"13"},{"_condition":{"$type":"NodeCanvas.Tasks.Conditions.BotCheckIsReloading"},"_position":{"x":-700.0,"y":520.0},"$type":"NodeCanvas.BehaviourTrees.ConditionNode","$id":"14"},{"_action":{"$type":"NodeCanvas.Tasks.Actions.BotSetReloadingAction"},"_position":{"x":-600.0,"y":590.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"15"},{"_action":{"speedMultiplier":{"_value":0.9},"$type":"NodeCanvas.Tasks.Actions.BotSetSpeed"},"_position":{"x":-500.0,"y":660.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"16"},{"_action":{"waitTime":{"_value":2.0},"$type":"NodeCanvas.Tasks.Actions.Wait"},"_position":{"x":-400.0,"y":730.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"17"},{"_action":{"$type":"NodeCanvas.Tasks.Actions.BotRefillAmmoAction"},"_position":{"x":-300.0,"y":800.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"18"},{"_action":{"setTo":false,"$type":"NodeCanvas.Tasks.Actions.BotSetReloadingAction"},"_position":{"x":-200.0,"y":870.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"19"},{"_action":{"speedMultiplier":{"_value":1.0},"$type":"NodeCanvas.Tasks.Actions.BotSetSpeed"},"_position":{"x":-100.0,"y":940.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"20"},{"_position":{"x":188.3219,"y":312.9758},"$type":"NodeCanvas.BehaviourTrees.Sequencer","$id":"21"},{"_action":{"targetEnemy":{"_name":"targetEnemy","_targetVariableID":"a1b2c3d4-e5f6-7890-abcd-ef1234567890"},"$type":"NodeCanvas.Tasks.Actions.BotFindEnemy"},"_position":{"x":100.0,"y":500.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"22"},{"_condition":{"$type":"NodeCanvas.Tasks.Conditions.BotCheckIsDrinking"},"_position":{"x":200.0,"y":657.565},"$type":"NodeCanvas.BehaviourTrees.ConditionNode","$id":"23"},{"_condition":{"threshold":{},"checkType":1,"$type":"NodeCanvas.Tasks.Conditions.BotCheckAmmo"},"_position":{"x":300.0,"y":730.0},"$type":"NodeCanvas.BehaviourTrees.ConditionNode","$id":"24"},{"_position":{"x":467.1858,"y":795.188},"$type":"NodeCanvas.BehaviourTrees.Parallel","$id":"25"},{"_action":{"targetEnemy":{"_name":"targetEnemy","_targetVariableID":"a1b2c3d4-e5f6-7890-abcd-ef1234567890"},"reEvaluateInterval":{"_value":0.5},"maxDistance":{"_value":50.0},"switchThreshold":{"_value":0.2},"$type":"NodeCanvas.Tasks.Actions.BotSelectTarget"},"_position":{"x":380.0,"y":800.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"26"},{"_action":{"targetEnemy":{"_name":"targetEnemy","_targetVariableID":"a1b2c3d4-e5f6-7890-abcd-ef1234567890"},"fireRate":{"_value":0.35},"effectiveRange":{"_value":30.0},"maxChaseDistance":{"_value":60.0},"lostTargetTimeout":{"_value":5.0},"noLOSTimeout":{"_value":8.0},"$type":"NodeCanvas.Tasks.Actions.BotAimAndShoot"},"_position":{"x":500.0,"y":870.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"27"},{"_position":{"x":700.0,"y":450.0},"$type":"NodeCanvas.BehaviourTrees.Sequencer","$id":"28"},{"_action":{"patrolTarget":{"_name":"patrolTarget","_targetVariableID":"c4d5e6f7-a8b9-0123-4567-890abcdef012"},"fallbackRadius":{"_value":30.0},"$type":"NodeCanvas.Tasks.Actions.BotPickPatrolPoint"},"_position":{"x":700.0,"y":520.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"29"},{"_action":{"targetPosition":{"_name":"patrolTarget","_targetVariableID":"c4d5e6f7-a8b9-0123-4567-890abcdef012"},"speed":{"_value":4.0},"keepDistance":{"_value":0.5},"$type":"NodeCanvas.Tasks.Actions.BotMoveToPosition"},"_position":{"x":700.0,"y":590.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"30"},{"_action":{"waitTime":{"_value":2.0},"$type":"NodeCanvas.Tasks.Actions.Wait"},"_position":{"x":699.0,"y":660.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"31"},{"_action":{"$type":"NodeCanvas.Tasks.Actions.BotUpdateAnim"},"_position":{"x":979.4371,"y":559.6975},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"32"},{"_action":{"speedMultiplier":{"_value":1.0},"$type":"NodeCanvas.Tasks.Actions.BotSetSpeed"},"_position":{"x":-1549.038,"y":750.2707},"$type":"NodeCanvas.BehaviourTrees.ActionNode"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"32"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"12"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"21"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"28"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"4"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"5"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"6"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"7"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"8"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"9"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"10"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"11"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"12"},"_targetNode":{"$ref":"13"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"12"},"_targetNode":{"$ref":"14"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"12"},"_targetNode":{"$ref":"15"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"12"},"_targetNode":{"$ref":"16"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"12"},"_targetNode":{"$ref":"17"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"12"},"_targetNode":{"$ref":"18"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"12"},"_targetNode":{"$ref":"19"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"12"},"_targetNode":{"$ref":"20"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"21"},"_targetNode":{"$ref":"22"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"21"},"_targetNode":{"$ref":"23"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"21"},"_targetNode":{"$ref":"24"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"21"},"_targetNode":{"$ref":"25"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"25"},"_targetNode":{"$ref":"26"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"25"},"_targetNode":{"$ref":"27"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"28"},"_targetNode":{"$ref":"29"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"28"},"_targetNode":{"$ref":"30"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"28"},"_targetNode":{"$ref":"31"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{"Health":{"_value":100.0,"_name":"Health","_id":"9538b576-19e1-41fc-ac74-9a25529b1acf","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"Ammo":{"_value":30.0,"_name":"Ammo","_id":"ee5b5938-0311-4f9f-87cd-9421ba14233d","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"IsReloading":{"_name":"IsReloading","_id":"21b7e06f-8275-47a4-b6bb-014ef0782037","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"IsDrinking":{"_name":"IsDrinking","_id":"d8a1c3f2-5b6e-4a9c-8d1f-e2a3b4c5d6e7","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
@@ -4621,8 +4621,8 @@ MonoBehaviour:
     _version: 3.28
     _category: 
     _comments: 
-    _translation: {x: -636, y: -298}
-    _zoomFactor: 0.9937612
+    _translation: {x: 1573, y: -395}
+    _zoomFactor: 0.8763504
   _firstActivation: 0
   _enableAction: 0
   _disableAction: 0
@@ -4662,7 +4662,8 @@ MonoBehaviour:
   syncDirection: 0
   syncMode: 0
   syncInterval: 0
-  bulletPrefab: {fileID: 1086664671600574, guid: 5953171a59c27394e9ad5cbb564affa8, type: 3}
+  bulletPrefab: {fileID: 1086664671600574, guid: 5953171a59c27394e9ad5cbb564affa8,
+    type: 3}
   hitEffect: {fileID: 1067471869909948, guid: 5e02303289b3c494e8e185be0fbbd405, type: 3}
   bulletSpeed: 800
   bulletLifeTime: 2
@@ -4696,6 +4697,10 @@ MonoBehaviour:
   networkAnimator: {fileID: 9012345678901234502}
   deathCanvas: {fileID: 0}
   playerVisual: {fileID: 0}
+  deathThirdPersonModel: {fileID: 0}
+  deathFirstPersonModel: {fileID: 0}
+  deathFirstPersonModelGun: {fileID: 0}
+  deadCamera: {fileID: 0}
   healthFillImage: {fileID: 0}
 --- !u!114 &9012345678901234501
 MonoBehaviour:
@@ -7762,11 +7767,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
-    - target: {fileID: 23280471604157296, guid: 689946d975a0e55449b1e7ae41933e73, type: 3}
+    - target: {fileID: 23280471604157296, guid: 689946d975a0e55449b1e7ae41933e73,
+        type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 33699190840813150, guid: 689946d975a0e55449b1e7ae41933e73, type: 3}
+    - target: {fileID: 33699190840813150, guid: 689946d975a0e55449b1e7ae41933e73,
+        type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 4300000, guid: c7741850eebe1df4ea75a80275b16311, type: 3}
@@ -7778,20 +7785,24 @@ PrefabInstance:
     - {fileID: 1426050648627750, guid: 689946d975a0e55449b1e7ae41933e73, type: 3}
     - {fileID: 1892571237583176, guid: 689946d975a0e55449b1e7ae41933e73, type: 3}
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 4035219142733080, guid: 689946d975a0e55449b1e7ae41933e73, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 4035219142733080, guid: 689946d975a0e55449b1e7ae41933e73,
+        type: 3}
       insertIndex: -1
       addedObject: {fileID: 378348707788504159}
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1117582899397640, guid: 689946d975a0e55449b1e7ae41933e73, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 1117582899397640, guid: 689946d975a0e55449b1e7ae41933e73,
+        type: 3}
       insertIndex: -1
       addedObject: {fileID: 2857619947528343890}
-    - targetCorrespondingSourceObject: {fileID: 1117582899397640, guid: 689946d975a0e55449b1e7ae41933e73, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 1117582899397640, guid: 689946d975a0e55449b1e7ae41933e73,
+        type: 3}
       insertIndex: -1
       addedObject: {fileID: 7547585872427543941}
   m_SourcePrefab: {fileID: 100100000, guid: 689946d975a0e55449b1e7ae41933e73, type: 3}
 --- !u!1 &1960997230588999914 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1117582899397640, guid: 689946d975a0e55449b1e7ae41933e73, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1117582899397640, guid: 689946d975a0e55449b1e7ae41933e73,
+    type: 3}
   m_PrefabInstance: {fileID: 1960513864343878882}
   m_PrefabAsset: {fileID: 0}
 --- !u!65 &2857619947528343890
@@ -7844,7 +7855,8 @@ Rigidbody:
   m_CollisionDetection: 0
 --- !u!4 &1962288481906856442 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4035219142733080, guid: 689946d975a0e55449b1e7ae41933e73, type: 3}
+  m_CorrespondingSourceObject: {fileID: 4035219142733080, guid: 689946d975a0e55449b1e7ae41933e73,
+    type: 3}
   m_PrefabInstance: {fileID: 1960513864343878882}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7918213378732409519
@@ -7855,51 +7867,63 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8947301554297290341}
     m_Modifications:
-    - target: {fileID: 6097080075587658818, guid: 556e828522c2d664dacf6dde91f68efb, type: 3}
+    - target: {fileID: 6097080075587658818, guid: 556e828522c2d664dacf6dde91f68efb,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.137
       objectReference: {fileID: 0}
-    - target: {fileID: 6097080075587658818, guid: 556e828522c2d664dacf6dde91f68efb, type: 3}
+    - target: {fileID: 6097080075587658818, guid: 556e828522c2d664dacf6dde91f68efb,
+        type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.144
       objectReference: {fileID: 0}
-    - target: {fileID: 6097080075587658818, guid: 556e828522c2d664dacf6dde91f68efb, type: 3}
+    - target: {fileID: 6097080075587658818, guid: 556e828522c2d664dacf6dde91f68efb,
+        type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.013
       objectReference: {fileID: 0}
-    - target: {fileID: 6097080075587658818, guid: 556e828522c2d664dacf6dde91f68efb, type: 3}
+    - target: {fileID: 6097080075587658818, guid: 556e828522c2d664dacf6dde91f68efb,
+        type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.86803263
       objectReference: {fileID: 0}
-    - target: {fileID: 6097080075587658818, guid: 556e828522c2d664dacf6dde91f68efb, type: 3}
+    - target: {fileID: 6097080075587658818, guid: 556e828522c2d664dacf6dde91f68efb,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: 0.4965072
       objectReference: {fileID: 0}
-    - target: {fileID: 6097080075587658818, guid: 556e828522c2d664dacf6dde91f68efb, type: 3}
+    - target: {fileID: 6097080075587658818, guid: 556e828522c2d664dacf6dde91f68efb,
+        type: 3}
       propertyPath: m_LocalRotation.y
       value: 2.9103824e-11
       objectReference: {fileID: 0}
-    - target: {fileID: 6097080075587658818, guid: 556e828522c2d664dacf6dde91f68efb, type: 3}
+    - target: {fileID: 6097080075587658818, guid: 556e828522c2d664dacf6dde91f68efb,
+        type: 3}
       propertyPath: m_LocalRotation.z
       value: 1.4551912e-11
       objectReference: {fileID: 0}
-    - target: {fileID: 6097080075587658818, guid: 556e828522c2d664dacf6dde91f68efb, type: 3}
+    - target: {fileID: 6097080075587658818, guid: 556e828522c2d664dacf6dde91f68efb,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 59.538
       objectReference: {fileID: 0}
-    - target: {fileID: 6097080075587658818, guid: 556e828522c2d664dacf6dde91f68efb, type: 3}
+    - target: {fileID: 6097080075587658818, guid: 556e828522c2d664dacf6dde91f68efb,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6097080075587658818, guid: 556e828522c2d664dacf6dde91f68efb, type: 3}
+    - target: {fileID: 6097080075587658818, guid: 556e828522c2d664dacf6dde91f68efb,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6905987088780623608, guid: 556e828522c2d664dacf6dde91f68efb, type: 3}
+    - target: {fileID: 6905987088780623608, guid: 556e828522c2d664dacf6dde91f68efb,
+        type: 3}
       propertyPath: m_Name
       value: coffee_001
       objectReference: {fileID: 0}
-    - target: {fileID: 6905987088780623608, guid: 556e828522c2d664dacf6dde91f68efb, type: 3}
+    - target: {fileID: 6905987088780623608, guid: 556e828522c2d664dacf6dde91f68efb,
+        type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -7910,7 +7934,8 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 556e828522c2d664dacf6dde91f68efb, type: 3}
 --- !u!4 &4142760921704752877 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 6097080075587658818, guid: 556e828522c2d664dacf6dde91f68efb, type: 3}
+  m_CorrespondingSourceObject: {fileID: 6097080075587658818, guid: 556e828522c2d664dacf6dde91f68efb,
+    type: 3}
   m_PrefabInstance: {fileID: 7918213378732409519}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8103156868719040745
@@ -7921,63 +7946,78 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1962288481906856442}
     m_Modifications:
-    - target: {fileID: 8445401694592989334, guid: 8c7ba79f8ec05794aba7ffdd3d8aba93, type: 3}
+    - target: {fileID: 8445401694592989334, guid: 8c7ba79f8ec05794aba7ffdd3d8aba93,
+        type: 3}
       propertyPath: m_Name
       value: P_LPSP_WEP_AR_01
       objectReference: {fileID: 0}
-    - target: {fileID: 8445401694592989334, guid: 8c7ba79f8ec05794aba7ffdd3d8aba93, type: 3}
+    - target: {fileID: 8445401694592989334, guid: 8c7ba79f8ec05794aba7ffdd3d8aba93,
+        type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8445401694593213622, guid: 8c7ba79f8ec05794aba7ffdd3d8aba93, type: 3}
+    - target: {fileID: 8445401694593213622, guid: 8c7ba79f8ec05794aba7ffdd3d8aba93,
+        type: 3}
       propertyPath: m_LocalScale.x
       value: 0.86742
       objectReference: {fileID: 0}
-    - target: {fileID: 8445401694593213622, guid: 8c7ba79f8ec05794aba7ffdd3d8aba93, type: 3}
+    - target: {fileID: 8445401694593213622, guid: 8c7ba79f8ec05794aba7ffdd3d8aba93,
+        type: 3}
       propertyPath: m_LocalScale.y
       value: 0.86742
       objectReference: {fileID: 0}
-    - target: {fileID: 8445401694593213622, guid: 8c7ba79f8ec05794aba7ffdd3d8aba93, type: 3}
+    - target: {fileID: 8445401694593213622, guid: 8c7ba79f8ec05794aba7ffdd3d8aba93,
+        type: 3}
       propertyPath: m_LocalScale.z
       value: -0.86742
       objectReference: {fileID: 0}
-    - target: {fileID: 8445401694593213622, guid: 8c7ba79f8ec05794aba7ffdd3d8aba93, type: 3}
+    - target: {fileID: 8445401694593213622, guid: 8c7ba79f8ec05794aba7ffdd3d8aba93,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8445401694593213622, guid: 8c7ba79f8ec05794aba7ffdd3d8aba93, type: 3}
+    - target: {fileID: 8445401694593213622, guid: 8c7ba79f8ec05794aba7ffdd3d8aba93,
+        type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.009
       objectReference: {fileID: 0}
-    - target: {fileID: 8445401694593213622, guid: 8c7ba79f8ec05794aba7ffdd3d8aba93, type: 3}
+    - target: {fileID: 8445401694593213622, guid: 8c7ba79f8ec05794aba7ffdd3d8aba93,
+        type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.089
       objectReference: {fileID: 0}
-    - target: {fileID: 8445401694593213622, guid: 8c7ba79f8ec05794aba7ffdd3d8aba93, type: 3}
+    - target: {fileID: 8445401694593213622, guid: 8c7ba79f8ec05794aba7ffdd3d8aba93,
+        type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8445401694593213622, guid: 8c7ba79f8ec05794aba7ffdd3d8aba93, type: 3}
+    - target: {fileID: 8445401694593213622, guid: 8c7ba79f8ec05794aba7ffdd3d8aba93,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8445401694593213622, guid: 8c7ba79f8ec05794aba7ffdd3d8aba93, type: 3}
+    - target: {fileID: 8445401694593213622, guid: 8c7ba79f8ec05794aba7ffdd3d8aba93,
+        type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8445401694593213622, guid: 8c7ba79f8ec05794aba7ffdd3d8aba93, type: 3}
+    - target: {fileID: 8445401694593213622, guid: 8c7ba79f8ec05794aba7ffdd3d8aba93,
+        type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8445401694593213622, guid: 8c7ba79f8ec05794aba7ffdd3d8aba93, type: 3}
+    - target: {fileID: 8445401694593213622, guid: 8c7ba79f8ec05794aba7ffdd3d8aba93,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8445401694593213622, guid: 8c7ba79f8ec05794aba7ffdd3d8aba93, type: 3}
+    - target: {fileID: 8445401694593213622, guid: 8c7ba79f8ec05794aba7ffdd3d8aba93,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8445401694593213622, guid: 8c7ba79f8ec05794aba7ffdd3d8aba93, type: 3}
+    - target: {fileID: 8445401694593213622, guid: 8c7ba79f8ec05794aba7ffdd3d8aba93,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
@@ -7994,6 +8034,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 8c7ba79f8ec05794aba7ffdd3d8aba93, type: 3}
 --- !u!4 &378348707788504159 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 8445401694593213622, guid: 8c7ba79f8ec05794aba7ffdd3d8aba93, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8445401694593213622, guid: 8c7ba79f8ec05794aba7ffdd3d8aba93,
+    type: 3}
   m_PrefabInstance: {fileID: 8103156868719040745}
   m_PrefabAsset: {fileID: 0}
