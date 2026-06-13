@@ -522,8 +522,14 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Predicate<int>
 	// System.Predicate<object>
 	// UnityEngine.Events.InvokableCall<float>
+	// UnityEngine.Events.InvokableCall<int,int,int>
+	// UnityEngine.Events.InvokableCall<int,int>
 	// UnityEngine.Events.UnityAction<float>
+	// UnityEngine.Events.UnityAction<int,int,int>
+	// UnityEngine.Events.UnityAction<int,int>
 	// UnityEngine.Events.UnityEvent<float>
+	// UnityEngine.Events.UnityEvent<int,int,int>
+	// UnityEngine.Events.UnityEvent<int,int>
 	// UnityEngine.InputSystem.InputBindingComposite<UnityEngine.Vector2>
 	// UnityEngine.InputSystem.InputBindingComposite<float>
 	// UnityEngine.InputSystem.InputControl<UnityEngine.Vector2>

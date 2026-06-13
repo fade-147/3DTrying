@@ -28,6 +28,7 @@
     <type fullname="ChangeAnimator" preserve="all" />
     <type fullname="CharacterOutline" preserve="all" />
     <type fullname="GameMenuCol" preserve="all" />
+    <type fullname="GameUIManager" preserve="all" />
     <type fullname="InfimaGames.ACurves" preserve="all" />
     <type fullname="InfimaGames.LowPolyShooterPack.BoltBehaviour" preserve="all" />
     <type fullname="InfimaGames.LowPolyShooterPack.CameraHeight" preserve="all" />
@@ -113,6 +114,7 @@
     <type fullname="SteamManager" preserve="all" />
     <type fullname="StrategyZone" preserve="all" />
     <type fullname="SwitchTeamButton" preserve="all" />
+    <type fullname="TeamScoreManager" preserve="all" />
     <type fullname="TeamSpawnArea" preserve="all" />
     <type fullname="VoiceChatManager" preserve="all" />
     <type fullname="InfimaGames.LowPolyShooterPack.AudioSettings" preserve="nothing" serialized="true" />
@@ -231,6 +233,7 @@
     <type fullname="TMPro.TMP_Settings" preserve="all" />
     <type fullname="TMPro.TMP_SpriteAsset" preserve="all" />
     <type fullname="TMPro.TMP_StyleSheet" preserve="all" />
+    <type fullname="TMPro.VertexGradient" preserve="nothing" serialized="true" />
     <type fullname="TMPro.FaceInfo_Legacy" preserve="nothing" serialized="true" />
     <type fullname="TMPro.FontAssetCreationSettings" preserve="nothing" serialized="true" />
     <type fullname="TMPro.KerningTable" preserve="nothing" serialized="true" />
@@ -244,7 +247,6 @@
     <type fullname="TMPro.TMP_SpriteCharacter" preserve="nothing" serialized="true" />
     <type fullname="TMPro.TMP_SpriteGlyph" preserve="nothing" serialized="true" />
     <type fullname="TMPro.TMP_Style" preserve="nothing" serialized="true" />
-    <type fullname="TMPro.VertexGradient" preserve="nothing" serialized="true" />
   </assembly>
   <assembly fullname="UnityEditor.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="UnityEditor.Audio.AudioMixerSnapshotController" preserve="all" />
@@ -299,6 +301,8 @@
     <type fullname="UnityEngine.Events.ArgumentCache" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Events.PersistentCallGroup" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Events.PersistentListenerMode" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.Events.UnityEvent`2[System.Int32,System.Int32]" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.Events.UnityEvent`3[System.Int32,System.Int32,System.Int32]" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.RectOffset" preserve="nothing" serialized="true" />
   </assembly>
   <assembly fullname="UnityEngine.ParticleSystemModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">

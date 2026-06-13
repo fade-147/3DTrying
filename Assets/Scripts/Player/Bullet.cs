@@ -69,7 +69,7 @@ public class Bullet : NetworkBehaviour
         var targetPlayer = other.gameObject.GetComponentInParent<PlayerCharacter>();
         if (targetPlayer != null && targetPlayer.netIdentity != ownerNetIdentity)
         {
-            targetPlayer.TakeDamage(15f);
+            targetPlayer.TakeDamage(15f, ownerNetIdentity);
         }
 
         // 服务端销毁子弹

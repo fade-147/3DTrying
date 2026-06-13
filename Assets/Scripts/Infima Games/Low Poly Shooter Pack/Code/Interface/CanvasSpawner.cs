@@ -68,6 +68,18 @@ namespace InfimaGames.LowPolyShooterPack.Interface
                 Instantiate(qualitySettingsPrefab);
         }
 
+        /// <summary>
+        /// 玩家重生时重置静态标志，并销毁旧的 UI Canvas。
+        /// 由 MyNetworkRoomManager.PlayerRespawnSequence 在生成新玩家前调用。
+        /// </summary>
+        public static void DestroyCanvasAndResetFlag()
+        {
+            _canvasSpawned = false;
+            var oldCanvas = GameObject.Find("P_LPSP_UI_Canvas(Clone)");
+            if (oldCanvas != null)
+                Destroy(oldCanvas);
+        }
+
         #endregion
     }
 }

@@ -214,6 +214,13 @@ namespace StarterAssets
             _isFirstPerson = true;
             ApplyViewMode();
 
+            // 注册本地玩家队伍到 GameUIManager，实现计分面板个性化（左=己方，右=敌方）
+            var uiManager = FindObjectOfType<GameUIManager>();
+            if (uiManager != null)
+            {
+                uiManager.RegisterLocalPlayerTeam(teamId);
+            }
+
             // Lock cursor
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;

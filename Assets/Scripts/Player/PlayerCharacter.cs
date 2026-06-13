@@ -39,7 +39,6 @@ public class PlayerCharacter : NetworkBehaviour
 
     [Header("血条设置")]
     public Image healthFillImage;
-    private float respawnTimer = 3f;
 
     private void Awake()
     {
@@ -87,21 +86,6 @@ public class PlayerCharacter : NetworkBehaviour
         foreach (var col in _rootColliders) col.enabled = false;
     }
 
-    /// <summary>禁用布娃娃物理（复活时调用）</summary>
-    private void DisableRagdoll()
-    {
-        if (_animator != null)
-        {
-            _animator.runtimeAnimatorController = _originalController;
-            _animator.cullingMode = AnimatorCullingMode.CullUpdateTransforms;
-        }
-        if (_characterController != null) _characterController.enabled = true;
-        if (_navMeshAgent != null) _navMeshAgent.enabled = true;
-        if (behaviourTreeOwner != null) behaviourTreeOwner.enabled = true;
-        if (networkAnimator != null) networkAnimator.enabled = true;
-        foreach (var col in _rootColliders) col.enabled = true;
-    }
-
     private void Start()
     {
 
@@ -134,14 +118,14 @@ public class PlayerCharacter : NetworkBehaviour
 
     // 服务端扣血，保证数据安全
     [Server]
-    public void TakeDamage(float damage)
+    public void TakeDamage(float damage, NetworkIdentity killerIdentity = null)
     {
         if (isDead) return;
 
         CurrentHealth = Mathf.Max(0, CurrentHealth - damage);
         if (CurrentHealth <= 0)
         {
-            Die();
+            Die(killerIdentity);
         }
     }
 
@@ -153,14 +137,49 @@ public class PlayerCharacter : NetworkBehaviour
         CurrentHealth = Mathf.Min(CurrentHealth + amount, MaxHealth);
     }
 
-    // 服务端死亡逻辑
+    // 服务端死亡逻辑：销毁旧实例，委托 RoomManager 重建
     [Server]
-    void Die()
+    void Die(NetworkIdentity killerIdentity = null)
     {
+        if (isDead) return;
         isDead = true;
-        EnableRagdoll();
+
+        // 立即禁用 Bot 行为树和寻路，防止死亡后 1 帧内仍执行 AI 动作
+        if (behaviourTreeOwner != null) behaviourTreeOwner.enabled = false;
+        if (_navMeshAgent != null) _navMeshAgent.enabled = false;
+
+        // 报告击杀到计分系统（destroy 前完成）
+        if (killerIdentity != null)
+        {
+            PlayerCharacter killerChar = killerIdentity.GetComponent<PlayerCharacter>();
+            if (killerChar != null)
+            {
+                int killerTeam = BotController.GetTeamId(killerChar);
+                int myTeam = BotController.GetTeamId(this);
+                if (killerTeam >= 0 && killerTeam != myTeam)
+                {
+                    TeamScoreManager.Instance?.AddKill(killerTeam);
+                }
+            }
+        }
+
         RpcOnDie();
-        Invoke(nameof(Respawn), respawnTimer);
+
+        int teamId = BotController.GetTeamId(this);
+        NetworkConnectionToClient conn = connectionToClient;
+
+        if (MyNetworkRoomManager.instance != null)
+        {
+            if (conn != null)
+                MyNetworkRoomManager.instance.QueuePlayerRespawn(conn, teamId, gameObject);
+            else
+                MyNetworkRoomManager.instance.QueueBotRespawn(teamId, gameObject);
+        }
+        else
+        {
+            Debug.LogError("[PlayerCharacter] MyNetworkRoomManager.instance is null");
+            NetworkServer.Destroy(gameObject);
+        }
     }
 
     // 客户端同步死亡表现
@@ -184,48 +203,6 @@ public class PlayerCharacter : NetworkBehaviour
         }
     }
 
-    // 服务端复活
-    [Server]
-    void Respawn()
-    {
-        CurrentHealth = MaxHealth;
-        isDead = false;
-        DisableRagdoll();
-
-        int teamId = BotController.GetTeamId(this);
-        Transform spawn = MyNetworkRoomManager.instance != null
-            ? MyNetworkRoomManager.instance.GetTeamRespawnPosition(teamId)
-            : null;
-
-        if (spawn != null)
-        {
-            transform.position = spawn.position;
-            transform.rotation = spawn.rotation;
-        }
-
-        RpcOnRespawn();
-    }
-
-    // 客户端同步复活表现
-    [ClientRpc]
-    void RpcOnRespawn()
-    {
-        DisableRagdoll();
-
-        if (isLocalPlayer)
-        {
-            if (deathCanvas != null)
-                deathCanvas.SetActive(false);
-            if (deathFirstPersonModel != null)
-                deathFirstPersonModel.SetActive(true);
-            if (deathFirstPersonModelGun != null)
-                deathFirstPersonModelGun.SetActive(true);
-            if (deathThirdPersonModel != null)
-                deathThirdPersonModel.SetActive(false);
-            if (deadCamera != null)
-                deadCamera.gameObject.SetActive(false);
-        }
-    }
 
     // 血量变化时自动更新UI
     void OnHealthChanged(float oldHp, float newHp)

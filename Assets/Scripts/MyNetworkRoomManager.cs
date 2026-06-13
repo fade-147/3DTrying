@@ -7,6 +7,7 @@ using Mirror;
 using YooAsset;
 using Mirror.FizzySteam;
 using StarterAssets;
+using InfimaGames.LowPolyShooterPack.Interface;
 
 
 public class MyNetworkRoomManager : NetworkRoomManager
@@ -20,6 +21,7 @@ public class MyNetworkRoomManager : NetworkRoomManager
 
     private SceneHandle _currentSceneHandle;
     private bool _isSwitchingScene = false;
+    private bool _isGameEnding;
 
     // 队伍生成配置：teamId → 生成区域 + 缓存数据
     private readonly Dictionary<int, TeamSpawnConfig> _teamSpawns = new Dictionary<int, TeamSpawnConfig>();
@@ -377,6 +379,7 @@ public class MyNetworkRoomManager : NetworkRoomManager
     {
         if (NetworkServer.active && Utils.IsSceneActive(GameplayScene))
         {
+            _isGameEnding = true;
             ServerChangeScene(RoomScene);
         }
     }
@@ -386,6 +389,7 @@ public class MyNetworkRoomManager : NetworkRoomManager
     private void AssignTeamsToSpawnAreas()
     {
         _teamSpawns.Clear();
+        _isGameEnding = false;
 
         TeamSpawnArea[] areas = FindObjectsOfType<TeamSpawnArea>();
 
@@ -491,6 +495,92 @@ public class MyNetworkRoomManager : NetworkRoomManager
             : Instantiate(playerPrefab, Vector3.zero, Quaternion.identity);
     }
 
+    /// <summary>在 NetworkServer.Spawn 之前，统一设置所有组件的 teamId。</summary>
+    private void SetTeamOnComponents(GameObject obj, int teamId)
+    {
+        var pnb = obj.GetComponent<StarterAssets.PlayerNetworkBridge>();
+        if (pnb != null) pnb.teamId = teamId;
+
+        var tpc = obj.GetComponent<StarterAssets.ThirdPersonController>();
+        if (tpc != null) tpc.teamId = teamId;
+
+        var ps = obj.GetComponent<PlayerState>();
+        if (ps != null) ps.teamId = teamId;
+
+        var bc = obj.GetComponent<BotController>();
+        if (bc != null) bc.teamId = teamId;
+    }
+
+    /// <summary>复活延迟（秒），死亡后等待此时间再销毁+重建</summary>
+    private const float RespawnDelay = 3f;
+
+    /// <summary>[Server] 委托销毁 + 重建玩家（保持连接绑定）</summary>
+    public void QueuePlayerRespawn(NetworkConnectionToClient conn, int teamId, GameObject objectToDestroy)
+    {
+        if (!NetworkServer.active) return;
+        StartCoroutine(PlayerRespawnSequence(conn, teamId, objectToDestroy));
+    }
+
+    private IEnumerator PlayerRespawnSequence(NetworkConnectionToClient conn, int teamId, GameObject objectToDestroy)
+    {
+        if (_isGameEnding) yield break;
+
+        // 延迟几秒再复活，给死亡画面展示时间
+        yield return new WaitForSeconds(RespawnDelay);
+
+        if (_isGameEnding) yield break;
+
+        // 销毁旧的 UI Canvas 并重置静态标志，确保新玩家能创建自己的 UI
+        CanvasSpawner.DestroyCanvasAndResetFlag();
+
+        if (objectToDestroy != null)
+            NetworkServer.Destroy(objectToDestroy);
+
+        yield return null;
+
+        if (_isGameEnding) yield break;
+        if (conn == null || !conn.isReady) yield break;
+
+        Transform startPos = GetTeamRespawnPosition(teamId);
+        Vector3 pos = startPos != null ? startPos.position : Vector3.zero;
+        Quaternion rot = startPos != null ? startPos.rotation : Quaternion.identity;
+
+        GameObject newPlayer = Instantiate(playerPrefab, pos, rot);
+        SetTeamOnComponents(newPlayer, teamId);
+        NetworkServer.ReplacePlayerForConnection(conn, newPlayer, ReplacePlayerOptions.KeepAuthority);
+    }
+
+    /// <summary>[Server] 委托销毁 + 重建 Bot</summary>
+    public void QueueBotRespawn(int teamId, GameObject objectToDestroy)
+    {
+        if (!NetworkServer.active) return;
+        StartCoroutine(BotRespawnSequence(teamId, objectToDestroy));
+    }
+
+    private IEnumerator BotRespawnSequence(int teamId, GameObject objectToDestroy)
+    {
+        if (_isGameEnding) yield break;
+
+        yield return new WaitForSeconds(RespawnDelay);
+
+        if (_isGameEnding) yield break;
+
+        if (objectToDestroy != null)
+            NetworkServer.Destroy(objectToDestroy);
+
+        yield return null;
+
+        if (_isGameEnding) yield break;
+
+        Transform startPos = GetTeamRespawnPosition(teamId);
+        Vector3 pos = startPos != null ? startPos.position : Vector3.zero;
+        pos = SnapToNavMesh(pos);
+
+        GameObject bot = Instantiate(botGamePrefab, pos, Quaternion.identity);
+        SetTeamOnComponents(bot, teamId);
+        NetworkServer.Spawn(bot);
+    }
+
     #endregion
 
     /// <summary>
@@ -527,16 +617,7 @@ public class MyNetworkRoomManager : NetworkRoomManager
             pos = SnapToNavMesh(pos);
 
             GameObject bot = Instantiate(botGamePrefab, pos, Quaternion.identity);
-
-            BotController bc = bot.GetComponent<BotController>();
-            if (bc != null) bc.teamId = teamId;
-
-            StarterAssets.PlayerNetworkBridge pnbBot = bot.GetComponent<StarterAssets.PlayerNetworkBridge>();
-            if (pnbBot != null) pnbBot.teamId = teamId;
-
-            StarterAssets.ThirdPersonController tpc = bot.GetComponent<StarterAssets.ThirdPersonController>();
-            if (tpc != null) tpc.teamId = teamId;
-
+            SetTeamOnComponents(bot, teamId);
             NetworkServer.Spawn(bot);
         }
     }
