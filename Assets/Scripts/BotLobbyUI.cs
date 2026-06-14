@@ -27,15 +27,15 @@ public class BotLobbyUI : MonoBehaviour
             return;
         }
 
-        var tracker = MyNetworkRoomManager.instance?.GetComponentInChildren<BotTeamTracker>(true);
+        // 始终注册客户端 handler（NetworkClient.Shutdown 会清空 handlers，每次 Start 都要重新注册）
+        NetworkClient.RegisterHandler<BotListMessage>(OnBotListMessage);
+
+        var mgr = MyNetworkRoomManager.instance;
+        var tracker = mgr != null ? mgr.GetComponentInChildren<BotTeamTracker>(true) : null;
         if (tracker != null)
         {
             tracker.OnBotListChanged += RebuildAll;
             RebuildAll();
-        }
-        else
-        {
-            NetworkClient.RegisterHandler<BotListMessage>(OnBotListMessage);
         }
     }
 
@@ -49,7 +49,8 @@ public class BotLobbyUI : MonoBehaviour
     {
         if (_team1Container == null || _team2Container == null) return;
 
-        var tracker = MyNetworkRoomManager.instance?.GetComponentInChildren<BotTeamTracker>(true);
+        var mgr = MyNetworkRoomManager.instance;
+        var tracker = mgr != null ? mgr.GetComponentInChildren<BotTeamTracker>(true) : null;
         int[] ids = tracker != null ? tracker.botTeamIds.ToArray() : _cachedBotTeamIds;
 
         ClearBotEntries();
@@ -122,7 +123,8 @@ public class BotLobbyUI : MonoBehaviour
 
     void OnDestroy()
     {
-        var tracker = MyNetworkRoomManager.instance?.GetComponentInChildren<BotTeamTracker>(true);
+        var mgr = MyNetworkRoomManager.instance;
+        var tracker = mgr != null ? mgr.GetComponentInChildren<BotTeamTracker>(true) : null;
         if (tracker != null)
             tracker.OnBotListChanged -= RebuildAll;
     }

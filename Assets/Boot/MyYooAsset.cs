@@ -127,7 +127,10 @@ public class MyYooAsset : MonoBehaviour
 
         if (initializationOperation.Status != EOperationStatus.Succeed)
         {
-            Debug.LogWarning(initializationOperation.Error);            
+            Debug.LogError($"资源初始化失败: {initializationOperation.Error}");
+            if (hotUpdateView != null)
+                hotUpdateView.RefreshUI(0f, "资源初始化失败，请检查网络后重启");
+            yield break;
         }
         else
         {
@@ -142,7 +145,10 @@ public class MyYooAsset : MonoBehaviour
 
         if (operation.Status != EOperationStatus.Succeed)
         {
-            Debug.LogWarning(operation.Error);            
+            Debug.LogError($"请求资源版本失败: {operation.Error}");
+            if (hotUpdateView != null)
+                hotUpdateView.RefreshUI(0f, "资源版本请求失败，请检查网络后重启");
+            yield break;
         }
         else
         {
@@ -158,7 +164,10 @@ public class MyYooAsset : MonoBehaviour
         
         if (operationManifest.Status != EOperationStatus.Succeed)
         {
-            Debug.LogWarning(operationManifest.Error);            
+            Debug.LogError($"更新资源清单失败: {operationManifest.Error}");
+            if (hotUpdateView != null)
+                hotUpdateView.RefreshUI(0f, "资源清单加载失败，请检查网络后重启");
+            yield break;
         }
         else
         {
@@ -468,14 +477,22 @@ public class MyYooAsset : MonoBehaviour
         yield break;
     }
 
-    // 点击开始游戏后的行为：真正加载主场景，并在加载后设置 HotUpdateReady
+    // 点击开始游戏：先通过 SteamBootCheck 检查 Steam，通过后加载 StartScene
     public void StartButtonClicked()
     {
         // 防止重复点击
         if (hotUpdateView.startButton != null)
             hotUpdateView.startButton.interactable = false;
 
-        StartCoroutine(LoadMainSceneAndFinish());
+        var check = SteamBootCheck.Instance;
+        if (check != null)
+        {
+            check.InitSteamAndProceed(() => StartCoroutine(LoadMainSceneAndFinish()));
+        }
+        else
+        {
+            StartCoroutine(LoadMainSceneAndFinish());
+        }
     }
 
     public void OnUpdateConfirmClicked()

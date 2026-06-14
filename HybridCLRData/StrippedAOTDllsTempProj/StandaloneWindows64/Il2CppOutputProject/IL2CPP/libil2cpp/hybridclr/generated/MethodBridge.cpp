@@ -69136,6 +69136,13 @@ static void __M2N_uus8uu(const MethodInfo* method, uint16_t* argVarIndexs, Stack
 }
 
 
+static void __M2N_uutypedbyref(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef uintptr_t (*NativeMethod)(uintptr_t __arg0, Il2CppTypedRef __arg1, const MethodInfo* method);
+    *(uintptr_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(M2NFromValueOrAddress<uintptr_t>(localVarBase+argVarIndexs[0]), M2NFromValueOrAddress<Il2CppTypedRef>(localVarBase+argVarIndexs[1]), method);
+}
+
+
 static void __M2N_uuu(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef uintptr_t (*NativeMethod)(uintptr_t __arg0, uintptr_t __arg1, const MethodInfo* method);
@@ -94415,6 +94422,7 @@ const Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"uus85", __M2N_uus85},
 	{"uus85uu", __M2N_uus85uu},
 	{"uus8uu", __M2N_uus8uu},
+	{"uutypedbyref", __M2N_uutypedbyref},
 	{"uuu", __M2N_uuu},
 	{"uuu1", __M2N_uuu1},
 	{"uuu1i4", __M2N_uuu1i4},
@@ -147970,6 +147978,23 @@ static uintptr_t __N2M_uus8uu(uintptr_t __arg0, __struct_8__ __arg1, uintptr_t _
 }
 
 
+static uintptr_t __N2M_uutypedbyref(uintptr_t __arg0, Il2CppTypedRef __arg1, const MethodInfo* method)
+{
+    
+	constexpr int __ARG_OFFSET_0__ = 0;
+	constexpr int __ARG_SIZE_0__ = (sizeof(__arg0) + 7)/8;
+	constexpr int __ARG_OFFSET_1__ = __ARG_OFFSET_0__ + __ARG_SIZE_0__;
+	constexpr int __ARG_SIZE_1__ = (sizeof(__arg1) + 7)/8;
+	constexpr int __TOTAL_ARG_SIZE__ = __ARG_OFFSET_1__ + __ARG_SIZE_1__;
+
+    StackObject args[__TOTAL_ARG_SIZE__];
+	*(uintptr_t*)(args + __ARG_OFFSET_0__) = __arg0;
+	*(Il2CppTypedRef*)(args + __ARG_OFFSET_1__) = __arg1;
+
+    uintptr_t ret; Interpreter::Execute(method, args, &ret); return ret;
+}
+
+
 static uintptr_t __N2M_uuu(uintptr_t __arg0, uintptr_t __arg1, const MethodInfo* method)
 {
     
@@ -173923,6 +173948,7 @@ const Native2ManagedMethodInfo hybridclr::interpreter::g_native2managedStub[] =
 	{"uus85", (Il2CppMethodPointer)__N2M_uus85},
 	{"uus85uu", (Il2CppMethodPointer)__N2M_uus85uu},
 	{"uus8uu", (Il2CppMethodPointer)__N2M_uus8uu},
+	{"uutypedbyref", (Il2CppMethodPointer)__N2M_uutypedbyref},
 	{"uuu", (Il2CppMethodPointer)__N2M_uuu},
 	{"uuu1", (Il2CppMethodPointer)__N2M_uuu1},
 	{"uuu1i4", (Il2CppMethodPointer)__N2M_uuu1i4},

@@ -37,6 +37,10 @@ public class PlayerCharacter : NetworkBehaviour
     public GameObject deathFirstPersonModelGun; // 死亡时隐藏第一人称枪
     public Camera deadCamera;                  // 死亡时启用的相机
 
+    [Header("受伤方向指示器")]
+    [Tooltip("拖入 DamageIndicators prefab（Assets/Resources/DamageIndicators.prefab）")]
+    public GameObject damageIndicatorPrefab;
+
     [Header("血条设置")]
     public Image healthFillImage;
 
@@ -118,11 +122,16 @@ public class PlayerCharacter : NetworkBehaviour
 
     // 服务端扣血，保证数据安全
     [Server]
-    public void TakeDamage(float damage, NetworkIdentity killerIdentity = null)
+    public void TakeDamage(float damage, NetworkIdentity killerIdentity = null, Vector3 attackerPosition = default)
     {
         if (isDead) return;
 
         CurrentHealth = Mathf.Max(0, CurrentHealth - damage);
+
+        // 向被击中的客户端发送伤害方向（仅玩家，Bot 无 connectionToClient）
+        if (connectionToClient != null && attackerPosition != Vector3.zero)
+            TargetShowDamageDirection(connectionToClient, attackerPosition);
+
         if (CurrentHealth <= 0)
         {
             Die(killerIdentity);
@@ -219,4 +228,31 @@ public class PlayerCharacter : NetworkBehaviour
         float fillAmount = CurrentHealth / MaxHealth;
         healthFillImage.fillAmount = fillAmount;
     }
+
+    /// <summary>
+    /// 服务端→客户端：通知被击中的玩家伤害来源方向。
+    /// 在客户端创建或找到 DamageIndicatorManager 并显示方向指示器。
+    /// </summary>
+    [TargetRpc]
+    private void TargetShowDamageDirection(NetworkConnection target, Vector3 attackerWorldPos)
+    {
+        if (attackerWorldPos == Vector3.zero) return;
+
+        if (_cachedDamageIndicators == null)
+        {
+            _cachedDamageIndicators = FindObjectOfType<DamageIndicatorManager>();
+            if (_cachedDamageIndicators == null)
+            {
+                Canvas canvas = FindObjectOfType<Canvas>();
+                if (canvas != null && damageIndicatorPrefab != null)
+                {
+                    GameObject go = Instantiate(damageIndicatorPrefab, canvas.transform);
+                    _cachedDamageIndicators = go.GetComponent<DamageIndicatorManager>();
+                }
+            }
+        }
+        _cachedDamageIndicators?.ShowIndicator(attackerWorldPos);
+    }
+
+    private static DamageIndicatorManager _cachedDamageIndicators;
 }

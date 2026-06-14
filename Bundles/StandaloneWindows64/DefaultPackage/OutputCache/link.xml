@@ -27,8 +27,10 @@
     <type fullname="Bullet" preserve="all" />
     <type fullname="ChangeAnimator" preserve="all" />
     <type fullname="CharacterOutline" preserve="all" />
+    <type fullname="DamageIndicatorManager" preserve="all" />
     <type fullname="GameMenuCol" preserve="all" />
     <type fullname="GameUIManager" preserve="all" />
+    <type fullname="HostLobbyButton" preserve="all" />
     <type fullname="InfimaGames.ACurves" preserve="all" />
     <type fullname="InfimaGames.LowPolyShooterPack.BoltBehaviour" preserve="all" />
     <type fullname="InfimaGames.LowPolyShooterPack.CameraHeight" preserve="all" />
@@ -99,6 +101,7 @@
     <type fullname="InfimaGames.LowPolyShooterPack.Weapon" preserve="all" />
     <type fullname="InfimaGames.LowPolyShooterPack.WeaponAnimationEventHandler" preserve="all" />
     <type fullname="InfimaGames.LowPolyShooterPack.WeaponAttachmentManager" preserve="all" />
+    <type fullname="LeaveRoomButton" preserve="all" />
     <type fullname="LobbyMenu" preserve="all" />
     <type fullname="MicButton" preserve="all" />
     <type fullname="MyNetworkRoomManager" preserve="all" />
@@ -110,10 +113,13 @@
     <type fullname="StarterAssets.PlayerNetworkBridge" preserve="all" />
     <type fullname="StarterAssets.StarterAssetsInputs" preserve="all" />
     <type fullname="StarterAssets.ThirdPersonController" preserve="all" />
+    <type fullname="StartSinglePlayerButton" preserve="all" />
+    <type fullname="SteamDebugText" preserve="all" />
     <type fullname="SteamLobby" preserve="all" />
     <type fullname="SteamManager" preserve="all" />
     <type fullname="StrategyZone" preserve="all" />
     <type fullname="SwitchTeamButton" preserve="all" />
+    <type fullname="TeammateOcclusion" preserve="all" />
     <type fullname="TeamScoreManager" preserve="all" />
     <type fullname="TeamSpawnArea" preserve="all" />
     <type fullname="VoiceChatManager" preserve="all" />

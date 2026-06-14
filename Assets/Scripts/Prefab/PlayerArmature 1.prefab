@@ -4501,6 +4501,7 @@ GameObject:
   - component: {fileID: 9012345678901234502}
   - component: {fileID: 837717861017212376}
   - component: {fileID: -5721000949726149452}
+  - component: {fileID: 3008229397350587925}
   m_Layer: 8
   m_Name: PlayerArmature 1
   m_TagString: Untagged
@@ -4701,6 +4702,7 @@ MonoBehaviour:
   deathFirstPersonModel: {fileID: 0}
   deathFirstPersonModelGun: {fileID: 0}
   deadCamera: {fileID: 0}
+  damageIndicatorPrefab: {fileID: 0}
   healthFillImage: {fileID: 0}
 --- !u!114 &9012345678901234501
 MonoBehaviour:
@@ -4783,6 +4785,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMaterial: {fileID: 2100000, guid: 5f512f12b3f213a4ba30a0a3595b56e1, type: 2}
+--- !u!114 &3008229397350587925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6233281133662039027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81a608141f65de46bbaa37a10bad891, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  occlusionMaterial: {fileID: 2100000, guid: f7fee25d17258f2458a16d3907b20ddc, type: 2}
 --- !u!1 &6248241989522100972
 GameObject:
   m_ObjectHideFlags: 0

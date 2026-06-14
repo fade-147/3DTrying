@@ -38,6 +38,7 @@ IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Mono_Security_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_NodeCanvas_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_ParadoxNotion_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_SimpleWebTransport_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_SteamErrorUIAssembly_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_System_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_System_Configuration_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_System_Core_CodeGenModule;
@@ -99,7 +100,7 @@ IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_com_rlabrecque_steamworks_net_CodeGe
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_kcp2k_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_mscorlib_CodeGenModule;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule* g_CodeGenModules[];
-const Il2CppCodeGenModule* g_CodeGenModules[78] = 
+const Il2CppCodeGenModule* g_CodeGenModules[79] = 
 {
 	(&g_Adrenak_BRW_CodeGenModule),
 	(&g_Adrenak_UniMic_Runtime_CodeGenModule),
@@ -119,6 +120,7 @@ const Il2CppCodeGenModule* g_CodeGenModules[78] =
 	(&g_NodeCanvas_CodeGenModule),
 	(&g_ParadoxNotion_CodeGenModule),
 	(&g_SimpleWebTransport_CodeGenModule),
+	(&g_SteamErrorUIAssembly_CodeGenModule),
 	(&g_System_CodeGenModule),
 	(&g_System_Configuration_CodeGenModule),
 	(&g_System_Core_CodeGenModule),
@@ -188,17 +190,17 @@ const Il2CppCodeRegistration g_CodeRegistration =
 	86068,
 	g_Il2CppGenericMethodPointers,
 	g_Il2CppGenericAdjustorThunks,
-	21195,
+	21196,
 	g_Il2CppInvokerPointers,
 	3623,
 	g_UnresolvedVirtualMethodPointers,
 	g_UnresolvedInstanceMethodPointers,
 	g_UnresolvedStaticMethodPointers,
-	953,
+	954,
 	g_Il2CppInteropData,
 	0,
 	NULL,
-	78,
+	79,
 	g_CodeGenModules,
 };
 IL2CPP_EXTERN_C_CONST Il2CppMetadataRegistration g_MetadataRegistration;

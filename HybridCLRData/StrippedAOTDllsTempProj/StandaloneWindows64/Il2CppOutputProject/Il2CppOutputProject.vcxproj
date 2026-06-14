@@ -606,6 +606,8 @@
     </ClCompile>
     <ClCompile Include="Source\SimpleWebTransport.cpp">
     </ClCompile>
+    <ClCompile Include="Source\SteamErrorUIAssembly.cpp">
+    </ClCompile>
     <ClCompile Include="Source\System.Configuration.cpp">
     </ClCompile>
     <ClCompile Include="Source\System.Core.cpp">
@@ -955,6 +957,8 @@
     <ClCompile Include="Source\ParadoxNotion_CodeGen.c">
     </ClCompile>
     <ClCompile Include="Source\SimpleWebTransport_CodeGen.c">
+    </ClCompile>
+    <ClCompile Include="Source\SteamErrorUIAssembly_CodeGen.c">
     </ClCompile>
     <ClCompile Include="Source\System.Configuration_CodeGen.c">
     </ClCompile>

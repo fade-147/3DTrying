@@ -30,6 +30,17 @@ namespace InfimaGames.LowPolyShooterPack.Interface
         /// </summary>
         private static bool _canvasSpawned;
 
+        /// <summary>
+        /// Reference to the spawned canvas, so OnDestroy can clean it up.
+        /// </summary>
+        private static GameObject _spawnedCanvas;
+
+        /// <summary>
+        /// Instance flag: true only for the CanvasSpawner that actually called SpawnForCharacter.
+        /// Prevents non-local-player clones from destroying the canvas on their OnDestroy.
+        /// </summary>
+        private bool _didSpawn;
+
         #endregion
 
         #region UNITY
@@ -38,6 +49,26 @@ namespace InfimaGames.LowPolyShooterPack.Interface
         {
             // No longer spawns automatically — PlayerNetworkBridge.OnStartLocalPlayer()
             // calls SpawnForCharacter() at the right time with the local player's Character.
+        }
+
+        /// <summary>
+        /// When the player prefab is destroyed (respawn or scene unload),
+        /// automatically reset the static flag and destroy the old canvas.
+        /// Only the instance that actually spawned the canvas performs cleanup.
+        /// This runs on EVERY process (server + all clients), so remote clients
+        /// can clean up their own canvas state without relying on server RPCs.
+        /// </summary>
+        private void OnDestroy()
+        {
+            if (_didSpawn && _canvasSpawned)
+            {
+                _canvasSpawned = false;
+                if (_spawnedCanvas != null)
+                {
+                    Destroy(_spawnedCanvas);
+                    _spawnedCanvas = null;
+                }
+            }
         }
 
         #endregion
@@ -53,10 +84,12 @@ namespace InfimaGames.LowPolyShooterPack.Interface
         {
             if (_canvasSpawned) return;
             _canvasSpawned = true;
+            _didSpawn = true;
 
             if (canvasPrefab != null)
             {
                 var canvas = Instantiate(canvasPrefab);
+                _spawnedCanvas = canvas;
                 // Wire the local Character into every UI Element on the Canvas.
                 foreach (var element in canvas.GetComponentsInChildren<Element>(true))
                 {
@@ -66,18 +99,6 @@ namespace InfimaGames.LowPolyShooterPack.Interface
 
             if (qualitySettingsPrefab != null)
                 Instantiate(qualitySettingsPrefab);
-        }
-
-        /// <summary>
-        /// 玩家重生时重置静态标志，并销毁旧的 UI Canvas。
-        /// 由 MyNetworkRoomManager.PlayerRespawnSequence 在生成新玩家前调用。
-        /// </summary>
-        public static void DestroyCanvasAndResetFlag()
-        {
-            _canvasSpawned = false;
-            var oldCanvas = GameObject.Find("P_LPSP_UI_Canvas(Clone)");
-            if (oldCanvas != null)
-                Destroy(oldCanvas);
         }
 
         #endregion

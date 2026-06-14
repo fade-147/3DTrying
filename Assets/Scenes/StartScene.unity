@@ -266,6 +266,7 @@ GameObject:
   - component: {fileID: 36957872}
   - component: {fileID: 36957874}
   - component: {fileID: 36957873}
+  - component: {fileID: 36957875}
   m_Layer: 5
   m_Name: Debug Text
   m_TagString: Untagged
@@ -334,6 +335,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 36957871}
   m_CullTransparentMesh: 1
+--- !u!114 &36957875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36957871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5224c1c4c51ce4744a23faf605b7d547, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &44837757
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,6 +359,7 @@ GameObject:
   - component: {fileID: 44837761}
   - component: {fileID: 44837760}
   - component: {fileID: 44837759}
+  - component: {fileID: 44837762}
   m_Layer: 5
   m_Name: Host Lobby Button
   m_TagString: Untagged
@@ -417,9 +431,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1379952244}
-        m_TargetAssemblyTypeName: SteamLobby, Assembly-CSharp
-        m_MethodName: HostLobby
+      - m_Target: {fileID: 44837762}
+        m_TargetAssemblyTypeName: HostLobbyButton, HotUpdate
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -467,6 +481,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 44837757}
   m_CullTransparentMesh: 1
+--- !u!114 &44837762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44837757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e851a7a65bcaefb4fb4ac13a15064cbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &247298290
 GameObject:
   m_ObjectHideFlags: 0
@@ -1463,7 +1489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 670494faf04ee9a46b018173faf2d50e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugText: {fileID: 36957873}
+  debugText: {fileID: 0}
 --- !u!114 &1379952245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2046,6 +2072,7 @@ GameObject:
   - component: {fileID: 1722449863}
   - component: {fileID: 1722449862}
   - component: {fileID: 1722449861}
+  - component: {fileID: 1722449864}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -2116,7 +2143,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1722449862}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1722449864}
+        m_TargetAssemblyTypeName: StartSinglePlayerButton, HotUpdate
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1722449862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2155,6 +2194,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1722449859}
   m_CullTransparentMesh: 1
+--- !u!114 &1722449864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722449859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a53db9db600ff4aab14cd0e0423854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1990475036
 GameObject:
   m_ObjectHideFlags: 0

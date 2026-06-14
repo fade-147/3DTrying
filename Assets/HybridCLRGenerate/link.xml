@@ -38,6 +38,7 @@
     <type fullname="Mirror.CommandAttribute" preserve="all" />
     <type fullname="Mirror.CommandMessage" preserve="all" />
     <type fullname="Mirror.EntityStateMessage" preserve="all" />
+    <type fullname="Mirror.LocalConnectionToClient" preserve="all" />
     <type fullname="Mirror.NetworkBehaviour" preserve="all" />
     <type fullname="Mirror.NetworkBehaviourSyncVar" preserve="all" />
     <type fullname="Mirror.NetworkClient" preserve="all" />
@@ -45,6 +46,7 @@
     <type fullname="Mirror.NetworkConnectionToClient" preserve="all" />
     <type fullname="Mirror.NetworkIdentity" preserve="all" />
     <type fullname="Mirror.NetworkManager" preserve="all" />
+    <type fullname="Mirror.NetworkManagerMode" preserve="all" />
     <type fullname="Mirror.NetworkMessage" preserve="all" />
     <type fullname="Mirror.NetworkPingMessage" preserve="all" />
     <type fullname="Mirror.NetworkPongMessage" preserve="all" />
@@ -73,6 +75,7 @@
     <type fullname="Mirror.SpawnFlags" preserve="all" />
     <type fullname="Mirror.SpawnMessage" preserve="all" />
     <type fullname="Mirror.SyncVarAttribute" preserve="all" />
+    <type fullname="Mirror.TargetRpcAttribute" preserve="all" />
     <type fullname="Mirror.TimeSnapshotMessage" preserve="all" />
     <type fullname="Mirror.Utils" preserve="all" />
     <type fullname="Mirror.Writer`1" preserve="all" />
@@ -260,6 +263,7 @@
     <type fullname="UnityEngine.UI.Text" preserve="all" />
   </assembly>
   <assembly fullname="UnityEngine.UIModule">
+    <type fullname="UnityEngine.Canvas" preserve="all" />
     <type fullname="UnityEngine.CanvasGroup" preserve="all" />
   </assembly>
   <assembly fullname="YooAsset">

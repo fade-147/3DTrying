@@ -140,8 +140,8 @@ private void OnReadyButtonClickered()
     private void OnDestroy()
     {
         //结束时，销毁监听
-        readyBtn.onClick.RemoveAllListeners();
-        cancelBtn.onClick.RemoveAllListeners();
-        removeBtn.onClick.RemoveAllListeners();
+        if (readyBtn != null) readyBtn.onClick.RemoveAllListeners();
+        if (cancelBtn != null) cancelBtn.onClick.RemoveAllListeners();
+        if (removeBtn != null) removeBtn.onClick.RemoveAllListeners();
     }
 }

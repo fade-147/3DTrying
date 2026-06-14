@@ -200,6 +200,8 @@ namespace StarterAssets
         private GameObject settingsObj;
         private float _outlineUpdateTimer = 0f;
         private const float OUTLINE_UPDATE_INTERVAL = 1f; // 每秒更新一次敌人描边
+        private float _teammateOcclusionTimer = 0f;
+        private const float TEAMMATE_OCCLUSION_INTERVAL = 2f; // 队友遮挡刷新间隔
         public float sensitivityX = 0.8f; // 设置中绑定，水平灵敏度
         public float sensitivityY = 0.8f;
 
@@ -746,6 +748,14 @@ namespace StarterAssets
             {
                 _outlineUpdateTimer = OUTLINE_UPDATE_INTERVAL;
                 UpdateEnemyOutlines();
+            }
+
+            // 周期性更新队友遮挡
+            _teammateOcclusionTimer -= Time.deltaTime;
+            if (_teammateOcclusionTimer <= 0f)
+            {
+                _teammateOcclusionTimer = TEAMMATE_OCCLUSION_INTERVAL;
+                UpdateTeammateOcclusions();
             }
         }
 
@@ -1638,6 +1648,30 @@ namespace StarterAssets
             }
         }
 
+        // 更新所有队友的遮挡状态
+        private void UpdateTeammateOcclusions()
+        {
+            if (!isLocalPlayer) return;
+
+            // 处理玩家角色
+            ThirdPersonController[] allPlayers = FindObjectsOfType<ThirdPersonController>();
+            foreach (ThirdPersonController player in allPlayers)
+            {
+                if (player == this) continue;
+                TeammateOcclusion occlusion = player.GetComponent<TeammateOcclusion>();
+                if (occlusion == null) continue;
+                occlusion.ToggleOcclusion(player.teamId == this.teamId);
+            }
+
+            // 处理 Bot
+            BotController[] allBots = FindObjectsOfType<BotController>();
+            foreach (BotController bot in allBots)
+            {
+                TeammateOcclusion occlusion = bot.GetComponent<TeammateOcclusion>();
+                if (occlusion == null) continue;
+                occlusion.ToggleOcclusion(bot.teamId == this.teamId);
+            }
+        }
 
         //动画回调函数
         public void OnInspectComplete()

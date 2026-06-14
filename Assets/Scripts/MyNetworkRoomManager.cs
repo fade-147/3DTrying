@@ -7,7 +7,6 @@ using Mirror;
 using YooAsset;
 using Mirror.FizzySteam;
 using StarterAssets;
-using InfimaGames.LowPolyShooterPack.Interface;
 
 
 public class MyNetworkRoomManager : NetworkRoomManager
@@ -22,6 +21,7 @@ public class MyNetworkRoomManager : NetworkRoomManager
     private SceneHandle _currentSceneHandle;
     private bool _isSwitchingScene = false;
     private bool _isGameEnding;
+    private bool _isSinglePlayer;
 
     // 队伍生成配置：teamId → 生成区域 + 缓存数据
     private readonly Dictionary<int, TeamSpawnConfig> _teamSpawns = new Dictionary<int, TeamSpawnConfig>();
@@ -80,6 +80,16 @@ public class MyNetworkRoomManager : NetworkRoomManager
         // 场景切换后远端客户端 OnClientSceneChanged 可能在 spawn 到达前就发 AddPlayer，
         // 需要在这里优雅处理而非报错。
         NetworkServer.RegisterHandler<AddPlayerMessage>(OnServerAddPlayerMessage);
+    }
+
+    public override void OnStopServer()
+    {
+        if (_botTracker != null)
+        {
+            Destroy(_botTracker.gameObject);
+            _botTracker = null;
+        }
+        base.OnStopServer();
     }
 
     void OnServerAddPlayerMessage(NetworkConnectionToClient conn, AddPlayerMessage msg)
@@ -216,6 +226,16 @@ public class MyNetworkRoomManager : NetworkRoomManager
 
             if (scenePath == GameplayScene)
             {
+                // 单人模式：roomSlots 为空，需手动为本地玩家创建 game player
+                if (_isSinglePlayer)
+                {
+                    var localConn = NetworkServer.localConnection;
+                    if (localConn != null && localConn.identity == null)
+                    {
+                        OnServerAddPlayer(localConn);
+                    }
+                }
+
                 StartCoroutine(SpawnBotsNextFrame());
             }
         }
@@ -261,6 +281,21 @@ public class MyNetworkRoomManager : NetworkRoomManager
 
         FinishLoadScene();
     }
+    /// <summary>手动加载 offline 场景（禁止 Mirror 自动场景切换后使用）。等待两帧确保网络完全清理。</summary>
+    private IEnumerator LoadOfflineSceneByYooAsset(string scenePath)
+    {
+        if (string.IsNullOrWhiteSpace(scenePath))
+            yield break;
+
+        yield return null;
+        yield return null;
+
+        _currentSceneHandle?.Release();
+        _currentSceneHandle = YooAssets.LoadSceneAsync(scenePath, LoadSceneMode.Single);
+        yield return _currentSceneHandle;
+
+        FinishLoadScene();
+    }
     #endregion
 
     #region 房间流程
@@ -285,6 +320,7 @@ public class MyNetworkRoomManager : NetworkRoomManager
         // 在此手动创建 game player，从 roomSlots 查找队伍
         int teamId = GetTeamIdForConnection(conn);
         GameObject gamePlayer = SpawnPlayerAtTeamPosition(teamId);
+        SetTeamOnComponents(gamePlayer, teamId);
 
         NetworkServer.AddPlayerForConnection(conn, gamePlayer);
     }
@@ -354,6 +390,39 @@ public class MyNetworkRoomManager : NetworkRoomManager
     #endregion
 
     #region UI 按钮 + Bot 生成
+
+    /// <summary>单人模式：跳过 Steam 大厅和 RoomScene，直接进入 5v5 对局。</summary>
+    public void StartSinglePlayer()
+    {
+        if (NetworkServer.active || NetworkClient.active)
+        {
+            Debug.LogWarning("[MyNetworkRoomManager] 网络已活跃，无法启动单人模式");
+            return;
+        }
+
+        _isSinglePlayer = true;
+
+        // 预填充 Bot：4 友方 (Team0) + 5 敌方 (Team1) = 5v5
+        InitBotTracker();
+        for (int i = 0; i < 4; i++) _botTracker.AddBot(0);
+        for (int i = 0; i < 5; i++) _botTracker.AddBot(1);
+
+        // 临时清空 onlineScene，阻止 StartHost 自动加载 LobbyScene
+        string savedOnlineScene = onlineScene;
+        onlineScene = "";
+        try
+        {
+            StartHost();
+        }
+        finally
+        {
+            onlineScene = savedOnlineScene;
+        }
+
+        // 直接加载 GameScene
+        ServerChangeScene(GameplayScene);
+    }
+
     public void StartGame()
     {
         if (Utils.IsSceneActive(RoomScene))
@@ -377,11 +446,56 @@ public class MyNetworkRoomManager : NetworkRoomManager
 
     public void ReturnToLobby()
     {
+        if (_isSinglePlayer)
+        {
+            ShutdownAndLoadOfflineScene();
+            return;
+        }
+
         if (NetworkServer.active && Utils.IsSceneActive(GameplayScene))
         {
             _isGameEnding = true;
             ServerChangeScene(RoomScene);
         }
+    }
+
+    public void LeaveRoom()
+    {
+        if (_isSinglePlayer)
+        {
+            ShutdownAndLoadOfflineScene();
+            return;
+        }
+
+        if (isNetworkActive)
+        {
+            if (SteamLobby.Instance != null)
+                SteamLobby.Instance.LeaveLobby();
+
+            string saved = offlineScene;
+            offlineScene = "";
+
+            if (mode == NetworkManagerMode.Host)
+                StopHost();
+            else
+                StopClient();
+
+            offlineScene = saved;
+            if (!string.IsNullOrWhiteSpace(saved))
+                StartCoroutine(LoadOfflineSceneByYooAsset(saved));
+        }
+    }
+
+    /// <summary>单机模式：安全关闭网络并加载 offline 场景，阻止 Mirror 将 GO 移出 DontDestroyOnLoad。</summary>
+    private void ShutdownAndLoadOfflineScene()
+    {
+        _isGameEnding = true;
+        _isSinglePlayer = false;
+        string saved = offlineScene;
+        offlineScene = "";
+        StopHost();
+        offlineScene = saved;
+        StartCoroutine(LoadOfflineSceneByYooAsset(saved));
     }
 
     #region 队伍生成区域
@@ -529,9 +643,6 @@ public class MyNetworkRoomManager : NetworkRoomManager
         yield return new WaitForSeconds(RespawnDelay);
 
         if (_isGameEnding) yield break;
-
-        // 销毁旧的 UI Canvas 并重置静态标志，确保新玩家能创建自己的 UI
-        CanvasSpawner.DestroyCanvasAndResetFlag();
 
         if (objectToDestroy != null)
             NetworkServer.Destroy(objectToDestroy);

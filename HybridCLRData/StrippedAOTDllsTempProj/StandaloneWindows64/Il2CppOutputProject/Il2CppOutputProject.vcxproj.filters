@@ -1384,6 +1384,9 @@
     <ClCompile Include="Source\SimpleWebTransport.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\SteamErrorUIAssembly.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
     <ClCompile Include="Source\System.Configuration.cpp">
       <Filter>Source</Filter>
     </ClCompile>
@@ -1907,6 +1910,9 @@
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\SimpleWebTransport_CodeGen.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SteamErrorUIAssembly_CodeGen.c">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\System.Configuration_CodeGen.c">

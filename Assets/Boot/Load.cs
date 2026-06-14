@@ -1,32 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using YooAsset;
 
+// 此脚本已废弃 — 所有 YooAsset 初始化已在 MyYooAsset.Start() 中完成。
+// 保留文件以维持场景引用结构。
 public class Load : MonoBehaviour
 {
-
-    private ResourcePackage package;
     private void Awake()
     {
-        InitYoo();
-    }
-
-    private void InitYoo()
-    {
-        // 初始化资源系统
-        YooAssets.Initialize();
-
-        // 创建默认的资源包
-        package = YooAssets.CreatePackage("DefaultPackage");
-
-        //// 获取指定的资源包，如果没有找到会报错
-        //var package = YooAssets.GetPackage("DefaultPackage");
-
-        //// 获取指定的资源包，如果没有找到不会报错
-        //var package = YooAssets.TryGetPackage("DefaultPackage");
-
-        // 设置该资源包为默认的资源包，可以使用YooAssets相关加载接口加载该资源包内容。
-        YooAssets.SetDefaultPackage(package);
+        // 不再执行任何初始化逻辑
+        return;
     }
 }
