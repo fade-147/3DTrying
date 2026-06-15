@@ -90,6 +90,20 @@ public class MyYooAsset : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
         Instance = this; // 设置单例
+
+        // 创建 UOSManager 用于 Passport 登录（Steam ExternalLogin）
+        if (UOSManager.Instance == null)
+        {
+            var uosGo = new GameObject("UOSManager");
+            uosGo.AddComponent<UOSManager>();
+        }
+
+        // 创建 PlayerNameManager 用于游戏内名字管理
+        if (PlayerNameManager.Instance == null)
+        {
+            var pnmGo = new GameObject("PlayerNameManager");
+            pnmGo.AddComponent<PlayerNameManager>();
+        }
     }
 
 
@@ -534,6 +548,13 @@ public class MyYooAsset : MonoBehaviour
         HotUpdateReady = true;
         if (hotUpdateView != null)
             hotUpdateView.RefreshUI(1f, "全部加载完成");
+
+        // 启动 UOS Passport 登录（fire-and-forget，不阻塞游戏流程）
+        if (UOSManager.Instance != null && !UOSManager.Instance.IsReady)
+        {
+            UOSManager.Instance.InitializeWithSteam();
+            Debug.Log("[MyYooAsset] UOSManager.InitializeWithSteam() 已触发");
+        }
     }
 
     //补充元数据

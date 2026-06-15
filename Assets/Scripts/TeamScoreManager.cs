@@ -92,6 +92,7 @@ public class TeamScoreManager : NetworkBehaviour
             _finalRedScore = redScore;
             _finalBlueScore = blueScore;
             RpcOnGameOver(_winningTeam, _finalRedScore, _finalBlueScore);
+            PlayerStatsManager.Instance?.NotifyPlayersSessionKills();
             StartCoroutine(DelayedReturnToLobby());
         }
         else if (blueScore >= ScoreToWin)
@@ -101,6 +102,7 @@ public class TeamScoreManager : NetworkBehaviour
             _finalRedScore = redScore;
             _finalBlueScore = blueScore;
             RpcOnGameOver(_winningTeam, _finalRedScore, _finalBlueScore);
+            PlayerStatsManager.Instance?.NotifyPlayersSessionKills();
             StartCoroutine(DelayedReturnToLobby());
         }
     }

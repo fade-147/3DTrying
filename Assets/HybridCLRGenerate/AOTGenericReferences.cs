@@ -6,6 +6,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	public static readonly IReadOnlyList<string> PatchedAOTAssemblyList = new List<string>
 	{
 		"Adrenak.UniVoice.Runtime.dll",
+		"Google.Protobuf.dll",
 		"Mirror.dll",
 		"ParadoxNotion.dll",
 		"System.Core.dll",
@@ -25,6 +26,17 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// Adrenak.UniVoice.ClientSession<int>
 	// Adrenak.UniVoice.IAudioClient<int>
 	// Adrenak.UniVoice.IAudioServer<int>
+	// Google.Protobuf.Collections.RepeatedField.<GetEnumerator>d__28<object>
+	// Google.Protobuf.Collections.RepeatedField<object>
+	// Google.Protobuf.FieldCodec.<>c<object>
+	// Google.Protobuf.FieldCodec.<>c__DisplayClass38_0<object>
+	// Google.Protobuf.FieldCodec.<>c__DisplayClass39_0<object>
+	// Google.Protobuf.FieldCodec.InputMerger<object>
+	// Google.Protobuf.FieldCodec.ValuesMerger<object>
+	// Google.Protobuf.FieldCodec<object>
+	// Google.Protobuf.IDeepCloneable<object>
+	// Google.Protobuf.ValueReader<object>
+	// Google.Protobuf.ValueWriter<object>
 	// Mirror.NetworkClient.<>c__DisplayClass61_0<BotListMessage>
 	// Mirror.NetworkMessages.<>c__DisplayClass8_0<BotListMessage,object>
 	// Mirror.NetworkMessages.<>c__DisplayClass8_0<Mirror.AddPlayerMessage,object>
@@ -385,6 +397,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<object,object>>
 	// System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<uint,object>>
 	// System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<ushort,object>>
+	// System.Collections.Generic.IEnumerable<System.ValueTuple<int,object,int>>
 	// System.Collections.Generic.IEnumerable<int>
 	// System.Collections.Generic.IEnumerable<object>
 	// System.Collections.Generic.IEnumerator<Mirror.NetworkRoomManager.PendingPlayer>
@@ -394,6 +407,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<object,object>>
 	// System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<uint,object>>
 	// System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<ushort,object>>
+	// System.Collections.Generic.IEnumerator<System.ValueTuple<int,object,int>>
 	// System.Collections.Generic.IEnumerator<int>
 	// System.Collections.Generic.IEnumerator<object>
 	// System.Collections.Generic.IEqualityComparer<Mirror.NetworkRoomManager.PendingPlayer>
@@ -434,6 +448,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Collections.ObjectModel.ReadOnlyCollection<object>
 	// System.Comparison<int>
 	// System.Comparison<object>
+	// System.Func<System.Threading.Tasks.VoidTaskResult>
 	// System.Func<UnityEngine.Vector3>
 	// System.Func<byte>
 	// System.Func<float>
@@ -491,6 +506,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Func<object,System.Nullable<uint>>
 	// System.Func<object,System.Nullable<ulong>>
 	// System.Func<object,System.Nullable<ushort>>
+	// System.Func<object,System.Threading.Tasks.VoidTaskResult>
 	// System.Func<object,UnityEngine.Color32>
 	// System.Func<object,UnityEngine.Color>
 	// System.Func<object,UnityEngine.LayerMask>
@@ -509,6 +525,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Func<object,float>
 	// System.Func<object,int>
 	// System.Func<object,long>
+	// System.Func<object,object,object>
 	// System.Func<object,object>
 	// System.Func<object,sbyte>
 	// System.Func<object,short>
@@ -521,6 +538,23 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Predicate<Mirror.NetworkRoomManager.PendingPlayer>
 	// System.Predicate<int>
 	// System.Predicate<object>
+	// System.Runtime.CompilerServices.AsyncTaskMethodBuilder<System.Threading.Tasks.VoidTaskResult>
+	// System.Runtime.CompilerServices.AsyncTaskMethodBuilder<object>
+	// System.Runtime.CompilerServices.ConfiguredTaskAwaitable.ConfiguredTaskAwaiter<System.Threading.Tasks.VoidTaskResult>
+	// System.Runtime.CompilerServices.ConfiguredTaskAwaitable.ConfiguredTaskAwaiter<object>
+	// System.Runtime.CompilerServices.ConfiguredTaskAwaitable<System.Threading.Tasks.VoidTaskResult>
+	// System.Runtime.CompilerServices.ConfiguredTaskAwaitable<object>
+	// System.Runtime.CompilerServices.TaskAwaiter<System.Threading.Tasks.VoidTaskResult>
+	// System.Runtime.CompilerServices.TaskAwaiter<object>
+	// System.Threading.Tasks.ContinuationTaskFromResultTask<System.Threading.Tasks.VoidTaskResult>
+	// System.Threading.Tasks.ContinuationTaskFromResultTask<object>
+	// System.Threading.Tasks.Task<System.Threading.Tasks.VoidTaskResult>
+	// System.Threading.Tasks.Task<object>
+	// System.Threading.Tasks.TaskFactory.<>c__DisplayClass35_0<System.Threading.Tasks.VoidTaskResult>
+	// System.Threading.Tasks.TaskFactory.<>c__DisplayClass35_0<object>
+	// System.Threading.Tasks.TaskFactory<System.Threading.Tasks.VoidTaskResult>
+	// System.Threading.Tasks.TaskFactory<object>
+	// System.ValueTuple<int,object,int>
 	// UnityEngine.Events.InvokableCall<float>
 	// UnityEngine.Events.InvokableCall<int,int,int>
 	// UnityEngine.Events.InvokableCall<int,int>
@@ -577,6 +611,25 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 		// int System.Linq.Enumerable.Count<object>(System.Collections.Generic.IEnumerable<object>)
 		// System.Collections.Generic.KeyValuePair<object,object> System.Linq.Enumerable.ElementAt<System.Collections.Generic.KeyValuePair<object,object>>(System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<object,object>>,int)
 		// object System.Linq.Enumerable.ElementAt<object>(System.Collections.Generic.IEnumerable<object>,int)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,LeaderboardUI.<RefreshData>d__12>(System.Runtime.CompilerServices.TaskAwaiter&,LeaderboardUI.<RefreshData>d__12&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,UOSLeaderboard.<EnsureFeatureSdkReady>d__7>(System.Runtime.CompilerServices.TaskAwaiter&,UOSLeaderboard.<EnsureFeatureSdkReady>d__7&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<System.Threading.Tasks.VoidTaskResult>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,LeaderboardUI.<RefreshData>d__12>(System.Runtime.CompilerServices.TaskAwaiter&,LeaderboardUI.<RefreshData>d__12&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<System.Threading.Tasks.VoidTaskResult>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,UOSLeaderboard.<EnsureFeatureSdkReady>d__7>(System.Runtime.CompilerServices.TaskAwaiter&,UOSLeaderboard.<EnsureFeatureSdkReady>d__7&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<object>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,UOSLeaderboard.<GetMyRank>d__10>(System.Runtime.CompilerServices.TaskAwaiter&,UOSLeaderboard.<GetMyRank>d__10&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<object>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,UOSLeaderboard.<GetTopRankings>d__9>(System.Runtime.CompilerServices.TaskAwaiter&,UOSLeaderboard.<GetTopRankings>d__9&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<object>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter<object>,UOSLeaderboard.<GetMyRank>d__10>(System.Runtime.CompilerServices.TaskAwaiter<object>&,UOSLeaderboard.<GetMyRank>d__10&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<object>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter<object>,UOSLeaderboard.<GetTopRankings>d__9>(System.Runtime.CompilerServices.TaskAwaiter<object>&,UOSLeaderboard.<GetTopRankings>d__9&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.Start<LeaderboardUI.<RefreshData>d__12>(LeaderboardUI.<RefreshData>d__12&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.Start<UOSLeaderboard.<EnsureFeatureSdkReady>d__7>(UOSLeaderboard.<EnsureFeatureSdkReady>d__7&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<object>.Start<UOSLeaderboard.<GetMyRank>d__10>(UOSLeaderboard.<GetMyRank>d__10&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<object>.Start<UOSLeaderboard.<GetTopRankings>d__9>(UOSLeaderboard.<GetTopRankings>d__9&)
+		// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,LeaderboardUI.<Refresh>d__10>(System.Runtime.CompilerServices.TaskAwaiter&,LeaderboardUI.<Refresh>d__10&)
+		// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,LeaderboardUI.<Show>d__8>(System.Runtime.CompilerServices.TaskAwaiter&,LeaderboardUI.<Show>d__8&)
+		// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,UOSLeaderboard.<SubmitKillScore>d__8>(System.Runtime.CompilerServices.TaskAwaiter&,UOSLeaderboard.<SubmitKillScore>d__8&)
+		// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter<object>,UOSLeaderboard.<SubmitKillScore>d__8>(System.Runtime.CompilerServices.TaskAwaiter<object>&,UOSLeaderboard.<SubmitKillScore>d__8&)
+		// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start<LeaderboardUI.<Refresh>d__10>(LeaderboardUI.<Refresh>d__10&)
+		// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start<LeaderboardUI.<Show>d__8>(LeaderboardUI.<Show>d__8&)
+		// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start<UOSLeaderboard.<SubmitKillScore>d__8>(UOSLeaderboard.<SubmitKillScore>d__8&)
 		// object& System.Runtime.CompilerServices.Unsafe.As<object,object>(object&)
 		// System.Void* System.Runtime.CompilerServices.Unsafe.AsPointer<object>(object&)
 		// System.Void* Unity.Collections.LowLevel.Unsafe.UnsafeUtility.AddressOf<UnityEngine.Vector2>(UnityEngine.Vector2&)

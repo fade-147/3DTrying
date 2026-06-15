@@ -39,17 +39,17 @@ static Il2CppMethodPointer s_methodPointers[11] =
 };
 static const int32_t s_InvokerIndices[11] = 
 {
-	11983,
-	11983,
-	9718,
-	11983,
-	9718,
-	9548,
-	11983,
-	11983,
-	11983,
-	21177,
-	11983,
+	13213,
+	13213,
+	10730,
+	13213,
+	10730,
+	10550,
+	13213,
+	13213,
+	13213,
+	22965,
+	13213,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_SteamErrorUIAssembly_CodeGenModule;
 const Il2CppCodeGenModule g_SteamErrorUIAssembly_CodeGenModule = 

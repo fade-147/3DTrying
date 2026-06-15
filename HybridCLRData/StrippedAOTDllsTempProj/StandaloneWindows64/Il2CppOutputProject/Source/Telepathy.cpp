@@ -2686,7 +2686,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Log__cctor_m6448ABA11714D512D9018FD53D50
 		L_2 = Console_get_Error_m0132A8360914E80AD6EEF7A353BC1C75A29AE4BF_inline(NULL);
 		TextWriter_tA9E5461506CF806E17B6BBBF2119359DEDA3F0F3* L_3 = L_2;
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_4 = (Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A*)il2cpp_codegen_object_new(Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A_il2cpp_TypeInfo_var);
-		Action_1__ctor_m9DC2953C55C4D7D4B7BEFE03D84DA1F9362D652C(L_4, L_3, (intptr_t)((void*)GetVirtualMethodInfo(L_3, 22)), NULL);
+		Action_1__ctor_m9DC2953C55C4D7D4B7BEFE03D84DA1F9362D652C(L_4, L_3, (intptr_t)((void*)GetVirtualMethodInfo(L_3, 23)), NULL);
 		((Log_t9781903FA414ED78D7CFD5F3FB3EDC9EF32A3763_StaticFields*)il2cpp_codegen_static_fields_for(Log_t9781903FA414ED78D7CFD5F3FB3EDC9EF32A3763_il2cpp_TypeInfo_var))->___Error = L_4;
 		Il2CppCodeGenWriteBarrier((void**)(&((Log_t9781903FA414ED78D7CFD5F3FB3EDC9EF32A3763_StaticFields*)il2cpp_codegen_static_fields_for(Log_t9781903FA414ED78D7CFD5F3FB3EDC9EF32A3763_il2cpp_TypeInfo_var))->___Error), (void*)L_4);
 		return;
@@ -4198,7 +4198,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NetworkStreamExtensions_ReadSafely_mE
 		int32_t L_3 = ___3_size;
 		NullCheck(L_0);
 		int32_t L_4;
-		L_4 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(28, L_0, L_1, L_2, L_3);
+		L_4 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(34, L_0, L_1, L_2, L_3);
 		V_0 = L_4;
 		goto IL_0016;
 	}
@@ -4936,7 +4936,7 @@ IL_004f_1:
 				NetworkStream_tF39C3684B6D572BF47F518AD1DB1F4B12CEE4AE0* L_15;
 				L_15 = TcpClient_GetStream_mDD54336B17D1267BD593E0A1EB9EDF3E9506AEBA(L_14, NULL);
 				NullCheck(L_15);
-				VirtualActionInvoker0::Invoke(14, L_15);
+				VirtualActionInvoker0::Invoke(20, L_15);
 				goto IL_0073_1;
 			}
 			catch(Il2CppExceptionWrapper& e)
@@ -5716,7 +5716,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ThreadFunctions_SendMessagesBlocking_m83
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_1 = ___1_payload;
 		int32_t L_2 = ___2_packetSize;
 		NullCheck(L_0);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(31, L_0, L_1, 0, L_2);
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(37, L_0, L_1, 0, L_2);
 		V_0 = (bool)1;
 		goto IL_0033;
 	}
@@ -5945,7 +5945,7 @@ FINALLY_00aa:
 			{
 				NetworkStream_tF39C3684B6D572BF47F518AD1DB1F4B12CEE4AE0* L_5 = V_0;
 				NullCheck(L_5);
-				VirtualActionInvoker0::Invoke(14, L_5);
+				VirtualActionInvoker0::Invoke(20, L_5);
 				TcpClient_t753B702EE06B59897564F75CEBFB6C8AFF10BD58* L_6 = ___1_client;
 				NullCheck(L_6);
 				TcpClient_Close_m03E0ED4E4BA87B3F1ED17585AB1327ED76F5FE89(L_6, NULL);
@@ -6142,7 +6142,7 @@ FINALLY_006f:
 			{
 				NetworkStream_tF39C3684B6D572BF47F518AD1DB1F4B12CEE4AE0* L_2 = V_0;
 				NullCheck(L_2);
-				VirtualActionInvoker0::Invoke(14, L_2);
+				VirtualActionInvoker0::Invoke(20, L_2);
 				TcpClient_t753B702EE06B59897564F75CEBFB6C8AFF10BD58* L_3 = ___1_client;
 				NullCheck(L_3);
 				TcpClient_Close_m03E0ED4E4BA87B3F1ED17585AB1327ED76F5FE89(L_3, NULL);
@@ -6189,7 +6189,7 @@ IL_0028_2:
 					ManualResetEvent_t63959486AA41A113A4353D0BF4A68E77EBA0A158* L_12 = ___3_sendPending;
 					NullCheck(L_12);
 					bool L_13;
-					L_13 = VirtualFuncInvoker0< bool >::Invoke(9, L_12);
+					L_13 = VirtualFuncInvoker0< bool >::Invoke(10, L_12);
 				}
 
 IL_002f_2:

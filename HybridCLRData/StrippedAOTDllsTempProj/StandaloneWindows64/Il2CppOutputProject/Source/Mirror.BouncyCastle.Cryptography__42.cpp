@@ -10614,7 +10614,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XoodyakDigest_Update_m473FE8A639C5857EFA
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_0 = __this->___buffer;
 		uint8_t L_1 = ___0_input;
 		NullCheck(L_0);
-		VirtualActionInvoker1< uint8_t >::Invoke(33, L_0, L_1);
+		VirtualActionInvoker1< uint8_t >::Invoke(39, L_0, L_1);
 		return;
 	}
 }
@@ -10636,7 +10636,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XoodyakDigest_BlockUpdate_mBAE24B3971813
 		int32_t L_5 = ___1_inOff;
 		int32_t L_6 = ___2_inLen;
 		NullCheck(L_3);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(31, L_3, L_4, L_5, L_6);
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(37, L_3, L_4, L_5, L_6);
 		return;
 	}
 }
@@ -10661,12 +10661,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t XoodyakDigest_DoFinal_m6B0564D6A9F646
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_2 = __this->___buffer;
 		NullCheck(L_2);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_3;
-		L_3 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(34, L_2);
+		L_3 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(40, L_2);
 		V_0 = L_3;
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_4 = __this->___buffer;
 		NullCheck(L_4);
 		int64_t L_5;
-		L_5 = VirtualFuncInvoker0< int64_t >::Invoke(10, L_4);
+		L_5 = VirtualFuncInvoker0< int64_t >::Invoke(11, L_4);
 		V_1 = ((int32_t)L_5);
 		V_2 = 0;
 		V_3 = 3;
@@ -10733,7 +10733,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XoodyakDigest_Reset_m550B6209EBA3AD83EB0
 		__this->___Rabsorb = ((int32_t)16);
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_2 = __this->___buffer;
 		NullCheck(L_2);
-		VirtualActionInvoker1< int64_t >::Invoke(27, L_2, ((int64_t)0));
+		VirtualActionInvoker1< int64_t >::Invoke(33, L_2, ((int64_t)0));
 		return;
 	}
 }

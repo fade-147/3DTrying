@@ -1,7 +1,11 @@
 <linker>
   <assembly fullname="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="ChangeNameUI" preserve="all" />
+    <type fullname="FirstLoginNameUI" preserve="all" />
     <type fullname="HelloInput" preserve="all" />
+    <type fullname="PlayerNameDisplay" preserve="all" />
     <type fullname="SaveManager" preserve="all" />
+    <type fullname="SteamProfileUI" preserve="all" />
   </assembly>
   <assembly fullname="Cinemachine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="Cinemachine.Cinemachine3rdPersonFollow" preserve="all" />
@@ -101,6 +105,8 @@
     <type fullname="InfimaGames.LowPolyShooterPack.Weapon" preserve="all" />
     <type fullname="InfimaGames.LowPolyShooterPack.WeaponAnimationEventHandler" preserve="all" />
     <type fullname="InfimaGames.LowPolyShooterPack.WeaponAttachmentManager" preserve="all" />
+    <type fullname="LeaderboardEntryUI" preserve="all" />
+    <type fullname="LeaderboardUI" preserve="all" />
     <type fullname="LeaveRoomButton" preserve="all" />
     <type fullname="LobbyMenu" preserve="all" />
     <type fullname="MicButton" preserve="all" />
@@ -122,6 +128,7 @@
     <type fullname="TeammateOcclusion" preserve="all" />
     <type fullname="TeamScoreManager" preserve="all" />
     <type fullname="TeamSpawnArea" preserve="all" />
+    <type fullname="UOSLeaderboard" preserve="all" />
     <type fullname="VoiceChatManager" preserve="all" />
     <type fullname="InfimaGames.LowPolyShooterPack.AudioSettings" preserve="nothing" serialized="true" />
     <type fullname="InfimaGames.LowPolyShooterPack.FeelState" preserve="nothing" serialized="true" />
@@ -236,10 +243,16 @@
   <assembly fullname="Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="TMPro.TextMeshProUGUI" preserve="all" />
     <type fullname="TMPro.TMP_FontAsset" preserve="all" />
+    <type fullname="TMPro.TMP_InputField" preserve="all" />
     <type fullname="TMPro.TMP_Settings" preserve="all" />
     <type fullname="TMPro.TMP_SpriteAsset" preserve="all" />
     <type fullname="TMPro.TMP_StyleSheet" preserve="all" />
     <type fullname="TMPro.VertexGradient" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_InputField/OnChangeEvent" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_InputField/SelectionEvent" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_InputField/SubmitEvent" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_InputField/TextSelectionEvent" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_InputField/TouchScreenKeyboardEvent" preserve="nothing" serialized="true" />
     <type fullname="TMPro.FaceInfo_Legacy" preserve="nothing" serialized="true" />
     <type fullname="TMPro.FontAssetCreationSettings" preserve="nothing" serialized="true" />
     <type fullname="TMPro.KerningTable" preserve="nothing" serialized="true" />
@@ -338,9 +351,13 @@
     <type fullname="UnityEngine.UI.HorizontalLayoutGroup" preserve="all" />
     <type fullname="UnityEngine.UI.Image" preserve="all" />
     <type fullname="UnityEngine.UI.InputField" preserve="all" />
+    <type fullname="UnityEngine.UI.LayoutElement" preserve="all" />
     <type fullname="UnityEngine.UI.Mask" preserve="all" />
     <type fullname="UnityEngine.UI.Outline" preserve="all" />
     <type fullname="UnityEngine.UI.RawImage" preserve="all" />
+    <type fullname="UnityEngine.UI.RectMask2D" preserve="all" />
+    <type fullname="UnityEngine.UI.Scrollbar" preserve="all" />
+    <type fullname="UnityEngine.UI.ScrollRect" preserve="all" />
     <type fullname="UnityEngine.UI.Slider" preserve="all" />
     <type fullname="UnityEngine.UI.Text" preserve="all" />
     <type fullname="UnityEngine.UI.VerticalLayoutGroup" preserve="all" />
@@ -352,6 +369,8 @@
     <type fullname="UnityEngine.UI.Navigation" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.UI.Slider/SliderEvent" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.UI.SpriteState" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.UI.ScrollRect/ScrollRectEvent" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.UI.Scrollbar/ScrollEvent" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.UI.InputField/EndEditEvent" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.UI.InputField/OnChangeEvent" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.UI.InputField/SubmitEvent" preserve="nothing" serialized="true" />

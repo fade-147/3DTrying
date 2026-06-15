@@ -47956,7 +47956,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t CallbackIdentities_GetCallbackIdentit
 		L_2 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_1, NULL);
 		NullCheck(L_0);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_3;
-		L_3 = VirtualFuncInvoker2< ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*, Type_t*, bool >::Invoke(19, L_0, L_2, (bool)0);
+		L_3 = VirtualFuncInvoker2< ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*, Type_t*, bool >::Invoke(20, L_0, L_2, (bool)0);
 		V_0 = L_3;
 		V_1 = 0;
 		goto IL_0024;
@@ -48215,7 +48215,7 @@ IL_0029:
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_14 = V_1;
 		NullCheck(L_13);
 		String_t* L_15;
-		L_15 = VirtualFuncInvoker1< String_t*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(33, L_13, L_14);
+		L_15 = VirtualFuncInvoker1< String_t*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(34, L_13, L_14);
 		return L_15;
 	}
 }
@@ -48263,7 +48263,7 @@ IL_0013:
 		int32_t L_9 = V_0;
 		NullCheck(L_7);
 		String_t* L_10;
-		L_10 = VirtualFuncInvoker3< String_t*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(34, L_7, L_8, 0, L_9);
+		L_10 = VirtualFuncInvoker3< String_t*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_7, L_8, 0, L_9);
 		return L_10;
 	}
 }
@@ -48290,7 +48290,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InteropHelp_StringToByteArrayUTF8_m96793
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_6 = ___1_outArrayBuffer;
 		NullCheck(L_2);
 		int32_t L_7;
-		L_7 = VirtualFuncInvoker5< int32_t, String_t*, int32_t, int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t >::Invoke(18, L_2, L_3, 0, L_5, L_6, 0);
+		L_7 = VirtualFuncInvoker5< int32_t, String_t*, int32_t, int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t >::Invoke(19, L_2, L_3, 0, L_5, L_6, 0);
 		V_0 = L_7;
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_8 = ___1_outArrayBuffer;
 		int32_t L_9 = V_0;
@@ -48346,7 +48346,7 @@ IL_0016:
 		String_t* L_2 = ___0_str;
 		NullCheck(L_1);
 		int32_t L_3;
-		L_3 = VirtualFuncInvoker1< int32_t, String_t* >::Invoke(10, L_1, L_2);
+		L_3 = VirtualFuncInvoker1< int32_t, String_t* >::Invoke(11, L_1, L_2);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_4 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)il2cpp_codegen_add(L_3, 1)));
 		V_0 = L_4;
 		Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* L_5;
@@ -48359,7 +48359,7 @@ IL_0016:
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_9 = V_0;
 		NullCheck(L_5);
 		int32_t L_10;
-		L_10 = VirtualFuncInvoker5< int32_t, String_t*, int32_t, int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t >::Invoke(18, L_5, L_6, 0, L_8, L_9, 0);
+		L_10 = VirtualFuncInvoker5< int32_t, String_t*, int32_t, int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t >::Invoke(19, L_5, L_6, 0, L_8, L_9, 0);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_11 = V_0;
 		NullCheck(L_11);
 		il2cpp_codegen_runtime_class_init_inline(Marshal_tD976A56A90263C3CE2B780D4B1CADADE2E70B4A7_il2cpp_TypeInfo_var);
@@ -48470,7 +48470,7 @@ IL_002a:
 		L_7 = InterfaceFuncInvoker1< String_t*, int32_t >::Invoke(0, IList_1_t97B3B39CDB830632CF9A846DD5FD149D333D9EDB_il2cpp_TypeInfo_var, L_5, L_6);
 		NullCheck(L_4);
 		int32_t L_8;
-		L_8 = VirtualFuncInvoker1< int32_t, String_t* >::Invoke(10, L_4, L_7);
+		L_8 = VirtualFuncInvoker1< int32_t, String_t* >::Invoke(11, L_4, L_7);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_9 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)il2cpp_codegen_add(L_8, 1)));
 		V_2 = L_9;
 		Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* L_10;
@@ -48491,7 +48491,7 @@ IL_002a:
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_18 = V_2;
 		NullCheck(L_10);
 		int32_t L_19;
-		L_19 = VirtualFuncInvoker5< int32_t, String_t*, int32_t, int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t >::Invoke(18, L_10, L_13, 0, L_17, L_18, 0);
+		L_19 = VirtualFuncInvoker5< int32_t, String_t*, int32_t, int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t >::Invoke(19, L_10, L_13, 0, L_17, L_18, 0);
 		IntPtrU5BU5D_tFD177F8C806A6921AD7150264CCC62FA00CAD832* L_20 = __this->___m_Strings;
 		int32_t L_21 = V_1;
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_22 = V_2;
@@ -56043,7 +56043,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* gameserveritem_t_GetGameDir_m70E68D
 		L_3 = Array_IndexOf_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_m3E47AE0BD5292CA28182DF90A3A3B19D2DBE1B6F(L_2, (uint8_t)0, Array_IndexOf_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_m3E47AE0BD5292CA28182DF90A3A3B19D2DBE1B6F_RuntimeMethod_var);
 		NullCheck(L_0);
 		String_t* L_4;
-		L_4 = VirtualFuncInvoker3< String_t*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(34, L_0, L_1, 0, L_3);
+		L_4 = VirtualFuncInvoker3< String_t*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_0, L_1, 0, L_3);
 		return L_4;
 	}
 }
@@ -56063,7 +56063,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void gameserveritem_t_SetGameDir_m75290EC8440
 		L_2 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_1, _stringLiteral1489F923C4DCA729178B3E3233458550D8DDDF29, NULL);
 		NullCheck(L_0);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_3;
-		L_3 = VirtualFuncInvoker1< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, String_t* >::Invoke(17, L_0, L_2);
+		L_3 = VirtualFuncInvoker1< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, String_t* >::Invoke(18, L_0, L_2);
 		__this->___m_szGameDir = L_3;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_szGameDir), (void*)L_3);
 		return;
@@ -56086,7 +56086,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* gameserveritem_t_GetMap_m404F8178F1
 		L_3 = Array_IndexOf_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_m3E47AE0BD5292CA28182DF90A3A3B19D2DBE1B6F(L_2, (uint8_t)0, Array_IndexOf_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_m3E47AE0BD5292CA28182DF90A3A3B19D2DBE1B6F_RuntimeMethod_var);
 		NullCheck(L_0);
 		String_t* L_4;
-		L_4 = VirtualFuncInvoker3< String_t*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(34, L_0, L_1, 0, L_3);
+		L_4 = VirtualFuncInvoker3< String_t*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_0, L_1, 0, L_3);
 		return L_4;
 	}
 }
@@ -56106,7 +56106,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void gameserveritem_t_SetMap_m795863410EAE187
 		L_2 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_1, _stringLiteral1489F923C4DCA729178B3E3233458550D8DDDF29, NULL);
 		NullCheck(L_0);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_3;
-		L_3 = VirtualFuncInvoker1< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, String_t* >::Invoke(17, L_0, L_2);
+		L_3 = VirtualFuncInvoker1< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, String_t* >::Invoke(18, L_0, L_2);
 		__this->___m_szMap = L_3;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_szMap), (void*)L_3);
 		return;
@@ -56129,7 +56129,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* gameserveritem_t_GetGameDescription
 		L_3 = Array_IndexOf_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_m3E47AE0BD5292CA28182DF90A3A3B19D2DBE1B6F(L_2, (uint8_t)0, Array_IndexOf_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_m3E47AE0BD5292CA28182DF90A3A3B19D2DBE1B6F_RuntimeMethod_var);
 		NullCheck(L_0);
 		String_t* L_4;
-		L_4 = VirtualFuncInvoker3< String_t*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(34, L_0, L_1, 0, L_3);
+		L_4 = VirtualFuncInvoker3< String_t*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_0, L_1, 0, L_3);
 		return L_4;
 	}
 }
@@ -56149,7 +56149,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void gameserveritem_t_SetGameDescription_m46B
 		L_2 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_1, _stringLiteral1489F923C4DCA729178B3E3233458550D8DDDF29, NULL);
 		NullCheck(L_0);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_3;
-		L_3 = VirtualFuncInvoker1< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, String_t* >::Invoke(17, L_0, L_2);
+		L_3 = VirtualFuncInvoker1< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, String_t* >::Invoke(18, L_0, L_2);
 		__this->___m_szGameDescription = L_3;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_szGameDescription), (void*)L_3);
 		return;
@@ -56190,7 +56190,7 @@ IL_0016:
 		L_8 = Array_IndexOf_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_m3E47AE0BD5292CA28182DF90A3A3B19D2DBE1B6F(L_7, (uint8_t)0, Array_IndexOf_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_m3E47AE0BD5292CA28182DF90A3A3B19D2DBE1B6F_RuntimeMethod_var);
 		NullCheck(L_5);
 		String_t* L_9;
-		L_9 = VirtualFuncInvoker3< String_t*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(34, L_5, L_6, 0, L_8);
+		L_9 = VirtualFuncInvoker3< String_t*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_5, L_6, 0, L_8);
 		return L_9;
 	}
 }
@@ -56210,7 +56210,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void gameserveritem_t_SetServerName_mCE5EC458
 		L_2 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_1, _stringLiteral1489F923C4DCA729178B3E3233458550D8DDDF29, NULL);
 		NullCheck(L_0);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_3;
-		L_3 = VirtualFuncInvoker1< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, String_t* >::Invoke(17, L_0, L_2);
+		L_3 = VirtualFuncInvoker1< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, String_t* >::Invoke(18, L_0, L_2);
 		__this->___m_szServerName = L_3;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_szServerName), (void*)L_3);
 		return;
@@ -56233,7 +56233,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* gameserveritem_t_GetGameTags_m62E8E
 		L_3 = Array_IndexOf_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_m3E47AE0BD5292CA28182DF90A3A3B19D2DBE1B6F(L_2, (uint8_t)0, Array_IndexOf_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_m3E47AE0BD5292CA28182DF90A3A3B19D2DBE1B6F_RuntimeMethod_var);
 		NullCheck(L_0);
 		String_t* L_4;
-		L_4 = VirtualFuncInvoker3< String_t*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(34, L_0, L_1, 0, L_3);
+		L_4 = VirtualFuncInvoker3< String_t*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_0, L_1, 0, L_3);
 		return L_4;
 	}
 }
@@ -56253,7 +56253,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void gameserveritem_t_SetGameTags_mA0FCD57768
 		L_2 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_1, _stringLiteral1489F923C4DCA729178B3E3233458550D8DDDF29, NULL);
 		NullCheck(L_0);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_3;
-		L_3 = VirtualFuncInvoker1< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, String_t* >::Invoke(17, L_0, L_2);
+		L_3 = VirtualFuncInvoker1< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, String_t* >::Invoke(18, L_0, L_2);
 		__this->___m_szGameTags = L_3;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_szGameTags), (void*)L_3);
 		return;

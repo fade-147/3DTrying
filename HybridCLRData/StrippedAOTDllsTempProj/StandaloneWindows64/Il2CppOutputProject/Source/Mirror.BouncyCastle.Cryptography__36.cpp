@@ -11990,11 +11990,11 @@ IL_003a:
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_11 = __this->___aadData;
 		NullCheck(L_11);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_12;
-		L_12 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(34, L_11);
+		L_12 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(40, L_11);
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_13 = __this->___aadData;
 		NullCheck(L_13);
 		int64_t L_14;
-		L_14 = VirtualFuncInvoker0< int64_t >::Invoke(10, L_13);
+		L_14 = VirtualFuncInvoker0< int64_t >::Invoke(11, L_13);
 		Grain128AeadEngine_DoProcessAADBytes_m8099F361937CB459BF0307D2316578E1A55BF1BC(__this, L_12, 0, ((int32_t)L_14), NULL);
 		__this->___aadFinished = (bool)1;
 	}
@@ -12036,7 +12036,7 @@ IL_000a:
 	{
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_1 = __this->___aadData;
 		NullCheck(L_1);
-		VirtualActionInvoker1< int64_t >::Invoke(27, L_1, ((int64_t)0));
+		VirtualActionInvoker1< int64_t >::Invoke(33, L_1, ((int64_t)0));
 		__this->___aadFinished = (bool)0;
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_2 = __this->___workingKey;
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_3 = __this->___workingIV;
@@ -12250,7 +12250,7 @@ IL_0013:
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_2 = __this->___aadData;
 		uint8_t L_3 = ___0_input;
 		NullCheck(L_2);
-		VirtualActionInvoker1< uint8_t >::Invoke(33, L_2, L_3);
+		VirtualActionInvoker1< uint8_t >::Invoke(39, L_2, L_3);
 		return;
 	}
 }
@@ -12276,7 +12276,7 @@ IL_0013:
 		int32_t L_4 = ___1_inOff;
 		int32_t L_5 = ___2_len;
 		NullCheck(L_2);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(31, L_2, L_3, L_4, L_5);
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(37, L_2, L_3, L_4, L_5);
 		return;
 	}
 }
@@ -12591,11 +12591,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Grain128AeadEngine_DoFinal_m4EC80C1E8
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_1 = __this->___aadData;
 		NullCheck(L_1);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_2;
-		L_2 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(34, L_1);
+		L_2 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(40, L_1);
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_3 = __this->___aadData;
 		NullCheck(L_3);
 		int64_t L_4;
-		L_4 = VirtualFuncInvoker0< int64_t >::Invoke(10, L_3);
+		L_4 = VirtualFuncInvoker0< int64_t >::Invoke(11, L_3);
 		Grain128AeadEngine_DoProcessAADBytes_m8099F361937CB459BF0307D2316578E1A55BF1BC(__this, L_2, 0, ((int32_t)L_4), NULL);
 		__this->___aadFinished = (bool)1;
 	}

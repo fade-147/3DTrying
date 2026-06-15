@@ -124,7 +124,21 @@
     </ClCompile>
     <ClCompile Include="Source\GenericMethods__27.cpp">
     </ClCompile>
+    <ClCompile Include="Source\GenericMethods__28.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\GenericMethods__29.cpp">
+    </ClCompile>
     <ClCompile Include="Source\GenericMethods__3.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\GenericMethods__30.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\GenericMethods__31.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\GenericMethods__32.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\GenericMethods__33.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\GenericMethods__34.cpp">
     </ClCompile>
     <ClCompile Include="Source\GenericMethods__4.cpp">
     </ClCompile>
@@ -182,9 +196,39 @@
     </ClCompile>
     <ClCompile Include="Source\Generics__117.cpp">
     </ClCompile>
+    <ClCompile Include="Source\Generics__118.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__119.cpp">
+    </ClCompile>
     <ClCompile Include="Source\Generics__12.cpp">
     </ClCompile>
+    <ClCompile Include="Source\Generics__120.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__121.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__122.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__123.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__124.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__125.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__126.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__127.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__128.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__129.cpp">
+    </ClCompile>
     <ClCompile Include="Source\Generics__13.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__130.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__131.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__132.cpp">
     </ClCompile>
     <ClCompile Include="Source\Generics__14.cpp">
     </ClCompile>
@@ -374,6 +418,16 @@
     </ClCompile>
     <ClCompile Include="Source\Generics__99.cpp">
     </ClCompile>
+    <ClCompile Include="Source\Google.Protobuf.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Google.Protobuf__1.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Google.Protobuf__2.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Google.Protobuf__3.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Google.Protobuf__4.cpp">
+    </ClCompile>
     <ClCompile Include="Source\HybridCLR.Runtime.cpp">
     </ClCompile>
     <ClCompile Include="Source\Il2CppCCalculateFieldValues.cpp">
@@ -386,11 +440,15 @@
     </ClCompile>
     <ClCompile Include="Source\Il2CppCCalculateFieldValues4.cpp">
     </ClCompile>
+    <ClCompile Include="Source\Il2CppCCalculateFieldValues5.cpp">
+    </ClCompile>
     <ClCompile Include="Source\Il2CppCCalculateTypeValues.cpp">
     </ClCompile>
     <ClCompile Include="Source\Il2CppCCalculateTypeValues1.cpp">
     </ClCompile>
     <ClCompile Include="Source\Il2CppCCalculateTypeValues2.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Il2CppCCalculateTypeValues3.cpp">
     </ClCompile>
     <ClCompile Include="Source\Il2CppCCFieldValuesTable.cpp">
     </ClCompile>
@@ -578,6 +636,8 @@
     </ClCompile>
     <ClCompile Include="Source\mscorlib__23.cpp">
     </ClCompile>
+    <ClCompile Include="Source\mscorlib__24.cpp">
+    </ClCompile>
     <ClCompile Include="Source\mscorlib__3.cpp">
     </ClCompile>
     <ClCompile Include="Source\mscorlib__4.cpp">
@@ -591,6 +651,24 @@
     <ClCompile Include="Source\mscorlib__8.cpp">
     </ClCompile>
     <ClCompile Include="Source\mscorlib__9.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Newtonsoft.Json.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Newtonsoft.Json__1.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Newtonsoft.Json__2.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Newtonsoft.Json__3.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Newtonsoft.Json__4.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Newtonsoft.Json__5.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Newtonsoft.Json__6.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Newtonsoft.Json__7.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Newtonsoft.Json__8.cpp">
     </ClCompile>
     <ClCompile Include="Source\NodeCanvas.cpp">
     </ClCompile>
@@ -614,13 +692,85 @@
     </ClCompile>
     <ClCompile Include="Source\System.Core__1.cpp">
     </ClCompile>
+    <ClCompile Include="Source\System.Core__2.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\System.Core__3.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\System.Core__4.cpp">
+    </ClCompile>
     <ClCompile Include="Source\System.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\System.Data.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\System.Data__1.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\System.Data__2.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\System.Data__3.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\System.Data__4.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\System.Data__5.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\System.Data__6.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\System.Data__7.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\System.Data__8.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\System.Data__9.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\System.Drawing.cpp">
     </ClCompile>
     <ClCompile Include="Source\System.Numerics.cpp">
     </ClCompile>
+    <ClCompile Include="Source\System.Runtime.CompilerServices.Unsafe.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\System.Runtime.Serialization.cpp">
+    </ClCompile>
     <ClCompile Include="Source\System.Xml.cpp">
     </ClCompile>
+    <ClCompile Include="Source\System.Xml.Linq.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\System.Xml__1.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\System.Xml__10.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\System.Xml__11.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\System.Xml__12.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\System.Xml__13.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\System.Xml__14.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\System.Xml__15.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\System.Xml__16.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\System.Xml__2.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\System.Xml__3.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\System.Xml__4.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\System.Xml__5.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\System.Xml__6.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\System.Xml__7.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\System.Xml__8.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\System.Xml__9.cpp">
+    </ClCompile>
     <ClCompile Include="Source\System__1.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\System__10.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\System__11.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\System__12.cpp">
     </ClCompile>
     <ClCompile Include="Source\System__2.cpp">
     </ClCompile>
@@ -633,6 +783,10 @@
     <ClCompile Include="Source\System__6.cpp">
     </ClCompile>
     <ClCompile Include="Source\System__7.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\System__8.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\System__9.cpp">
     </ClCompile>
     <ClCompile Include="Source\Telepathy.cpp">
     </ClCompile>
@@ -698,6 +852,56 @@
     </ClCompile>
     <ClCompile Include="Source\Unity.Mathematics__9.cpp">
     </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core__1.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core__10.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core__11.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core__12.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core__13.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core__14.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core__15.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core__16.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core__17.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core__18.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core__2.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core__3.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core__4.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core__5.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core__6.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core__7.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core__8.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core__9.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Feature.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Feature__1.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Feature__2.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Login.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.UI.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.UI__1.cpp">
+    </ClCompile>
     <ClCompile Include="Source\Unity.Postprocessing.Runtime.cpp">
     </ClCompile>
     <ClCompile Include="Source\Unity.Postprocessing.Runtime__1.cpp">
@@ -760,6 +964,12 @@
     </ClCompile>
     <ClCompile Include="Source\Unity.Timeline__1.cpp">
     </ClCompile>
+    <ClCompile Include="Source\Unity.UOS.Common.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Unity.UOS.Common__1.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Unity.UOS.Encrypt.cpp">
+    </ClCompile>
     <ClCompile Include="Source\UnityEngine.AIModule.cpp">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.AndroidJNIModule.cpp">
@@ -787,6 +997,8 @@
     <ClCompile Include="Source\UnityEngine.DirectorModule.cpp">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.GridModule.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.ImageConversionModule.cpp">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.IMGUIModule.cpp">
     </ClCompile>
@@ -880,6 +1092,8 @@
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.UnityWebRequestModule.cpp">
     </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UnityWebRequestTextureModule.cpp">
+    </ClCompile>
     <ClCompile Include="Source\UnityEngine.VFXModule.cpp">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.VideoModule.cpp">
@@ -911,6 +1125,8 @@
     <ClCompile Include="Source\Concentus-Unity.Runtime_CodeGen.c">
     </ClCompile>
     <ClCompile Include="Source\FizzySteamworks_CodeGen.c">
+    </ClCompile>
+    <ClCompile Include="Source\Google.Protobuf_CodeGen.c">
     </ClCompile>
     <ClCompile Include="Source\HybridCLR.Runtime_CodeGen.c">
     </ClCompile>
@@ -952,6 +1168,8 @@
     </ClCompile>
     <ClCompile Include="Source\mscorlib_CodeGen.c">
     </ClCompile>
+    <ClCompile Include="Source\Newtonsoft.Json_CodeGen.c">
+    </ClCompile>
     <ClCompile Include="Source\NodeCanvas_CodeGen.c">
     </ClCompile>
     <ClCompile Include="Source\ParadoxNotion_CodeGen.c">
@@ -964,7 +1182,17 @@
     </ClCompile>
     <ClCompile Include="Source\System.Core_CodeGen.c">
     </ClCompile>
+    <ClCompile Include="Source\System.Data_CodeGen.c">
+    </ClCompile>
+    <ClCompile Include="Source\System.Drawing_CodeGen.c">
+    </ClCompile>
     <ClCompile Include="Source\System.Numerics_CodeGen.c">
+    </ClCompile>
+    <ClCompile Include="Source\System.Runtime.CompilerServices.Unsafe_CodeGen.c">
+    </ClCompile>
+    <ClCompile Include="Source\System.Runtime.Serialization_CodeGen.c">
+    </ClCompile>
+    <ClCompile Include="Source\System.Xml.Linq_CodeGen.c">
     </ClCompile>
     <ClCompile Include="Source\System.Xml_CodeGen.c">
     </ClCompile>
@@ -986,6 +1214,14 @@
     </ClCompile>
     <ClCompile Include="Source\Unity.Mathematics_CodeGen.c">
     </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core_CodeGen.c">
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Feature_CodeGen.c">
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Login_CodeGen.c">
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.UI_CodeGen.c">
+    </ClCompile>
     <ClCompile Include="Source\Unity.Postprocessing.Runtime_CodeGen.c">
     </ClCompile>
     <ClCompile Include="Source\Unity.RenderPipeline.Universal.ShaderLibrary_CodeGen.c">
@@ -997,6 +1233,10 @@
     <ClCompile Include="Source\Unity.TextMeshPro_CodeGen.c">
     </ClCompile>
     <ClCompile Include="Source\Unity.Timeline_CodeGen.c">
+    </ClCompile>
+    <ClCompile Include="Source\Unity.UOS.Common_CodeGen.c">
+    </ClCompile>
+    <ClCompile Include="Source\Unity.UOS.Encrypt_CodeGen.c">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.AIModule_CodeGen.c">
     </ClCompile>
@@ -1013,6 +1253,8 @@
     <ClCompile Include="Source\UnityEngine.DirectorModule_CodeGen.c">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.GridModule_CodeGen.c">
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.ImageConversionModule_CodeGen.c">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.IMGUIModule_CodeGen.c">
     </ClCompile>
@@ -1060,6 +1302,8 @@
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.UnityWebRequestModule_CodeGen.c">
     </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UnityWebRequestTextureModule_CodeGen.c">
+    </ClCompile>
     <ClCompile Include="Source\UnityEngine.VFXModule_CodeGen.c">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.VideoModule_CodeGen.c">
@@ -1074,6 +1318,8 @@
     </ClCompile>
     <ClCompile Include="Source\__Generated_CodeGen.c">
     </ClCompile>
+    <ClInclude Include="Source\NativeBridge.h">
+    </ClInclude>
     <ClInclude Include="IL2CPP\external\baselib\Include\Baselib.h">
     </ClInclude>
     <ClInclude Include="IL2CPP\external\baselib\Include\C\Baselib_Alignment.h">

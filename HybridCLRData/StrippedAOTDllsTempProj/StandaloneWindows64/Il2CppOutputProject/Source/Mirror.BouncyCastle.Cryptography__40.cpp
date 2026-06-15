@@ -7565,7 +7565,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IsapDigest_Update_m14D6597E668F5D8BBEB01
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_0 = __this->___buffer;
 		uint8_t L_1 = ___0_input;
 		NullCheck(L_0);
-		VirtualActionInvoker1< uint8_t >::Invoke(33, L_0, L_1);
+		VirtualActionInvoker1< uint8_t >::Invoke(39, L_0, L_1);
 		return;
 	}
 }
@@ -7587,7 +7587,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IsapDigest_BlockUpdate_m3054B6AFC3E13181
 		int32_t L_5 = ___1_inOff;
 		int32_t L_6 = ___2_inLen;
 		NullCheck(L_3);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(31, L_3, L_4, L_5, L_6);
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(37, L_3, L_4, L_5, L_6);
 		return;
 	}
 }
@@ -7616,12 +7616,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t IsapDigest_DoFinal_mD26C26ABD7A52FBB3
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_2 = __this->___buffer;
 		NullCheck(L_2);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_3;
-		L_3 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(34, L_2);
+		L_3 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(40, L_2);
 		V_0 = L_3;
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_4 = __this->___buffer;
 		NullCheck(L_4);
 		int64_t L_5;
-		L_5 = VirtualFuncInvoker0< int64_t >::Invoke(10, L_4);
+		L_5 = VirtualFuncInvoker0< int64_t >::Invoke(11, L_4);
 		il2cpp_codegen_runtime_class_init_inline(Convert_t7097FF336D592F7C06D88A98349A44646F91EFFC_il2cpp_TypeInfo_var);
 		int32_t L_6;
 		L_6 = Convert_ToInt32_mA857F99F1CACB73D7DB85E26638E7CC1A2CD5C78(L_5, NULL);
@@ -7708,7 +7708,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IsapDigest_Reset_m5CB910E016C7C97562374E
 	{
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_0 = __this->___buffer;
 		NullCheck(L_0);
-		VirtualActionInvoker1< int64_t >::Invoke(27, L_0, ((int64_t)0));
+		VirtualActionInvoker1< int64_t >::Invoke(33, L_0, ((int64_t)0));
 		return;
 	}
 }
@@ -13441,7 +13441,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NullDigest_GetDigestSize_m6A4FB49D8E7
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_0 = __this->___bOut;
 		NullCheck(L_0);
 		int64_t L_1;
-		L_1 = VirtualFuncInvoker0< int64_t >::Invoke(10, L_0);
+		L_1 = VirtualFuncInvoker0< int64_t >::Invoke(11, L_0);
 		il2cpp_codegen_runtime_class_init_inline(Convert_t7097FF336D592F7C06D88A98349A44646F91EFFC_il2cpp_TypeInfo_var);
 		int32_t L_2;
 		L_2 = Convert_ToInt32_mA857F99F1CACB73D7DB85E26638E7CC1A2CD5C78(L_1, NULL);
@@ -13454,7 +13454,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NullDigest_Update_m19260B320A1DBCFC7D95D
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_0 = __this->___bOut;
 		uint8_t L_1 = ___0_b;
 		NullCheck(L_0);
-		VirtualActionInvoker1< uint8_t >::Invoke(33, L_0, L_1);
+		VirtualActionInvoker1< uint8_t >::Invoke(39, L_0, L_1);
 		return;
 	}
 }
@@ -13466,7 +13466,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NullDigest_BlockUpdate_mBF4A2861EE16A4C6
 		int32_t L_2 = ___1_inOff;
 		int32_t L_3 = ___2_len;
 		NullCheck(L_0);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(31, L_0, L_1, L_2, L_3);
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(37, L_0, L_1, L_2, L_3);
 		return;
 	}
 }
@@ -13495,11 +13495,11 @@ FINALLY_0029:
 			MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_0 = __this->___bOut;
 			NullCheck(L_0);
 			ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_1;
-			L_1 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(34, L_0);
+			L_1 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(40, L_0);
 			MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_2 = __this->___bOut;
 			NullCheck(L_2);
 			int64_t L_3;
-			L_3 = VirtualFuncInvoker0< int64_t >::Invoke(10, L_2);
+			L_3 = VirtualFuncInvoker0< int64_t >::Invoke(11, L_2);
 			il2cpp_codegen_runtime_class_init_inline(Convert_t7097FF336D592F7C06D88A98349A44646F91EFFC_il2cpp_TypeInfo_var);
 			int32_t L_4;
 			L_4 = Convert_ToInt32_mA857F99F1CACB73D7DB85E26638E7CC1A2CD5C78(L_3, NULL);
@@ -13529,7 +13529,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NullDigest_Reset_m32DA0AA695F9ADF4ED16FD
 	{
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_0 = __this->___bOut;
 		NullCheck(L_0);
-		VirtualActionInvoker1< int64_t >::Invoke(27, L_0, ((int64_t)0));
+		VirtualActionInvoker1< int64_t >::Invoke(33, L_0, ((int64_t)0));
 		return;
 	}
 }
@@ -14347,7 +14347,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonBeetleDigest_Update_m03C244450E991
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_0 = __this->___buffer;
 		uint8_t L_1 = ___0_input;
 		NullCheck(L_0);
-		VirtualActionInvoker1< uint8_t >::Invoke(33, L_0, L_1);
+		VirtualActionInvoker1< uint8_t >::Invoke(39, L_0, L_1);
 		return;
 	}
 }
@@ -14369,7 +14369,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonBeetleDigest_BlockUpdate_m713FB398
 		int32_t L_5 = ___1_inOff;
 		int32_t L_6 = ___2_inLen;
 		NullCheck(L_3);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(31, L_3, L_4, L_5, L_6);
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(37, L_3, L_4, L_5, L_6);
 		return;
 	}
 }
@@ -14407,12 +14407,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonBeetleDigest_DoFinal_m0492A2DB6
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_2 = __this->___buffer;
 		NullCheck(L_2);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_3;
-		L_3 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(34, L_2);
+		L_3 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(40, L_2);
 		V_0 = L_3;
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_4 = __this->___buffer;
 		NullCheck(L_4);
 		int64_t L_5;
-		L_5 = VirtualFuncInvoker0< int64_t >::Invoke(10, L_4);
+		L_5 = VirtualFuncInvoker0< int64_t >::Invoke(11, L_4);
 		V_1 = ((int32_t)L_5);
 		int32_t L_6 = V_1;
 		if (L_6)
@@ -14631,7 +14631,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonBeetleDigest_Reset_m4A3D6ED261C4D2
 	{
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_0 = __this->___buffer;
 		NullCheck(L_0);
-		VirtualActionInvoker1< int64_t >::Invoke(27, L_0, ((int64_t)0));
+		VirtualActionInvoker1< int64_t >::Invoke(33, L_0, ((int64_t)0));
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_1 = __this->___state;
 		il2cpp_codegen_runtime_class_init_inline(Arrays_tB427528651FB4A564AE712360C5DB38FFB1BF525_il2cpp_TypeInfo_var);
 		Arrays_Fill_m6CDCC69D6A98E9AF64F1D9768F907B4636714499(L_1, (uint8_t)0, NULL);
@@ -15165,7 +15165,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Prehash_Update_m04E3BF3638C145A6AD5EC839
 		LimitedBuffer_tB4CC73BDC93E06CDEE5109037D4965C43F71102A* L_0 = __this->___m_buf;
 		uint8_t L_1 = ___0_input;
 		NullCheck(L_0);
-		VirtualActionInvoker1< uint8_t >::Invoke(33, L_0, L_1);
+		VirtualActionInvoker1< uint8_t >::Invoke(39, L_0, L_1);
 		return;
 	}
 }
@@ -15177,7 +15177,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Prehash_BlockUpdate_m923D63B9478704C5620
 		int32_t L_2 = ___1_inOff;
 		int32_t L_3 = ___2_inLen;
 		NullCheck(L_0);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(31, L_0, L_1, L_2, L_3);
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(37, L_0, L_1, L_2, L_3);
 		return;
 	}
 }

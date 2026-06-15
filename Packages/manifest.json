@@ -1,5 +1,9 @@
 {
   "dependencies": {
+    "cn.unity.uos.launcher": "https://cnb.cool/unity/uos/UOSLauncher.git",
+    "cn.unity.uos.passport.core": "https://cnb.cool/unity/uos/PassportCore.git",
+    "cn.unity.uos.passport.feature": "https://cnb.cool/unity/uos/PassportFeatureSDK.git",
+    "cn.unity.uos.passport.login": "https://cnb.cool/unity/uos/PassportLoginSDK.git",
     "com.adrenak.univoice": "4.12.0",
     "com.code-philosophy.hybridclr": "https://gitee.com/focus-creative-games/hybridclr_unity.git",
     "com.tuyoogame.yooasset": "2.3.18",

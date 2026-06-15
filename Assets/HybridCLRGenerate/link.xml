@@ -31,6 +31,9 @@
     <type fullname="Cinemachine.CinemachineVirtualCamera" preserve="all" />
     <type fullname="Cinemachine.CinemachineVirtualCameraBase" preserve="all" />
   </assembly>
+  <assembly fullname="Google.Protobuf">
+    <type fullname="Google.Protobuf.Collections.RepeatedField`1" preserve="all" />
+  </assembly>
   <assembly fullname="Mirror">
     <type fullname="Mirror.AddPlayerMessage" preserve="all" />
     <type fullname="Mirror.ChangeOwnerMessage" preserve="all" />
@@ -126,6 +129,17 @@
     <type fullname="UnityEngine.InputSystem.Mouse" preserve="all" />
     <type fullname="UnityEngine.InputSystem.PlayerInput" preserve="all" />
     <type fullname="UnityEngine.InputSystem.Pointer" preserve="all" />
+  </assembly>
+  <assembly fullname="Unity.Passport.Core">
+    <type fullname="Leaderboard.GetMemberScoreResponse" preserve="all" />
+    <type fullname="Leaderboard.LeaderboardMemberScore" preserve="all" />
+    <type fullname="Leaderboard.LeaderboardScore" preserve="all" />
+    <type fullname="Leaderboard.ListLeaderboardScoresResponse" preserve="all" />
+    <type fullname="Leaderboard.UpdateScoreResponse" preserve="all" />
+  </assembly>
+  <assembly fullname="Unity.Passport.Feature">
+    <type fullname="Unity.Passport.Runtime.PassportFeatureSDK" preserve="all" />
+    <type fullname="Unity.Passport.Runtime.PassportFeatureSDK/Leaderboard" preserve="all" />
   </assembly>
   <assembly fullname="Unity.TextMeshPro">
     <type fullname="TMPro.TMP_Text" preserve="all" />
@@ -315,6 +329,7 @@
     <type fullname="System.Collections.Generic.List`1/Enumerator" preserve="all" />
     <type fullname="System.Collections.Generic.Queue`1" preserve="all" />
     <type fullname="System.Collections.Generic.Queue`1/Enumerator" preserve="all" />
+    <type fullname="System.Collections.IEnumerable" preserve="all" />
     <type fullname="System.Collections.IEnumerator" preserve="all" />
     <type fullname="System.ComponentModel.EditorBrowsableAttribute" preserve="all" />
     <type fullname="System.ComponentModel.EditorBrowsableState" preserve="all" />
@@ -326,7 +341,9 @@
     <type fullname="System.Diagnostics.DebuggableAttribute/DebuggingModes" preserve="all" />
     <type fullname="System.Diagnostics.DebuggerHiddenAttribute" preserve="all" />
     <type fullname="System.DllNotFoundException" preserve="all" />
+    <type fullname="System.Double" preserve="all" />
     <type fullname="System.Enum" preserve="all" />
+    <type fullname="System.Environment" preserve="all" />
     <type fullname="System.Exception" preserve="all" />
     <type fullname="System.Func`1" preserve="all" />
     <type fullname="System.Func`2" preserve="all" />
@@ -342,23 +359,35 @@
     <type fullname="System.Nullable`1" preserve="all" />
     <type fullname="System.Object" preserve="all" />
     <type fullname="System.Reflection.MemberInfo" preserve="all" />
+    <type fullname="System.Runtime.CompilerServices.AsyncStateMachineAttribute" preserve="all" />
+    <type fullname="System.Runtime.CompilerServices.AsyncTaskMethodBuilder" preserve="all" />
+    <type fullname="System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1" preserve="all" />
+    <type fullname="System.Runtime.CompilerServices.AsyncVoidMethodBuilder" preserve="all" />
     <type fullname="System.Runtime.CompilerServices.CompilationRelaxationsAttribute" preserve="all" />
     <type fullname="System.Runtime.CompilerServices.CompilerGeneratedAttribute" preserve="all" />
     <type fullname="System.Runtime.CompilerServices.ExtensionAttribute" preserve="all" />
+    <type fullname="System.Runtime.CompilerServices.IAsyncStateMachine" preserve="all" />
     <type fullname="System.Runtime.CompilerServices.IsReadOnlyAttribute" preserve="all" />
     <type fullname="System.Runtime.CompilerServices.IteratorStateMachineAttribute" preserve="all" />
     <type fullname="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute" preserve="all" />
     <type fullname="System.Runtime.CompilerServices.RuntimeHelpers" preserve="all" />
     <type fullname="System.Runtime.CompilerServices.SwitchExpressionException" preserve="all" />
+    <type fullname="System.Runtime.CompilerServices.TaskAwaiter" preserve="all" />
+    <type fullname="System.Runtime.CompilerServices.TaskAwaiter`1" preserve="all" />
+    <type fullname="System.Runtime.CompilerServices.TupleElementNamesAttribute" preserve="all" />
     <type fullname="System.RuntimeFieldHandle" preserve="all" />
     <type fullname="System.RuntimeTypeHandle" preserve="all" />
     <type fullname="System.Single" preserve="all" />
     <type fullname="System.String" preserve="all" />
     <type fullname="System.Text.StringBuilder" preserve="all" />
     <type fullname="System.Threading.Interlocked" preserve="all" />
+    <type fullname="System.Threading.Tasks.Task" preserve="all" />
+    <type fullname="System.Threading.Tasks.Task`1" preserve="all" />
     <type fullname="System.Type" preserve="all" />
     <type fullname="System.UInt32" preserve="all" />
+    <type fullname="System.UInt64" preserve="all" />
     <type fullname="System.Uri" preserve="all" />
+    <type fullname="System.ValueTuple`3" preserve="all" />
     <type fullname="System.ValueType" preserve="all" />
   </assembly>
 </linker>

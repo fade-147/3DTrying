@@ -21000,7 +21000,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MessageStats_RecordRpc_mF915C93C129508FF
 		L_7 = Delegate_get_Method_mB684A7525653DFE0EFC35E58449E1FC8E2A9F019(L_6, NULL);
 		NullCheck(L_7);
 		Type_t* L_8;
-		L_8 = VirtualFuncInvoker0< Type_t* >::Invoke(13, L_7);
+		L_8 = VirtualFuncInvoker0< Type_t* >::Invoke(14, L_7);
 		RemoteCallDelegate_t0D46D8B06F939EC7E9F47E0ACB82FC0119205AE1* L_9 = V_2;
 		String_t* L_10;
 		L_10 = Extensions_GetMethodName_mA6000AE61C141217ED9D24166FEE72286173FADC(L_9, NULL);

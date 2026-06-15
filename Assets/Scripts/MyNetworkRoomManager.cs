@@ -17,6 +17,7 @@ public class MyNetworkRoomManager : NetworkRoomManager
     public GameObject botGamePrefab;
 
     private BotTeamTracker _botTracker;
+    private PlayerStatsManager _playerStatsManager;
 
     private SceneHandle _currentSceneHandle;
     private bool _isSwitchingScene = false;
@@ -75,6 +76,7 @@ public class MyNetworkRoomManager : NetworkRoomManager
     {
         base.OnStartServer();
         InitBotTracker();
+        InitPlayerStatsManager();
         // 替换 AddPlayerMessage 处理器：Mirror 内置的 OnServerAddPlayerInternal 在
         // conn.identity != null 时直接报错，无法被 OnServerAddPlayer 覆盖拦截。
         // 场景切换后远端客户端 OnClientSceneChanged 可能在 spawn 到达前就发 AddPlayer，
@@ -88,6 +90,11 @@ public class MyNetworkRoomManager : NetworkRoomManager
         {
             Destroy(_botTracker.gameObject);
             _botTracker = null;
+        }
+        if (_playerStatsManager != null)
+        {
+            Destroy(_playerStatsManager.gameObject);
+            _playerStatsManager = null;
         }
         base.OnStopServer();
     }
@@ -120,6 +127,18 @@ public class MyNetworkRoomManager : NetworkRoomManager
         GameObject botTrackerGO = new GameObject("BotTracker");
         botTrackerGO.transform.SetParent(transform);
         _botTracker = botTrackerGO.AddComponent<BotTeamTracker>();
+    }
+
+    void InitPlayerStatsManager()
+    {
+        if (_playerStatsManager != null) return;
+        GameObject go = new GameObject("PlayerStatsManager");
+        go.transform.SetParent(transform);
+        // 必须 NetworkBehaviour 先添加，NetworkIdentity 后添加
+        // ——NetworkIdentity.Awake() 扫描 NB 组件注入 netIdentity 引用
+        _playerStatsManager = go.AddComponent<PlayerStatsManager>();
+        go.AddComponent<NetworkIdentity>();
+        NetworkServer.Spawn(go);
     }
 
     public void AddBot(int teamId)

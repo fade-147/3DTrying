@@ -23081,7 +23081,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 		ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A* L_2 = __this->___elist;
 		NullCheck(L_2);
 		RuntimeObject* L_3;
-		L_3 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(35, L_2);
+		L_3 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(37, L_2);
 		V_6 = L_3;
 	}
 	{
@@ -24344,7 +24344,7 @@ IL_0032:
 			StreamReader_t81027449065C1B0C339DB46241D8001A6F61130B* L_7 = V_1;
 			NullCheck(L_7);
 			String_t* L_8;
-			L_8 = VirtualFuncInvoker0< String_t* >::Invoke(12, L_7);
+			L_8 = VirtualFuncInvoker0< String_t* >::Invoke(13, L_7);
 			KeyPairPersistence_FromXml_m6D94C0820F4E00B8761FD92E3404E5C583215876(__this, L_8, NULL);
 			goto IL_0033;
 		}
@@ -24414,7 +24414,7 @@ IL_0034:
 			String_t* L_8;
 			L_8 = KeyPairPersistence_ToXml_mC806794E51F1AFCBD05773B5B2B11B1EC54E276E(__this, NULL);
 			NullCheck(L_7);
-			VirtualActionInvoker1< String_t* >::Invoke(16, L_7, L_8);
+			VirtualActionInvoker1< String_t* >::Invoke(17, L_7, L_8);
 			NullCheck(L_7);
 			VirtualActionInvoker0::Invoke(8, L_7);
 			goto IL_0035;
@@ -25290,7 +25290,7 @@ IL_005a:
 		String_t* L_11 = L_10->___KeyContainerName;
 		NullCheck(L_9);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_12;
-		L_12 = VirtualFuncInvoker1< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, String_t* >::Invoke(17, L_9, L_11);
+		L_12 = VirtualFuncInvoker1< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, String_t* >::Invoke(18, L_9, L_11);
 		V_1 = L_12;
 		MD5_t808E6AE387D5FCC368DBB86576572C1564D17E5A* L_13;
 		L_13 = MD5_Create_mD7AEBE7A752D163971C764A9A8CC0029C865F223(NULL);

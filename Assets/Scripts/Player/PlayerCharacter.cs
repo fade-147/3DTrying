@@ -170,6 +170,10 @@ public class PlayerCharacter : NetworkBehaviour
                     TeamScoreManager.Instance?.AddKill(killerTeam);
                 }
             }
+
+            // 追踪击杀者个人击杀数（Human 玩家专用，Bot 无 connectionToClient 会被过滤）
+            if (killerIdentity.connectionToClient != null)
+                PlayerStatsManager.Instance?.AddKill(killerIdentity.connectionToClient);
         }
 
         RpcOnDie();

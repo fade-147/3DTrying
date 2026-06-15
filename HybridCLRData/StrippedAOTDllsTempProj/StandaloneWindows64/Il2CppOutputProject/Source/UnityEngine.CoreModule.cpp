@@ -222,6 +222,7 @@ struct BurstDiscardAttribute_t860FCEA3A7BADFD735A65A36C99B894EB2AAB388;
 struct Byte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3;
 struct Calendar_t0A117CC7532A54C17188C2EFEA1F79DB20DF3A3B;
 struct Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184;
+struct CanBeNullAttribute_t99CC786E4B2E46440D2A90CFE0FC0E1B3A37BCF7;
 struct CancellationCallbackInfo_tC8BE558ED1E173434DD1919D574C9FAFE501E22D;
 struct CancellationTokenSource_tAAE1E0033BCFC233801F8CB4CED5C852B350CB7B;
 struct CodePageDataItem_t52460FA30AE37F4F26ACB81055E58002262F19F2;
@@ -1169,6 +1170,9 @@ struct BurstDiscardAttribute_t860FCEA3A7BADFD735A65A36C99B894EB2AAB388  : public
 struct Byte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3 
 {
 	uint8_t ___m_value;
+};
+struct CanBeNullAttribute_t99CC786E4B2E46440D2A90CFE0FC0E1B3A37BCF7  : public Attribute_tFDA8EFEFB0711976D22474794576DAF28F7440AA
+{
 };
 struct CancellationToken_t51142D9C6D7C02D314DA34A6A7988C528992FFED 
 {
@@ -5383,6 +5387,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t HDROutputSettings_GetMaxToneMapLumina
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t HDROutputSettings_GetMinToneMapLuminance_mC4BEC32AA92CFD4F4E4A78FD96049BC2467A73D5 (int32_t ___0_displayIndex, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HDROutputSettings_RequestHDRModeChangeInternal_m57F7725021997655534D0D15C2E75B8321A38546 (int32_t ___0_displayIndex, bool ___1_enabled, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HDROutputSettings__ctor_mD43A1273737AF3CA25B7FEBA41E6DD252A8D4533 (HDROutputSettings_t6A590B1AA325DD7389D71F502B762BF1592A9F62* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Resolution_get_width_mC55423852D453EEC0B66E692AA3E7F5DE772FB24 (Resolution_tDF215F567EEFFD07B9A8FB7CEACC08EA6B8B9525* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Resolution_get_height_mD46754FA3634CA816BE91D1610D1FEBDECCEBE5B (Resolution_tDF215F567EEFFD07B9A8FB7CEACC08EA6B8B9525* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Resolution_ToString_m058CE120CC83F314D0C8D4A706F9AA068BC9CF34 (Resolution_tDF215F567EEFFD07B9A8FB7CEACC08EA6B8B9525* __this, const RuntimeMethod* method) ;
 inline void Action_2_Invoke_m728A2437F181FBC56F4D617249B47F513AC9FC43_inline (Action_2_tD7438462601D3939500ED67463331FE00CFFBDB8* __this, int32_t ___0_arg1, int32_t ___1_arg2, const RuntimeMethod* method)
 {
@@ -7369,7 +7375,7 @@ IL_000e:
 		int32_t L_10 = ___1_charsLen;
 		NullCheck(L_8);
 		String_t* L_11;
-		L_11 = VirtualFuncInvoker3< String_t*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(34, L_8, L_9, 0, L_10);
+		L_11 = VirtualFuncInvoker3< String_t*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_8, L_9, 0, L_10);
 		V_2 = L_11;
 		goto IL_0034;
 	}
@@ -9213,7 +9219,7 @@ IL_0039:
 		Type_t* L_12 = ___0_t;
 		NullCheck(L_12);
 		FieldInfoU5BU5D_t50D47CBECF1AEB152F555803E3329D9E34DBF8D8* L_13;
-		L_13 = VirtualFuncInvoker1< FieldInfoU5BU5D_t50D47CBECF1AEB152F555803E3329D9E34DBF8D8*, int32_t >::Invoke(123, L_12, ((int32_t)52));
+		L_13 = VirtualFuncInvoker1< FieldInfoU5BU5D_t50D47CBECF1AEB152F555803E3329D9E34DBF8D8*, int32_t >::Invoke(124, L_12, ((int32_t)52));
 		V_4 = L_13;
 		V_5 = 0;
 		goto IL_0098;
@@ -9230,7 +9236,7 @@ IL_004f:
 		FieldInfo_t* L_18 = V_6;
 		NullCheck(L_18);
 		Type_t* L_19;
-		L_19 = VirtualFuncInvoker0< Type_t* >::Invoke(25, L_18);
+		L_19 = VirtualFuncInvoker0< Type_t* >::Invoke(26, L_18);
 		bool L_20;
 		L_20 = UnsafeUtility_IsBlittableValueType_m159791218E5C5547B5D65D773E8E890372A8F4F8(L_19, NULL);
 		V_7 = (bool)((((int32_t)L_20) == ((int32_t)0))? 1 : 0);
@@ -9245,12 +9251,12 @@ IL_004f:
 		FieldInfo_t* L_23 = V_6;
 		NullCheck(L_23);
 		Type_t* L_24;
-		L_24 = VirtualFuncInvoker0< Type_t* >::Invoke(25, L_23);
+		L_24 = VirtualFuncInvoker0< Type_t* >::Invoke(26, L_23);
 		String_t* L_25 = ___1_name;
 		FieldInfo_t* L_26 = V_6;
 		NullCheck(L_26);
 		String_t* L_27;
-		L_27 = VirtualFuncInvoker0< String_t* >::Invoke(12, L_26);
+		L_27 = VirtualFuncInvoker0< String_t* >::Invoke(13, L_26);
 		String_t* L_28;
 		L_28 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral1517117F1C97F9858A0CAB40CD0F7B384BE59539, L_25, L_27, NULL);
 		String_t* L_29;
@@ -9298,7 +9304,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool UnsafeUtility_IsArrayBlittable_m53049315
 		L_1 = Object_GetType_mE10A8FC1E57F3DF29972CCBC026C2DC3942263B3(L_0, NULL);
 		NullCheck(L_1);
 		Type_t* L_2;
-		L_2 = VirtualFuncInvoker0< Type_t* >::Invoke(63, L_1);
+		L_2 = VirtualFuncInvoker0< Type_t* >::Invoke(64, L_1);
 		bool L_3;
 		L_3 = UnsafeUtility_IsBlittableValueType_m159791218E5C5547B5D65D773E8E890372A8F4F8(L_2, NULL);
 		V_0 = L_3;
@@ -9322,13 +9328,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UnsafeUtility_GetReasonForArrayNonB
 		L_1 = Object_GetType_mE10A8FC1E57F3DF29972CCBC026C2DC3942263B3(L_0, NULL);
 		NullCheck(L_1);
 		Type_t* L_2;
-		L_2 = VirtualFuncInvoker0< Type_t* >::Invoke(63, L_1);
+		L_2 = VirtualFuncInvoker0< Type_t* >::Invoke(64, L_1);
 		V_0 = L_2;
 		Type_t* L_3 = V_0;
 		Type_t* L_4 = V_0;
 		NullCheck(L_4);
 		String_t* L_5;
-		L_5 = VirtualFuncInvoker0< String_t* >::Invoke(12, L_4);
+		L_5 = VirtualFuncInvoker0< String_t* >::Invoke(13, L_4);
 		String_t* L_6;
 		L_6 = UnsafeUtility_GetReasonForTypeNonBlittableImpl_m3F94960798254241B201BFC006DD49A8EB974209(L_3, L_5, NULL);
 		V_1 = L_6;
@@ -9465,6 +9471,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BurstCompilerService_LoadBurstLibrary_m4
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanBeNullAttribute__ctor_mA155D2A988E88AD5FD4DB3FDD7704203BFDD41DF (CanBeNullAttribute_t99CC786E4B2E46440D2A90CFE0FC0E1B3A37BCF7* __this, const RuntimeMethod* method) 
+{
+	{
+		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
+		return;
+	}
+}
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
@@ -28194,7 +28215,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t BeforeRenderHelper_GetUpdateOrder_mF6
 		L_3 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_2, NULL);
 		NullCheck(L_1);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_4;
-		L_4 = VirtualFuncInvoker2< ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*, Type_t*, bool >::Invoke(19, L_1, L_3, (bool)1);
+		L_4 = VirtualFuncInvoker2< ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*, Type_t*, bool >::Invoke(20, L_1, L_3, (bool)1);
 		V_0 = L_4;
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_5 = V_0;
 		if (!L_5)
@@ -32163,6 +32184,54 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ColorGamutUtility_GetTransferFunction
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Resolution_get_width_mC55423852D453EEC0B66E692AA3E7F5DE772FB24 (Resolution_tDF215F567EEFFD07B9A8FB7CEACC08EA6B8B9525* __this, const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	{
+		int32_t L_0 = __this->___m_Width;
+		V_0 = L_0;
+		goto IL_000a;
+	}
+
+IL_000a:
+	{
+		int32_t L_1 = V_0;
+		return L_1;
+	}
+}
+IL2CPP_EXTERN_C  int32_t Resolution_get_width_mC55423852D453EEC0B66E692AA3E7F5DE772FB24_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	Resolution_tDF215F567EEFFD07B9A8FB7CEACC08EA6B8B9525* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<Resolution_tDF215F567EEFFD07B9A8FB7CEACC08EA6B8B9525*>(__this + _offset);
+	int32_t _returnValue;
+	_returnValue = Resolution_get_width_mC55423852D453EEC0B66E692AA3E7F5DE772FB24(_thisAdjusted, method);
+	return _returnValue;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Resolution_get_height_mD46754FA3634CA816BE91D1610D1FEBDECCEBE5B (Resolution_tDF215F567EEFFD07B9A8FB7CEACC08EA6B8B9525* __this, const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	{
+		int32_t L_0 = __this->___m_Height;
+		V_0 = L_0;
+		goto IL_000a;
+	}
+
+IL_000a:
+	{
+		int32_t L_1 = V_0;
+		return L_1;
+	}
+}
+IL2CPP_EXTERN_C  int32_t Resolution_get_height_mD46754FA3634CA816BE91D1610D1FEBDECCEBE5B_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	Resolution_tDF215F567EEFFD07B9A8FB7CEACC08EA6B8B9525* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<Resolution_tDF215F567EEFFD07B9A8FB7CEACC08EA6B8B9525*>(__this + _offset);
+	int32_t _returnValue;
+	_returnValue = Resolution_get_height_mD46754FA3634CA816BE91D1610D1FEBDECCEBE5B(_thisAdjusted, method);
+	return _returnValue;
+}
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Resolution_ToString_m058CE120CC83F314D0C8D4A706F9AA068BC9CF34 (Resolution_tDF215F567EEFFD07B9A8FB7CEACC08EA6B8B9525* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;

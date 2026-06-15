@@ -661,7 +661,28 @@
     <ClCompile Include="Source\GenericMethods__27.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\GenericMethods__28.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GenericMethods__29.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
     <ClCompile Include="Source\GenericMethods__3.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GenericMethods__30.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GenericMethods__31.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GenericMethods__32.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GenericMethods__33.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GenericMethods__34.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\GenericMethods__4.cpp">
@@ -748,10 +769,55 @@
     <ClCompile Include="Source\Generics__117.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Generics__118.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__119.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
     <ClCompile Include="Source\Generics__12.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Generics__120.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__121.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__122.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__123.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__124.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__125.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__126.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__127.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__128.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__129.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
     <ClCompile Include="Source\Generics__13.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__130.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__131.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__132.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\Generics__14.cpp">
@@ -1036,6 +1102,21 @@
     <ClCompile Include="Source\Generics__99.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Google.Protobuf.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Google.Protobuf__1.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Google.Protobuf__2.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Google.Protobuf__3.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Google.Protobuf__4.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
     <ClCompile Include="Source\HybridCLR.Runtime.cpp">
       <Filter>Source</Filter>
     </ClCompile>
@@ -1054,6 +1135,9 @@
     <ClCompile Include="Source\Il2CppCCalculateFieldValues4.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Il2CppCCalculateFieldValues5.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
     <ClCompile Include="Source\Il2CppCCalculateTypeValues.cpp">
       <Filter>Source</Filter>
     </ClCompile>
@@ -1061,6 +1145,9 @@
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\Il2CppCCalculateTypeValues2.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Il2CppCCalculateTypeValues3.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\Il2CppCCFieldValuesTable.cpp">
@@ -1342,6 +1429,9 @@
     <ClCompile Include="Source\mscorlib__23.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\mscorlib__24.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
     <ClCompile Include="Source\mscorlib__3.cpp">
       <Filter>Source</Filter>
     </ClCompile>
@@ -1361,6 +1451,33 @@
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\mscorlib__9.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Newtonsoft.Json.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Newtonsoft.Json__1.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Newtonsoft.Json__2.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Newtonsoft.Json__3.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Newtonsoft.Json__4.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Newtonsoft.Json__5.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Newtonsoft.Json__6.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Newtonsoft.Json__7.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Newtonsoft.Json__8.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\NodeCanvas.cpp">
@@ -1396,16 +1513,124 @@
     <ClCompile Include="Source\System.Core__1.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\System.Core__2.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System.Core__3.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System.Core__4.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
     <ClCompile Include="Source\System.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System.Data.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System.Data__1.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System.Data__2.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System.Data__3.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System.Data__4.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System.Data__5.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System.Data__6.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System.Data__7.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System.Data__8.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System.Data__9.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System.Drawing.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\System.Numerics.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\System.Runtime.CompilerServices.Unsafe.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System.Runtime.Serialization.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
     <ClCompile Include="Source\System.Xml.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\System.Xml.Linq.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System.Xml__1.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System.Xml__10.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System.Xml__11.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System.Xml__12.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System.Xml__13.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System.Xml__14.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System.Xml__15.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System.Xml__16.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System.Xml__2.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System.Xml__3.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System.Xml__4.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System.Xml__5.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System.Xml__6.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System.Xml__7.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System.Xml__8.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System.Xml__9.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
     <ClCompile Include="Source\System__1.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System__10.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System__11.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System__12.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\System__2.cpp">
@@ -1424,6 +1649,12 @@
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\System__7.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System__8.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System__9.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\Telepathy.cpp">
@@ -1522,6 +1753,81 @@
     <ClCompile Include="Source\Unity.Mathematics__9.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core__1.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core__10.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core__11.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core__12.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core__13.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core__14.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core__15.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core__16.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core__17.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core__18.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core__2.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core__3.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core__4.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core__5.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core__6.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core__7.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core__8.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core__9.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Feature.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Feature__1.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Feature__2.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Login.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.UI.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.UI__1.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
     <ClCompile Include="Source\Unity.Postprocessing.Runtime.cpp">
       <Filter>Source</Filter>
     </ClCompile>
@@ -1615,6 +1921,15 @@
     <ClCompile Include="Source\Unity.Timeline__1.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Unity.UOS.Common.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Unity.UOS.Common__1.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Unity.UOS.Encrypt.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
     <ClCompile Include="Source\UnityEngine.AIModule.cpp">
       <Filter>Source</Filter>
     </ClCompile>
@@ -1655,6 +1970,9 @@
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.GridModule.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.ImageConversionModule.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.IMGUIModule.cpp">
@@ -1795,6 +2113,9 @@
     <ClCompile Include="Source\UnityEngine.UnityWebRequestModule.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UnityWebRequestTextureModule.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
     <ClCompile Include="Source\UnityEngine.VFXModule.cpp">
       <Filter>Source</Filter>
     </ClCompile>
@@ -1841,6 +2162,9 @@
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\FizzySteamworks_CodeGen.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Google.Protobuf_CodeGen.c">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\HybridCLR.Runtime_CodeGen.c">
@@ -1903,6 +2227,9 @@
     <ClCompile Include="Source\mscorlib_CodeGen.c">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Newtonsoft.Json_CodeGen.c">
+      <Filter>Source</Filter>
+    </ClCompile>
     <ClCompile Include="Source\NodeCanvas_CodeGen.c">
       <Filter>Source</Filter>
     </ClCompile>
@@ -1921,7 +2248,22 @@
     <ClCompile Include="Source\System.Core_CodeGen.c">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\System.Data_CodeGen.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System.Drawing_CodeGen.c">
+      <Filter>Source</Filter>
+    </ClCompile>
     <ClCompile Include="Source\System.Numerics_CodeGen.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System.Runtime.CompilerServices.Unsafe_CodeGen.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System.Runtime.Serialization_CodeGen.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System.Xml.Linq_CodeGen.c">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\System.Xml_CodeGen.c">
@@ -1954,6 +2296,18 @@
     <ClCompile Include="Source\Unity.Mathematics_CodeGen.c">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Core_CodeGen.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Feature_CodeGen.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.Login_CodeGen.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Unity.Passport.UI_CodeGen.c">
+      <Filter>Source</Filter>
+    </ClCompile>
     <ClCompile Include="Source\Unity.Postprocessing.Runtime_CodeGen.c">
       <Filter>Source</Filter>
     </ClCompile>
@@ -1970,6 +2324,12 @@
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\Unity.Timeline_CodeGen.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Unity.UOS.Common_CodeGen.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Unity.UOS.Encrypt_CodeGen.c">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.AIModule_CodeGen.c">
@@ -1994,6 +2354,9 @@
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.GridModule_CodeGen.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.ImageConversionModule_CodeGen.c">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.IMGUIModule_CodeGen.c">
@@ -2065,6 +2428,9 @@
     <ClCompile Include="Source\UnityEngine.UnityWebRequestModule_CodeGen.c">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UnityWebRequestTextureModule_CodeGen.c">
+      <Filter>Source</Filter>
+    </ClCompile>
     <ClCompile Include="Source\UnityEngine.VFXModule_CodeGen.c">
       <Filter>Source</Filter>
     </ClCompile>
@@ -2086,6 +2452,9 @@
     <ClCompile Include="Source\__Generated_CodeGen.c">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClInclude Include="Source\NativeBridge.h">
+      <Filter>Source</Filter>
+    </ClInclude>
     <ClInclude Include="IL2CPP\external\baselib\Include\Baselib.h">
       <Filter>IL2CPP\external\baselib\Include</Filter>
     </ClInclude>

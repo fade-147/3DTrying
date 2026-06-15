@@ -1,5 +1,41 @@
 {
   "dependencies": {
+    "cn.unity.uos.launcher": {
+      "version": "https://cnb.cool/unity/uos/UOSLauncher.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "3.2.1"
+      },
+      "hash": "1056345ab63d9e091a74bfbe3c83e00768499033"
+    },
+    "cn.unity.uos.passport.core": {
+      "version": "https://cnb.cool/unity/uos/PassportCore.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "3.2.1"
+      },
+      "hash": "0b673f4fc3a3442dd695b28ec99cdd8f38907896"
+    },
+    "cn.unity.uos.passport.feature": {
+      "version": "https://cnb.cool/unity/uos/PassportFeatureSDK.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "3.2.1"
+      },
+      "hash": "5a7531c0cc034129325b32f798accdc12b188f90"
+    },
+    "cn.unity.uos.passport.login": {
+      "version": "https://cnb.cool/unity/uos/PassportLoginSDK.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "3.2.1"
+      },
+      "hash": "327c6f2043d24c81dcd15367002d7a2f848f73ed"
+    },
     "com.adrenak.brw": {
       "version": "1.2.0",
       "depth": 1,
