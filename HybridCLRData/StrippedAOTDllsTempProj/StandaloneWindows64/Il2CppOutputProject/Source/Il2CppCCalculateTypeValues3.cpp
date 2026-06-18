@@ -9926,7 +9926,7 @@ struct U3CSyncToUOSU3Ed__24_tBA1DA9ED975B779C1DB008D8B11A207B6D149143
 	TaskAwaiter_t9B661AC8C2EFA6BAB94C77BB24A5DDA82D61F833 ___U3CU3Eu__1;
 	TaskAwaiter_1_t1292FD7045103BE474E8F82A7FDCCBDF437DB946 ___U3CU3Eu__2;
 };
-struct U3CInitializeWithSteamU3Ed__18_t38EB7536D9584FA8426F0110C4D8726ED56806EC 
+struct U3CInitializeWithSteamU3Ed__19_tF70EDA637E908330253339C05BC1CAB1657FC837 
 {
 	int32_t ___U3CU3E1__state;
 	AsyncVoidMethodBuilder_t253E37B63E7E7B504878AE6563347C147F98EF2D ___U3CU3Et__builder;
@@ -10698,7 +10698,7 @@ struct SyncTile_t0F06ED3A2623F91411C6F4773D87AB58EAD4EC2C_marshaled_com
 struct AnimationCallback_tE547D906169542713327C4223421511CAA98B140  : public MulticastDelegate_t
 {
 };
-struct U3CDoExternalLoginU3Ed__20_t496867EB01AD378551DB8313F8844D87682CB26A 
+struct U3CDoExternalLoginU3Ed__21_tAFC64E2676DB5704FF248F884C4864C963B910F9 
 {
 	int32_t ___U3CU3E1__state;
 	AsyncTaskMethodBuilder_t7A5128C134547B5918EB1AA24FE47ED4C1DF3F06 ___U3CU3Et__builder;
@@ -14202,9 +14202,9 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize17018 = { sizeof(U3CPollUnti
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize17019;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize17019 = { sizeof(SteamProfileUI_tF6EF7198DED763A7ECEA5CDE62A2A5CE66D14727), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize17020;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize17020 = { sizeof(U3CDoExternalLoginU3Ed__20_t496867EB01AD378551DB8313F8844D87682CB26A)+ sizeof(RuntimeObject), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize17020 = { sizeof(U3CDoExternalLoginU3Ed__21_tAFC64E2676DB5704FF248F884C4864C963B910F9)+ sizeof(RuntimeObject), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize17021;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize17021 = { sizeof(U3CInitializeWithSteamU3Ed__18_t38EB7536D9584FA8426F0110C4D8726ED56806EC)+ sizeof(RuntimeObject), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize17021 = { sizeof(U3CInitializeWithSteamU3Ed__19_tF70EDA637E908330253339C05BC1CAB1657FC837)+ sizeof(RuntimeObject), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize17022;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize17022 = { sizeof(UOSManager_tFF1F866757AFAB7D8964C93993AA844D93511118), -1, sizeof(UOSManager_tFF1F866757AFAB7D8964C93993AA844D93511118_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize17023;

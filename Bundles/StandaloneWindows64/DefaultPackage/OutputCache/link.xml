@@ -128,7 +128,16 @@
     <type fullname="TeammateOcclusion" preserve="all" />
     <type fullname="TeamScoreManager" preserve="all" />
     <type fullname="TeamSpawnArea" preserve="all" />
+    <type fullname="UOSAddFriendEntryUI" preserve="all" />
+    <type fullname="UOSAddFriendUI" preserve="all" />
+    <type fullname="UOSFriendEntryUI" preserve="all" />
+    <type fullname="UOSFriendListUI" preserve="all" />
+    <type fullname="UOSFriendRequestsUI" preserve="all" />
+    <type fullname="UOSFriendsManager" preserve="all" />
     <type fullname="UOSLeaderboard" preserve="all" />
+    <type fullname="UOSLobbyBrowserUI" preserve="all" />
+    <type fullname="UOSLobbyCardUI" preserve="all" />
+    <type fullname="UOSRequestEntryUI" preserve="all" />
     <type fullname="VoiceChatManager" preserve="all" />
     <type fullname="InfimaGames.LowPolyShooterPack.AudioSettings" preserve="nothing" serialized="true" />
     <type fullname="InfimaGames.LowPolyShooterPack.FeelState" preserve="nothing" serialized="true" />

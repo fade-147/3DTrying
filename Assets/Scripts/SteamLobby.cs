@@ -10,6 +10,9 @@ public class SteamLobby : MonoBehaviour
     private CSteamID _currentLobbyId;
     private const string hostAddressKey = "HostAddress";
 
+    /// <summary>当前 Steam Lobby ID（供 UOS Presence 发布和 UI 读取）</summary>
+    public CSteamID CurrentLobbyId => _currentLobbyId;
+
     protected Callback<LobbyCreated_t> LobbyCreated;
     protected Callback<GameLobbyJoinRequested_t> LobbyJoinRequested;
     protected Callback<LobbyEnter_t> LobbyEntered;
@@ -55,6 +58,10 @@ public class SteamLobby : MonoBehaviour
             if (debugText != null) debugText.text = "房间创建成功";
             _roomManager.StartHost();
             SteamMatchmaking.SetLobbyData(new CSteamID(callback.m_ulSteamIDLobby), hostAddressKey, SteamUser.GetSteamID().ToString());
+
+            // 将房间信息发布到 UOS Presence，供好友发现和加入
+            if (UOSFriendsManager.Instance != null)
+                _ = UOSFriendsManager.Instance.PublishLobbyPresence(callback.m_ulSteamIDLobby, SteamUser.GetSteamID().ToString());
         }
         else
         {
@@ -89,7 +96,7 @@ public class SteamLobby : MonoBehaviour
             if (debugText != null) debugText.text = "Steam 未初始化，无法创建房间";
             return;
         }
-        SteamMatchmaking.CreateLobby(ELobbyType.k_ELobbyTypeFriendsOnly, _roomManager.maxConnections);
+        SteamMatchmaking.CreateLobby(ELobbyType.k_ELobbyTypeInvisible, _roomManager.maxConnections);
     }
 
     public void BindDebugText(Text text)
@@ -107,6 +114,9 @@ public class SteamLobby : MonoBehaviour
         {
             SteamMatchmaking.LeaveLobby(_currentLobbyId);
             _currentLobbyId = CSteamID.Nil;
+            // 清除 Presence，好友大厅列表不再显示
+            if (UOSFriendsManager.Instance != null)
+                _ = UOSFriendsManager.Instance.ClearLobbyPresence();
         }
     }
 }

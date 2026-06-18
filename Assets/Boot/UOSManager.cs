@@ -28,6 +28,9 @@ public class UOSManager : MonoBehaviour
     /// <summary>UOS 侧的用户 ID（与传入的 SteamID 不同，由 UOS 生成）</summary>
     public string UserId { get; private set; }
 
+    /// <summary>UOS 角色所属 Realm ID（搜索好友时限制同服）</summary>
+    public const string RealmId = "8a9bd113-95d0-40f7-adad-d38c2685d227";
+
     [Header("调试")]
     [SerializeField] private bool _debugBypassSteam;
 

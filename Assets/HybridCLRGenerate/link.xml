@@ -136,12 +136,23 @@
     <type fullname="Leaderboard.LeaderboardScore" preserve="all" />
     <type fullname="Leaderboard.ListLeaderboardScoresResponse" preserve="all" />
     <type fullname="Leaderboard.UpdateScoreResponse" preserve="all" />
+    <type fullname="Passport.FindFriendsRandomlyResponse" preserve="all" />
+    <type fullname="Passport.FriendInfo" preserve="all" />
+    <type fullname="Passport.FriendRequest" preserve="all" />
+    <type fullname="Passport.GetFriendListResponse" preserve="all" />
+    <type fullname="Passport.GetFriendRequestListResponse" preserve="all" />
+    <type fullname="Passport.Persona" preserve="all" />
+    <type fullname="Passport.SearchFriendsResponse" preserve="all" />
+    <type fullname="Unity.Passport.Runtime.Model.FriendRequestStatus" preserve="all" />
+    <type fullname="Unity.Passport.Runtime.Model.PassportFriendPresence" preserve="all" />
   </assembly>
   <assembly fullname="Unity.Passport.Feature">
     <type fullname="Unity.Passport.Runtime.PassportFeatureSDK" preserve="all" />
+    <type fullname="Unity.Passport.Runtime.PassportFeatureSDK/Friends" preserve="all" />
     <type fullname="Unity.Passport.Runtime.PassportFeatureSDK/Leaderboard" preserve="all" />
   </assembly>
   <assembly fullname="Unity.TextMeshPro">
+    <type fullname="TMPro.TMP_InputField" preserve="all" />
     <type fullname="TMPro.TMP_Text" preserve="all" />
     <type fullname="TMPro.TextMeshProUGUI" preserve="all" />
   </assembly>
@@ -383,6 +394,7 @@
     <type fullname="System.Threading.Interlocked" preserve="all" />
     <type fullname="System.Threading.Tasks.Task" preserve="all" />
     <type fullname="System.Threading.Tasks.Task`1" preserve="all" />
+    <type fullname="System.Tuple`2" preserve="all" />
     <type fullname="System.Type" preserve="all" />
     <type fullname="System.UInt32" preserve="all" />
     <type fullname="System.UInt64" preserve="all" />

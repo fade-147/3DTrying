@@ -539,20 +539,28 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Predicate<int>
 	// System.Predicate<object>
 	// System.Runtime.CompilerServices.AsyncTaskMethodBuilder<System.Threading.Tasks.VoidTaskResult>
+	// System.Runtime.CompilerServices.AsyncTaskMethodBuilder<byte>
 	// System.Runtime.CompilerServices.AsyncTaskMethodBuilder<object>
 	// System.Runtime.CompilerServices.ConfiguredTaskAwaitable.ConfiguredTaskAwaiter<System.Threading.Tasks.VoidTaskResult>
+	// System.Runtime.CompilerServices.ConfiguredTaskAwaitable.ConfiguredTaskAwaiter<byte>
 	// System.Runtime.CompilerServices.ConfiguredTaskAwaitable.ConfiguredTaskAwaiter<object>
 	// System.Runtime.CompilerServices.ConfiguredTaskAwaitable<System.Threading.Tasks.VoidTaskResult>
+	// System.Runtime.CompilerServices.ConfiguredTaskAwaitable<byte>
 	// System.Runtime.CompilerServices.ConfiguredTaskAwaitable<object>
 	// System.Runtime.CompilerServices.TaskAwaiter<System.Threading.Tasks.VoidTaskResult>
+	// System.Runtime.CompilerServices.TaskAwaiter<byte>
 	// System.Runtime.CompilerServices.TaskAwaiter<object>
 	// System.Threading.Tasks.ContinuationTaskFromResultTask<System.Threading.Tasks.VoidTaskResult>
+	// System.Threading.Tasks.ContinuationTaskFromResultTask<byte>
 	// System.Threading.Tasks.ContinuationTaskFromResultTask<object>
 	// System.Threading.Tasks.Task<System.Threading.Tasks.VoidTaskResult>
+	// System.Threading.Tasks.Task<byte>
 	// System.Threading.Tasks.Task<object>
 	// System.Threading.Tasks.TaskFactory.<>c__DisplayClass35_0<System.Threading.Tasks.VoidTaskResult>
+	// System.Threading.Tasks.TaskFactory.<>c__DisplayClass35_0<byte>
 	// System.Threading.Tasks.TaskFactory.<>c__DisplayClass35_0<object>
 	// System.Threading.Tasks.TaskFactory<System.Threading.Tasks.VoidTaskResult>
+	// System.Threading.Tasks.TaskFactory<byte>
 	// System.Threading.Tasks.TaskFactory<object>
 	// System.ValueTuple<int,object,int>
 	// UnityEngine.Events.InvokableCall<float>
@@ -612,23 +620,84 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 		// System.Collections.Generic.KeyValuePair<object,object> System.Linq.Enumerable.ElementAt<System.Collections.Generic.KeyValuePair<object,object>>(System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<object,object>>,int)
 		// object System.Linq.Enumerable.ElementAt<object>(System.Collections.Generic.IEnumerable<object>,int)
 		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,LeaderboardUI.<RefreshData>d__12>(System.Runtime.CompilerServices.TaskAwaiter&,LeaderboardUI.<RefreshData>d__12&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,UOSFriendsManager.<ClearLobbyPresence>d__20>(System.Runtime.CompilerServices.TaskAwaiter&,UOSFriendsManager.<ClearLobbyPresence>d__20&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,UOSFriendsManager.<Initialize>d__7>(System.Runtime.CompilerServices.TaskAwaiter&,UOSFriendsManager.<Initialize>d__7&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,UOSFriendsManager.<PublishLobbyPresence>d__19>(System.Runtime.CompilerServices.TaskAwaiter&,UOSFriendsManager.<PublishLobbyPresence>d__19&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,UOSFriendsManager.<SetPresence>d__16>(System.Runtime.CompilerServices.TaskAwaiter&,UOSFriendsManager.<SetPresence>d__16&)
 		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,UOSLeaderboard.<EnsureFeatureSdkReady>d__7>(System.Runtime.CompilerServices.TaskAwaiter&,UOSLeaderboard.<EnsureFeatureSdkReady>d__7&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter<object>,UOSAddFriendUI.<Search>d__12>(System.Runtime.CompilerServices.TaskAwaiter<object>&,UOSAddFriendUI.<Search>d__12&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter<object>,UOSFriendListUI.<Refresh>d__14>(System.Runtime.CompilerServices.TaskAwaiter<object>&,UOSFriendListUI.<Refresh>d__14&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter<object>,UOSFriendRequestsUI.<Refresh>d__11>(System.Runtime.CompilerServices.TaskAwaiter<object>&,UOSFriendRequestsUI.<Refresh>d__11&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter<object>,UOSLobbyBrowserUI.<RefreshLobbies>d__12>(System.Runtime.CompilerServices.TaskAwaiter<object>&,UOSLobbyBrowserUI.<RefreshLobbies>d__12&)
 		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<System.Threading.Tasks.VoidTaskResult>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,LeaderboardUI.<RefreshData>d__12>(System.Runtime.CompilerServices.TaskAwaiter&,LeaderboardUI.<RefreshData>d__12&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<System.Threading.Tasks.VoidTaskResult>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,UOSFriendsManager.<ClearLobbyPresence>d__20>(System.Runtime.CompilerServices.TaskAwaiter&,UOSFriendsManager.<ClearLobbyPresence>d__20&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<System.Threading.Tasks.VoidTaskResult>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,UOSFriendsManager.<Initialize>d__7>(System.Runtime.CompilerServices.TaskAwaiter&,UOSFriendsManager.<Initialize>d__7&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<System.Threading.Tasks.VoidTaskResult>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,UOSFriendsManager.<PublishLobbyPresence>d__19>(System.Runtime.CompilerServices.TaskAwaiter&,UOSFriendsManager.<PublishLobbyPresence>d__19&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<System.Threading.Tasks.VoidTaskResult>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,UOSFriendsManager.<SetPresence>d__16>(System.Runtime.CompilerServices.TaskAwaiter&,UOSFriendsManager.<SetPresence>d__16&)
 		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<System.Threading.Tasks.VoidTaskResult>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,UOSLeaderboard.<EnsureFeatureSdkReady>d__7>(System.Runtime.CompilerServices.TaskAwaiter&,UOSLeaderboard.<EnsureFeatureSdkReady>d__7&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<System.Threading.Tasks.VoidTaskResult>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter<object>,UOSAddFriendUI.<Search>d__12>(System.Runtime.CompilerServices.TaskAwaiter<object>&,UOSAddFriendUI.<Search>d__12&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<System.Threading.Tasks.VoidTaskResult>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter<object>,UOSFriendListUI.<Refresh>d__14>(System.Runtime.CompilerServices.TaskAwaiter<object>&,UOSFriendListUI.<Refresh>d__14&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<System.Threading.Tasks.VoidTaskResult>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter<object>,UOSFriendRequestsUI.<Refresh>d__11>(System.Runtime.CompilerServices.TaskAwaiter<object>&,UOSFriendRequestsUI.<Refresh>d__11&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<System.Threading.Tasks.VoidTaskResult>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter<object>,UOSLobbyBrowserUI.<RefreshLobbies>d__12>(System.Runtime.CompilerServices.TaskAwaiter<object>&,UOSLobbyBrowserUI.<RefreshLobbies>d__12&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<byte>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,UOSFriendsManager.<ApproveFriendRequest>d__11>(System.Runtime.CompilerServices.TaskAwaiter&,UOSFriendsManager.<ApproveFriendRequest>d__11&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<byte>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,UOSFriendsManager.<RejectFriendRequest>d__12>(System.Runtime.CompilerServices.TaskAwaiter&,UOSFriendsManager.<RejectFriendRequest>d__12&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<byte>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,UOSFriendsManager.<RemoveFriend>d__15>(System.Runtime.CompilerServices.TaskAwaiter&,UOSFriendsManager.<RemoveFriend>d__15&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<byte>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,UOSFriendsManager.<SendFriendRequest>d__10>(System.Runtime.CompilerServices.TaskAwaiter&,UOSFriendsManager.<SendFriendRequest>d__10&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<byte>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter<object>,UOSFriendsManager.<ApproveFriendRequest>d__11>(System.Runtime.CompilerServices.TaskAwaiter<object>&,UOSFriendsManager.<ApproveFriendRequest>d__11&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<byte>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter<object>,UOSFriendsManager.<RejectFriendRequest>d__12>(System.Runtime.CompilerServices.TaskAwaiter<object>&,UOSFriendsManager.<RejectFriendRequest>d__12&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<byte>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter<object>,UOSFriendsManager.<SendFriendRequest>d__10>(System.Runtime.CompilerServices.TaskAwaiter<object>&,UOSFriendsManager.<SendFriendRequest>d__10&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<object>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,UOSFriendsManager.<FindRandom>d__9>(System.Runtime.CompilerServices.TaskAwaiter&,UOSFriendsManager.<FindRandom>d__9&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<object>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,UOSFriendsManager.<GetFriendList>d__14>(System.Runtime.CompilerServices.TaskAwaiter&,UOSFriendsManager.<GetFriendList>d__14&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<object>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,UOSFriendsManager.<GetFriendPresence>d__17>(System.Runtime.CompilerServices.TaskAwaiter&,UOSFriendsManager.<GetFriendPresence>d__17&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<object>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,UOSFriendsManager.<GetFriendPresenceBatch>d__18>(System.Runtime.CompilerServices.TaskAwaiter&,UOSFriendsManager.<GetFriendPresenceBatch>d__18&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<object>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,UOSFriendsManager.<GetReceivedRequests>d__13>(System.Runtime.CompilerServices.TaskAwaiter&,UOSFriendsManager.<GetReceivedRequests>d__13&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<object>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,UOSFriendsManager.<SearchByDisplayName>d__8>(System.Runtime.CompilerServices.TaskAwaiter&,UOSFriendsManager.<SearchByDisplayName>d__8&)
 		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<object>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,UOSLeaderboard.<GetMyRank>d__10>(System.Runtime.CompilerServices.TaskAwaiter&,UOSLeaderboard.<GetMyRank>d__10&)
 		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<object>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,UOSLeaderboard.<GetTopRankings>d__9>(System.Runtime.CompilerServices.TaskAwaiter&,UOSLeaderboard.<GetTopRankings>d__9&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<object>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter<object>,UOSFriendsManager.<FindRandom>d__9>(System.Runtime.CompilerServices.TaskAwaiter<object>&,UOSFriendsManager.<FindRandom>d__9&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<object>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter<object>,UOSFriendsManager.<GetFriendList>d__14>(System.Runtime.CompilerServices.TaskAwaiter<object>&,UOSFriendsManager.<GetFriendList>d__14&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<object>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter<object>,UOSFriendsManager.<GetFriendPresence>d__17>(System.Runtime.CompilerServices.TaskAwaiter<object>&,UOSFriendsManager.<GetFriendPresence>d__17&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<object>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter<object>,UOSFriendsManager.<GetFriendPresenceBatch>d__18>(System.Runtime.CompilerServices.TaskAwaiter<object>&,UOSFriendsManager.<GetFriendPresenceBatch>d__18&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<object>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter<object>,UOSFriendsManager.<GetReceivedRequests>d__13>(System.Runtime.CompilerServices.TaskAwaiter<object>&,UOSFriendsManager.<GetReceivedRequests>d__13&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<object>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter<object>,UOSFriendsManager.<SearchByDisplayName>d__8>(System.Runtime.CompilerServices.TaskAwaiter<object>&,UOSFriendsManager.<SearchByDisplayName>d__8&)
 		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<object>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter<object>,UOSLeaderboard.<GetMyRank>d__10>(System.Runtime.CompilerServices.TaskAwaiter<object>&,UOSLeaderboard.<GetMyRank>d__10&)
 		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<object>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter<object>,UOSLeaderboard.<GetTopRankings>d__9>(System.Runtime.CompilerServices.TaskAwaiter<object>&,UOSLeaderboard.<GetTopRankings>d__9&)
 		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.Start<LeaderboardUI.<RefreshData>d__12>(LeaderboardUI.<RefreshData>d__12&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.Start<UOSAddFriendUI.<Search>d__12>(UOSAddFriendUI.<Search>d__12&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.Start<UOSFriendListUI.<Refresh>d__14>(UOSFriendListUI.<Refresh>d__14&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.Start<UOSFriendRequestsUI.<Refresh>d__11>(UOSFriendRequestsUI.<Refresh>d__11&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.Start<UOSFriendsManager.<ClearLobbyPresence>d__20>(UOSFriendsManager.<ClearLobbyPresence>d__20&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.Start<UOSFriendsManager.<Initialize>d__7>(UOSFriendsManager.<Initialize>d__7&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.Start<UOSFriendsManager.<PublishLobbyPresence>d__19>(UOSFriendsManager.<PublishLobbyPresence>d__19&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.Start<UOSFriendsManager.<SetPresence>d__16>(UOSFriendsManager.<SetPresence>d__16&)
 		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.Start<UOSLeaderboard.<EnsureFeatureSdkReady>d__7>(UOSLeaderboard.<EnsureFeatureSdkReady>d__7&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.Start<UOSLobbyBrowserUI.<RefreshLobbies>d__12>(UOSLobbyBrowserUI.<RefreshLobbies>d__12&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<byte>.Start<UOSFriendsManager.<ApproveFriendRequest>d__11>(UOSFriendsManager.<ApproveFriendRequest>d__11&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<byte>.Start<UOSFriendsManager.<RejectFriendRequest>d__12>(UOSFriendsManager.<RejectFriendRequest>d__12&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<byte>.Start<UOSFriendsManager.<RemoveFriend>d__15>(UOSFriendsManager.<RemoveFriend>d__15&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<byte>.Start<UOSFriendsManager.<SendFriendRequest>d__10>(UOSFriendsManager.<SendFriendRequest>d__10&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<object>.Start<UOSFriendsManager.<FindRandom>d__9>(UOSFriendsManager.<FindRandom>d__9&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<object>.Start<UOSFriendsManager.<GetFriendList>d__14>(UOSFriendsManager.<GetFriendList>d__14&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<object>.Start<UOSFriendsManager.<GetFriendPresence>d__17>(UOSFriendsManager.<GetFriendPresence>d__17&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<object>.Start<UOSFriendsManager.<GetFriendPresenceBatch>d__18>(UOSFriendsManager.<GetFriendPresenceBatch>d__18&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<object>.Start<UOSFriendsManager.<GetReceivedRequests>d__13>(UOSFriendsManager.<GetReceivedRequests>d__13&)
+		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<object>.Start<UOSFriendsManager.<SearchByDisplayName>d__8>(UOSFriendsManager.<SearchByDisplayName>d__8&)
 		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<object>.Start<UOSLeaderboard.<GetMyRank>d__10>(UOSLeaderboard.<GetMyRank>d__10&)
 		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<object>.Start<UOSLeaderboard.<GetTopRankings>d__9>(UOSLeaderboard.<GetTopRankings>d__9&)
 		// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,LeaderboardUI.<Refresh>d__10>(System.Runtime.CompilerServices.TaskAwaiter&,LeaderboardUI.<Refresh>d__10&)
 		// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,LeaderboardUI.<Show>d__8>(System.Runtime.CompilerServices.TaskAwaiter&,LeaderboardUI.<Show>d__8&)
 		// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,UOSLeaderboard.<SubmitKillScore>d__8>(System.Runtime.CompilerServices.TaskAwaiter&,UOSLeaderboard.<SubmitKillScore>d__8&)
+		// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter<byte>,UOSAddFriendUI.<OnSendRequest>d__13>(System.Runtime.CompilerServices.TaskAwaiter<byte>&,UOSAddFriendUI.<OnSendRequest>d__13&)
+		// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter<byte>,UOSFriendListUI.<OnDeleteFriend>d__15>(System.Runtime.CompilerServices.TaskAwaiter<byte>&,UOSFriendListUI.<OnDeleteFriend>d__15&)
+		// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter<byte>,UOSFriendRequestsUI.<OnAccept>d__12>(System.Runtime.CompilerServices.TaskAwaiter<byte>&,UOSFriendRequestsUI.<OnAccept>d__12&)
+		// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter<byte>,UOSFriendRequestsUI.<OnReject>d__13>(System.Runtime.CompilerServices.TaskAwaiter<byte>&,UOSFriendRequestsUI.<OnReject>d__13&)
 		// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter<object>,UOSLeaderboard.<SubmitKillScore>d__8>(System.Runtime.CompilerServices.TaskAwaiter<object>&,UOSLeaderboard.<SubmitKillScore>d__8&)
 		// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start<LeaderboardUI.<Refresh>d__10>(LeaderboardUI.<Refresh>d__10&)
 		// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start<LeaderboardUI.<Show>d__8>(LeaderboardUI.<Show>d__8&)
+		// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start<UOSAddFriendUI.<OnSendRequest>d__13>(UOSAddFriendUI.<OnSendRequest>d__13&)
+		// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start<UOSFriendListUI.<OnDeleteFriend>d__15>(UOSFriendListUI.<OnDeleteFriend>d__15&)
+		// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start<UOSFriendRequestsUI.<OnAccept>d__12>(UOSFriendRequestsUI.<OnAccept>d__12&)
+		// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start<UOSFriendRequestsUI.<OnReject>d__13>(UOSFriendRequestsUI.<OnReject>d__13&)
 		// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start<UOSLeaderboard.<SubmitKillScore>d__8>(UOSLeaderboard.<SubmitKillScore>d__8&)
 		// object& System.Runtime.CompilerServices.Unsafe.As<object,object>(object&)
 		// System.Void* System.Runtime.CompilerServices.Unsafe.AsPointer<object>(object&)
