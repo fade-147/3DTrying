@@ -69,6 +69,9 @@ mono_crash.*
 # YooAsset hot update bundles (generated build artifacts)
 /[Bb]undles/
 
+# HybridCLR generated artifacts (auto-generated, no need to commit)
+/HybridCLRData/
+
 # Builds
 *.apk
 *.aab
