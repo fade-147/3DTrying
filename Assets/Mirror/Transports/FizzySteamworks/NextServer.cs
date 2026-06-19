@@ -234,6 +234,19 @@ namespace Mirror.FizzySteam
 
         public void Shutdown()
         {
+            // 关闭所有客户端连接，触发各客户端 ClosedByPeer 回调，
+            // 确保客户端能正常检测到服务端断开（而非无限等待超时）。
+            foreach (HSteamNetConnection conn in connToMirrorID.FirstTypes.ToList())
+            {
+#if UNITY_SERVER
+                SteamGameServerNetworkingSockets.CloseConnection(conn, 0, "Server Shutdown", false);
+#else
+                SteamNetworkingSockets.CloseConnection(conn, 0, "Server Shutdown", false);
+#endif
+            }
+            connToMirrorID = new BidirectionalDictionary<HSteamNetConnection, int>();
+            steamIDToMirrorID = new BidirectionalDictionary<CSteamID, int>();
+
 #if UNITY_SERVER
             SteamGameServerNetworkingSockets.CloseListenSocket(listenSocket);
 #else

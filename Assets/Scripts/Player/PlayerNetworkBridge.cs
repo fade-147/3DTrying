@@ -53,6 +53,9 @@ namespace StarterAssets
         [SyncVar]
         public int teamId;
 
+        [SyncVar]
+        public string playerName = "";
+
         #endregion
 
         #region FIELDS
@@ -77,21 +80,13 @@ namespace StarterAssets
         private NetworkAnimator _networkAnimator;
         private Cinemachine.CinemachineVirtualCamera _thirdPersonVCam;
         private bool _referencesCached;
+        private Renderer[] _cachedThirdPersonRenderers;
 
-        // Cached animator parameter hashes for 3P sync
-        private static readonly int HashMovement = Animator.StringToHash("Movement");
-        private static readonly int HashHorizontal = Animator.StringToHash("Horizontal");
-        private static readonly int HashVertical = Animator.StringToHash("Vertical");
-        private static readonly int HashRunning = Animator.StringToHash("Running");
+        // Cached animator parameter hashes for LPSP-specific 3P sync
         private static readonly int HashAim = Animator.StringToHash("Aim");
         private static readonly int HashCrouching = Animator.StringToHash("Crouching");
         private static readonly int HashReloading = Animator.StringToHash("Reloading");
         private static readonly int HashHolstered = Animator.StringToHash("Holstered");
-        private static readonly int HashGrounded = Animator.StringToHash("Grounded");
-        private static readonly int HashJump = Animator.StringToHash("Jump");
-        private static readonly int HashFreeFall = Animator.StringToHash("FreeFall");
-        private static readonly int HashSpeed = Animator.StringToHash("Speed");
-        private static readonly int HashMotionSpeed = Animator.StringToHash("MotionSpeed");
 
         #endregion
 
@@ -221,6 +216,11 @@ namespace StarterAssets
                 uiManager.RegisterLocalPlayerTeam(teamId);
             }
 
+            // Upload player name from PlayerPrefs to server
+            string name = PlayerNameUtility.GetSavedUserName();
+            if (!string.IsNullOrEmpty(name))
+                CmdSetPlayerName(name);
+
             // Lock cursor
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
@@ -272,9 +272,26 @@ namespace StarterAssets
 
         private void ApplyViewMode()
         {
-            // 3P visual (model, Cinemachine target)
+            // ── 3P visual: hide only renderers, keep GO active ──
+            // The Animator is on ThirdPersonVisual/Geometry and must stay on an active GO
+            // for Mirror NetworkAnimator to sync animation parameters.
+            // Player2View solved this by putting the Animator on the root GO (never disabled).
             if (thirdPersonVisual != null)
-                thirdPersonVisual.SetActive(!_isFirstPerson);
+            {
+                // Ensure GO stays active
+                if (!thirdPersonVisual.activeSelf)
+                    thirdPersonVisual.SetActive(true);
+
+                // Cache renderers once
+                if (_cachedThirdPersonRenderers == null)
+                    _cachedThirdPersonRenderers = thirdPersonVisual.GetComponentsInChildren<Renderer>(true);
+
+                bool show = !_isFirstPerson;
+                foreach (var r in _cachedThirdPersonRenderers)
+                {
+                    if (r != null) r.enabled = show;
+                }
+            }
 
             // LPSP Character Root (FP rig + animator + camera)
             if (characterRoot != null)
@@ -355,6 +372,9 @@ namespace StarterAssets
                     case "Inventory Next":
                         chr?.OnTryInventoryNext(ctx);
                         break;
+                    case "Melee":
+                        chr?.OnTryMelee(ctx);
+                        break;
                 }
             };
 
@@ -367,25 +387,33 @@ namespace StarterAssets
         #region ANIMATOR SYNC
 
         /// <summary>
-        /// Copies key parameters from the LPSP FP animator to the 3P animator
-        /// so that remote players see correct locomotion animations.
+        /// Copies LPSP-specific animation parameters from the FP animator to the 3P animator.
+        /// Locomotion (Speed, MoveLeft/Right/Forward/Back, etc.) is driven by TPC directly
+        /// and synced via NetworkAnimator — no need to duplicate here.
         /// </summary>
         private void SyncAnimatorParameters()
         {
             if (fpAnimator == null || tpAnimator == null) return;
 
-            // Locomotion
-            tpAnimator.SetFloat(HashMovement, fpAnimator.GetFloat(HashMovement));
-            tpAnimator.SetFloat(HashHorizontal, fpAnimator.GetFloat(HashHorizontal));
-            tpAnimator.SetFloat(HashVertical, fpAnimator.GetFloat(HashVertical));
-            tpAnimator.SetBool(HashRunning, fpAnimator.GetBool(HashRunning));
+            // Locomotion: TPC writes TPS-native params (Speed, MoveLeft/Right/Forward/Back,
+            // Grounded, Jump, FreeFall) to tpAnimator; NetworkAnimator syncs them.
+
+            // LPSP-specific params (only effective if tpAnimator controller supports these names)
             tpAnimator.SetBool(HashAim, fpAnimator.GetBool(HashAim));
             tpAnimator.SetBool(HashCrouching, fpAnimator.GetBool(HashCrouching));
             tpAnimator.SetBool(HashReloading, fpAnimator.GetBool(HashReloading));
             tpAnimator.SetBool(HashHolstered, fpAnimator.GetBool(HashHolstered));
+        }
 
-            // Also sync TPC-driven grounded/jump state from tpAnimator (set by TPC GroundedCheck/JumpAndGravity)
-            // No need to sync back -- TPC already writes to tpAnimator directly.
+        #endregion
+
+        #region NAME SYNC
+
+        /// <summary>[Command] 上传本地玩家昵称到服务端</summary>
+        [Command]
+        public void CmdSetPlayerName(string name)
+        {
+            playerName = name;
         }
 
         #endregion

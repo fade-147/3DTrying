@@ -421,7 +421,7 @@ namespace InfimaGames.LowPolyShooterPack
             //We need a muzzle in order to fire this weapon!
             if (muzzleBehaviour == null)
                 return;
-            
+
             //Make sure that we have a camera cached, otherwise we don't really have the ability to perform traces.
             if (playerCamera == null)
                 return;
@@ -435,24 +435,44 @@ namespace InfimaGames.LowPolyShooterPack
             //Set the slide back if we just ran out of ammunition.
             if (ammunitionCurrent == 0)
                 SetSlideBack(1);
-            
+
             //Play all muzzle effects.
             muzzleBehaviour.Effect();
+
+            // ── Attachment effect: compute total spread reduction ──
+            float attachmentSpreadReduction = 0f;
+            if (gripBehaviour is IAttachmentEffect gripFx)
+                attachmentSpreadReduction += gripFx.SpreadReduction;
+            if (muzzleBehaviour is IAttachmentEffect muzzleFx)
+                attachmentSpreadReduction += muzzleFx.SpreadReduction;
+            // Laser hipfire bonus (only when NOT aiming — spreadMultiplier == 1.0 indicates hipfire)
+            if (Mathf.Approximately(spreadMultiplier, 1.0f) && laserBehaviour is IAttachmentEffect laserFx)
+                attachmentSpreadReduction += laserFx.HipfireSpreadReduction;
+
+            float finalSpread = spread * spreadMultiplier * (1f - attachmentSpreadReduction);
 
             //Spawn as many projectiles as we need.
             for (var i = 0; i < shotCount; i++)
             {
                 //Determine a random spread value using all of our multipliers.
-                Vector3 spreadValue = Random.insideUnitSphere * (spread * spreadMultiplier);
+                Vector3 spreadValue = Random.insideUnitSphere * finalSpread;
                 //Remove the forward spread component, since locally this would go inside the object we're shooting!
                 spreadValue.z = 0;
                 //Convert to world space.
                 spreadValue = playerCamera.TransformDirection(spreadValue);
 
-                //Spawn projectile from the projectile spawn point.
-                GameObject projectile = Instantiate(prefabProjectile, playerCamera.position, Quaternion.Euler(playerCamera.eulerAngles + spreadValue));
-                //Add velocity to the projectile.
-                projectile.GetComponent<Rigidbody>().velocity = projectile.transform.forward * projectileImpulse;
+                // 联网弹丸：由 PlayerNetwork.CmdFire 在服务端生成，跳过本地 Instantiate。
+                bool isNetworked = prefabProjectile != null &&
+                    prefabProjectile.TryGetComponent<Mirror.NetworkBehaviour>(out _);
+                if (!isNetworked)
+                {
+                    //Spawn projectile from the projectile spawn point.
+                    GameObject projectile = Instantiate(prefabProjectile, playerCamera.position, Quaternion.Euler(playerCamera.eulerAngles + spreadValue));
+                    //Add velocity to the projectile.
+                    projectile.GetComponent<Rigidbody>().velocity = projectile.transform.forward * projectileImpulse;
+                    Debug.Log($"[WPN_LOCAL] Spawned {projectile.name} at {projectile.transform.position} — prefab has NO NetworkBehaviour, using local path.");
+                }
+                // else: 联网弹丸由 PlayerNetwork.CmdFire 在服务端生成，不重复本地生成。
             }
         }
 

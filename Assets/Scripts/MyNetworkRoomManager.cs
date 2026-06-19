@@ -24,6 +24,10 @@ public class MyNetworkRoomManager : NetworkRoomManager
     private bool _isGameEnding;
     private bool _isSinglePlayer;
 
+    // Bot 命名计数器（服务端生命周期内递增）
+    private static int _nextRedBotId = 1;
+    private static int _nextBlueBotId = 1;
+
     // 队伍生成配置：teamId → 生成区域 + 缓存数据
     private readonly Dictionary<int, TeamSpawnConfig> _teamSpawns = new Dictionary<int, TeamSpawnConfig>();
     private const int TeamCount = 2;
@@ -97,6 +101,27 @@ public class MyNetworkRoomManager : NetworkRoomManager
             _playerStatsManager = null;
         }
         base.OnStopServer();
+    }
+
+    public override void OnClientDisconnect()
+    {
+        // 纯客户端被动断开（房主退出等）：Mirror 基类会将 GO 移出 DDOL
+        // 并加载 offlineScene，导致 SteamManager/SteamLobby 随 GO 销毁。
+        // 在此提前清空 offlineScene 阻止基类行为，改为手动通过 YooAsset 加载。
+        if (mode == NetworkManagerMode.ClientOnly && !string.IsNullOrWhiteSpace(offlineScene))
+        {
+            if (SteamLobby.Instance != null)
+                SteamLobby.Instance.LeaveLobby();
+
+            string sceneToLoad = offlineScene;
+            offlineScene = "";
+
+            if (!string.IsNullOrWhiteSpace(sceneToLoad))
+                StartCoroutine(LoadOfflineSceneByYooAsset(sceneToLoad));
+        }
+
+        _isGameEnding = false;
+        _isSinglePlayer = false;
     }
 
     void OnServerAddPlayerMessage(NetworkConnectionToClient conn, AddPlayerMessage msg)
@@ -229,6 +254,8 @@ public class MyNetworkRoomManager : NetworkRoomManager
 
         try
         {
+            yield return TransitionIn();
+
             _currentSceneHandle?.Release();
             _currentSceneHandle = YooAssets.LoadSceneAsync(scenePath, LoadSceneMode.Single);
             yield return _currentSceneHandle;
@@ -242,6 +269,8 @@ public class MyNetworkRoomManager : NetworkRoomManager
             }
 
             FinishLoadScene();
+
+            yield return TransitionOut();
 
             if (scenePath == GameplayScene)
             {
@@ -260,6 +289,7 @@ public class MyNetworkRoomManager : NetworkRoomManager
         }
         finally
         {
+            LoadingTransitionController.Instance?.Hide();
             _isSwitchingScene = false;
         }
     }
@@ -289,16 +319,27 @@ public class MyNetworkRoomManager : NetworkRoomManager
 
     private IEnumerator ClientLoadSceneByYooAsset(string scenePath, SceneOperation sceneOperation)
     {
-        _currentSceneHandle?.Release();
+        try
+        {
+            yield return TransitionIn();
 
-        LoadSceneMode loadMode = sceneOperation == SceneOperation.LoadAdditive ? LoadSceneMode.Additive : LoadSceneMode.Single;
-        _currentSceneHandle = YooAssets.LoadSceneAsync(scenePath, loadMode);
-        yield return _currentSceneHandle;
+            _currentSceneHandle?.Release();
 
-        if (sceneOperation == SceneOperation.Normal)
-            NetworkManager.networkSceneName = scenePath;
+            LoadSceneMode loadMode = sceneOperation == SceneOperation.LoadAdditive ? LoadSceneMode.Additive : LoadSceneMode.Single;
+            _currentSceneHandle = YooAssets.LoadSceneAsync(scenePath, loadMode);
+            yield return _currentSceneHandle;
 
-        FinishLoadScene();
+            if (sceneOperation == SceneOperation.Normal)
+                NetworkManager.networkSceneName = scenePath;
+
+            FinishLoadScene();
+
+            yield return TransitionOut();
+        }
+        finally
+        {
+            LoadingTransitionController.Instance?.Hide();
+        }
     }
     /// <summary>手动加载 offline 场景（禁止 Mirror 自动场景切换后使用）。等待两帧确保网络完全清理。</summary>
     private IEnumerator LoadOfflineSceneByYooAsset(string scenePath)
@@ -309,12 +350,39 @@ public class MyNetworkRoomManager : NetworkRoomManager
         yield return null;
         yield return null;
 
-        _currentSceneHandle?.Release();
-        _currentSceneHandle = YooAssets.LoadSceneAsync(scenePath, LoadSceneMode.Single);
-        yield return _currentSceneHandle;
+        try
+        {
+            yield return TransitionIn();
 
-        FinishLoadScene();
+            _currentSceneHandle?.Release();
+            _currentSceneHandle = YooAssets.LoadSceneAsync(scenePath, LoadSceneMode.Single);
+            yield return _currentSceneHandle;
+
+            FinishLoadScene();
+
+            yield return TransitionOut();
+        }
+        finally
+        {
+            LoadingTransitionController.Instance?.Hide();
+        }
     }
+
+    /// <summary>过渡动画：播放渐入并等待完成（1 秒，与 FadeIn clip 长度匹配）。</summary>
+    private static IEnumerator TransitionIn()
+    {
+        LoadingTransitionController.Instance?.Show();
+        yield return new WaitForSeconds(1f);
+    }
+
+    /// <summary>过渡动画：通知加载完成并等待渐出播完。</summary>
+    private static IEnumerator TransitionOut()
+    {
+        LoadingTransitionController.Instance?.NotifyLoadComplete();
+        if (LoadingTransitionController.Instance != null)
+            yield return new WaitWhile(() => LoadingTransitionController.Instance.IsActive);
+    }
+
     #endregion
 
     #region 房间流程
@@ -342,6 +410,10 @@ public class MyNetworkRoomManager : NetworkRoomManager
         SetTeamOnComponents(gamePlayer, teamId);
 
         NetworkServer.AddPlayerForConnection(conn, gamePlayer);
+
+        // 主动记录队伍和默认名字（确保 0/0 玩家也出现在结算中）
+        PlayerStatsManager.Instance?.RecordPlayerTeam(conn.connectionId, teamId);
+        PlayerStatsManager.Instance?.RecordPlayerName(conn, $"Player {conn.connectionId}");
     }
 
     public override GameObject OnRoomServerCreateGamePlayer(NetworkConnectionToClient conn, GameObject roomPlayer)
@@ -523,6 +595,8 @@ public class MyNetworkRoomManager : NetworkRoomManager
     {
         _teamSpawns.Clear();
         _isGameEnding = false;
+        _nextRedBotId = 1;
+        _nextBlueBotId = 1;
 
         TeamSpawnArea[] areas = FindObjectsOfType<TeamSpawnArea>();
 
@@ -628,8 +702,8 @@ public class MyNetworkRoomManager : NetworkRoomManager
             : Instantiate(playerPrefab, Vector3.zero, Quaternion.identity);
     }
 
-    /// <summary>在 NetworkServer.Spawn 之前，统一设置所有组件的 teamId。</summary>
-    private void SetTeamOnComponents(GameObject obj, int teamId)
+    /// <summary>在 NetworkServer.Spawn 之前，统一设置所有组件的 teamId 和 Bot 名字。</summary>
+    private void SetTeamOnComponents(GameObject obj, int teamId, string botDisplayName = null)
     {
         var pnb = obj.GetComponent<StarterAssets.PlayerNetworkBridge>();
         if (pnb != null) pnb.teamId = teamId;
@@ -641,7 +715,24 @@ public class MyNetworkRoomManager : NetworkRoomManager
         if (ps != null) ps.teamId = teamId;
 
         var bc = obj.GetComponent<BotController>();
-        if (bc != null) bc.teamId = teamId;
+        if (bc != null)
+        {
+            bc.teamId = teamId;
+            // 复活时复用旧名，初始生成时分配新名
+            if (!string.IsNullOrEmpty(botDisplayName))
+            {
+                bc.displayName = botDisplayName;
+            }
+            else
+            {
+                bc.displayName = teamId == 0
+                    ? $"红方AI {_nextRedBotId++}"
+                    : $"蓝方AI {_nextBlueBotId++}";
+            }
+
+            // 主动记录 Bot 信息到 PlayerStatsManager
+            PlayerStatsManager.Instance?.RecordBotInfo(bc.displayName, teamId);
+        }
     }
 
     /// <summary>复活延迟（秒），死亡后等待此时间再销毁+重建</summary>
@@ -681,13 +772,13 @@ public class MyNetworkRoomManager : NetworkRoomManager
     }
 
     /// <summary>[Server] 委托销毁 + 重建 Bot</summary>
-    public void QueueBotRespawn(int teamId, GameObject objectToDestroy)
+    public void QueueBotRespawn(int teamId, GameObject objectToDestroy, string botDisplayName = null)
     {
         if (!NetworkServer.active) return;
-        StartCoroutine(BotRespawnSequence(teamId, objectToDestroy));
+        StartCoroutine(BotRespawnSequence(teamId, objectToDestroy, botDisplayName));
     }
 
-    private IEnumerator BotRespawnSequence(int teamId, GameObject objectToDestroy)
+    private IEnumerator BotRespawnSequence(int teamId, GameObject objectToDestroy, string botDisplayName = null)
     {
         if (_isGameEnding) yield break;
 
@@ -707,7 +798,7 @@ public class MyNetworkRoomManager : NetworkRoomManager
         pos = SnapToNavMesh(pos);
 
         GameObject bot = Instantiate(botGamePrefab, pos, Quaternion.identity);
-        SetTeamOnComponents(bot, teamId);
+        SetTeamOnComponents(bot, teamId, botDisplayName);
         NetworkServer.Spawn(bot);
     }
 

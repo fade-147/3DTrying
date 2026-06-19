@@ -6,6 +6,8 @@ using UnityEngine.EventSystems;
 public class MicButton : MonoBehaviour
 {
     [SerializeField] Image iconImage;
+    [SerializeField] GameObject iconMicOn;
+    [SerializeField] GameObject iconMicOff;
     [SerializeField] Text labelText;
 
     VoiceChatManager voiceChatManager;
@@ -28,7 +30,7 @@ public class MicButton : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.V))
+        if (Input.GetKeyDown(KeyCode.B))
             OnClick();
     }
 
@@ -56,6 +58,11 @@ public class MicButton : MonoBehaviour
                 MicMode.Deafened => Color.red,
                 _ => Color.red
             };
+
+            // 开麦图标：全部、仅队伍；关麦图标：关麦、静音
+            bool isMicOn = mode == MicMode.All || mode == MicMode.TeamOnly;
+            if (iconMicOn != null) iconMicOn.SetActive(isMicOn);
+            if (iconMicOff != null) iconMicOff.SetActive(!isMicOn);
         }
         if (labelText != null)
         {

@@ -3,6 +3,7 @@
     "rootNamespace": "",
     "references": [
         "HotUpdate",
+        "Mirror",
         "Unity.TextMeshPro"
     ],
     "includePlatforms": [

@@ -34,6 +34,13 @@
 # Visual Studio cache directory
 .vs/
 
+# VS Code (personal editor config)
+.vscode/
+*.code-workspace
+
+# Visual Studio generated config
+.vsconfig
+
 # Gradle cache directory
 .gradle/
 
@@ -62,15 +69,23 @@ ExportedObj/
 
 # Unity3D generated file on crash reports
 sysinfo.txt
+# Unity batch mode build log
+build_log.txt
 
 # Mono auto generated files
 mono_crash.*
 
 # YooAsset hot update bundles (generated build artifacts)
 /[Bb]undles/
+# YooAsset built-in bundles copied to StreamingAssets
+/[Aa]ssets/StreamingAssets/yoo/
+/[Aa]ssets/StreamingAssets/yoo.meta
 
 # HybridCLR generated artifacts (auto-generated, no need to commit)
 /HybridCLRData/
+# HybridCLR auto-generated scripts inside Assets
+/[Aa]ssets/HybridCLRGenerate/
+/[Aa]ssets/HybridCLRGenerate.meta
 
 # Builds
 *.apk
@@ -78,6 +93,10 @@ mono_crash.*
 *.unitypackage
 *.unitypackage.meta
 *.app
+
+# HybridCLR compiled DLLs copied to Assets/DLLS (auto-generated via AutoSyncDLLs)
+/[Aa]ssets/DLLS/
+/[Aa]ssets/DLLS.meta
 
 # Crashlytics generated file
 crashlytics-build.properties

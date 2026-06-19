@@ -76,7 +76,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 130359
+    m_Bits: 261431
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -423,7 +423,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: 0.42844337, y: 0.00000016018748, z: -0.00000031292439}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -589,6 +589,9 @@ MonoBehaviour:
   socket: {fileID: 8709495368621436670}
   sprite: {fileID: 21300000, guid: ca6129469615bd9499bf0a845aa2d15e, type: 3}
   audioClipFire: {fileID: 8300000, guid: c1bd91cf7c20534478c9b9c5d69d1732, type: 3}
+  recoilReduction: 0
+  spreadReduction: 0
+  suppressSound: 0
   prefabFlashParticles: {fileID: 6630366363211497712, guid: e1d2196309ba6554ca2be7c5902e4afa,
     type: 3}
   flashParticlesCount: 5
@@ -1584,6 +1587,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: c1afa798815e0284794aeb69442dc435, type: 3}
+  recoilReduction: 0.12
+  spreadReduction: 0.05
+  crouchRecoilBonus: 0.15
 --- !u!1 &910818792863144756
 GameObject:
   m_ObjectHideFlags: 0
@@ -2298,7 +2304,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: -0.30339944, y: -0.00000014156103, z: -0.000000074505806}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -2803,7 +2809,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: -0.42933267, y: 0.0000004796311, z: 0.00000028242357}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -4064,6 +4070,9 @@ MonoBehaviour:
   socket: {fileID: 5005413041928395494}
   sprite: {fileID: 21300000, guid: 7a33f905c2fb98246a31d475864e5971, type: 3}
   audioClipFire: {fileID: 8300000, guid: c1bd91cf7c20534478c9b9c5d69d1732, type: 3}
+  recoilReduction: 0
+  spreadReduction: 0
+  suppressSound: 0
   prefabFlashParticles: {fileID: 6630366363211497712, guid: e1d2196309ba6554ca2be7c5902e4afa,
     type: 3}
   flashParticlesCount: 5
@@ -4199,7 +4208,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: 0.014486143, y: -0.005314215, z: 0.09005813}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -4385,6 +4394,10 @@ GameObject:
   - component: {fileID: 1441212589942155161}
   - component: {fileID: 2828060690696036812}
   - component: {fileID: 1406593049434936287}
+  - component: {fileID: 7641550794359993281}
+  - component: {fileID: 8147645274443433299}
+  - component: {fileID: 66884466961405516}
+  - component: {fileID: 2393308030085429568}
   m_Layer: 10
   m_Name: Player_FPS_TP
   m_TagString: Player
@@ -5024,7 +5037,7 @@ MonoBehaviour:
   syncDirection: 1
   syncMode: 0
   syncInterval: 0
-  clientAuthority: 0
+  clientAuthority: 1
   animator: {fileID: 8508271036101376259}
 --- !u!114 &8364104373318702593
 MonoBehaviour:
@@ -5065,7 +5078,7 @@ MonoBehaviour:
   firstPersonAnimator: {fileID: 0}
   fpCamera: {fileID: 916095938892669238}
   fpCameraRoot: {fileID: 0}
-  cameraMap: {fileID: 0}
+  cameraMap: {fileID: 682305534263097495}
   fpMouseSensitivity: 1.5
   isHoldingGun: 0
   toggleGunLockTime: 2.5
@@ -5090,13 +5103,19 @@ MonoBehaviour:
     type: 3}
   BulletSpeed: 100
   BulletLifeTime: 2
+  RocketPrefab: {fileID: 1670969100947644, guid: 6eff2e3f87451484da970b33bbf1411f,
+    type: 3}
+  GrenadeLauncherPrefab: {fileID: 1679295593729814, guid: edf8c9b19ab77cd458707a7f9b3d825d,
+    type: 3}
+  GrenadeNetworkPrefab: {fileID: 1948591290861370, guid: 7b04fe350ed10a741a1e245447860d9e,
+    type: 3}
   RecoilAmount: 1
   RecoilSmoothTime: 0.1
   maxAmmo: 20
   currentAmmo: 20
   reloadDuration: 2
   gunAnimator: {fileID: 0}
-  IsRunning: 0
+  _thirdPersonAnimator: {fileID: 8508271036101376259}
   RecoilStartShot: 3
   RecoilRampSpeed: 0.5
   sensitivityX: 0.8
@@ -5116,6 +5135,7 @@ MonoBehaviour:
   MaxSpread: 3
   SpreadDecaySpeed: 5
   AimSpreadMultiplier: 0.2
+  PelletSpreadAngle: 3
   _currentSpread: 0
 --- !u!114 &8187846539677519549
 MonoBehaviour:
@@ -5157,6 +5177,7 @@ MonoBehaviour:
   fpAnimator: {fileID: 3320314160785962872}
   playerInput: {fileID: 601192529242639950}
   teamId: 0
+  playerName: 
 --- !u!114 &2482790335043080306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5325,12 +5346,94 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2751027687307977091}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f81a608141f65de46bbaa37a10bad891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   occlusionMaterial: {fileID: 2100000, guid: f7fee25d17258f2458a16d3907b20ddc, type: 2}
+  excludeNameContains:
+  - Shirt
+  - Pants
+  - Head
+  - Arms
+  - FPS_Arms
+  - Character
+  - Body
+  - Skin
+--- !u!114 &7641550794359993281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2751027687307977091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b0da8ed84073814ebf114baeb65724b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
+  equippedWeaponSlug: 
+--- !u!114 &8147645274443433299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2751027687307977091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e38d617e7eef3ac428cb4e7c024ecdce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
+  rightHandSlot: {fileID: 7052288148121599133}
+--- !u!114 &66884466961405516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2751027687307977091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f47b60c4e3838f240bdf0786728df2b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
+  arrowObject: {fileID: 3350018949925397649}
+--- !u!114 &2393308030085429568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2751027687307977091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b85ce40ae2804849a8121b0e3cd15ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
+  meleeRange: 1.8
+  meleeRadius: 0.4
+  meleeDamage: 50
+  meleeCooldown: 0.6
+  chestHeight: 1.3
+  damageMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  meleeHitEffect: {fileID: 0}
+  meleeHitEffectLifetime: 2
 --- !u!1 &2825526234971183696
 GameObject:
   m_ObjectHideFlags: 0
@@ -6222,7 +6325,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2468733402067218533
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7011,6 +7114,7 @@ MonoBehaviour:
   active: 1
   turnOffWhileRunning: 1
   turnOffWhileAiming: 1
+  hipfireSpreadReduction: 0.15
   toggleClip: {fileID: 8300000, guid: 57d5804d68ddb164fb822b9ee3b41bc3, type: 3}
   toggleAudioSettings:
     automaticCleanup: 0
@@ -7902,7 +8006,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: -0.42231846, y: 0.13698626, z: 0.18517862}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -8412,6 +8516,9 @@ MonoBehaviour:
   socket: {fileID: 6727793242231601087}
   sprite: {fileID: 21300000, guid: 08eb47ae3fa5b5544859271d9e6ae01a, type: 3}
   audioClipFire: {fileID: 8300000, guid: c1bd91cf7c20534478c9b9c5d69d1732, type: 3}
+  recoilReduction: 0
+  spreadReduction: 0
+  suppressSound: 0
   prefabFlashParticles: {fileID: 6630366363211497712, guid: e1d2196309ba6554ca2be7c5902e4afa,
     type: 3}
   flashParticlesCount: 5
@@ -8641,6 +8748,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 82c9817d61286ec409bbb4ef45443347, type: 3}
+  recoilReduction: 0.12
+  spreadReduction: 0.05
+  crouchRecoilBonus: 0.15
 --- !u!1 &5138424243803929868
 GameObject:
   m_ObjectHideFlags: 0
@@ -9528,6 +9638,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 510504b45f4b35b42838f90765041163, type: 3}
+  recoilReduction: 0.12
+  spreadReduction: 0.05
+  crouchRecoilBonus: 0.15
 --- !u!1 &5798853184419019267
 GameObject:
   m_ObjectHideFlags: 0
@@ -9970,7 +10083,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: 0.014488304, y: -0.005314275, z: -0.09005819}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -10408,7 +10521,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: 0.30340037, y: -0.000000037252903, z: 0.000000059604645}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -10926,7 +11039,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: -0.108088896, y: -0.008514138, z: 0.000000037252903}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -13503,7 +13616,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: -0.434855, y: 0.13133143, z: -0.19132784}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -13995,7 +14108,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: -0.5671414, y: 0.110170394, z: -0.0036742447}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -14333,6 +14446,7 @@ MonoBehaviour:
   active: 1
   turnOffWhileRunning: 1
   turnOffWhileAiming: 0
+  hipfireSpreadReduction: 0.15
   toggleClip: {fileID: 8300000, guid: 57d5804d68ddb164fb822b9ee3b41bc3, type: 3}
   toggleAudioSettings:
     automaticCleanup: 0
@@ -15090,6 +15204,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 323767727815900626, guid: 9482e0a2ae6a92742bbe72e00f29f763,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 329713599816777310, guid: 9482e0a2ae6a92742bbe72e00f29f763,
         type: 3}
       propertyPath: m_Layer
@@ -15280,6 +15399,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 533782347010914116, guid: 9482e0a2ae6a92742bbe72e00f29f763,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 534901576665618134, guid: 9482e0a2ae6a92742bbe72e00f29f763,
         type: 3}
       propertyPath: m_Layer
@@ -15389,6 +15513,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 729217871479863180, guid: 9482e0a2ae6a92742bbe72e00f29f763,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 729585827056308338, guid: 9482e0a2ae6a92742bbe72e00f29f763,
         type: 3}
@@ -16680,6 +16809,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 2573425008543814111, guid: 9482e0a2ae6a92742bbe72e00f29f763,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2593958138464832966, guid: 9482e0a2ae6a92742bbe72e00f29f763,
         type: 3}
       propertyPath: m_Layer
@@ -16764,6 +16898,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2721973063879575132, guid: 9482e0a2ae6a92742bbe72e00f29f763,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2723244855608753552, guid: 9482e0a2ae6a92742bbe72e00f29f763,
         type: 3}
@@ -17024,6 +17163,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3140280382167778167, guid: 9482e0a2ae6a92742bbe72e00f29f763,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3145654043931660728, guid: 9482e0a2ae6a92742bbe72e00f29f763,
         type: 3}
@@ -18740,6 +18884,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 5816828841803526325, guid: 9482e0a2ae6a92742bbe72e00f29f763,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5822839839941452023, guid: 9482e0a2ae6a92742bbe72e00f29f763,
         type: 3}
       propertyPath: m_Layer
@@ -19344,6 +19493,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6615766835629242649, guid: 9482e0a2ae6a92742bbe72e00f29f763,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6626107111984031059, guid: 9482e0a2ae6a92742bbe72e00f29f763,
         type: 3}
@@ -20125,6 +20279,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7760006461502462299, guid: 9482e0a2ae6a92742bbe72e00f29f763,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7770699308993828346, guid: 9482e0a2ae6a92742bbe72e00f29f763,
         type: 3}

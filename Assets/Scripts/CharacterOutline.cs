@@ -46,6 +46,7 @@ public class CharacterOutline : MonoBehaviour
 
     void OnGUI()
     {
+        return; // DEBUG: disabled
         if (Camera.main == null) return;
 
         Vector3 screenPos = Camera.main.WorldToScreenPoint(transform.position);

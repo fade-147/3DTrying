@@ -6,6 +6,36 @@ using StarterAssets;
 using System.Collections.Generic;
 
 /// <summary>
+/// Bot 感知等级，控制视野锥、检测距离和射击精度。
+/// Unaware: 巡逻中，正面 120 度锥形，35 单位检测范围
+/// Suspicious: 听到枪声/队友受伤，正面 180 度，50 单位
+/// Aware: 发现敌人但未交火，正面 240 度，50 单位
+/// Engaged: 交战中，360 度全方向，60 单位，8 秒后衰减到 Aware
+/// </summary>
+public enum AwarenessLevel
+{
+    Unaware,
+    Suspicious,
+    Aware,
+    Engaged
+}
+
+/// <summary>
+/// Bot 玩法风格，影响 zone 选择偏好、交战距离和移动速度。
+/// Aggressive: 偏好 Frontline，近战，高射速，速度快 10%
+/// Defensive: 偏好 Defend，远战，谨慎，速度慢 10%
+/// Flanker: 偏好 Flank，侧翼路线，速度略快 5%
+/// Roamer: 偏好 Roam，自由巡逻，速度略慢 5%
+/// </summary>
+public enum BotPlayStyle
+{
+    Aggressive,
+    Defensive,
+    Flanker,
+    Roamer
+}
+
+/// <summary>
 /// AI 控制组件，挂载到 PlayerArmature 上，为 NodeCanvas 行为树提供 Bot 行为能力。
 /// 所有公共方法由 NodeCanvas 自定义任务调用，不直接驱动 Update。
 /// </summary>
@@ -28,6 +58,7 @@ public class BotController : NetworkBehaviour
     [SerializeField] private float hitProbability = 0.7f;
 
     [SyncVar] public int teamId;
+    [SyncVar] public string displayName = "";
     [SyncVar] public int currentAmmo = 30;
     [SyncVar] public bool isReloading;
     [SyncVar] public bool isDrinking;
@@ -63,6 +94,24 @@ public class BotController : NetworkBehaviour
     private static readonly int DrinkHash = Animator.StringToHash("Drink");
     private static readonly int IsHoldingGunHash = Animator.StringToHash("IsHoldingGun");
 
+    // Zone 类型冷却：防止 Bot 在同类 zone 间振荡
+    private ZoneType _lastZoneType = (ZoneType)(-1);
+    private int _sameTypeStreak;
+    private float _zoneLockUntil = -1f;
+    private const int MaxSameTypeStreak = 2;
+    private const float MinZoneLockDuration = 8f;
+    private const float MaxZoneLockDuration = 15f;
+
+    // 个性参数
+    [SyncVar] public BotPlayStyle playStyle;
+    private Dictionary<ZoneType, float> _zoneTypeWeights;
+    private float _preferredEngageDistance = 15f;
+
+    // 感知状态（非 SyncVar，服务端逻辑）
+    private AwarenessLevel _awareness = AwarenessLevel.Unaware;
+    private Vector3 _lastHeardGunfirePos;
+    private float _awarenessTimer;
+
     private void Awake()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
@@ -88,6 +137,9 @@ public class BotController : NetworkBehaviour
         base.OnStartServer();
         currentAmmo = MaxAmmo;
 
+        InitPersonality();
+        BotZoneManager.Instance?.RegisterBot(this);
+
         var bto = GetComponent<NodeCanvas.BehaviourTrees.BehaviourTreeOwner>();
         if (bto != null)
         {
@@ -105,6 +157,11 @@ public class BotController : NetworkBehaviour
         {
             Debug.LogWarning($"[BotController] OnStartServer: teamId={teamId}, pos={transform.position}, BehaviourTreeOwner NOT FOUND!");
         }
+    }
+
+    private void OnDestroy()
+    {
+        BotZoneManager.Instance?.UnregisterBot(this);
     }
 
     /// <summary>
@@ -269,7 +326,8 @@ public class BotController : NetworkBehaviour
 
     /// <summary>
     /// 从场景 StrategyZone 中智能选择一个目标区。
-    /// 排除最近去过的、已被队友认领的区，按距离+权重+类型评分。
+    /// 排除最近去过的、已被队友认领的区，按距离+个性权重+类型评分。
+    /// Zone 到达锁定和同类型连续访问限制防止振荡。
     /// </summary>
     public StrategyZone PickStrategyZone()
     {
@@ -279,6 +337,10 @@ public class BotController : NetworkBehaviour
 
         uint myNetId = netId;
         var mgr = BotZoneManager.Instance;
+
+        // 到达锁定：锁定期内不能重选
+        if (Time.time < _zoneLockUntil)
+            return _currentZone;
 
         // 已有目标区且仍有效，不重选，防止树重置时 zone 跳变
         if (_currentZone != null
@@ -307,17 +369,35 @@ public class BotController : NetworkBehaviour
             if (IsZoneRecentlyVisited(zone)) continue;
             if (mgr != null && mgr.IsZoneClaimedByOther(zone, myNetId)) continue;
 
+            // 同类型连续访问限制：强制换类型
+            if (_sameTypeStreak >= MaxSameTypeStreak && zone.zoneType == _lastZoneType)
+                continue;
+
             float dist = Vector3.Distance(transform.position, zone.WorldPosition);
-            float typeWeight = zone.zoneType switch
-            {
-                ZoneType.Frontline => 1.5f,
-                ZoneType.Defend => 1.2f,
-                ZoneType.Flank => 1.0f,
-                ZoneType.Roam => 0.8f,
-                _ => 1f,
-            };
+
+            // 使用个性权重替代硬编码值
+            float typeWeight = _zoneTypeWeights != null && _zoneTypeWeights.TryGetValue(zone.zoneType, out float w)
+                ? w
+                : zone.zoneType switch
+                {
+                    ZoneType.Frontline => 1.5f,
+                    ZoneType.Defend => 1.2f,
+                    ZoneType.Flank => 1.0f,
+                    ZoneType.Roam => 0.8f,
+                    _ => 1f,
+                };
 
             float score = zone.priority * typeWeight / Mathf.Max(dist, 1f);
+
+            // 队友密度惩罚：避免多个 Bot 挤同一区
+            if (mgr != null)
+            {
+                int nearbyTeammates = mgr.GetTeammateDensityNear(zone, teamId, myNetId, 30f);
+                if (nearbyTeammates >= 2)
+                    score *= 0.3f;
+                else if (nearbyTeammates >= 1)
+                    score *= 0.6f;
+            }
 
             if (score > bestScore)
             {
@@ -342,6 +422,15 @@ public class BotController : NetworkBehaviour
         {
             mgr?.TryClaimZone(best, myNetId);
             _currentZone = best;
+
+            // 更新同类型连续计数
+            if (best.zoneType == _lastZoneType)
+                _sameTypeStreak++;
+            else
+            {
+                _lastZoneType = best.zoneType;
+                _sameTypeStreak = 1;
+            }
         }
 
         return best;
@@ -363,9 +452,12 @@ public class BotController : NetworkBehaviour
 
     /// <summary>
     /// 到达当前策略区时调用，释放认领 + 标记冷却 + 清空 currentZone 以便下次选新区。
+    /// 设置到达锁定计时器，防止立即重选同一区引起振荡。
     /// </summary>
     public void ArriveAtZone()
     {
+        _zoneLockUntil = Time.time + Random.Range(MinZoneLockDuration, MaxZoneLockDuration);
+
         if (_currentZone != null && BotZoneManager.Instance != null)
         {
             BotZoneManager.Instance.ReleaseZone(netId);
@@ -419,6 +511,9 @@ public class BotController : NetworkBehaviour
         }
 
         Destroy(bullet, bulletLifeTime);
+
+        // 通知场景内其他 Bot 听到枪声
+        BotZoneManager.Instance?.BroadcastGunfire(muzzlePos, netId);
     }
 
     /// <summary>
@@ -480,28 +575,180 @@ public class BotController : NetworkBehaviour
     }
 
     /// <summary>
-    /// 基于命中率对射击方向添加随机散布。
-    /// 命中时不加偏移，未命中时在 spreadAngle 范围内随机偏转。
+    /// 基于命中率和散布角度对射击方向添加随机偏移。
+    /// 命中时不加偏移，未命中时在 effectiveSpread 范围内随机偏转。
     /// </summary>
-    public Vector3 ApplySpread(Vector3 baseDirection)
+    public Vector3 ApplySpread(Vector3 baseDirection, float effectiveHitProb, float effectiveSpread)
     {
-        if (Random.value <= hitProbability)
+        if (Random.value <= effectiveHitProb)
             return baseDirection;
 
-        float spreadX = Random.Range(-spreadAngle, spreadAngle);
-        float spreadY = Random.Range(-spreadAngle, spreadAngle);
+        float spreadX = Random.Range(-effectiveSpread, effectiveSpread);
+        float spreadY = Random.Range(-effectiveSpread, effectiveSpread);
         return Quaternion.Euler(spreadX, spreadY, 0f) * baseDirection;
     }
 
     /// <summary>
-    /// 每帧更新射击冷却计时器。
+    /// 每帧更新射击冷却计时器和感知衰减。
     /// 由 BotAimAndShoot 的 OnUpdate 调用。
+    /// Engaged→Aware(8s), Aware→Suspicious(5s), Suspicious→Unaware(10s)
     /// </summary>
-    public void UpdateFireTimer()
+    public void UpdateTimers()
     {
         if (_fireTimer > 0f)
-        {
             _fireTimer -= Time.deltaTime;
+
+        _awarenessTimer += Time.deltaTime;
+        switch (_awareness)
+        {
+            case AwarenessLevel.Engaged:
+                if (_awarenessTimer > 8f) SetAwareness(AwarenessLevel.Aware);
+                break;
+            case AwarenessLevel.Aware:
+                if (_awarenessTimer > 5f) SetAwareness(AwarenessLevel.Suspicious);
+                break;
+            case AwarenessLevel.Suspicious:
+                if (_awarenessTimer > 10f) SetAwareness(AwarenessLevel.Unaware);
+                break;
         }
+    }
+
+    /// <summary>
+    /// 根据当前移动状态计算动态射击精度参数。
+    /// 站立不动保持基础值；移动中精度下降、散布增大；冲刺时进一步恶化。
+    /// </summary>
+    public void GetDynamicAccuracy(out float effectiveHitProb, out float effectiveSpread)
+    {
+        float speed = _navMeshAgent != null ? _navMeshAgent.velocity.magnitude : 0f;
+        bool isMoving = speed > 0.5f;
+        bool isSprinting = speed > _baseSpeed * 0.7f;
+
+        effectiveHitProb = hitProbability;
+        effectiveSpread = spreadAngle;
+
+        if (isSprinting)
+        {
+            effectiveHitProb *= 0.3f;
+            effectiveSpread *= 4f;
+        }
+        else if (isMoving)
+        {
+            effectiveHitProb *= 0.55f;
+            effectiveSpread *= 2f;
+        }
+    }
+
+    /// <summary>
+    /// 当前感知等级对应的敌人检测距离。
+    /// Unaware 只能看到近处，Engaged 保持最大追踪距离。
+    /// </summary>
+    public float GetCurrentDetectionRange()
+    {
+        return _awareness switch
+        {
+            AwarenessLevel.Unaware => 35f,
+            AwarenessLevel.Suspicious => 50f,
+            AwarenessLevel.Aware => 50f,
+            AwarenessLevel.Engaged => 60f,
+            _ => DetectionRange
+        };
+    }
+
+    /// <summary>
+    /// 当前感知等级对应的视野锥半角（度）。
+    /// Unaware=60(120°锥), Suspicious=90(180°锥), Aware=120(240°锥), Engaged=180(360°全方向)
+    /// </summary>
+    public float GetCurrentVisionHalfAngle()
+    {
+        return _awareness switch
+        {
+            AwarenessLevel.Unaware => 60f,
+            AwarenessLevel.Suspicious => 90f,
+            AwarenessLevel.Aware => 120f,
+            AwarenessLevel.Engaged => 180f,
+            _ => 60f
+        };
+    }
+
+    /// <summary>
+    /// 设置感知等级并重置等级计时器。
+    /// </summary>
+    public void SetAwareness(AwarenessLevel level)
+    {
+        _awareness = level;
+        _awarenessTimer = 0f;
+    }
+
+    /// <summary>
+    /// 听到枪声通知。200 单位内且当前未交战时提升到 Suspicious 等级并转向声源。
+    /// </summary>
+    public void OnHearGunfire(Vector3 gunfirePos)
+    {
+        if (_awareness == AwarenessLevel.Engaged) return;
+
+        _lastHeardGunfirePos = gunfirePos;
+        float dist = Vector3.Distance(transform.position, gunfirePos);
+        if (dist < 200f && _awareness < AwarenessLevel.Suspicious)
+        {
+            SetAwareness(AwarenessLevel.Suspicious);
+            Vector3 dir = (gunfirePos - transform.position).normalized;
+            dir.y = 0f;
+            if (dir != Vector3.zero)
+                transform.rotation = Quaternion.LookRotation(dir);
+        }
+    }
+
+    /// <summary>
+    /// 被击中时直接升至 Engaged 等级。
+    /// </summary>
+    public void OnTakeDamage(Vector3 attackerPos)
+    {
+        SetAwareness(AwarenessLevel.Engaged);
+        _lastHeardGunfirePos = attackerPos;
+    }
+
+    /// <summary>
+    /// 个性初始化：随机分配玩法风格，据此设置 zone 偏好权重、交战距离和移动速度。
+    /// </summary>
+    private void InitPersonality()
+    {
+        playStyle = (BotPlayStyle)Random.Range(0, 4);
+
+        _zoneTypeWeights = playStyle switch
+        {
+            BotPlayStyle.Aggressive => new Dictionary<ZoneType, float>
+                { [ZoneType.Frontline] = 1.8f, [ZoneType.Defend] = 0.9f, [ZoneType.Flank] = 1.2f, [ZoneType.Roam] = 0.6f },
+            BotPlayStyle.Defensive => new Dictionary<ZoneType, float>
+                { [ZoneType.Frontline] = 0.8f, [ZoneType.Defend] = 1.8f, [ZoneType.Flank] = 0.9f, [ZoneType.Roam] = 1.0f },
+            BotPlayStyle.Flanker => new Dictionary<ZoneType, float>
+                { [ZoneType.Frontline] = 1.0f, [ZoneType.Defend] = 0.8f, [ZoneType.Flank] = 1.8f, [ZoneType.Roam] = 1.1f },
+            BotPlayStyle.Roamer => new Dictionary<ZoneType, float>
+                { [ZoneType.Frontline] = 1.0f, [ZoneType.Defend] = 1.0f, [ZoneType.Flank] = 1.0f, [ZoneType.Roam] = 1.8f },
+            _ => new Dictionary<ZoneType, float>
+                { [ZoneType.Frontline] = 1.5f, [ZoneType.Defend] = 1.2f, [ZoneType.Flank] = 1.0f, [ZoneType.Roam] = 0.8f },
+        };
+
+        _preferredEngageDistance = playStyle switch
+        {
+            BotPlayStyle.Aggressive => Random.Range(8f, 14f),
+            BotPlayStyle.Defensive => Random.Range(18f, 28f),
+            BotPlayStyle.Flanker => Random.Range(12f, 20f),
+            BotPlayStyle.Roamer => Random.Range(10f, 22f),
+            _ => 15f
+        };
+
+        _baseSpeed *= playStyle switch
+        {
+            BotPlayStyle.Aggressive => 1.1f,
+            BotPlayStyle.Defensive => 0.9f,
+            BotPlayStyle.Flanker => 1.05f,
+            BotPlayStyle.Roamer => 0.95f,
+            _ => 1f
+        };
+
+        if (_navMeshAgent != null)
+            _navMeshAgent.speed = _baseSpeed;
+
+        Debug.Log($"[BotController] InitPersonality: style={playStyle}, engageDist={_preferredEngageDistance:F1}, speed={_baseSpeed:F2}");
     }
 }

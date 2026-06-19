@@ -42,7 +42,18 @@ namespace InfimaGames.LowPolyShooterPack
         /// </summary>
         /// <param name="equippedAtStart">Inventory index of the weapon we want to equip when the game starts.</param>
         public abstract void Init(int equippedAtStart = 0);
-        
+
+        /// <summary>
+        /// Init with a LoadoutData. Destroys existing child weapons and instantiates those specified in the loadout.
+        /// </summary>
+        /// <param name="loadout">Player loadout configuration.</param>
+        /// <param name="equippedAtStart">Which slot index to equip initially.</param>
+        public virtual void Init(LoadoutData loadout, int equippedAtStart = 0)
+        {
+            // Default: fall back to basic Init (for subclasses that don't override).
+            Init(equippedAtStart);
+        }
+
         /// <summary>
         /// Equips a Weapon.
         /// </summary>

@@ -31,7 +31,7 @@ public class VoiceChatManager : MonoBehaviour
     [SerializeField] bool useVad = true;
     [SerializeField] int recordingDurationSeconds = 60;
 
-    public MicMode CurrentMode { get; private set; } = MicMode.Deafened;
+    public MicMode CurrentMode { get; private set; } = MicMode.Muted;
 
     // 关麦前的收听模式，用于 Muted 状态下保持正确的收听范围
     MicMode _lastActiveMode = MicMode.All;
@@ -165,11 +165,11 @@ public class VoiceChatManager : MonoBehaviour
     {
         MicMode next = CurrentMode switch
         {
-            MicMode.All => MicMode.TeamOnly,
-            MicMode.TeamOnly => MicMode.Muted,
-            MicMode.Muted => MicMode.Deafened,
-            MicMode.Deafened => MicMode.All,
-            _ => MicMode.All
+            MicMode.Muted => MicMode.TeamOnly,
+            MicMode.TeamOnly => MicMode.All,
+            MicMode.All => MicMode.Deafened,
+            MicMode.Deafened => MicMode.Muted,
+            _ => MicMode.Muted
         };
         SetMode(next);
     }

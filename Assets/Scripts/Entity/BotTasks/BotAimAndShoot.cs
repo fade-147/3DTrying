@@ -16,7 +16,6 @@ namespace NodeCanvas.Tasks.Actions
         public BBParameter<float> lostTargetTimeout = 5f;
         public BBParameter<float> noLOSTimeout = 8f;
         public float aimHeight = 1.5f;
-        public float aimSmoothTime = 0.1f;
         public float preferredDistance = 15f;
 
         private BotController _botController;
@@ -25,6 +24,8 @@ namespace NodeCanvas.Tasks.Actions
         private float _lostTimer;
         private float _noLOSTimer;
         private int _layerMask;
+        private int _consecutiveShots;
+        private const float ConsecutiveShotPenaltyPerShot = 0.05f;
 
         protected override string info
         {
@@ -44,6 +45,7 @@ namespace NodeCanvas.Tasks.Actions
             _fireTimer = 0f;
             _lostTimer = 0f;
             _noLOSTimer = 0f;
+            _consecutiveShots = -2; // 前2发精度加成：第1发 +0.2, 第2发 +0.1
         }
 
         protected override void OnUpdate()
@@ -82,9 +84,9 @@ namespace NodeCanvas.Tasks.Actions
             // 始终瞄准目标
             _botController.AimAtTarget(target);
 
-            // 射击冷却
-            if (_fireTimer > 0f)
-                _fireTimer -= Time.deltaTime;
+            // 射击冷却 + 感知衰减
+            _botController.UpdateTimers();
+            if (_fireTimer > 0f) _fireTimer -= Time.deltaTime;
 
             // LOS 检测
             Vector3 dirToTarget = (target.position - agent.position).normalized;
@@ -97,7 +99,7 @@ namespace NodeCanvas.Tasks.Actions
             {
                 _noLOSTimer = 0f;
 
-                // 有视野：停在 preferredDistance 处射击
+                // 有视野：停在 preferredDistance 处射击（NavMesh 并行移动不阻断射击）
                 if (_navAgent != null && _navAgent.isOnNavMesh)
                 {
                     Vector3 desiredPos = target.position - dirToTarget * preferredDistance;
@@ -108,11 +110,36 @@ namespace NodeCanvas.Tasks.Actions
                     }
                 }
 
-                if (_fireTimer <= 0f && dist <= effectiveRange.value)
+                if (_botController.CanFire() && dist <= effectiveRange.value)
                 {
-                    _botController.ServerFire(_botController.ApplySpread(shootDirection), muzzlePos);
+                    // 动态精度：根据移动状态调整命中率和散布
+                    _botController.GetDynamicAccuracy(out float hp, out float spread);
+
+                    // 距离衰减：超过 40 单位精度下降
+                    if (dist > 40f)
+                    {
+                        hp *= 0.7f;
+                        spread *= 1.5f;
+                    }
+
+                    // 前 2 发精度加成（_consecutiveShots 从 -2 开始）
+                    float shotBonus = 0f;
+                    if (_consecutiveShots < 0)
+                    {
+                        shotBonus = Mathf.Abs(_consecutiveShots) * 0.1f;
+                        hp = Mathf.Min(1f, hp + shotBonus);
+                    }
+
+                    // 连续射击递减
+                    hp = Mathf.Max(0.1f, hp - _consecutiveShots * ConsecutiveShotPenaltyPerShot);
+                    spread *= 1f + _consecutiveShots * 0.08f;
+
+                    _botController.ServerFire(
+                        _botController.ApplySpread(shootDirection, hp, spread),
+                        muzzlePos);
                     _botController.ConsumeAmmo();
                     _fireTimer = fireRate.value;
+                    _consecutiveShots++;
                 }
             }
             else
@@ -132,6 +159,10 @@ namespace NodeCanvas.Tasks.Actions
                     _navAgent.SetDestination(target.position);
                 }
             }
+
+            // 半射速周期内未射击则重置连续计数
+            if (_fireTimer > 0f && _fireTimer <= fireRate.value * 0.5f)
+                _consecutiveShots = 0;
         }
 
         protected override void OnPause() { }

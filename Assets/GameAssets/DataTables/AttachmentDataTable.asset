@@ -1,0 +1,262 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfba502f289e12843b5ab74684e10930, type: 3}
+  m_Name: AttachmentDataTable
+  m_EditorClassIdentifier: 
+  attachments:
+  - slug: att_scope_01
+    displayName: "\u94C1\u7784"
+    description: "\u6807\u51C6\u673A\u68B0\u7784\u51C6\u5177\u3002"
+    category: 0
+    icon: {fileID: 21300000, guid: fb50846c39fbaac459573ceb00094717, type: 3}
+    prefab: {fileID: 4840233239652816165, guid: 608b505d9e0fca141a46b8ac70f96ddc,
+      type: 3}
+    recoilReduction: 0
+    spreadReduction: 0
+    swayReduction: 0.05
+    suppressSound: 0
+    ammoCapacityMultiplier: 1
+    hipfireSpreadReduction: 0
+  - slug: att_scope_02
+    displayName: "\u7EA2\u70B9\u7784\u51C6\u955C"
+    description: "\u5FEB\u901F\u7784\u51C6\u7EA2\u70B9\u955C\uFF0C\u63D0\u9AD8\u53CD\u5E94\u901F\u5EA6\u3002"
+    category: 0
+    icon: {fileID: 21300000, guid: bd464a74ec700e34f8fdc28351f04637, type: 3}
+    prefab: {fileID: 4840233239652816165, guid: a2962c3563c7ee246be224e9304464bd,
+      type: 3}
+    recoilReduction: 0
+    spreadReduction: 0
+    swayReduction: 0.1
+    suppressSound: 0
+    ammoCapacityMultiplier: 1
+    hipfireSpreadReduction: 0
+  - slug: att_scope_03
+    displayName: "\u5168\u606F\u7784\u51C6\u955C"
+    description: "\u5168\u606F\u6295\u5F71\u7784\u51C6\uFF0C\u7CBE\u51C6\u4E14\u89C6\u91CE\u5F00\u9614\u3002"
+    category: 0
+    icon: {fileID: 21300000, guid: 9c6d26fe073e3d64aa0aa4a411e3dd78, type: 3}
+    prefab: {fileID: 4840233239652816165, guid: f3d402d9c5423004a8e08fb187c46276,
+      type: 3}
+    recoilReduction: 0
+    spreadReduction: 0.05
+    swayReduction: 0.08
+    suppressSound: 0
+    ammoCapacityMultiplier: 1
+    hipfireSpreadReduction: 0
+  - slug: att_scope_04
+    displayName: "ACOG 4\xD7"
+    description: "4\u500D\u5149\u5B66\u7784\u51C6\u955C\uFF0C\u4E2D\u8DDD\u79BB\u4F5C\u6218\u5229\u5668\u3002"
+    category: 0
+    icon: {fileID: 21300000, guid: 2349c5f0829e7aa4c86ee473a694cb71, type: 3}
+    prefab: {fileID: 4840233239652816165, guid: 29f69acff7685bc43a0c3a86db1dbe85,
+      type: 3}
+    recoilReduction: 0
+    spreadReduction: 0.1
+    swayReduction: 0.02
+    suppressSound: 0
+    ammoCapacityMultiplier: 1
+    hipfireSpreadReduction: 0
+  - slug: att_scope_05
+    displayName: "6\xD7 \u9AD8\u500D\u955C"
+    description: "6\u500D\u5149\u5B66\u7784\u51C6\u955C\uFF0C\u8FDC\u8DDD\u79BB\u7CBE\u786E\u6253\u51FB\u3002"
+    category: 0
+    icon: {fileID: 21300000, guid: 4c19a60de5b24ec4994279a9c7971ab0, type: 3}
+    prefab: {fileID: 4840233239652816165, guid: 2cadd769aff535a4fb4d7bf045dc579d,
+      type: 3}
+    recoilReduction: 0
+    spreadReduction: 0.15
+    swayReduction: 0.01
+    suppressSound: 0
+    ammoCapacityMultiplier: 1
+    hipfireSpreadReduction: 0
+  - slug: att_scope_06
+    displayName: "\u70ED\u6210\u50CF\u7784\u51C6\u955C"
+    description: "\u70ED\u6210\u50CF\u6280\u672F\uFF0C\u7A7F\u900F\u70DF\u96FE\u53D1\u73B0\u654C\u4EBA\u3002"
+    category: 0
+    icon: {fileID: 21300000, guid: c42c0303296abc84f88505a6cf5cd358, type: 3}
+    prefab: {fileID: 4840233239652816165, guid: bdf11905568039047a943adbe62f5e53,
+      type: 3}
+    recoilReduction: 0
+    spreadReduction: 0.1
+    swayReduction: 0.03
+    suppressSound: 0
+    ammoCapacityMultiplier: 1
+    hipfireSpreadReduction: 0
+  - slug: att_scope_07
+    displayName: "\u591C\u89C6\u7784\u51C6\u955C"
+    description: "\u5FAE\u5149\u591C\u89C6\u7784\u51C6\uFF0C\u591C\u95F4\u4F5C\u6218\u5FC5\u5907\u3002"
+    category: 0
+    icon: {fileID: 21300000, guid: b741b16959b23664bbd75d01cf608ba2, type: 3}
+    prefab: {fileID: 4840233239652816165, guid: 95e9b96c3ea7be948b7b8c162831d0ee,
+      type: 3}
+    recoilReduction: 0
+    spreadReduction: 0.08
+    swayReduction: 0.05
+    suppressSound: 0
+    ammoCapacityMultiplier: 1
+    hipfireSpreadReduction: 0
+  - slug: att_scope_08
+    displayName: "8\xD7 \u72D9\u51FB\u955C"
+    description: "8\u500D\u8D85\u9AD8\u500D\u7387\uFF0C\u7EC8\u6781\u8FDC\u8DDD\u79BB\u7784\u51C6\u955C\u3002"
+    category: 0
+    icon: {fileID: 21300000, guid: 3f8aee8bb8390ad4880233f27f7b7747, type: 3}
+    prefab: {fileID: 4840233239652816165, guid: ec5fdd40e62797947a90a79df17d15f5,
+      type: 3}
+    recoilReduction: 0
+    spreadReduction: 0.2
+    swayReduction: 0
+    suppressSound: 0
+    ammoCapacityMultiplier: 1
+    hipfireSpreadReduction: 0
+  - slug: att_muzzle_01
+    displayName: "\u6D88\u7130\u5668"
+    description: "\u6807\u51C6\u6D88\u7130\u5668\uFF0C\u9690\u85CF\u67AA\u53E3\u706B\u7130\u3002"
+    category: 1
+    icon: {fileID: 21300000, guid: 30da2fd2d9d114a4b85328cac9f021c0, type: 3}
+    prefab: {fileID: 9171938055095294277, guid: 16810aaa7341c99469aecedc37b98ef5,
+      type: 3}
+    recoilReduction: 0.03
+    spreadReduction: 0
+    swayReduction: 0
+    suppressSound: 0
+    ammoCapacityMultiplier: 1
+    hipfireSpreadReduction: 0
+  - slug: att_muzzle_02
+    displayName: "\u6D88\u97F3\u5668 01"
+    description: "\u8F7B\u578B\u6D88\u97F3\u5668\uFF0C\u7565\u5FAE\u964D\u4F4E\u540E\u5750\u529B\u3002\u9690\u85CF\u67AA\u58F0\u65B9\u5411\u6307\u793A\u5668\u3002"
+    category: 1
+    icon: {fileID: 21300000, guid: 2001cba51744cff428b4e47973c23359, type: 3}
+    prefab: {fileID: 2904974346716440054, guid: 209489031a3ced84dbe74e379aae2c76,
+      type: 3}
+    recoilReduction: 0.05
+    spreadReduction: 0
+    swayReduction: 0
+    suppressSound: 1
+    ammoCapacityMultiplier: 1
+    hipfireSpreadReduction: 0
+  - slug: att_muzzle_03
+    displayName: "\u6D88\u97F3\u5668 02"
+    description: "\u6218\u672F\u6D88\u97F3\u5668\uFF0C\u6709\u6548\u964D\u4F4E\u540E\u5750\u529B\u3002\u9690\u85CF\u67AA\u58F0\u65B9\u5411\u6307\u793A\u5668\u3002"
+    category: 1
+    icon: {fileID: 21300000, guid: e999e535b497ffb4ab5317313566e328, type: 3}
+    prefab: {fileID: 2904974346716440054, guid: 36b623c00545cdb49a842dc448ffc5b8,
+      type: 3}
+    recoilReduction: 0.08
+    spreadReduction: 0
+    swayReduction: 0
+    suppressSound: 1
+    ammoCapacityMultiplier: 1
+    hipfireSpreadReduction: 0
+  - slug: att_muzzle_04
+    displayName: "\u6D88\u97F3\u5668 03"
+    description: "\u9AD8\u7EA7\u6D88\u97F3\u5668\uFF0C\u5927\u5E45\u964D\u4F4E\u540E\u5750\u529B\u3002\u9690\u85CF\u67AA\u58F0\u65B9\u5411\u6307\u793A\u5668\u3002"
+    category: 1
+    icon: {fileID: 21300000, guid: 54daee6b38e0be349a74b2ce5fc26d36, type: 3}
+    prefab: {fileID: 1097628004451514646, guid: 232d12e5a30c1684ca33398f69a2f100,
+      type: 3}
+    recoilReduction: 0.1
+    spreadReduction: 0.02
+    swayReduction: 0
+    suppressSound: 1
+    ammoCapacityMultiplier: 1
+    hipfireSpreadReduction: 0
+  - slug: att_laser_01
+    displayName: "\u956D\u5C04\u7784\u51C6\u5668"
+    description: "\u7EA2\u8272\u956D\u5C04\u7EBF\uFF0C\u8170\u5C04\u7CBE\u5EA6\u5927\u5E45\u63D0\u5347\u3002"
+    category: 2
+    icon: {fileID: 21300000, guid: 16246b2807263b644b8644130b56adde, type: 3}
+    prefab: {fileID: 9123963325609617414, guid: 9cd79930b39d3b74bad7b19421a5ddf6,
+      type: 3}
+    recoilReduction: 0
+    spreadReduction: 0
+    swayReduction: 0
+    suppressSound: 0
+    ammoCapacityMultiplier: 1
+    hipfireSpreadReduction: 0.15
+  - slug: att_laser_02
+    displayName: "\u956D\u5C04\u624B\u7535\u7EC4\u5408"
+    description: "\u956D\u5C04+\u6218\u672F\u624B\u7535\u7EC4\u5408\uFF0C\u8170\u5C04\u7CBE\u5EA6\u5C0F\u5E45\u63D0\u5347\u3002"
+    category: 2
+    icon: {fileID: 21300000, guid: 4e231cdfc1b6a9248b123367763fdd2c, type: 3}
+    prefab: {fileID: 1196120324595551393, guid: b8575028f4533b64b8ffada2b0d7b181,
+      type: 3}
+    recoilReduction: 0
+    spreadReduction: 0
+    swayReduction: 0
+    suppressSound: 0
+    ammoCapacityMultiplier: 1
+    hipfireSpreadReduction: 0.1
+  - slug: att_grip_01
+    displayName: "\u524D\u63E1\u628A"
+    description: "\u6807\u51C6\u524D\u63E1\u628A\uFF0C\u964D\u4F4E\u540E\u5750\u529B\u548C\u6563\u5E03\u3002"
+    category: 3
+    icon: {fileID: 21300000, guid: 05f7814ac19986e41bb4065606fb5b69, type: 3}
+    prefab: {fileID: 1390724240781867511, guid: df97592f1c318634e874c1298f212682,
+      type: 3}
+    recoilReduction: 0.12
+    spreadReduction: 0.05
+    swayReduction: 0
+    suppressSound: 0
+    ammoCapacityMultiplier: 1
+    hipfireSpreadReduction: 0
+  - slug: att_grip_02
+    displayName: "\u53CC\u811A\u67B6 01"
+    description: "\u8F7B\u578B\u53CC\u811A\u67B6\uFF0C\u8E72\u4F0F/\u8DB4\u4E0B\u65F6\u5927\u5E45\u964D\u4F4E\u540E\u5750\u529B\u3002"
+    category: 3
+    icon: {fileID: 21300000, guid: 55e78347e2beea84db7fc4a30a0679c2, type: 3}
+    prefab: {fileID: 7162551469379788399, guid: edb3e6f3cb3e39d4d82e883b8efa2d34,
+      type: 3}
+    recoilReduction: 0.05
+    spreadReduction: 0.03
+    swayReduction: 0
+    suppressSound: 0
+    ammoCapacityMultiplier: 1
+    hipfireSpreadReduction: 0
+  - slug: att_grip_03
+    displayName: "\u53CC\u811A\u67B6 02"
+    description: "\u91CD\u578B\u53CC\u811A\u67B6\uFF0C\u8E72\u4F0F/\u8DB4\u4E0B\u65F6\u6781\u5927\u964D\u4F4E\u540E\u5750\u529B\u3002"
+    category: 3
+    icon: {fileID: 21300000, guid: 584bec6890ff26a4db92976e4412471c, type: 3}
+    prefab: {fileID: 4352424173568931059, guid: 7038049384741b74c82d78a046954a46,
+      type: 3}
+    recoilReduction: 0.08
+    spreadReduction: 0.05
+    swayReduction: 0
+    suppressSound: 0
+    ammoCapacityMultiplier: 1
+    hipfireSpreadReduction: 0
+  - slug: att_mag_extended
+    displayName: "\u6269\u5C55\u5F39\u5323"
+    description: "\u6269\u5BB9\u5F39\u5323\uFF0C\u5F39\u836F\u91CF +20%\u3002"
+    category: 4
+    icon: {fileID: 21300000, guid: 45791f92d28f006438e7ef19ae163e09, type: 3}
+    prefab: {fileID: 8014712818330038343, guid: 32e37db670c44c249b0a036c3e638aa2,
+      type: 3}
+    recoilReduction: 0
+    spreadReduction: 0
+    swayReduction: 0
+    suppressSound: 0
+    ammoCapacityMultiplier: 1.2
+    hipfireSpreadReduction: 0
+  - slug: att_mag_drum
+    displayName: "\u5F39\u9F13"
+    description: "\u5927\u5BB9\u91CF\u5F39\u9F13\uFF0C\u5F39\u836F\u91CF +50%\u3002\u4EC5\u9650\u6B65\u67AA/\u51B2\u950B\u67AA\u3002"
+    category: 4
+    icon: {fileID: 21300000, guid: 45791f92d28f006438e7ef19ae163e09, type: 3}
+    prefab: {fileID: 8014712818330038343, guid: 32e37db670c44c249b0a036c3e638aa2,
+      type: 3}
+    recoilReduction: 0
+    spreadReduction: 0
+    swayReduction: 0
+    suppressSound: 0
+    ammoCapacityMultiplier: 1.5
+    hipfireSpreadReduction: 0

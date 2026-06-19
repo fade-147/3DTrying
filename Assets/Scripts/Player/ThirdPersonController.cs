@@ -99,10 +99,19 @@ namespace StarterAssets
         public GameObject HitEffect; // 命中特效预制体
         public GameObject MuzzleFlash; // 枪口特效预制体
         private float _fireTimer; // 射速冷却计时器
+        private int _lastCmdFireFrame = -1; // 防止同帧多次开火
         public bool CanShoot = true; // 是否可射击（可用于换弹/持枪判断）
         public GameObject BulletPrefab; // 子弹预制体
         public float BulletSpeed = 800f; // 子弹速度（刚体力）
         public float BulletLifeTime = 2f; // 子弹生命周期（避免内存泄漏）
+
+        [Header("联网爆炸弹丸")]
+        [Tooltip("火箭弹 prefab（改造后的 P_LPSP_PROJ_RL）")]
+        public GameObject RocketPrefab;
+        [Tooltip("榴弹 prefab（改造后的 P_LPSP_PROJ_GL）")]
+        public GameObject GrenadeLauncherPrefab;
+        [Tooltip("手榴弹 prefab（改造后的 P_LPSP_PROJ_Grenade_01）")]
+        public GameObject GrenadeNetworkPrefab;
         [Header("Recoil Settings")]
         public float RecoilAmount = 1f; // 后坐力幅度
         public float RecoilSmoothTime = 0.1f;
@@ -160,6 +169,7 @@ namespace StarterAssets
         private int _animIDInspect;
         private int _animIDInspecting;
         private int _animIDReload;
+        private int _animIDChangeGun;
 
         // 检视枪状态
         private bool isInspecting = false;
@@ -182,22 +192,19 @@ namespace StarterAssets
         private GameObject collimatorUI;
 
         private Animator _animator;
+        [SerializeField]
+        private Animator _thirdPersonAnimator; // Animator on child ThirdPersonVisual/Geometry, assigned via Inspector
         private NetworkAnimator _networkAnimator;
 
         private CharacterController _controller;
         private GameObject _mainCamera;
         private const float _threshold = 0.01f;
         private bool _hasAnimator;
-        public bool IsRunning=false;
-
         private float _recoilPitch; // 后坐力目标角度（枪口上跳）
         private int _shotCount;                // 连续射击计数
         public int RecoilStartShot = 3;        // 第几发开始上跳
         public float RecoilRampSpeed = 0.5f;   // 上跳累积速度
 
-        private SettingManager _settingManager;
-        private bool SettingOpen=false;
-        private GameObject settingsObj;
         private float _outlineUpdateTimer = 0f;
         private const float OUTLINE_UPDATE_INTERVAL = 1f; // 每秒更新一次敌人描边
         private float _teammateOcclusionTimer = 0f;
@@ -226,6 +233,7 @@ namespace StarterAssets
         [Tooltip("最大散布上限")] public float MaxSpread = 3f;
         [Tooltip("散布回落速度")] public float SpreadDecaySpeed = 5f;
         [Tooltip("开镜散布倍率")] public float AimSpreadMultiplier = 0.2f;
+        [Tooltip("多弹丸散布角（度），仅 shotCount>1 时生效（如霰弹枪）")] public float PelletSpreadAngle = 3f;
         [SerializeField] private float _currentSpread; // 当前实时散布值
 
         // IA_Player input state — updated by PlayerInput SendMessage callbacks
@@ -236,10 +244,28 @@ namespace StarterAssets
         private bool _cursorInputForLook = true;
 
         /// <summary>
+        /// Allows SettingsMenu to disable mouse look when settings panel is open.
+        /// </summary>
+        public bool CursorInputForLook
+        {
+            get => _cursorInputForLook;
+            set => _cursorInputForLook = value;
+        }
+
+        /// <summary>
         /// Tracks LPSP Character shotsFired to detect when Character fires,
         /// so TPC can send exactly one CmdFire per Character.Fire() call.
         /// </summary>
         private int _lastLpspShotsFired;
+
+        private void ResolveAnimator()
+        {
+            if (_thirdPersonAnimator != null)
+                _animator = _thirdPersonAnimator;
+            else
+                TryGetComponent(out _animator);
+            _hasAnimator = _animator != null;
+        }
 
         private void Awake()
         {
@@ -250,7 +276,7 @@ namespace StarterAssets
             PlayerInput pi = GetComponent<PlayerInput>();
             if (pi != null) pi.enabled = false;
             // 获取Spine2骨骼
-            if (_animator == null) TryGetComponent(out _animator);
+            ResolveAnimator();
             _networkAnimator = GetComponent<NetworkAnimator>();
 
             if (_animator != null)
@@ -399,7 +425,6 @@ namespace StarterAssets
 
         private void Start()
         {
-            _hasAnimator = TryGetComponent(out _animator);
             _controller = GetComponent<CharacterController>();
             ResolveMissingReferences();
             AssignAnimationIDs();
@@ -463,12 +488,6 @@ namespace StarterAssets
                 UpdateAmmoUI();
             }
 
-            // 灵敏度设置
-            if (isLocalPlayer)
-            {
-                SetupSensitivitySettings();
-            }
-
             // Visual mode initialization is now handled by PlayerNetworkBridge.
             // Cinemachine binding for local player:
             if (isLocalPlayer && thirdPersonVCam != null && CinemachineCameraTarget != null)
@@ -477,58 +496,6 @@ namespace StarterAssets
                 thirdPersonVCam.LookAt = CinemachineCameraTarget.transform;
             }
 
-        }
-
-        //设置面板获
-        private void SetupSensitivitySettings()
-        {
-            // 通过标签找到设置管理器物体
-            settingsObj = GameObject.FindGameObjectWithTag("Settings");
-
-            if (settingsObj != null)
-            {
-                _settingManager = settingsObj.GetComponent<SettingManager>();
-
-                if (_settingManager != null)
-                {
-                    // 初始化滑动条的范围 (0.1 - 1.1)
-                    if (_settingManager.sensitivityXSlider != null)
-                    {
-                        _settingManager.sensitivityXSlider.minValue = 0.1f;
-                        _settingManager.sensitivityXSlider.maxValue = 1.1f;
-                        // 初始化当前值
-                        _settingManager.sensitivityXSlider.value = sensitivityX;
-                        // 监听滑动事件
-                        _settingManager.sensitivityXSlider.onValueChanged.AddListener(OnSensitivityXChanged);
-                    }
-
-                    if (_settingManager.sensitivityYSlider != null)
-                    {
-                        _settingManager.sensitivityYSlider.minValue = 0.1f;
-                        _settingManager.sensitivityYSlider.maxValue = 1.1f;
-                        // 初始化当前值
-                        _settingManager.sensitivityYSlider.value = sensitivityY;
-                        // 监听滑动事件
-                        _settingManager.sensitivityYSlider.onValueChanged.AddListener(OnSensitivityYChanged);
-                    }
-
-                }
-
-                settingsObj.SetActive(false);
-            }
-
-        }
-
-        // 水平灵敏度变化回调
-        private void OnSensitivityXChanged(float value)
-        {
-            sensitivityX = value;
-        }
-
-        // 垂直灵敏度变化回调
-        private void OnSensitivityYChanged(float value)
-        {
-            sensitivityY = value;
         }
 
         // 更新弹药UI显示
@@ -557,10 +524,9 @@ namespace StarterAssets
         //Update仅本地玩家执行，死亡后禁用输入
         private void Update()
         {
-            // 非本地玩家/死亡状态/未初始化完成 不执行逻辑
-            if (!isLocalPlayer || player == null || player.isDead) return;
+            // 非本地玩家/死亡状态/结算面板打开/未初始化完成 不执行逻辑
+            if (!isLocalPlayer || player == null || player.isDead || TeamScoreManager.SettlementIsOpen) return;
 
-            _hasAnimator = TryGetComponent(out _animator);
             PollPlayerInput();
             JumpAndGravity();
             GroundedCheck();
@@ -625,13 +591,14 @@ namespace StarterAssets
             }
 
             // R 键换枪：Character 活跃时由 LPSP InputAction 处理（IA_Player → InvokeUnityEvents → Character.OnTryToggleGun）
-            if (Input.GetKeyDown(KeyCode.R) && _canToggleGun && !_isDrinking && !IsLpspCharacterActive)
-            {
-                ToggleGun();
-                _canToggleGun = false;
-                Invoke(nameof(UnlockGunToggle), toggleGunLockTime);
-                CanShoot = false;
-            }
+            // [DISABLED] 第三人称下不再需要 R 键卸枪逻辑，保留代码以备将来恢复
+            // if (Input.GetKeyDown(KeyCode.R) && _canToggleGun && !_isDrinking && !IsLpspCharacterActive)
+            // {
+            //     ToggleGun();
+            //     _canToggleGun = false;
+            //     Invoke(nameof(UnlockGunToggle), toggleGunLockTime);
+            //     CanShoot = false;
+            // }
 
             // 射速冷却
             if (_fireTimer > 0)
@@ -644,16 +611,9 @@ namespace StarterAssets
             // This avoids double-firing and ammo desync.
             // ── LPSP Character 不活跃时(Build fallback) ──
             // TPC handles everything: ammo, fire rate, spread, recoil, CmdFire.
-            if (Input.GetMouseButton(0) && !IsRunning && CanShoot && isHoldingGun && !_isDrinking && !isReloading && !SettingOpen)
+            if (Input.GetMouseButton(0) && CanShoot && isHoldingGun && !_isDrinking && !isReloading && !SettingsMenu.IsOpen)
             {
                 isInspecting = false;
-
-                if (_sprintHeld == true)
-                {
-                    _sprintHeld = false;
-                    firstPersonAnimator.SetBool("Running", false);
-                    return;
-                }
 
                 if (IsLpspCharacterActive)
                 {
@@ -684,7 +644,7 @@ namespace StarterAssets
                             Transform muzzle = IsInFirstPerson ? firstPersonMuzzle : thirdPersonMuzzle;
                             if (muzzle == null) muzzle = thirdPersonMuzzle;
                             if (muzzle != null)
-                                CmdFire(shootDirection, muzzle.position);
+                                CmdFire(shootDirection, muzzle.position, GetCurrentWeaponSlug());
                         }
                     }
                 }
@@ -716,29 +676,9 @@ namespace StarterAssets
                         Transform muzzle = IsInFirstPerson ? firstPersonMuzzle : thirdPersonMuzzle;
                         if (muzzle == null) muzzle = thirdPersonMuzzle;
                         if (muzzle == null) return;
-                        CmdFire(shootDirection, muzzle.position);
+                        CmdFire(shootDirection, muzzle.position, GetCurrentWeaponSlug());
                         _fireTimer = FireRate;
                     }
-                }
-            }
-
-            if (Input.GetKeyDown(KeyCode.Tab))
-            {
-                SettingOpen = !SettingOpen;
-                settingsObj.SetActive(SettingOpen);
-
-                if (SettingOpen)
-                {
-                    Cursor.visible = true;
-                    Cursor.lockState = CursorLockMode.None;
-                    _cursorInputForLook = false;
-                    _lookInput = Vector2.zero;  // 清空残留的鼠标 delta，防止视角继续转动
-                }
-                else
-                {
-                    Cursor.visible = false;
-                    Cursor.lockState = CursorLockMode.Locked;
-                    _cursorInputForLook = true;
                 }
             }
 
@@ -905,38 +845,134 @@ namespace StarterAssets
 
         //服务端射击命令，网络生成子弹
         [Command]
-        private void CmdFire(Vector3 shootDirection, Vector3 muzzleWorldPos)
+        public void CmdFire(Vector3 shootDirection, Vector3 muzzleWorldPos, string weaponSlug)
         {
-            // 服务端校验空对象
-            if (BulletPrefab == null) return;
+            // 防止同帧重复开火
+            if (Time.frameCount == _lastCmdFireFrame) return;
+            _lastCmdFireFrame = Time.frameCount;
 
-            // 服务端生成子弹
-            GameObject bullet = Instantiate(BulletPrefab, muzzleWorldPos, Quaternion.LookRotation(shootDirection));
-            NetworkServer.Spawn(bullet);
+            GameObject prefab = GetProjectilePrefab(weaponSlug);
+            Debug.Log($"[CMD_FIRE] slug={weaponSlug} → prefab={(prefab != null ? prefab.name : "NULL")} at pos={muzzleWorldPos}");
+            if (prefab == null) return;
 
-            // 设置子弹归属，防止自伤
-            Bullet bulletScript = bullet.GetComponent<Bullet>();
-            if (bulletScript != null)
+            var entry = WeaponPrefabRegistry.GetEntry(weaponSlug);
+            int shotCount = entry != null ? entry.shotCount : 1;
+            float baseDamage = entry != null ? entry.damage : 15f;
+            float pelletSpreadAngle = PelletSpreadAngle;
+
+            for (int i = 0; i < shotCount; i++)
             {
-                bulletScript.ownerNetIdentity = netIdentity;
-                bulletScript.HitEffect = HitEffect;
-                bulletScript.BulletLifeTime = BulletLifeTime;
-                bulletScript.SetupTeammateIgnore();
+                Vector3 pelletDir = shootDirection;
+                if (shotCount > 1)
+                {
+                    float offsetX = Random.Range(-pelletSpreadAngle, pelletSpreadAngle);
+                    float offsetY = Random.Range(-pelletSpreadAngle, pelletSpreadAngle);
+                    pelletDir = Quaternion.Euler(offsetY, offsetX, 0) * shootDirection;
+                }
+
+                // 前向偏移避免出生在发射者碰撞体内部
+                Vector3 spawnPos = muzzleWorldPos + pelletDir.normalized * 1.5f;
+
+                // 服务端生成弹丸
+                GameObject projectile = Instantiate(prefab, spawnPos, Quaternion.LookRotation(pelletDir));
+
+                // 必须在 Spawn 前设置 ownerNetIdentity，否则 OnStartServer 中 SetupTeammateIgnore 拿不到
+                NetworkedExplosive explosive = null;
+                Bullet bulletScript = null;
+                if (projectile.TryGetComponent<NetworkedExplosive>(out var exp))
+                {
+                    exp.ownerNetIdentity = netIdentity;
+                    explosive = exp;
+                }
+                else if (projectile.TryGetComponent<Bullet>(out var bul))
+                {
+                    bul.ownerNetIdentity = netIdentity;
+                    bulletScript = bul;
+                }
+
+                NetworkServer.Spawn(projectile);
+
+                // 爆炸类弹丸（火箭弹 / 榴弹）
+                if (explosive != null)
+                {
+                    if (projectile.TryGetComponent<Rigidbody>(out var rbExp))
+                    {
+                        rbExp.velocity = Vector3.zero;
+                        rbExp.AddForce(pelletDir.normalized * explosive.InitialSpeed, ForceMode.VelocityChange);
+                    }
+                }
+                // 普通子弹
+                else if (bulletScript != null)
+                {
+                    bulletScript.damage = baseDamage;
+                    bulletScript.HitEffect = HitEffect;
+                    bulletScript.BulletLifeTime = BulletLifeTime;
+                    bulletScript.SetupTeammateIgnore();
+
+                    if (projectile.TryGetComponent<Rigidbody>(out var rbBullet))
+                    {
+                        rbBullet.velocity = Vector3.zero;
+                        rbBullet.AddForce(pelletDir.normalized * BulletSpeed, ForceMode.VelocityChange);
+                    }
+
+                    Destroy(projectile, BulletLifeTime);
+                }
             }
 
-            // 服务端统一给子弹推力（用客户端传的方向，绝对正确）
-            if (bullet.TryGetComponent<Rigidbody>(out var rb))
-            {
-                rb.velocity = Vector3.zero; // 重置速度
-                rb.AddForce(shootDirection.normalized * BulletSpeed, ForceMode.VelocityChange);
-            }
-
-            // 服务端定时销毁子弹
-            Destroy(bullet, BulletLifeTime);
-            // 同步枪口特效到所有客户端
+            // 同步枪口特效到所有客户端（每轮射击只播一次）
             RpcShowMuzzleFlash(muzzleWorldPos);
-
             _shotCount++;
+        }
+
+        GameObject GetProjectilePrefab(string slug)
+        {
+            switch (slug)
+            {
+                case "wpn_rl_01":
+                    return RocketPrefab != null ? RocketPrefab : BulletPrefab;
+                case "wpn_gl_01":
+                    return GrenadeLauncherPrefab != null ? GrenadeLauncherPrefab : BulletPrefab;
+                default:
+                    return BulletPrefab;
+            }
+        }
+
+        string GetCurrentWeaponSlug()
+        {
+            var character = GetComponent<InfimaGames.LowPolyShooterPack.Character>();
+            var inventory = character?.GetInventory() as InfimaGames.LowPolyShooterPack.Inventory;
+            return inventory?.GetEquippedSlug();
+        }
+
+        // 服务端手榴弹投掷命令
+        [Command]
+        public void CmdThrowGrenade(Vector3 throwDirection, Vector3 throwPosition, float throwForce)
+        {
+            if (GrenadeNetworkPrefab == null)
+            {
+                Debug.LogError("[ThirdPersonController] GrenadeNetworkPrefab is null.");
+                return;
+            }
+
+            GameObject grenade = Instantiate(GrenadeNetworkPrefab, throwPosition,
+                Quaternion.LookRotation(throwDirection));
+
+            var explosive = grenade.GetComponent<NetworkedExplosive>();
+            if (explosive != null)
+                explosive.ownerNetIdentity = netIdentity;
+
+            // 先加力再 Spawn，客户端首个同步帧就有正确速度
+            if (grenade.TryGetComponent<Rigidbody>(out var rb))
+            {
+                rb.AddForce(throwDirection * throwForce, ForceMode.Force);
+                rb.AddRelativeTorque(
+                    Random.Range(500f, 1500f),
+                    0f,
+                    0f
+                );
+            }
+
+            NetworkServer.Spawn(grenade);
         }
 
         // 客户端同步枪口特效
@@ -1208,6 +1244,7 @@ namespace StarterAssets
             _animIDMoveBack = Animator.StringToHash("MoveBack");
             _animIDIsHoldingGun = Animator.StringToHash("IsHoldingGun");
             _animIDToggleGun = Animator.StringToHash("ToggleGun");
+            _animIDChangeGun = Animator.StringToHash("ChangeGun");
             _animIDAim = Animator.StringToHash("Aim");
             _animIDAiming = Animator.StringToHash("Aiming");
             _animIDInspect = Animator.StringToHash("Inspect");
@@ -1273,6 +1310,16 @@ namespace StarterAssets
                 _animator.SetBool(_animIDIsHoldingGun, newValue);
             }
 
+            // 初始持枪时触发 ChangeGun，让 3P Animator 切到持枪姿态。
+            // 用 ChangeGun 而非 ToggleGun：前者是 Any State 无条件纯 trigger，
+            // 后者需要 IsHoldingGun=true 同时成立，spawn 期间有竞态风险。
+            // 延迟一帧：SyncVar hook 在 deserialize 阶段触发，此时 Animator
+            // 尚未完成首次 Update，立即 SetTrigger 可能被静默丢弃。
+            // NetworkAnimator clientAuthority=true，只有 owner 能发 trigger → 全网同步。
+            if (isLocalPlayer && !oldValue && newValue && _networkAnimator != null)
+            {
+                StartCoroutine(FireChangeGunNextFrame());
+            }
 
             // 相机逻辑,本地 + 远程都生效
             if (newValue)
@@ -1291,6 +1338,17 @@ namespace StarterAssets
 
             CanShoot = newValue;
             _fireTimer = 0;  //重置射击冷却
+        }
+
+        /// <summary>
+        /// 延迟一帧触发 ChangeGun，确保 Animator 已完成首次 Update。
+        /// 仅在初始 spawn 时由 OnHoldGunStateChanged 调用。
+        /// </summary>
+        private System.Collections.IEnumerator FireChangeGunNextFrame()
+        {
+            yield return null;
+            if (_networkAnimator != null)
+                _networkAnimator.SetTrigger(_animIDChangeGun);
         }
 
         // 解锁换枪
@@ -1318,8 +1376,12 @@ namespace StarterAssets
 
             if (_lookInput.sqrMagnitude >= _threshold && !LockCameraPosition)
             {
-                _cinemachineTargetYaw += _lookInput.x * Time.deltaTime;
-                _cinemachineTargetPitch += _lookInput.y * Time.deltaTime;
+                // Mouse delta is already frame-rate independent — no * Time.deltaTime.
+                // 0.05f matches IA_Player's ScaleVector2(x=0.05,y=0.05) processor for consistent feel.
+                float mouseX = _lookInput.x * sensitivityX * 0.05f;
+                float mouseY = _lookInput.y * sensitivityY * 0.05f;
+                _cinemachineTargetYaw += mouseX;
+                _cinemachineTargetPitch -= mouseY; // negate: mouse up → look up
             }
 
             _cinemachineTargetYaw = ClampAngle(_cinemachineTargetYaw, float.MinValue, float.MaxValue);
@@ -1681,6 +1743,7 @@ namespace StarterAssets
 
         void OnGUI()
         {
+            return; // DEBUG: disabled
             // --- Player name tag (above head, all players) ---
             if (Camera.main == null) return;
 

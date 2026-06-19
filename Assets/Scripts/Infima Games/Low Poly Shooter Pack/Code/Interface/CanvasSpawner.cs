@@ -26,14 +26,18 @@ namespace InfimaGames.LowPolyShooterPack.Interface
         #region FIELDS
 
         /// <summary>
-        /// Static flag to ensure only one canvas is spawned per process.
+        /// Instance flag: true when this CanvasSpawner has created a canvas.
+        /// No longer static — each instance tracks its own canvas to avoid
+        /// a race condition where Unity's deferred Destroy causes the old
+        /// instance's OnDestroy to run AFTER the new instance's SpawnForCharacter,
+        /// leaving the new player with no UI.
         /// </summary>
-        private static bool _canvasSpawned;
+        private bool _canvasSpawned;
 
         /// <summary>
-        /// Reference to the spawned canvas, so OnDestroy can clean it up.
+        /// Reference to the canvas spawned by this instance, so OnDestroy can clean it up.
         /// </summary>
-        private static GameObject _spawnedCanvas;
+        private GameObject _spawnedCanvas;
 
         /// <summary>
         /// Instance flag: true only for the CanvasSpawner that actually called SpawnForCharacter.
@@ -53,7 +57,7 @@ namespace InfimaGames.LowPolyShooterPack.Interface
 
         /// <summary>
         /// When the player prefab is destroyed (respawn or scene unload),
-        /// automatically reset the static flag and destroy the old canvas.
+        /// clean up the canvas that this instance created.
         /// Only the instance that actually spawned the canvas performs cleanup.
         /// This runs on EVERY process (server + all clients), so remote clients
         /// can clean up their own canvas state without relying on server RPCs.

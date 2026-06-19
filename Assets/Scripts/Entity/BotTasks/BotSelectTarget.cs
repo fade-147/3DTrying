@@ -27,6 +27,11 @@ namespace NodeCanvas.Tasks.Actions
         protected override void OnExecute()
         {
             _bc = agent.GetComponent<BotController>();
+            if (_bc == null)
+            {
+                EndAction(false);
+                return;
+            }
             _layerMask = LayerMask.GetMask("Default", "Environment");
             _timer = 0f;
 
@@ -102,6 +107,14 @@ namespace NodeCanvas.Tasks.Actions
 
             Vector3 dirToEnemy = (enemy.position - agent.position).normalized;
             float angle = Vector3.Angle(agent.forward, dirToEnemy);
+
+            // 视野锥过滤：目标在锥外则大幅降权（Engaged 180° 全方向不降权）
+            if (_bc != null)
+            {
+                float halfAngle = _bc.GetCurrentVisionHalfAngle();
+                if (halfAngle < 180f && angle > halfAngle)
+                    return -1f;
+            }
 
             float score = 0f;
             score += (1f - dist / maxDistance.value) * 50f;

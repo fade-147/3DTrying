@@ -98,7 +98,9 @@ public class RoomPlayerGUI : MonoBehaviour
         //每帧更新玩家的名字和准备状态，以及自己的准备和取消按钮的显示状态
         if (playerName != null)
         {
-            playerName.text = $"Player[{player.index + 1}]";    //显示玩家的名字，index是从0开始的，所以加1。这样第一个玩家就是玩家1，第二个是玩家2
+            playerName.text = string.IsNullOrEmpty(player.playerName)
+                ? $"Player[{player.index + 1}]"
+                : player.playerName;
         }
         if(readyState != null)
         {
@@ -143,5 +145,10 @@ private void OnReadyButtonClickered()
         if (readyBtn != null) readyBtn.onClick.RemoveAllListeners();
         if (cancelBtn != null) cancelBtn.onClick.RemoveAllListeners();
         if (removeBtn != null) removeBtn.onClick.RemoveAllListeners();
+
+        // 被动断开时 OnClientExitRoom() 不会被调用，
+        // 需在此确保 playerPanel 被销毁，避免 UI 残留
+        if (playerPanel != null)
+            Destroy(playerPanel);
     }
 }

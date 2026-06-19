@@ -24,7 +24,16 @@
   </assembly>
   <assembly fullname="HotUpdate, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="AllPlayersDebugUI" preserve="all" />
+    <type fullname="AttachmentDataTable" preserve="all" />
+    <type fullname="AttachmentInfoPopup" preserve="all" />
+    <type fullname="BackpackButton" preserve="all" />
+    <type fullname="BackpackUI" preserve="all" />
+    <type fullname="BackpackWeaponSlot" preserve="all" />
     <type fullname="BasicRigidBodyPush" preserve="all" />
+    <type fullname="BattlePassButton" preserve="all" />
+    <type fullname="BattlePassNodeUI" preserve="all" />
+    <type fullname="BattlePassRewardPopup" preserve="all" />
+    <type fullname="BattlePassUI" preserve="all" />
     <type fullname="BotController" preserve="all" />
     <type fullname="BotLobbyUI" preserve="all" />
     <type fullname="BotZoneManager" preserve="all" />
@@ -32,8 +41,13 @@
     <type fullname="ChangeAnimator" preserve="all" />
     <type fullname="CharacterOutline" preserve="all" />
     <type fullname="DamageIndicatorManager" preserve="all" />
+    <type fullname="DraggableItem" preserve="all" />
+    <type fullname="DropTarget" preserve="all" />
+    <type fullname="GachaButton" preserve="all" />
+    <type fullname="GachaUI" preserve="all" />
     <type fullname="GameMenuCol" preserve="all" />
     <type fullname="GameUIManager" preserve="all" />
+    <type fullname="GoldDisplayUI" preserve="all" />
     <type fullname="HostLobbyButton" preserve="all" />
     <type fullname="InfimaGames.ACurves" preserve="all" />
     <type fullname="InfimaGames.LowPolyShooterPack.BoltBehaviour" preserve="all" />
@@ -105,17 +119,26 @@
     <type fullname="InfimaGames.LowPolyShooterPack.Weapon" preserve="all" />
     <type fullname="InfimaGames.LowPolyShooterPack.WeaponAnimationEventHandler" preserve="all" />
     <type fullname="InfimaGames.LowPolyShooterPack.WeaponAttachmentManager" preserve="all" />
+    <type fullname="KillFeedEntry" preserve="all" />
+    <type fullname="KillFeedUI" preserve="all" />
     <type fullname="LeaderboardEntryUI" preserve="all" />
     <type fullname="LeaderboardUI" preserve="all" />
     <type fullname="LeaveRoomButton" preserve="all" />
     <type fullname="LobbyMenu" preserve="all" />
     <type fullname="MicButton" preserve="all" />
+    <type fullname="MinimapArrow" preserve="all" />
     <type fullname="MyNetworkRoomManager" preserve="all" />
     <type fullname="MyNetworkRoomPlayer" preserve="all" />
     <type fullname="NetworkDebugUI" preserve="all" />
+    <type fullname="NetworkedExplosive" preserve="all" />
     <type fullname="PlayerCharacter" preserve="all" />
+    <type fullname="PlayerMelee" preserve="all" />
+    <type fullname="PlayerWeaponSync" preserve="all" />
     <type fullname="RoomPlayerGUI" preserve="all" />
     <type fullname="SettingManager" preserve="all" />
+    <type fullname="SettingsMenu" preserve="all" />
+    <type fullname="SettlementEntry" preserve="all" />
+    <type fullname="SettlementUI" preserve="all" />
     <type fullname="StarterAssets.PlayerNetworkBridge" preserve="all" />
     <type fullname="StarterAssets.StarterAssetsInputs" preserve="all" />
     <type fullname="StarterAssets.ThirdPersonController" preserve="all" />
@@ -124,25 +147,36 @@
     <type fullname="SteamLobby" preserve="all" />
     <type fullname="SteamManager" preserve="all" />
     <type fullname="StrategyZone" preserve="all" />
+    <type fullname="SurrenderVoteManager" preserve="all" />
+    <type fullname="SurrenderVoteUI" preserve="all" />
     <type fullname="SwitchTeamButton" preserve="all" />
     <type fullname="TeammateOcclusion" preserve="all" />
     <type fullname="TeamScoreManager" preserve="all" />
     <type fullname="TeamSpawnArea" preserve="all" />
+    <type fullname="ThirdPersonWeaponDisplay" preserve="all" />
     <type fullname="UOSAddFriendEntryUI" preserve="all" />
     <type fullname="UOSAddFriendUI" preserve="all" />
     <type fullname="UOSFriendEntryUI" preserve="all" />
     <type fullname="UOSFriendListUI" preserve="all" />
     <type fullname="UOSFriendRequestsUI" preserve="all" />
     <type fullname="UOSFriendsManager" preserve="all" />
+    <type fullname="UOSInboxDetailUI" preserve="all" />
+    <type fullname="UOSInboxEntryUI" preserve="all" />
+    <type fullname="UOSInboxUI" preserve="all" />
     <type fullname="UOSLeaderboard" preserve="all" />
     <type fullname="UOSLobbyBrowserUI" preserve="all" />
     <type fullname="UOSLobbyCardUI" preserve="all" />
     <type fullname="UOSRequestEntryUI" preserve="all" />
     <type fullname="VoiceChatManager" preserve="all" />
+    <type fullname="WeaponDataTable" preserve="all" />
+    <type fullname="WeaponInfoPopup" preserve="all" />
+    <type fullname="AttachmentSlotEntry" preserve="nothing" serialized="true" />
     <type fullname="InfimaGames.LowPolyShooterPack.AudioSettings" preserve="nothing" serialized="true" />
     <type fullname="InfimaGames.LowPolyShooterPack.FeelState" preserve="nothing" serialized="true" />
     <type fullname="InfimaGames.SpringSettings" preserve="nothing" serialized="true" />
     <type fullname="InfimaGames.LowPolyShooterPack.SwayDirection" preserve="nothing" serialized="true" />
+    <type fullname="AttachmentEntry" preserve="nothing" serialized="true" />
+    <type fullname="WeaponEntry" preserve="nothing" serialized="true" />
   </assembly>
   <assembly fullname="Mirror, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="Mirror.NetworkIdentity" preserve="all" />
@@ -326,12 +360,13 @@
     <type fullname="UnityEngine.Texture2D" preserve="all" />
     <type fullname="UnityEngine.TrailRenderer" preserve="all" />
     <type fullname="UnityEngine.Transform" preserve="all" />
-    <type fullname="UnityEngine.Events.ArgumentCache" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Events.PersistentCallGroup" preserve="nothing" serialized="true" />
-    <type fullname="UnityEngine.Events.PersistentListenerMode" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Events.UnityEvent`2[System.Int32,System.Int32]" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.Events.UnityEvent`2[System.String,System.Single]" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Events.UnityEvent`3[System.Int32,System.Int32,System.Int32]" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.RectOffset" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.Events.ArgumentCache" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.Events.PersistentListenerMode" preserve="nothing" serialized="true" />
   </assembly>
   <assembly fullname="UnityEngine.ParticleSystemModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="UnityEngine.ParticleSystem" preserve="all" />
@@ -357,6 +392,7 @@
     <type fullname="UnityEngine.UI.CanvasScaler" preserve="all" />
     <type fullname="UnityEngine.UI.ContentSizeFitter" preserve="all" />
     <type fullname="UnityEngine.UI.GraphicRaycaster" preserve="all" />
+    <type fullname="UnityEngine.UI.GridLayoutGroup" preserve="all" />
     <type fullname="UnityEngine.UI.HorizontalLayoutGroup" preserve="all" />
     <type fullname="UnityEngine.UI.Image" preserve="all" />
     <type fullname="UnityEngine.UI.InputField" preserve="all" />
@@ -376,9 +412,9 @@
     <type fullname="UnityEngine.UI.FontData" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.UI.MaskableGraphic/CullStateChangedEvent" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.UI.Navigation" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.UI.ScrollRect/ScrollRectEvent" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.UI.Slider/SliderEvent" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.UI.SpriteState" preserve="nothing" serialized="true" />
-    <type fullname="UnityEngine.UI.ScrollRect/ScrollRectEvent" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.UI.Scrollbar/ScrollEvent" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.UI.InputField/EndEditEvent" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.UI.InputField/OnChangeEvent" preserve="nothing" serialized="true" />

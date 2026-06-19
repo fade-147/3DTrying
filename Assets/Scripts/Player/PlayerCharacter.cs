@@ -21,6 +21,8 @@ public class PlayerCharacter : NetworkBehaviour
     private CharacterController _characterController;
     private NavMeshAgent _navMeshAgent;
     private Collider[] _rootColliders;
+    private Rigidbody[] _boneRigidbodies;
+    private Collider[] _boneColliders;
 
     [Tooltip("BehaviourTreeOwner")]
     public MonoBehaviour behaviourTreeOwner;
@@ -67,11 +69,25 @@ public class PlayerCharacter : NetworkBehaviour
         _characterController = GetComponent<CharacterController>();
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _rootColliders = GetComponents<Collider>();
+
+        // 仅本地玩家：缓存 3P 骨骼 Rigidbody/Collider，存活时冻结骨骼+关闭碰撞体。
+        // 远程玩家 3P 模型始终活跃，Animator 正常驱动骨骼，不需要干预。
+        if (isLocalPlayer && _animator != null)
+        {
+            _boneRigidbodies = _animator.GetComponentsInChildren<Rigidbody>(true);
+            SetBoneKinematic(true);
+
+            _boneColliders = _animator.GetComponentsInChildren<Collider>(true);
+            SetBoneCollidersEnabled(false);
+        }
     }
 
     /// <summary>启用布娃娃物理（死亡时调用）</summary>
     private void EnableRagdoll()
     {
+        // 1. 冻结骨骼在动画姿态（kinematic + collider 关闭状态）
+        SetBoneKinematic(true);
+
         if (_animator != null)
         {
             _animator.cullingMode = AnimatorCullingMode.AlwaysAnimate;
@@ -88,6 +104,30 @@ public class PlayerCharacter : NetworkBehaviour
         if (behaviourTreeOwner != null) behaviourTreeOwner.enabled = false;
         if (networkAnimator != null) networkAnimator.enabled = false;
         foreach (var col in _rootColliders) col.enabled = false;
+
+        // 2. 开启骨骼碰撞体 + 解锁 kinematic → 布娃娃从当前动画姿态自然下落
+        SetBoneCollidersEnabled(true);
+        SetBoneKinematic(false);
+    }
+
+    /// <summary>设置 3P 骨骼 Rigidbody 的运动学状态。存活时 true，死亡时 false。</summary>
+    private void SetBoneKinematic(bool kinematic)
+    {
+        if (_boneRigidbodies == null) return;
+        foreach (var rb in _boneRigidbodies)
+        {
+            if (rb != null) rb.isKinematic = kinematic;
+        }
+    }
+
+    /// <summary>开关 3P 骨骼碰撞体。存活时 false（避免干扰 CharacterController），死亡时 true。</summary>
+    private void SetBoneCollidersEnabled(bool enabled)
+    {
+        if (_boneColliders == null) return;
+        foreach (var col in _boneColliders)
+        {
+            if (col != null) col.enabled = enabled;
+        }
     }
 
     private void Start()
@@ -157,24 +197,8 @@ public class PlayerCharacter : NetworkBehaviour
         if (behaviourTreeOwner != null) behaviourTreeOwner.enabled = false;
         if (_navMeshAgent != null) _navMeshAgent.enabled = false;
 
-        // 报告击杀到计分系统（destroy 前完成）
-        if (killerIdentity != null)
-        {
-            PlayerCharacter killerChar = killerIdentity.GetComponent<PlayerCharacter>();
-            if (killerChar != null)
-            {
-                int killerTeam = BotController.GetTeamId(killerChar);
-                int myTeam = BotController.GetTeamId(this);
-                if (killerTeam >= 0 && killerTeam != myTeam)
-                {
-                    TeamScoreManager.Instance?.AddKill(killerTeam);
-                }
-            }
-
-            // 追踪击杀者个人击杀数（Human 玩家专用，Bot 无 connectionToClient 会被过滤）
-            if (killerIdentity.connectionToClient != null)
-                PlayerStatsManager.Instance?.AddKill(killerIdentity.connectionToClient);
-        }
+        // 击杀计分 + 击杀播报 + 死亡统计
+        ProcessKillScoring(killerIdentity);
 
         RpcOnDie();
 
@@ -186,13 +210,123 @@ public class PlayerCharacter : NetworkBehaviour
             if (conn != null)
                 MyNetworkRoomManager.instance.QueuePlayerRespawn(conn, teamId, gameObject);
             else
-                MyNetworkRoomManager.instance.QueueBotRespawn(teamId, gameObject);
+            {
+                BotController bc = GetComponent<BotController>();
+                string botName = bc != null ? bc.displayName : null;
+                MyNetworkRoomManager.instance.QueueBotRespawn(teamId, gameObject, botName);
+            }
         }
         else
         {
             Debug.LogError("[PlayerCharacter] MyNetworkRoomManager.instance is null");
             NetworkServer.Destroy(gameObject);
         }
+    }
+
+    /// <summary>
+    /// [Server] 从 killerIdentity 收集击杀者/被击杀者名字和队伍，报告计分、播报击杀、统计死亡。
+    /// </summary>
+    [Server]
+    void ProcessKillScoring(NetworkIdentity killerIdentity)
+    {
+        string killerName = "未知";
+        string victimName = "未知";
+        int killerTeam = -1;
+        int victimTeam = BotController.GetTeamId(this);
+
+        // 获取被击杀者名字
+        if (connectionToClient != null)
+        {
+            var victimPnb = GetComponent<StarterAssets.PlayerNetworkBridge>();
+            victimName = victimPnb != null && !string.IsNullOrEmpty(victimPnb.playerName)
+                ? victimPnb.playerName
+                : $"Player {netId}";
+        }
+        else
+        {
+            var victimBc = GetComponent<BotController>();
+            victimName = victimBc != null && !string.IsNullOrEmpty(victimBc.displayName)
+                ? victimBc.displayName
+                : "未知";
+        }
+
+        if (killerIdentity != null)
+        {
+            PlayerCharacter killerChar = killerIdentity.GetComponent<PlayerCharacter>();
+            if (killerChar != null)
+            {
+                killerTeam = BotController.GetTeamId(killerChar);
+                if (killerTeam >= 0 && killerTeam != victimTeam)
+                {
+                    if (TeamScoreManager.Instance != null)
+                        TeamScoreManager.Instance.AddKill(killerTeam);
+                }
+            }
+
+            // 获取击杀者名字
+            if (killerIdentity.connectionToClient != null)
+            {
+                var killerPnb = killerIdentity.GetComponent<StarterAssets.PlayerNetworkBridge>();
+                killerName = killerPnb != null && !string.IsNullOrEmpty(killerPnb.playerName)
+                    ? killerPnb.playerName
+                    : $"Player {killerIdentity.netId}";
+            }
+            else
+            {
+                var killerBc = killerIdentity.GetComponent<BotController>();
+                killerName = killerBc != null && !string.IsNullOrEmpty(killerBc.displayName)
+                    ? killerBc.displayName
+                    : "未知";
+            }
+
+            // 追踪击杀者个人击杀数（Human 玩家专用）
+            if (killerIdentity.connectionToClient != null)
+            {
+                if (PlayerStatsManager.Instance != null)
+                    PlayerStatsManager.Instance.AddKill(killerIdentity.connectionToClient);
+            }
+            else
+            {
+                // 击杀者是 Bot
+                var killerBc = killerIdentity.GetComponent<BotController>();
+                if (killerBc != null)
+                    PlayerStatsManager.Instance?.AddBotKill(killerBc.displayName);
+            }
+        }
+
+        // 追踪被击杀者死亡数
+        if (connectionToClient != null)
+        {
+            if (PlayerStatsManager.Instance != null)
+                PlayerStatsManager.Instance.AddDeath(connectionToClient);
+        }
+        else
+        {
+            // 被击杀者是 Bot
+            var victimBc = GetComponent<BotController>();
+            if (victimBc != null)
+                PlayerStatsManager.Instance?.AddBotDeath(victimBc.displayName);
+        }
+
+        // 人类玩家懒记录名字和队伍（确保跨复活/重连后结算数据完整）
+        var ps = PlayerStatsManager.Instance;
+        if (ps != null)
+        {
+            if (killerIdentity != null && killerIdentity.connectionToClient != null)
+            {
+                ps.RecordPlayerName(killerIdentity.connectionToClient, killerName);
+                ps.RecordPlayerTeam(killerIdentity.connectionToClient.connectionId, killerTeam);
+            }
+            if (connectionToClient != null)
+            {
+                ps.RecordPlayerName(connectionToClient, victimName);
+                ps.RecordPlayerTeam(connectionToClient.connectionId, victimTeam);
+            }
+        }
+
+        // 广播击杀播报到所有客户端（通过场景 NB 确保远端可靠接收）
+        if (TeamScoreManager.Instance != null)
+            TeamScoreManager.Instance.RpcAddKillEntry(killerName, victimName, killerTeam, victimTeam);
     }
 
     // 客户端同步死亡表现

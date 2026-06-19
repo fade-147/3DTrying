@@ -16,6 +16,7 @@ namespace NodeCanvas.Tasks.Actions
         private const float MoveTimeout = 30f;
         private const float RescanInterval = 1.5f;
         private const float StartupGracePeriod = 0.5f;
+        private const float MidPathInterval = 4f;
 
         private NavMeshAgent _navAgent;
         private BotController _botController;
@@ -23,8 +24,10 @@ namespace NodeCanvas.Tasks.Actions
         private float _elapsedTime;
         private float _rescanTimer;
         private float _graceTimer;
+        private float _midPathTimer;
         private Vector3 _lastTarget;
         private Vector3 _projectedDest;
+        private Vector3 _currentDest;
         private int _setDestFailCount;
 
         protected override void OnExecute()
@@ -34,6 +37,7 @@ namespace NodeCanvas.Tasks.Actions
             _blackboard = agent.GetComponent<Blackboard>();
             _elapsedTime = 0f;
             _rescanTimer = 0f; // 首次扫描延迟 1.5s，防止刚进入巡逻就因残留 targetEnemy 退出
+            _midPathTimer = 0f;
 
             // 目标没变则不重置宽限期，防止树重置时反复归零
             if (targetPosition.value != _lastTarget)
@@ -41,6 +45,7 @@ namespace NodeCanvas.Tasks.Actions
                 _graceTimer = 0f;
                 _lastTarget = targetPosition.value;
                 _projectedDest = targetPosition.value;
+                _currentDest = Vector3.zero;
             }
             _setDestFailCount = 0;
 
@@ -82,9 +87,24 @@ namespace NodeCanvas.Tasks.Actions
             if (NavMesh.SamplePosition(dest, out NavMeshHit navHit, 10f, NavMesh.AllAreas))
                 dest = navHit.position;
 
+            // 中途随机偏移：每隔 MidPathInterval 秒对路径做小扰动，让 Bot 路线差异化
+            if (_navAgent != null && _navAgent.isOnNavMesh)
+            {
+                _midPathTimer += Time.deltaTime;
+                if (_midPathTimer > MidPathInterval)
+                {
+                    _midPathTimer = 0f;
+                    Vector3 midPoint = agent.position + Quaternion.Euler(0, Random.Range(-30f, 30f), 0)
+                        * (dest - agent.position).normalized * Random.Range(5f, 10f);
+                    if (NavMesh.SamplePosition(midPoint, out NavMeshHit midHit, 5f, NavMesh.AllAreas))
+                        _currentDest = midHit.position;
+                }
+            }
+
             _navAgent.speed = speed.value;
             _navAgent.stoppingDistance = keepDistance.value;
-            bool pathFound = _navAgent.SetDestination(dest);
+            Vector3 finalDest = _currentDest != Vector3.zero ? _currentDest : dest;
+            bool pathFound = _navAgent.SetDestination(finalDest);
             if (pathFound)
                 _projectedDest = dest;
 

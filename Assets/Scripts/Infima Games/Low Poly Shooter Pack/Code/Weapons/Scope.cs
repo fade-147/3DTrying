@@ -7,8 +7,18 @@ namespace InfimaGames.LowPolyShooterPack
     /// <summary>
     /// Weapon Scope.
     /// </summary>
-    public class Scope : ScopeBehaviour
+    public class Scope : ScopeBehaviour, IAttachmentEffect
     {
+        #region IAttachmentEffect
+
+        public float RecoilReduction => 0f;
+        public float SpreadReduction => 0f;
+        public float SwayReduction => swayMultiplier < 1f ? 1f - swayMultiplier : 0f;
+        public bool SuppressSound => false;
+        public float AmmoCapacityMultiplier => 1f;
+        public float HipfireSpreadReduction => 0f;
+
+        #endregion
         #region FIELDS SERIALIZED
     
         [Title(label: "Multipliers")]

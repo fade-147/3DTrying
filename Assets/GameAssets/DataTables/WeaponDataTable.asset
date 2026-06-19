@@ -1,0 +1,301 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 256ba571425590d44a05734f53fc73fc, type: 3}
+  m_Name: WeaponDataTable
+  m_EditorClassIdentifier: 
+  weapons:
+  - slug: wpn_ar_01
+    displayName: "\u7A81\u51FB\u6B65\u67AA 01"
+    description: "\u6807\u51C6\u7A81\u51FB\u6B65\u67AA\uFF0C\u53EF\u9760\u7684\u5168\u80FD\u6B66\u5668\u3002"
+    category: 0
+    prefab: {fileID: 8445401694592989334, guid: 8c7ba79f8ec05794aba7ffdd3d8aba93,
+      type: 3}
+    icon: {fileID: 21300000, guid: 644b41f1dd68b494f8f8dcc2377613ad, type: 3}
+    isAutomatic: 1
+    isBoltAction: 0
+    roundsPerMinute: 650
+    magazineSize: 30
+    shotCount: 1
+    cycledReload: 0
+    movementSpeedMultiplier: 1
+    damage: 15
+    unsupportedAttachments: 
+  - slug: wpn_ar_02
+    displayName: "\u7A81\u51FB\u6B65\u67AA 02"
+    description: "\u6539\u826F\u578B\u7A81\u51FB\u6B65\u67AA\uFF0C\u5F39\u5323\u5BB9\u91CF\u66F4\u5927\u3002"
+    category: 0
+    prefab: {fileID: 8445401694592989334, guid: f985fca8d5251c049ab9579d483160b4,
+      type: 3}
+    icon: {fileID: 21300000, guid: e250b5b374c42a34a909f2b0f3d4ddcf, type: 3}
+    isAutomatic: 1
+    isBoltAction: 0
+    roundsPerMinute: 650
+    magazineSize: 32
+    shotCount: 1
+    cycledReload: 0
+    movementSpeedMultiplier: 1
+    damage: 13
+    unsupportedAttachments: 
+  - slug: wpn_ar_03
+    displayName: "\u7A81\u51FB\u6B65\u67AA 03"
+    description: "\u7D27\u51D1\u578B\u7A81\u51FB\u6B65\u67AA\uFF0C\u9002\u5408\u8FD1\u8DDD\u79BB\u4F5C\u6218\u3002"
+    category: 0
+    prefab: {fileID: 1494106612615314066, guid: 4a4b8a3ad4e704d41951ddfdb2797d07,
+      type: 3}
+    icon: {fileID: 21300000, guid: a5a248fd0b5292a4f92c4aed83774d30, type: 3}
+    isAutomatic: 1
+    isBoltAction: 0
+    roundsPerMinute: 650
+    magazineSize: 25
+    shotCount: 1
+    cycledReload: 0
+    movementSpeedMultiplier: 1
+    damage: 16
+    unsupportedAttachments: 
+  - slug: wpn_handgun_01
+    displayName: "\u534A\u81EA\u52A8\u624B\u67AA 01"
+    description: "\u6807\u51C6\u534A\u81EA\u52A8\u624B\u67AA\u3002"
+    category: 1
+    prefab: {fileID: 8445401694592989334, guid: d3308534d30856e42b7a585baa7a886b,
+      type: 3}
+    icon: {fileID: 21300000, guid: dbb743605251b90448b5a24de1d4c8d1, type: 3}
+    isAutomatic: 0
+    isBoltAction: 0
+    roundsPerMinute: 500
+    magazineSize: 12
+    shotCount: 1
+    cycledReload: 0
+    movementSpeedMultiplier: 1
+    damage: 16
+    unsupportedAttachments: 
+  - slug: wpn_handgun_02
+    displayName: "\u534A\u81EA\u52A8\u624B\u67AA 02"
+    description: "\u7D27\u51D1\u578B\u624B\u67AA\u3002"
+    category: 1
+    prefab: {fileID: 3438908114058917180, guid: 8e4a73c62bb7a404db9c33a2c4369c16,
+      type: 3}
+    icon: {fileID: 21300000, guid: 23434c8f0f1c5ae4e99885fed16e382d, type: 3}
+    isAutomatic: 0
+    isBoltAction: 0
+    roundsPerMinute: 500
+    magazineSize: 10
+    shotCount: 1
+    cycledReload: 0
+    movementSpeedMultiplier: 1
+    damage: 17
+    unsupportedAttachments: 
+  - slug: wpn_handgun_03
+    displayName: "\u534A\u81EA\u52A8\u624B\u67AA 03"
+    description: "\u5927\u53E3\u5F84\u624B\u67AA\u3002"
+    category: 1
+    prefab: {fileID: 189091626145577203, guid: 464d2b315a1ed6b408948cc2fc04e8f7, type: 3}
+    icon: {fileID: 21300000, guid: 7f08290f9932fa24b8c20fb70270706c, type: 3}
+    isAutomatic: 0
+    isBoltAction: 0
+    roundsPerMinute: 500
+    magazineSize: 10
+    shotCount: 1
+    cycledReload: 0
+    movementSpeedMultiplier: 1
+    damage: 17
+    unsupportedAttachments: 
+  - slug: wpn_handgun_04
+    displayName: "\u534A\u81EA\u52A8\u624B\u67AA 04"
+    description: "\u8F7B\u578B\u624B\u67AA\u3002"
+    category: 1
+    prefab: {fileID: 189091626145577203, guid: 6ff85997fd470764cb6d04a3cdb9ef78, type: 3}
+    icon: {fileID: 21300000, guid: 526b066a363146e4995388c0d4f9d2fb, type: 3}
+    isAutomatic: 0
+    isBoltAction: 0
+    roundsPerMinute: 500
+    magazineSize: 10
+    shotCount: 1
+    cycledReload: 0
+    movementSpeedMultiplier: 1
+    damage: 14
+    unsupportedAttachments: 
+  - slug: wpn_smg_01
+    displayName: "\u51B2\u950B\u67AA 01"
+    description: "\u9AD8\u5C04\u901F\u51B2\u950B\u67AA\uFF0C\u5F39\u5BB9\u91CF\u5927\u3002"
+    category: 2
+    prefab: {fileID: 7874684396750147702, guid: f01300d92eca1d34c977ec94fe940f2a,
+      type: 3}
+    icon: {fileID: 21300000, guid: 729aae9133538024ca9d6d7347c25fb5, type: 3}
+    isAutomatic: 1
+    isBoltAction: 0
+    roundsPerMinute: 750
+    magazineSize: 37
+    shotCount: 1
+    cycledReload: 0
+    movementSpeedMultiplier: 1
+    damage: 13
+    unsupportedAttachments: 
+  - slug: wpn_smg_02
+    displayName: "\u51B2\u950B\u67AA 02"
+    description: "\u8D85\u9AD8\u901F\u51B2\u950B\u67AA\uFF0C\u5C04\u901F\u6781\u5FEB\u3002"
+    category: 2
+    prefab: {fileID: 7874684396750147702, guid: 91256867b7928854aa72388111406f90,
+      type: 3}
+    icon: {fileID: 21300000, guid: 4715971b6fd1fec4696b120a033db5b6, type: 3}
+    isAutomatic: 1
+    isBoltAction: 0
+    roundsPerMinute: 800
+    magazineSize: 30
+    shotCount: 1
+    cycledReload: 0
+    movementSpeedMultiplier: 1
+    damage: 13
+    unsupportedAttachments: 
+  - slug: wpn_smg_03
+    displayName: "\u51B2\u950B\u67AA 03"
+    description: "\u5747\u8861\u578B\u51B2\u950B\u67AA\u3002"
+    category: 2
+    prefab: {fileID: 7874684396750147702, guid: b0c409430ff16f9458eb5c4a87d637a1,
+      type: 3}
+    icon: {fileID: 21300000, guid: caae882e7c2c28440b7253c03b20a9d2, type: 3}
+    isAutomatic: 1
+    isBoltAction: 0
+    roundsPerMinute: 750
+    magazineSize: 35
+    shotCount: 1
+    cycledReload: 0
+    movementSpeedMultiplier: 1
+    damage: 14
+    unsupportedAttachments: 
+  - slug: wpn_smg_04
+    displayName: "\u51B2\u950B\u67AA 04"
+    description: "\u5927\u5BB9\u91CF\u51B2\u950B\u67AA\uFF0C\u6301\u7EED\u706B\u529B\u3002"
+    category: 2
+    prefab: {fileID: 7874684396750147702, guid: 1e8358d68aabf3b43a3af3491d2ce387,
+      type: 3}
+    icon: {fileID: 21300000, guid: c763c9d122eb9b443865de90a9681b07, type: 3}
+    isAutomatic: 1
+    isBoltAction: 0
+    roundsPerMinute: 680
+    magazineSize: 54
+    shotCount: 1
+    cycledReload: 0
+    movementSpeedMultiplier: 1
+    damage: 13
+    unsupportedAttachments: 
+  - slug: wpn_smg_05
+    displayName: "\u51B2\u950B\u67AA 05"
+    description: "\u7CBE\u51C6\u578B\u51B2\u950B\u67AA\u3002"
+    category: 2
+    prefab: {fileID: 7874684396750147702, guid: f7d11b288d7f05b4799e60acb906f217,
+      type: 3}
+    icon: {fileID: 21300000, guid: c3720c0b1075f5446abce2956ebfe5c0, type: 3}
+    isAutomatic: 1
+    isBoltAction: 0
+    roundsPerMinute: 700
+    magazineSize: 32
+    shotCount: 1
+    cycledReload: 0
+    movementSpeedMultiplier: 1
+    damage: 13
+    unsupportedAttachments: 
+  - slug: wpn_shotgun_01
+    displayName: "\u6CF5\u52A8\u9730\u5F39\u67AA"
+    description: "\u8FD1\u8DDD\u79BB\u6BC1\u706D\u6027\u706B\u529B\uFF0C\u6BCF\u6B21\u53D1\u5C046\u9897\u5F39\u4E38\u3002"
+    category: 3
+    prefab: {fileID: 5836565387965750232, guid: e1be29c2c2f53c947819b92d236806c7,
+      type: 3}
+    icon: {fileID: 21300000, guid: a46b9a765b8e2874e8fa937db5199a57, type: 3}
+    isAutomatic: 0
+    isBoltAction: 1
+    roundsPerMinute: 125
+    magazineSize: 8
+    shotCount: 6
+    cycledReload: 1
+    movementSpeedMultiplier: 1
+    damage: 10
+    unsupportedAttachments: 
+  - slug: wpn_sniper_01
+    displayName: "\u6813\u52A8\u72D9\u51FB\u67AA"
+    description: "\u9AD8\u7CBE\u5EA6\u6813\u52A8\u72D9\u51FB\u67AA\u3002"
+    category: 4
+    prefab: {fileID: 5836565387965750232, guid: 9a467c4de3e36284f8665dfdc825b7fa,
+      type: 3}
+    icon: {fileID: 21300000, guid: 487f673182ac7bf4ead9bde84c9f508a, type: 3}
+    isAutomatic: 0
+    isBoltAction: 1
+    roundsPerMinute: 125
+    magazineSize: 7
+    shotCount: 1
+    cycledReload: 1
+    movementSpeedMultiplier: 1
+    damage: 60
+    unsupportedAttachments: 
+  - slug: wpn_sniper_02
+    displayName: "\u534A\u81EA\u52A8\u72D9\u51FB\u67AA 02"
+    description: "\u534A\u81EA\u52A8\u72D9\u51FB\u67AA\uFF0C\u5C04\u901F\u66F4\u5FEB\u3002"
+    category: 4
+    prefab: {fileID: 6446807073419897400, guid: 472df6f8da21c7845bf1bafde3566634,
+      type: 3}
+    icon: {fileID: 21300000, guid: 9d7d9bcbe5b94874c8dc7b439e47f255, type: 3}
+    isAutomatic: 0
+    isBoltAction: 0
+    roundsPerMinute: 125
+    magazineSize: 9
+    shotCount: 1
+    cycledReload: 0
+    movementSpeedMultiplier: 1
+    damage: 35
+    unsupportedAttachments: 
+  - slug: wpn_sniper_03
+    displayName: "\u534A\u81EA\u52A8\u72D9\u51FB\u67AA 03"
+    description: "\u8F7B\u578B\u534A\u81EA\u52A8\u72D9\u51FB\u67AA\u3002"
+    category: 4
+    prefab: {fileID: 6446807073419897400, guid: aaae9b0e0cb7c174a8b680c0ed75745f,
+      type: 3}
+    icon: {fileID: 21300000, guid: 64e5dd4da3549fa4b9d54f9a11c7f9a8, type: 3}
+    isAutomatic: 0
+    isBoltAction: 0
+    roundsPerMinute: 125
+    magazineSize: 8
+    shotCount: 1
+    cycledReload: 0
+    movementSpeedMultiplier: 1
+    damage: 35
+    unsupportedAttachments: 
+  - slug: wpn_gl_01
+    displayName: "\u69B4\u5F39\u53D1\u5C04\u5668"
+    description: "\u53D1\u5C04\u69B4\u5F39\uFF0C\u81EA\u52A8\u88C5\u586B\u3002"
+    category: 5
+    prefab: {fileID: 5708224683135725906, guid: 12038d9fe9b50784c91441fad6056ebd,
+      type: 3}
+    icon: {fileID: 21300000, guid: 4bae6d5bdb71ca448990f3f371ce50c9, type: 3}
+    isAutomatic: 0
+    isBoltAction: 0
+    roundsPerMinute: 200
+    magazineSize: 1
+    shotCount: 1
+    cycledReload: 0
+    movementSpeedMultiplier: 1
+    damage: 50
+    unsupportedAttachments: 
+  - slug: wpn_rl_01
+    displayName: "\u706B\u7BAD\u7B52"
+    description: "\u53D1\u5C04\u706B\u7BAD\u5F39\uFF0C\u5A01\u529B\u5DE8\u5927\u3002"
+    category: 5
+    prefab: {fileID: 3798639132677175782, guid: 201b59cc0f9baa643817e6c1d0198649,
+      type: 3}
+    icon: {fileID: 21300000, guid: dcd3cd9ee65898c498b47524f429da37, type: 3}
+    isAutomatic: 0
+    isBoltAction: 0
+    roundsPerMinute: 500
+    magazineSize: 1
+    shotCount: 1
+    cycledReload: 0
+    movementSpeedMultiplier: 1
+    damage: 50
+    unsupportedAttachments: 0000000001000000

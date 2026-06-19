@@ -28,6 +28,10 @@ namespace NodeCanvas.Tasks.Actions
             GameObject nearest = null;
             float nearestDist = Mathf.Infinity;
 
+            // 根据感知等级确定检测距离和视野锥
+            float detectRange = botController.GetCurrentDetectionRange();
+            float visionHalfAngle = botController.GetCurrentVisionHalfAngle();
+
             PlayerCharacter[] allChars = Object.FindObjectsByType<PlayerCharacter>(FindObjectsSortMode.None);
             foreach (PlayerCharacter pc in allChars)
             {
@@ -38,6 +42,16 @@ namespace NodeCanvas.Tasks.Actions
                 if (otherTeamId == -1 || otherTeamId == botController.teamId) continue;
 
                 float dist = Vector3.Distance(agent.position, pc.transform.position);
+                if (dist > detectRange) continue; // 距离限制
+
+                // 视野锥检测（Engaged 时 180° 即全方向）
+                if (visionHalfAngle < 180f)
+                {
+                    Vector3 dirToTarget = (pc.transform.position - agent.position).normalized;
+                    float angle = Vector3.Angle(agent.forward, dirToTarget);
+                    if (angle > visionHalfAngle) continue;
+                }
+
                 if (dist < nearestDist)
                 {
                     nearestDist = dist;
@@ -46,6 +60,10 @@ namespace NodeCanvas.Tasks.Actions
             }
 
             targetEnemy.value = nearest;
+
+            if (nearest != null)
+                botController.SetAwareness(AwarenessLevel.Aware);
+
             EndAction(nearest != null);
         }
     }

@@ -12,7 +12,7 @@ namespace InfimaGames.LowPolyShooterPack
     /// <summary>
     /// Laser. Represents a Weapon's laser.
     /// </summary>
-    public class Laser : LaserBehaviour
+    public class Laser : LaserBehaviour, IAttachmentEffect
     {
         #region FIELDS SERIALIZED
 
@@ -25,7 +25,7 @@ namespace InfimaGames.LowPolyShooterPack
         [Tooltip("Type of laser.")]
         [SerializeField]
         private LaserType laserType;
-        
+
         [Tooltip("True if the lasersight should start active.")]
         [SerializeField]
         private bool active = true;
@@ -37,6 +37,12 @@ namespace InfimaGames.LowPolyShooterPack
         [Tooltip("If true, the laser will be turned off automatically while the character is aiming.")]
         [SerializeField]
         private bool turnOffWhileAiming = true;
+
+        [Title(label: "Attachment Effects")]
+
+        [Tooltip("腰射散布减少百分比（0~1，0.15=减少15%）")]
+        [SerializeField]
+        private float hipfireSpreadReduction = 0.15f;
         
         [Title(label: "Audio")]
         
@@ -89,6 +95,14 @@ namespace InfimaGames.LowPolyShooterPack
         /// GetTurnOffWhileAiming.
         /// </summary>
         public override bool GetTurnOffWhileAiming() => turnOffWhileAiming;
+
+        // IAttachmentEffect
+        public float RecoilReduction => 0f;
+        public float SpreadReduction => 0f;
+        public float SwayReduction => 0f;
+        public bool SuppressSound => false;
+        public float AmmoCapacityMultiplier => 1f;
+        public float HipfireSpreadReduction => hipfireSpreadReduction;
 
         #endregion
         

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 using Mirror;
+using InfimaGames.LowPolyShooterPack;
 
 /// <summary>
 /// Handles shooting, ammo management, reload, spread, and recoil triggering.
@@ -79,7 +80,7 @@ public class PlayerCombat : NetworkBehaviour
     #region Private
 
     private PlayerState _state;
-    private PlayerNetwork _network;
+    private StarterAssets.ThirdPersonController _tpc;
     private PlayerViewManager _view;
     private PlayerMovement _movement;
     private StarterAssets.StarterAssetsInputs _input;
@@ -97,7 +98,7 @@ public class PlayerCombat : NetworkBehaviour
     void Awake()
     {
         _state = GetComponent<PlayerState>();
-        _network = GetComponent<PlayerNetwork>();
+        _tpc = GetComponent<StarterAssets.ThirdPersonController>();
         _view = GetComponent<PlayerViewManager>();
         _movement = GetComponent<PlayerMovement>();
         _input = GetComponent<StarterAssets.StarterAssetsInputs>();
@@ -142,12 +143,6 @@ public class PlayerCombat : NetworkBehaviour
         if (fireHeld && CanShoot && _state.isHoldingGun && _fireTimer <= 0 &&
             !IsReloading && currentAmmo > 0 && !_state.isInspecting)
         {
-            if (_input.sprint)
-            {
-                _input.sprint = false;
-                return;
-            }
-
             TryFire();
         }
 
@@ -197,7 +192,8 @@ public class PlayerCombat : NetworkBehaviour
                 ? thirdPersonMuzzle.position
                 : transform.position + transform.forward;
 
-        _network.CmdFire(shootDirection, muzzlePos);
+        if (_tpc != null)
+            _tpc.CmdFire(shootDirection, muzzlePos, GetCurrentWeaponSlug());
 
         _fireTimer = FireRate;
         OnFire?.Invoke();
@@ -354,6 +350,16 @@ public class PlayerCombat : NetworkBehaviour
     {
         if (_ammoTextUI != null)
             _ammoTextUI.text = currentAmmo + "/" + maxAmmo;
+    }
+
+    /// <summary>
+    /// 从 LPSP Inventory 读取当前装备武器的 slug，传给 CmdFire 做武器分流。
+    /// </summary>
+    string GetCurrentWeaponSlug()
+    {
+        var character = GetComponent<Character>();
+        var inventory = character?.GetInventory() as Inventory;
+        return inventory?.GetEquippedSlug();
     }
 
     #endregion

@@ -307,7 +307,13 @@ namespace InfimaGames.LowPolyShooterPack
 			movementBehaviour = GetComponent<MovementBehaviour>();
 
 			//Initialize Inventory.
-			inventory.Init(weaponIndexEquippedAtStart);
+			// 始终使用 loadout 武器。未加载时用默认配置（仅 wpn_ar_01）。
+			if (LoadoutData.CurrentLoadout == null || LoadoutData.CurrentLoadout.GetEquippedWeapons().Count == 0)
+			{
+				LoadoutData.CurrentLoadout = UOSLoadoutManager.CreateDefaultLoadout();
+			}
+			inventory.Init(LoadoutData.CurrentLoadout, weaponIndexEquippedAtStart);
+			// TODO: 训练场模式需调用 inventory.Init(weaponIndexEquippedAtStart) 使用全部武器
 
 			//Refresh!
 			RefreshWeaponSetup();
@@ -711,6 +717,15 @@ namespace InfimaGames.LowPolyShooterPack
 			lastShotTime = Time.time;
 			//Play.
 			characterAnimator.CrossFade("Fire Empty", 0.05f, layerOverlay, 0);
+		}
+		/// <summary>
+		/// Allows external systems (e.g. settings menu) to lock/unlock the cursor.
+		/// When locked=false, all LPSP input (Move/Look/Fire/...) is blocked.
+		/// </summary>
+		public void SetCursorLocked(bool locked)
+		{
+			cursorLocked = locked;
+			UpdateCursorState();
 		}
 		/// <summary>
 		/// Updates the cursor state based on the value of the cursorLocked variable.
@@ -1419,17 +1434,32 @@ namespace InfimaGames.LowPolyShooterPack
 			//Make sure we have a camera!
 			if (cameraWorld == null)
 				return;
-			
+
 			//Remove Grenade.
 			if(!grenadesUnlimited)
 				grenadeCount--;
-			
+
 			//Get Camera Transform.
 			Transform cTransform = cameraWorld.transform;
 			//Calculate the throwing location.
 			Vector3 position = cTransform.position;
 			position += cTransform.forward * grenadeSpawnOffset;
-			//Throw.
+
+			// 联网手榴弹：由 ThirdPersonController.CmdThrowGrenade 在服务端生成。
+			bool isNetworked = grenadePrefab.TryGetComponent<Mirror.NetworkBehaviour>(out _);
+			if (isNetworked)
+			{
+				var tpc = GetComponentInParent<StarterAssets.ThirdPersonController>();
+				if (tpc != null)
+				{
+					// 随机投掷力度（与原版 P_LPSP_PROJ_Grenade_01 一致：4500~5000）
+					float throwForce = UnityEngine.Random.Range(4500f, 5000f);
+					tpc.CmdThrowGrenade(cTransform.forward, position, throwForce);
+					return; // 跳过本地 Instantiate
+				}
+			}
+
+			// 非联网手榴弹：本地生成（旧行为）。
 			Instantiate(grenadePrefab, position, cTransform.rotation);
 		}
 		/// <summary>

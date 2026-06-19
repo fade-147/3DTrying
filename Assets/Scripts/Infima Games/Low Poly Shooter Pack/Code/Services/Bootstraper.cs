@@ -34,6 +34,9 @@ namespace InfimaGames.LowPolyShooterPack
             ServiceLocator.Current.Register<IAudioManagerService>(soundManagerService);
 
             #endregion
+
+            // Registry 初始化已移至 MyYooAsset.LoadHotUpdateDlls()，
+            // 确保编辑器和打包后走同一条 YooAsset 路径。
         }
     }
 }

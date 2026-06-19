@@ -9,6 +9,10 @@ public class MyNetworkRoomPlayer : NetworkRoomPlayer
     [SyncVar(hook = nameof(OnTeamIdChanged))]
     public int teamId = 0;
 
+    /// <summary>玩家昵称（从 PlayerPrefs 上传，大厅 UI 显示用）</summary>
+    [SyncVar]
+    public string playerName = "";
+
     // 队伍人数上限（可自己改，比如4v4就设4）
     public const int MAX_PER_TEAM = 4;
 
@@ -23,6 +27,21 @@ public class MyNetworkRoomPlayer : NetworkRoomPlayer
     {
         base.OnClientEnterRoom();
         GetComponent<RoomPlayerGUI>()?.InitializeUI();
+
+        // 上传本地玩家昵称到服务端
+        if (isLocalPlayer)
+        {
+            string name = PlayerNameUtility.GetSavedUserName();
+            if (!string.IsNullOrEmpty(name))
+                CmdSetPlayerName(name);
+        }
+    }
+
+    /// <summary>[Command] 服务端设置玩家昵称</summary>
+    [Command]
+    public void CmdSetPlayerName(string name)
+    {
+        playerName = name;
     }
 
     public override void OnClientExitRoom()

@@ -11,6 +11,8 @@ public class Bullet : NetworkBehaviour
     public float BulletLifeTime = 2f;
     // 子弹归属者，防止自伤
     public NetworkIdentity ownerNetIdentity;
+    // 每发伤害（由 CmdFire 根据 WeaponDataTable 设置）
+    public float damage = 15f;
 
     // 服务端定时销毁子弹
     public override void OnStartServer()
@@ -70,7 +72,7 @@ public class Bullet : NetworkBehaviour
         if (targetPlayer != null && targetPlayer.netIdentity != ownerNetIdentity)
         {
             Vector3 attackerPos = ownerNetIdentity != null ? ownerNetIdentity.transform.position : transform.position;
-            targetPlayer.TakeDamage(15f, ownerNetIdentity, attackerPos);
+            targetPlayer.TakeDamage(damage, ownerNetIdentity, attackerPos);
         }
 
         // 服务端销毁子弹

@@ -104,6 +104,7 @@ public class MyYooAsset : MonoBehaviour
             var pnmGo = new GameObject("PlayerNameManager");
             pnmGo.AddComponent<PlayerNameManager>();
         }
+
     }
 
 
@@ -476,6 +477,31 @@ public class MyYooAsset : MonoBehaviour
         }
         LoadMetadataForAOTAssemblies();
         LoadHotUpdateDlls();
+
+        // HotUpdate 程序集已就绪，运行时动态挂载 LoadingTransitionController
+        // 预制体上不预先挂脚本（避免构建时因 HotUpdate.dll 未包含而丢失引用）
+        {
+            var ltPrefab = Resources.Load<GameObject>("LoadingTransition");
+            if (ltPrefab != null)
+            {
+                var ltGo = Instantiate(ltPrefab);
+                var ltType = _hotUpdateAss?.GetType("LoadingTransitionController");
+                if (ltType != null)
+                {
+                    ltGo.AddComponent(ltType);
+                    Debug.Log("[MyYooAsset] LoadingTransitionController 已动态挂载");
+                }
+                else
+                {
+                    Debug.LogWarning("[MyYooAsset] LoadingTransitionController 类型未在 HotUpdate.dll 中找到");
+                }
+            }
+            else
+            {
+                Debug.LogWarning("[MyYooAsset] LoadingTransition prefab 未找到，场景过渡动画不可用。");
+            }
+        }
+
         // 所有程序集加载完成，但不切场景：显示开始按钮并等待玩家确认
         AssembliesLoaded = true;
         Debug.Log("程序集加载完成，等待用户点击开始游戏按钮切换场景");
@@ -662,6 +688,48 @@ public class MyYooAsset : MonoBehaviour
         {
             Debug.LogError("[MyYooAsset] _hotUpdateAss 为空，跳过 Mirror 初始化");
             return;
+        }
+
+        // ── 武器 & 配件 Registry 初始化 ──
+        // 编辑器和打包后统一在此处通过 YooAsset 加载 DataTable。
+        // 此时 YooAsset package 已初始化完毕，HotUpdate.dll 已加载。
+        if (PackageInitialized && package != null)
+        {
+            try
+            {
+                var weaponHandle = package.LoadAssetSync("WeaponDataTable");
+                var attachmentHandle = package.LoadAssetSync("AttachmentDataTable");
+
+                if (weaponHandle.Status == YooAsset.EOperationStatus.Succeed && weaponHandle.AssetObject != null)
+                {
+                    var weaponRegType = _hotUpdateAss.GetType("WeaponPrefabRegistry");
+                    weaponRegType?.GetMethod("Init",
+                        System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.Public)
+                        ?.Invoke(null, new[] { weaponHandle.AssetObject });
+                    Debug.Log("[MyYooAsset] WeaponPrefabRegistry 初始化成功");
+                }
+                else
+                {
+                    Debug.LogWarning($"[MyYooAsset] WeaponDataTable 加载失败: {weaponHandle.LastError}");
+                }
+
+                if (attachmentHandle.Status == YooAsset.EOperationStatus.Succeed && attachmentHandle.AssetObject != null)
+                {
+                    var attachmentRegType = _hotUpdateAss.GetType("AttachmentRegistry");
+                    attachmentRegType?.GetMethod("Init",
+                        System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.Public)
+                        ?.Invoke(null, new[] { attachmentHandle.AssetObject });
+                    Debug.Log("[MyYooAsset] AttachmentRegistry 初始化成功");
+                }
+                else
+                {
+                    Debug.LogWarning($"[MyYooAsset] AttachmentDataTable 加载失败: {attachmentHandle.LastError}");
+                }
+            }
+            catch (System.Exception ex)
+            {
+                Debug.LogError($"[MyYooAsset] Registry 初始化失败: {ex}");
+            }
         }
 
         // 热更程序集 InitReadWriters 扫描 — 暂时禁用，排查联机 NullReferenceException

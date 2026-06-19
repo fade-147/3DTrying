@@ -78,6 +78,21 @@ public class HelloInput : MonoBehaviour
         setInCountText.text = $"这是你第{userGameData.setInCount}次进入游戏，玩的开心哦";
     }
 
+    /// <summary>
+    /// 从 PlayerPrefs 读取已保存的玩家昵称，供其他模块（网络同步等）使用。
+    /// 无需 HelloInput 实例化即可调用。
+    /// </summary>
+    public static string GetSavedUserName()
+    {
+        if (PlayerPrefs.HasKey("UserGameData"))
+        {
+            var data = new UserGameData();
+            SaveManager.Instance.Load(data, "UserGameData");
+            return data.userName ?? "";
+        }
+        return "";
+    }
+
     // 解锁方法
     // public void UnlockInput()
     // {

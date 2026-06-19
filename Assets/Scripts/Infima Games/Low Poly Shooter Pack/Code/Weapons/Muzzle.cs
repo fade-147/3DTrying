@@ -8,12 +8,12 @@ namespace InfimaGames.LowPolyShooterPack
     /// <summary>
     /// Muzzle.
     /// </summary>
-    public class Muzzle : MuzzleBehaviour
+    public class Muzzle : MuzzleBehaviour, IAttachmentEffect
     {
         #region FIELDS SERIALIZED
 
         [Title(label: "Settings")]
-        
+
         [Tooltip("Socket at the tip of the Muzzle. Commonly used as a firing point.")]
         [SerializeField]
         private Transform socket;
@@ -25,7 +25,21 @@ namespace InfimaGames.LowPolyShooterPack
         [Tooltip("Audio clip played when firing through this muzzle.")]
         [SerializeField]
         private AudioClip audioClipFire;
-        
+
+        [Title(label: "Attachment Effects")]
+
+        [Tooltip("后坐力减少百分比（0~1，0.05=减少5%）")]
+        [SerializeField]
+        private float recoilReduction;
+
+        [Tooltip("散布减少百分比（0~1）")]
+        [SerializeField]
+        private float spreadReduction;
+
+        [Tooltip("是否消音（true=隐藏伤害方向指示器）")]
+        [SerializeField]
+        private bool suppressSound;
+
         [Title(label: "Particles")]
         
         [Tooltip("Firing Particles.")]
@@ -133,6 +147,14 @@ namespace InfimaGames.LowPolyShooterPack
         
         public override Light GetFlashLight() => flashLight;
         public override float GetFlashLightDuration() => flashLightDuration;
+
+        // IAttachmentEffect
+        public float RecoilReduction => recoilReduction;
+        public float SpreadReduction => spreadReduction;
+        public float SwayReduction => 0f;
+        public bool SuppressSound => suppressSound;
+        public float AmmoCapacityMultiplier => 1f;
+        public float HipfireSpreadReduction => 0f;
 
         #endregion
 

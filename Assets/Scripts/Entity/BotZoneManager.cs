@@ -15,6 +15,11 @@ public class BotZoneManager : NetworkBehaviour
     private readonly Dictionary<uint, StrategyZone> _botClaims = new();
     private readonly Dictionary<StrategyZone, float> _zoneCooldowns = new();
 
+    /// <summary>
+    /// 已注册的 Bot 列表，用于枪声广播等全局通知。
+    /// </summary>
+    public readonly List<BotController> RegisteredBots = new();
+
     private void Awake()
     {
         if (Instance != null)
@@ -84,5 +89,54 @@ public class BotZoneManager : NetworkBehaviour
                 return true;
         }
         return false;
+    }
+
+    /// <summary>
+    /// 查询某 zone 附近（radius 内）有多少队友 Bot 正在前往或已到达。
+    /// 用于密度惩罚，避免多个 Bot 挤同一区。
+    /// </summary>
+    public int GetTeammateDensityNear(StrategyZone zone, int teamId, uint excludeNetId, float radius = 30f)
+    {
+        int count = 0;
+        foreach (var kv in _botClaims)
+        {
+            if (kv.Key == excludeNetId) continue;
+            if (kv.Value == null) continue;
+            if (Vector3.Distance(zone.WorldPosition, kv.Value.WorldPosition) < radius)
+                count++;
+        }
+        return count;
+    }
+
+    /// <summary>
+    /// 注册 Bot 到全局列表，供枪声广播等通知使用。
+    /// 由 BotController.OnStartServer 调用。
+    /// </summary>
+    public void RegisterBot(BotController bc)
+    {
+        if (bc != null && !RegisteredBots.Contains(bc))
+            RegisteredBots.Add(bc);
+    }
+
+    /// <summary>
+    /// 从全局列表注销 Bot。
+    /// 由 BotController.OnDestroy 调用。
+    /// </summary>
+    public void UnregisterBot(BotController bc)
+    {
+        RegisteredBots.Remove(bc);
+    }
+
+    /// <summary>
+    /// 向所有 Bot（除发射者外）广播枪声位置，触发听觉感知。
+    /// 由 BotController.ServerFire 调用。
+    /// </summary>
+    public void BroadcastGunfire(Vector3 pos, uint sourceNetId)
+    {
+        foreach (var bc in RegisteredBots)
+        {
+            if (bc != null && bc.netId != sourceNetId)
+                bc.OnHearGunfire(pos);
+        }
     }
 }
